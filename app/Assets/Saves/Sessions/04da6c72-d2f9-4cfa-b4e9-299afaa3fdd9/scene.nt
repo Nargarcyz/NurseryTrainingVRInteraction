@@ -5,7 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 9,
+    "$rlength": 8,
     "$rcontent": [
         {
             "$k": "Doorfd8f8f63-41c3-44ba-b27f-70ba7a713b38",
@@ -210,15 +210,15 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.102648951,
-                        -3.11538076,
-                        8.788891E-05
+                        0.120082118,
+                        -3.110498,
+                        0.004970683
                     },
                     "rotation": {
                         "$type": 7,
-                        0.09084313,
-                        359.688232,
-                        359.937317
+                        0.0312525555,
+                        359.5647,
+                        359.9786
                     },
                     "graph": {
                         "$id": 24,
@@ -316,10 +316,9 @@
                     "childs": {
                         "$id": 34,
                         "$type": 4,
-                        "$rlength": 2,
+                        "$rlength": 1,
                         "$rcontent": [
-                            "Scissors52949435-8475-4426-91bf-9c27b73ba7f7",
-                            "Scissors_bigf32f6629-d12e-4cb2-9063-48a57130e13b"
+                            "Scissors52949435-8475-4426-91bf-9c27b73ba7f7"
                         ]
                     },
                     "parent": "",
@@ -1016,129 +1015,6 @@
                     0.5294118,
                     0.607843161,
                     1
-                }
-            }
-        },
-        {
-            "$k": "Scissors_bigf32f6629-d12e-4cb2-9063-48a57130e13b",
-            "$v": {
-                "$id": 102,
-                "$type": 14,
-                "data": {
-                    "$type": 3,
-                    "id": "Scissors_bigf32f6629-d12e-4cb2-9063-48a57130e13b",
-                    "childs": {
-                        "$id": 103,
-                        "$type": 4,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "parent": "Closet61628be2-5f22-404f-8361-08321e01101a",
-                    "data": {
-                        "$id": 104,
-                        "$type": 15,
-                        "collapsed": true,
-                        "name": null,
-                        "value": null,
-                        "defaultValue": null
-                    },
-                    "sceneObjectGUID": "78aaf3ac-442f-4b3f-9b34-901c57b3bf48",
-                    "graphJSON": "",
-                    "position": {
-                        "$type": 7,
-                        0.06826923,
-                        -3.10927725,
-                        0.000615417957
-                    },
-                    "rotation": {
-                        "$type": 7,
-                        0.0205286816,
-                        359.857971,
-                        359.985779
-                    },
-                    "graph": {
-                        "$id": 105,
-                        "$type": 8,
-                        "_name": "",
-                        "nodes": {
-                            "$id": 106,
-                            "$type": 9,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "packedNodes": {
-                            "$id": 107,
-                            "$type": 10,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodes": {
-                            "$id": 108,
-                            "$type": 11,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodesDict": {
-                            "$id": 109,
-                            "$type": 12,
-                            "comparer": {
-                                "$id": 110,
-                                "$type": 1
-                            },
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "linkedNTVariable": "",
-                        "assignedSCGO": null,
-                        "displayName": ""
-                    }
-                },
-                "outlineRoot": {
-                    "$id": 111,
-                    "$type": 13
-                },
-                "toolType": 1,
-                "grabObject": {
-                    "$id": 112,
-                    "$type": 16,
-                    "disableWhenIdle": true,
-                    "allowedNearTouchControllers": 0,
-                    "allowedTouchControllers": 0,
-                    "ignoredColliders": {
-                        "$id": 113,
-                        "$type": 17,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "isGrabbable": true,
-                    "holdButtonToGrab": true,
-                    "stayGrabbedOnTeleport": true,
-                    "validDrop": 1,
-                    "grabOverrideButton": 0,
-                    "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
-                    "secondaryGrabActionScript": null,
-                    "isUsable": false,
-                    "holdButtonToUse": true,
-                    "useOnlyIfGrabbed": false,
-                    "pointerActivatesUseAction": false,
-                    "useOverrideButton": 0,
-                    "allowedUseControllers": 0,
-                    "objectHighlighter": null,
-                    "touchHighlightColor": {
-                        "$type": 18,
-                        0,
-                        0,
-                        0,
-                        0
-                    },
-                    "usingState": 0
                 }
             }
         }

@@ -1341,7 +1341,7 @@
                                                                                                                                 "hasError": false,
                                                                                                                                 "error": "",
                                                                                                                                 "isExecuting": false,
-                                                                                                                                "scneObject": null,
+                                                                                                                                "sceneObject": null,
                                                                                                                                 "result": false,
                                                                                                                                 "tool": 0
                                                                                                                             },
@@ -2188,7 +2188,7 @@
                                                                                                                                 "hasError": false,
                                                                                                                                 "error": "",
                                                                                                                                 "isExecuting": false,
-                                                                                                                                "scneObject": null,
+                                                                                                                                "sceneObject": null,
                                                                                                                                 "result": false,
                                                                                                                                 "tool": 1
                                                                                                                             },
@@ -2960,7 +2960,7 @@
                                                                                                                                 "hasError": false,
                                                                                                                                 "error": "",
                                                                                                                                 "isExecuting": false,
-                                                                                                                                "scneObject": null,
+                                                                                                                                "sceneObject": null,
                                                                                                                                 "result": false,
                                                                                                                                 "tool": 4
                                                                                                                             },
@@ -3732,7 +3732,7 @@
                                                                                                                                 "hasError": false,
                                                                                                                                 "error": "",
                                                                                                                                 "isExecuting": false,
-                                                                                                                                "scneObject": null,
+                                                                                                                                "sceneObject": null,
                                                                                                                                 "result": false,
                                                                                                                                 "tool": 3
                                                                                                                             },
@@ -4503,7 +4503,7 @@
                                                                                                                                 "hasError": false,
                                                                                                                                 "error": "",
                                                                                                                                 "isExecuting": false,
-                                                                                                                                "scneObject": null,
+                                                                                                                                "sceneObject": null,
                                                                                                                                 "result": false,
                                                                                                                                 "tool": 2
                                                                                                                             },
@@ -5384,13 +5384,16 @@
                 "callbackNodesDict": {
                     "$id": 573,
                     "$type": 24,
-                    "comparer": $iref:4,
+                    "comparer": {
+                        "$id": 574,
+                        "$type": 5
+                    },
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 574,
+                                "$id": 575,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5407,7 +5410,7 @@
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 575,
+                    "$id": 576,
                     "$type": "27|System.Collections.Generic.List`1[[XNode.NodePort, Assembly-CSharp]], mscorlib",
                     "$rlength": 7,
                     "$rcontent": [
@@ -5422,19 +5425,19 @@
                 }
             },
             {
-                "$id": 576,
+                "$id": 577,
                 "$type": 26,
                 "_name": "Check Tool",
                 "nodes": $iref:190,
                 "packedNodes": {
-                    "$id": 577,
+                    "$id": 578,
                     "$type": 22,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 578,
+                    "$id": 579,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5442,15 +5445,15 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 579,
+                    "$id": 580,
                     "$type": 24,
-                    "comparer": $iref:4,
+                    "comparer": $iref:574,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 580,
+                                "$id": 581,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5467,7 +5470,7 @@
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 581,
+                    "$id": 582,
                     "$type": 27,
                     "$rlength": 7,
                     "$rcontent": [
@@ -5482,19 +5485,19 @@
                 }
             },
             {
-                "$id": 582,
+                "$id": 583,
                 "$type": 26,
                 "_name": "Check Tool",
                 "nodes": $iref:272,
                 "packedNodes": {
-                    "$id": 583,
+                    "$id": 584,
                     "$type": 22,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 584,
+                    "$id": 585,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5502,15 +5505,15 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 585,
+                    "$id": 586,
                     "$type": 24,
-                    "comparer": $iref:4,
+                    "comparer": $iref:574,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 586,
+                                "$id": 587,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5527,7 +5530,7 @@
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 587,
+                    "$id": 588,
                     "$type": 27,
                     "$rlength": 7,
                     "$rcontent": [
@@ -5542,19 +5545,19 @@
                 }
             },
             {
-                "$id": 588,
+                "$id": 589,
                 "$type": 26,
                 "_name": "Check Tool",
                 "nodes": $iref:436,
                 "packedNodes": {
-                    "$id": 589,
+                    "$id": 590,
                     "$type": 22,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 590,
+                    "$id": 591,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5562,15 +5565,15 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 591,
+                    "$id": 592,
                     "$type": 24,
-                    "comparer": $iref:4,
+                    "comparer": $iref:574,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 592,
+                                "$id": 593,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5587,7 +5590,7 @@
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 593,
+                    "$id": 594,
                     "$type": 27,
                     "$rlength": 7,
                     "$rcontent": [
@@ -5602,19 +5605,19 @@
                 }
             },
             {
-                "$id": 594,
+                "$id": 595,
                 "$type": 26,
                 "_name": "Check Tool",
                 "nodes": $iref:354,
                 "packedNodes": {
-                    "$id": 595,
+                    "$id": 596,
                     "$type": 22,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 596,
+                    "$id": 597,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5622,15 +5625,15 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 597,
+                    "$id": 598,
                     "$type": 24,
-                    "comparer": $iref:4,
+                    "comparer": $iref:574,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 598,
+                                "$id": 599,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5647,7 +5650,7 @@
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 599,
+                    "$id": 600,
                     "$type": 27,
                     "$rlength": 7,
                     "$rcontent": [
@@ -5664,7 +5667,7 @@
         ]
     },
     "callbackNodes": {
-        "$id": 600,
+        "$id": 601,
         "$type": 23,
         "$rlength": 2,
         "$rcontent": [
@@ -5673,15 +5676,15 @@
         ]
     },
     "callbackNodesDict": {
-        "$id": 601,
+        "$id": 602,
         "$type": 24,
-        "comparer": $iref:4,
+        "comparer": $iref:574,
         "$rlength": 2,
         "$rcontent": [
             {
                 "$k": "Exercise End",
                 "$v": {
-                    "$id": 602,
+                    "$id": 603,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5692,7 +5695,7 @@
             {
                 "$k": "Check",
                 "$v": {
-                    "$id": 603,
+                    "$id": 604,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
