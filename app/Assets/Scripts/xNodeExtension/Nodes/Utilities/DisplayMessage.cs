@@ -10,7 +10,7 @@ namespace NT.Nodes.Other {
         }
 
         public override string GetDisplayName(){
-            return "Dsiplay Message";
+            return "Display Message";
         }
     }
 }

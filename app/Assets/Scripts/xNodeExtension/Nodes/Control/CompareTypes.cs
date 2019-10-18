@@ -7,7 +7,7 @@ namespace NT.Nodes.Other {
 
     public class CompareTypes : NTNode {
 
-        [Input(ShowBackingValue.Never, ConnectionType.Override)] public SceneGameObjectReference scneObject;
+        [Input(ShowBackingValue.Never, ConnectionType.Override)] public SceneGameObjectReference sceneObject;
         
         [NTOutput] public bool result;
 
@@ -17,7 +17,7 @@ namespace NT.Nodes.Other {
 
         public override object GetValue(NodePort port) {
             if(port.fieldName == nameof(result) ){
-                SceneGameObject scgo = GetInputValue<SceneGameObject>(nameof(scneObject), null);
+                SceneGameObject scgo = GetInputValue<SceneGameObject>(nameof(sceneObject), null);
 
                 if(scgo != null && scgo is ITool){
                     ITool t = (ITool) scgo;
