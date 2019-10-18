@@ -2,7 +2,7 @@ using NT.Atributes;
 using UnityEngine;
 using XNode;
 
-namespace NT.Nodes.Other{
+namespace NT.Nodes.Arithmetic{
 
     [System.Serializable]
     public class SumNode : NTNode
