@@ -6353,13 +6353,16 @@
                 "callbackNodesDict": {
                     "$id": 658,
                     "$type": 19,
-                    "comparer": $iref:4,
+                    "comparer": {
+                        "$id": 659,
+                        "$type": 5
+                    },
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Exercise End",
                             "$v": {
-                                "$id": 659,
+                                "$id": 660,
                                 "$type": 18,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -6376,7 +6379,7 @@
                 },
                 "assetID": "f5f6e475-7e5c-4c78-a2cc-2c38571e5b5d",
                 "ports": {
-                    "$id": 660,
+                    "$id": 661,
                     "$type": 24,
                     "$rlength": 10,
                     "$rcontent": [
@@ -6394,19 +6397,19 @@
                 }
             },
             {
-                "$id": 661,
+                "$id": 662,
                 "$type": 23,
                 "_name": "ComputeFinalGrade",
                 "nodes": $iref:247,
                 "packedNodes": {
-                    "$id": 662,
+                    "$id": 663,
                     "$type": 17,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 663,
+                    "$id": 664,
                     "$type": 18,
                     "$rlength": 1,
                     "$rcontent": [
@@ -6414,15 +6417,15 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 664,
+                    "$id": 665,
                     "$type": 19,
-                    "comparer": $iref:4,
+                    "comparer": $iref:659,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "ComputeGrade",
                             "$v": {
-                                "$id": 665,
+                                "$id": 666,
                                 "$type": 18,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -6439,7 +6442,7 @@
                 },
                 "assetID": "7a743653-5dc5-479e-8fe7-6fcc20959c0c",
                 "ports": {
-                    "$id": 666,
+                    "$id": 667,
                     "$type": 24,
                     "$rlength": 6,
                     "$rcontent": [
@@ -6455,7 +6458,7 @@
         ]
     },
     "callbackNodes": {
-        "$id": 667,
+        "$id": 668,
         "$type": 18,
         "$rlength": 1,
         "$rcontent": [
@@ -6463,15 +6466,15 @@
         ]
     },
     "callbackNodesDict": {
-        "$id": 668,
+        "$id": 669,
         "$type": 19,
-        "comparer": $iref:4,
+        "comparer": $iref:659,
         "$rlength": 1,
         "$rcontent": [
             {
                 "$k": "ShowGrade",
                 "$v": {
-                    "$id": 669,
+                    "$id": 670,
                     "$type": 18,
                     "$rlength": 1,
                     "$rcontent": [
