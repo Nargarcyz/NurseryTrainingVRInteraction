@@ -41,4 +41,29 @@ public class UGUINodeContextMenu : UGUIContextMenu {
 		runtimeGraph.Refresh();
 		Close();
 	}
+
+    public void DuplicateNode()
+    {
+        RuntimeGraph runtimeGraph = GetComponentInParent<RuntimeGraph>();
+
+        if (runtimeGraph.selectedNodes.Count > 0)
+        {
+            List<IUGUINode> result = new List<IUGUINode>();
+            for (int i = runtimeGraph.selectedNodes.Count - 1; i >= 0; i--)
+            {
+                IUGUINode n = runtimeGraph.selectedNodes[i];
+                XNode.Node newNode = n.DuplicateNode();
+                //result.Add(newNode);
+            }
+            runtimeGraph.selectedNodes = result;
+        }
+        else
+        {
+            // TODO
+            // selected.Duplicate();
+        }
+
+        runtimeGraph.Refresh();
+        Close();
+    }
 }  

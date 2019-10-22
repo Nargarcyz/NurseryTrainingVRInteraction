@@ -1217,7 +1217,7 @@
                                                             $iref:120,
                                                             {
                                                                 "$id": 135,
-                                                                "$type": "20|NT.Nodes.Other.SumNode, Assembly-CSharp",
+                                                                "$type": "20|XNode.Node, Assembly-CSharp",
                                                                 "_name": "Sum_2090255104",
                                                                 "graph": $iref:113,
                                                                 "position": {
@@ -1364,13 +1364,7 @@
                                                                             }
                                                                         }
                                                                     ]
-                                                                },
-                                                                "hasError": false,
-                                                                "error": "",
-                                                                "isExecuting": false,
-                                                                "valueA": 0,
-                                                                "valueB": 2,
-                                                                "result": 2
+                                                                }
                                                             }
                                                         ]
                                                     },
@@ -1701,7 +1695,7 @@
                                                 "hasError": false,
                                                 "error": "",
                                                 "isExecuting": false,
-                                                "scneObject": null,
+                                                "sceneObject": null,
                                                 "result": false,
                                                 "tool": 0
                                             },
@@ -2350,13 +2344,7 @@
                                                                                                                             }
                                                                                                                         }
                                                                                                                     ]
-                                                                                                                },
-                                                                                                                "hasError": false,
-                                                                                                                "error": "",
-                                                                                                                "isExecuting": false,
-                                                                                                                "valueA": 0,
-                                                                                                                "valueB": -2,
-                                                                                                                "result": -2
+                                                                                                                }
                                                                                                             },
                                                                                                             "reroutePoints": {
                                                                                                                 "$id": 251,

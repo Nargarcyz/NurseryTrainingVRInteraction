@@ -102,6 +102,12 @@ public class UGUIGroupedNode :  MonoBehaviour, IPointerClickHandler, IDragHandle
         ((NTGraph) graph.graph).RemoveGroupedNodes(group);
     }
 
+    public Node DuplicateNode()
+    {
+        // TODO: DUPLICATE GROUPED
+        return null;
+    }
+
     public void Remove()
     {
         RemoveNode();

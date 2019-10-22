@@ -161,6 +161,13 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
 	    graph.graph.RemoveNode(node);
     }
 
+    public Node DuplicateNode()
+    {
+        Vector2 position = new Vector2(100,200);
+        position += node.position;
+        return graph.graph.CopyNode(node,position);
+    }
+
     public void Remove()
     {
        RemoveNode();

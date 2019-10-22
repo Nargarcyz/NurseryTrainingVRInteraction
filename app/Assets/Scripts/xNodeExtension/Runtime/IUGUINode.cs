@@ -10,4 +10,5 @@ public interface IUGUINode {
     RuntimeGraph GetRuntimeGraph();
     void SetPosition(Vector2 position);
     void RemoveNode();
+    Node DuplicateNode();
 }

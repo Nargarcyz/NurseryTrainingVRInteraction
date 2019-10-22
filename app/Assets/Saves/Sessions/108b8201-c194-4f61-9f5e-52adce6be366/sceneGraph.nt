@@ -5,7 +5,7 @@
     "nodes": {
         "$id": 1,
         "$type": "1|System.Collections.Generic.List`1[[XNode.Node, Assembly-CSharp]], mscorlib",
-        "$rlength": 31,
+        "$rlength": 34,
         "$rcontent": [
             {
                 "$id": 2,
@@ -1011,7 +1011,7 @@
                                             "fieldName": "valueB",
                                             "node": {
                                                 "$id": 112,
-                                                "$type": "18|NT.Nodes.Other.SumNode, Assembly-CSharp",
+                                                "$type": "18|XNode.Node, Assembly-CSharp",
                                                 "_name": "Sum_1040728832",
                                                 "graph": {
                                                     "$id": 113,
@@ -1584,13 +1584,7 @@
                                                             }
                                                         }
                                                     ]
-                                                },
-                                                "hasError": false,
-                                                "error": "",
-                                                "isExecuting": false,
-                                                "valueA": 2,
-                                                "valueB": 0,
-                                                "result": 2
+                                                }
                                             },
                                             "reroutePoints": {
                                                 "$id": 174,
@@ -2444,13 +2438,7 @@
                                                             }
                                                         }
                                                     ]
-                                                },
-                                                "hasError": false,
-                                                "error": "",
-                                                "isExecuting": false,
-                                                "valueA": 2,
-                                                "valueB": 0,
-                                                "result": 2
+                                                }
                                             },
                                             "reroutePoints": {
                                                 "$id": 264,
@@ -3216,13 +3204,7 @@
                                                             }
                                                         }
                                                     ]
-                                                },
-                                                "hasError": false,
-                                                "error": "",
-                                                "isExecuting": false,
-                                                "valueA": 2,
-                                                "valueB": 0,
-                                                "result": 6
+                                                }
                                             },
                                             "reroutePoints": {
                                                 "$id": 346,
@@ -3988,13 +3970,7 @@
                                                             }
                                                         }
                                                     ]
-                                                },
-                                                "hasError": false,
-                                                "error": "",
-                                                "isExecuting": false,
-                                                "valueA": 2,
-                                                "valueB": 0,
-                                                "result": 2
+                                                }
                                             },
                                             "reroutePoints": {
                                                 "$id": 428,
@@ -4759,13 +4735,7 @@
                                                             }
                                                         }
                                                     ]
-                                                },
-                                                "hasError": false,
-                                                "error": "",
-                                                "isExecuting": false,
-                                                "valueA": 2,
-                                                "valueB": 0,
-                                                "result": 2
+                                                }
                                             },
                                             "reroutePoints": {
                                                 "$id": 510,
@@ -5169,13 +5139,7 @@
                                                                                                                             }
                                                                                                                         }
                                                                                                                     ]
-                                                                                                                },
-                                                                                                                "hasError": false,
-                                                                                                                "error": "",
-                                                                                                                "isExecuting": false,
-                                                                                                                "valueA": 0,
-                                                                                                                "valueB": -2,
-                                                                                                                "result": -2
+                                                                                                                }
                                                                                                             },
                                                                                                             "reroutePoints": {
                                                                                                                 "$id": 556,
@@ -5353,28 +5317,358 @@
             $iref:228,
             $iref:310,
             $iref:474,
-            $iref:392
+            $iref:392,
+            {
+                "$id": 569,
+                "$type": 11,
+                "_name": "WaitForNode",
+                "graph": $iref:0,
+                "position": {
+                    "$type": 3,
+                    0,
+                    0
+                },
+                "ports": {
+                    "$id": 570,
+                    "$type": 4,
+                    "comparer": $iref:4,
+                    "$rlength": 4,
+                    "$rcontent": [
+                        {
+                            "$k": "seconds",
+                            "$v": {
+                                "$id": 571,
+                                "$type": 6,
+                                "_fieldName": "seconds",
+                                "_node": $iref:569,
+                                "_typeQualifiedName": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                "connections": {
+                                    "$id": 572,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 0,
+                                "_connectionType": 1,
+                                "_typeConstraint": 2,
+                                "_dynamic": false
+                            }
+                        },
+                        {
+                            "$k": "breakFlow",
+                            "$v": {
+                                "$id": 573,
+                                "$type": 6,
+                                "_fieldName": "breakFlow",
+                                "_node": $iref:569,
+                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "connections": {
+                                    "$id": 574,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 0,
+                                "_connectionType": 1,
+                                "_typeConstraint": 2,
+                                "_dynamic": false
+                            }
+                        },
+                        {
+                            "$k": "flowIn",
+                            "$v": {
+                                "$id": 575,
+                                "$type": 6,
+                                "_fieldName": "flowIn",
+                                "_node": $iref:569,
+                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "connections": {
+                                    "$id": 576,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 0,
+                                "_connectionType": 1,
+                                "_typeConstraint": 2,
+                                "_dynamic": false
+                            }
+                        },
+                        {
+                            "$k": "flowOut",
+                            "$v": {
+                                "$id": 577,
+                                "$type": 6,
+                                "_fieldName": "flowOut",
+                                "_node": $iref:569,
+                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "connections": {
+                                    "$id": 578,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 1,
+                                "_connectionType": 0,
+                                "_typeConstraint": 0,
+                                "_dynamic": false
+                            }
+                        }
+                    ]
+                },
+                "hasError": false,
+                "error": "",
+                "isExecuting": false,
+                "flowIn": null,
+                "flowOut": null,
+                "seconds": 0,
+                "breakFlow": null
+            },
+            {
+                "$id": 579,
+                "$type": 11,
+                "_name": "WaitForNode",
+                "graph": $iref:0,
+                "position": {
+                    "$type": 3,
+                    0,
+                    0
+                },
+                "ports": {
+                    "$id": 580,
+                    "$type": 4,
+                    "comparer": $iref:4,
+                    "$rlength": 4,
+                    "$rcontent": [
+                        {
+                            "$k": "seconds",
+                            "$v": {
+                                "$id": 581,
+                                "$type": 6,
+                                "_fieldName": "seconds",
+                                "_node": $iref:579,
+                                "_typeQualifiedName": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                "connections": {
+                                    "$id": 582,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 0,
+                                "_connectionType": 1,
+                                "_typeConstraint": 2,
+                                "_dynamic": false
+                            }
+                        },
+                        {
+                            "$k": "breakFlow",
+                            "$v": {
+                                "$id": 583,
+                                "$type": 6,
+                                "_fieldName": "breakFlow",
+                                "_node": $iref:579,
+                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "connections": {
+                                    "$id": 584,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 0,
+                                "_connectionType": 1,
+                                "_typeConstraint": 2,
+                                "_dynamic": false
+                            }
+                        },
+                        {
+                            "$k": "flowIn",
+                            "$v": {
+                                "$id": 585,
+                                "$type": 6,
+                                "_fieldName": "flowIn",
+                                "_node": $iref:579,
+                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "connections": {
+                                    "$id": 586,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 0,
+                                "_connectionType": 1,
+                                "_typeConstraint": 2,
+                                "_dynamic": false
+                            }
+                        },
+                        {
+                            "$k": "flowOut",
+                            "$v": {
+                                "$id": 587,
+                                "$type": 6,
+                                "_fieldName": "flowOut",
+                                "_node": $iref:579,
+                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "connections": {
+                                    "$id": 588,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 1,
+                                "_connectionType": 0,
+                                "_typeConstraint": 0,
+                                "_dynamic": false
+                            }
+                        }
+                    ]
+                },
+                "hasError": false,
+                "error": "",
+                "isExecuting": false,
+                "flowIn": null,
+                "flowOut": null,
+                "seconds": 0,
+                "breakFlow": null
+            },
+            {
+                "$id": 589,
+                "$type": 11,
+                "_name": "WaitForNode",
+                "graph": $iref:0,
+                "position": {
+                    "$type": 3,
+                    0,
+                    0
+                },
+                "ports": {
+                    "$id": 590,
+                    "$type": 4,
+                    "comparer": $iref:4,
+                    "$rlength": 4,
+                    "$rcontent": [
+                        {
+                            "$k": "seconds",
+                            "$v": {
+                                "$id": 591,
+                                "$type": 6,
+                                "_fieldName": "seconds",
+                                "_node": $iref:589,
+                                "_typeQualifiedName": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                "connections": {
+                                    "$id": 592,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 0,
+                                "_connectionType": 1,
+                                "_typeConstraint": 2,
+                                "_dynamic": false
+                            }
+                        },
+                        {
+                            "$k": "breakFlow",
+                            "$v": {
+                                "$id": 593,
+                                "$type": 6,
+                                "_fieldName": "breakFlow",
+                                "_node": $iref:589,
+                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "connections": {
+                                    "$id": 594,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 0,
+                                "_connectionType": 1,
+                                "_typeConstraint": 2,
+                                "_dynamic": false
+                            }
+                        },
+                        {
+                            "$k": "flowIn",
+                            "$v": {
+                                "$id": 595,
+                                "$type": 6,
+                                "_fieldName": "flowIn",
+                                "_node": $iref:589,
+                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "connections": {
+                                    "$id": 596,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 0,
+                                "_connectionType": 1,
+                                "_typeConstraint": 2,
+                                "_dynamic": false
+                            }
+                        },
+                        {
+                            "$k": "flowOut",
+                            "$v": {
+                                "$id": 597,
+                                "$type": 6,
+                                "_fieldName": "flowOut",
+                                "_node": $iref:589,
+                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "connections": {
+                                    "$id": 598,
+                                    "$type": 7,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "_direction": 1,
+                                "_connectionType": 0,
+                                "_typeConstraint": 0,
+                                "_dynamic": false
+                            }
+                        }
+                    ]
+                },
+                "hasError": false,
+                "error": "",
+                "isExecuting": false,
+                "flowIn": null,
+                "flowOut": null,
+                "seconds": 0,
+                "breakFlow": null
+            }
         ]
     },
     "packedNodes": {
-        "$id": 569,
+        "$id": 599,
         "$type": 22,
         "$rlength": 5,
         "$rcontent": [
             {
-                "$id": 570,
+                "$id": 600,
                 "$type": "26|NT.Graph.NodeGroupGraph, Assembly-CSharp",
                 "_name": "Check Tool",
                 "nodes": $iref:114,
                 "packedNodes": {
-                    "$id": 571,
+                    "$id": 601,
                     "$type": 22,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 572,
+                    "$id": 602,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5382,10 +5676,10 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 573,
+                    "$id": 603,
                     "$type": 24,
                     "comparer": {
-                        "$id": 574,
+                        "$id": 604,
                         "$type": 5
                     },
                     "$rlength": 1,
@@ -5393,7 +5687,7 @@
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 575,
+                                "$id": 605,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5410,7 +5704,7 @@
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 576,
+                    "$id": 606,
                     "$type": "27|System.Collections.Generic.List`1[[XNode.NodePort, Assembly-CSharp]], mscorlib",
                     "$rlength": 7,
                     "$rcontent": [
@@ -5425,19 +5719,19 @@
                 }
             },
             {
-                "$id": 577,
+                "$id": 607,
                 "$type": 26,
                 "_name": "Check Tool",
                 "nodes": $iref:190,
                 "packedNodes": {
-                    "$id": 578,
+                    "$id": 608,
                     "$type": 22,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 579,
+                    "$id": 609,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5445,15 +5739,15 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 580,
+                    "$id": 610,
                     "$type": 24,
-                    "comparer": $iref:574,
+                    "comparer": $iref:604,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 581,
+                                "$id": 611,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5470,7 +5764,7 @@
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 582,
+                    "$id": 612,
                     "$type": 27,
                     "$rlength": 7,
                     "$rcontent": [
@@ -5485,19 +5779,19 @@
                 }
             },
             {
-                "$id": 583,
+                "$id": 613,
                 "$type": 26,
                 "_name": "Check Tool",
                 "nodes": $iref:272,
                 "packedNodes": {
-                    "$id": 584,
+                    "$id": 614,
                     "$type": 22,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 585,
+                    "$id": 615,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5505,15 +5799,15 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 586,
+                    "$id": 616,
                     "$type": 24,
-                    "comparer": $iref:574,
+                    "comparer": $iref:604,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 587,
+                                "$id": 617,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5525,12 +5819,12 @@
                 },
                 "position": {
                     "$type": 3,
-                    -131.5625,
-                    741.5
+                    -142.5,
+                    736.8125
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 588,
+                    "$id": 618,
                     "$type": 27,
                     "$rlength": 7,
                     "$rcontent": [
@@ -5545,19 +5839,19 @@
                 }
             },
             {
-                "$id": 589,
+                "$id": 619,
                 "$type": 26,
                 "_name": "Check Tool",
                 "nodes": $iref:436,
                 "packedNodes": {
-                    "$id": 590,
+                    "$id": 620,
                     "$type": 22,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 591,
+                    "$id": 621,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5565,15 +5859,15 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 592,
+                    "$id": 622,
                     "$type": 24,
-                    "comparer": $iref:574,
+                    "comparer": $iref:604,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 593,
+                                "$id": 623,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5590,7 +5884,7 @@
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 594,
+                    "$id": 624,
                     "$type": 27,
                     "$rlength": 7,
                     "$rcontent": [
@@ -5605,19 +5899,19 @@
                 }
             },
             {
-                "$id": 595,
+                "$id": 625,
                 "$type": 26,
                 "_name": "Check Tool",
                 "nodes": $iref:354,
                 "packedNodes": {
-                    "$id": 596,
+                    "$id": 626,
                     "$type": 22,
                     "$rlength": 0,
                     "$rcontent": [
                     ]
                 },
                 "callbackNodes": {
-                    "$id": 597,
+                    "$id": 627,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5625,15 +5919,15 @@
                     ]
                 },
                 "callbackNodesDict": {
-                    "$id": 598,
+                    "$id": 628,
                     "$type": 24,
-                    "comparer": $iref:574,
+                    "comparer": $iref:604,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 599,
+                                "$id": 629,
                                 "$type": 23,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -5650,7 +5944,7 @@
                 },
                 "assetID": "1d6062bb-843b-45f8-ab92-d4794ed230c5",
                 "ports": {
-                    "$id": 600,
+                    "$id": 630,
                     "$type": 27,
                     "$rlength": 7,
                     "$rcontent": [
@@ -5667,7 +5961,7 @@
         ]
     },
     "callbackNodes": {
-        "$id": 601,
+        "$id": 631,
         "$type": 23,
         "$rlength": 2,
         "$rcontent": [
@@ -5676,15 +5970,15 @@
         ]
     },
     "callbackNodesDict": {
-        "$id": 602,
+        "$id": 632,
         "$type": 24,
-        "comparer": $iref:574,
+        "comparer": $iref:604,
         "$rlength": 2,
         "$rcontent": [
             {
                 "$k": "Exercise End",
                 "$v": {
-                    "$id": 603,
+                    "$id": 633,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
@@ -5695,7 +5989,7 @@
             {
                 "$k": "Check",
                 "$v": {
-                    "$id": 604,
+                    "$id": 634,
                     "$type": 23,
                     "$rlength": 1,
                     "$rcontent": [
