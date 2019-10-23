@@ -163,9 +163,9 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
 
     public Node DuplicateNode()
     {
-        Vector2 position = new Vector2(100,200);
-        position += node.position;
-        return graph.graph.CopyNode(node,position);
+        Node newNode = graph.graph.CopyNode(node);
+        newNode.position = node.position + new Vector2(100, 200);
+        return newNode;
     }
 
     public void Remove()

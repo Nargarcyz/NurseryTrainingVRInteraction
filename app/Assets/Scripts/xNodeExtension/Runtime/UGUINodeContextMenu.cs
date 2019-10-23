@@ -45,23 +45,40 @@ public class UGUINodeContextMenu : UGUIContextMenu {
     public void DuplicateNode()
     {
         RuntimeGraph runtimeGraph = GetComponentInParent<RuntimeGraph>();
+        List<XNode.Node> newNodes = new List<XNode.Node>();
 
         if (runtimeGraph.selectedNodes.Count > 0)
         {
-            List<IUGUINode> result = new List<IUGUINode>();
-            for (int i = runtimeGraph.selectedNodes.Count - 1; i >= 0; i--)
+            for (int i = 0; i < runtimeGraph.selectedNodes.Count; i++)
             {
                 IUGUINode n = runtimeGraph.selectedNodes[i];
                 XNode.Node newNode = n.DuplicateNode();
-                //result.Add(newNode);
+                newNodes.Add(newNode);
             }
-            runtimeGraph.selectedNodes = result;
         }
         else
         {
-            // TODO
-            // selected.Duplicate();
+            if (selected is IUGUINode n)
+            {
+                XNode.Node newNode = n.DuplicateNode();
+                newNodes.Add(newNode);
+            }
         }
+
+        /*
+        // Set new nodes as selected
+        List<IUGUINode> newSelected = new List<IUGUINode>();
+        runtimeGraph.Refresh();
+
+        foreach (XNode.Node n in newNodes)
+        {
+            IUGUINode nodeRuntime = runtimeGraph.GetRuntimeNode(n);
+            newSelected.Add(nodeRuntime);
+        }
+        // TODO: No actualiza a nivel visual los colores de los seleccionados
+        runtimeGraph.selectedNodes = newSelected;
+        */
+        runtimeGraph.selectedNodes.Clear();
 
         runtimeGraph.Refresh();
         Close();
