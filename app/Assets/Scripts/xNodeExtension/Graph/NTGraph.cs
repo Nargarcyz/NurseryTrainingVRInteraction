@@ -106,6 +106,13 @@ namespace  NT.Graph
             packedNodes.Remove(group);
         }
 
+        public Node DuplicateGroupedNodes(NodeGroupGraph group)
+        {
+            // TODO: Duplicate correctly
+
+            return null;
+        }
+
         public IEnumerator StartExecutionFlow(CallbackNode callbackNode)
         {
             NodeExecutionContext nodeExecutionContext = new NodeExecutionContext{node = callbackNode};

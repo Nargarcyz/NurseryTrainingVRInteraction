@@ -104,8 +104,9 @@ public class UGUIGroupedNode :  MonoBehaviour, IPointerClickHandler, IDragHandle
 
     public Node DuplicateNode()
     {
-        // TODO: DUPLICATE GROUPED
-        return null;
+        Node newNode = ((NTGraph)graph.graph).DuplicateGroupedNodes(group);
+        newNode.position = group.position + new Vector2(100, 200);
+        return newNode;
     }
 
     public void Remove()
