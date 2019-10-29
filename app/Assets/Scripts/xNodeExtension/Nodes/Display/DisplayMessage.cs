@@ -1,4 +1,4 @@
-namespace NT.Nodes.Other {
+namespace NT.Nodes.Display {
     
     public class DisplayMessage : FlowNode {
 
