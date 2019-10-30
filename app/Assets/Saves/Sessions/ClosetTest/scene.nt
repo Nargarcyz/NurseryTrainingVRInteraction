@@ -2257,16 +2257,13 @@
                         "callbackNodesDict": {
                             "$id": 232,
                             "$type": 12,
-                            "comparer": {
-                                "$id": 233,
-                                "$type": 1
-                            },
+                            "comparer": $iref:1,
                             "$rlength": 3,
                             "$rcontent": [
                                 {
                                     "$k": "Grabbed",
                                     "$v": {
-                                        "$id": 234,
+                                        "$id": 233,
                                         "$type": 11,
                                         "$rlength": 1,
                                         "$rcontent": [
@@ -2277,7 +2274,7 @@
                                 {
                                     "$k": "Gloves on",
                                     "$v": {
-                                        "$id": 235,
+                                        "$id": 234,
                                         "$type": 11,
                                         "$rlength": 1,
                                         "$rcontent": [
@@ -2288,7 +2285,7 @@
                                 {
                                     "$k": "Cover On",
                                     "$v": {
-                                        "$id": 236,
+                                        "$id": 235,
                                         "$type": 11,
                                         "$rlength": 1,
                                         "$rcontent": [
@@ -2300,13 +2297,13 @@
                         },
                         "linkedNTVariable": "Closet1b1eaef9-0fd2-4d24-836a-252c4d33e5cc",
                         "assignedSCGO": {
-                            "$id": 237,
+                            "$id": 236,
                             "$type": 21,
                             "data": {
                                 "$type": 3,
                                 "id": "Closet1b1eaef9-0fd2-4d24-836a-252c4d33e5cc",
                                 "childs": {
-                                    "$id": 238,
+                                    "$id": 237,
                                     "$type": 4,
                                     "$rlength": 0,
                                     "$rcontent": [
@@ -2331,21 +2328,25 @@
                                 "graph": $iref:102
                             },
                             "outlineRoot": {
-                                "$id": 239,
+                                "$id": 238,
                                 "$type": 13
                             },
                             "drawer": {
-                                "$id": 240,
+                                "$id": 239,
                                 "$type": 13
                             },
                             "slotPivot": {
-                                "$id": 241,
+                                "$id": 240,
                                 "$type": "38|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
                                 "$rlength": 6,
                                 "$rcontent": [
                                     {
-                                        "$id": 242,
+                                        "$id": 241,
                                         "$type": "39|UnityEngine.Transform, UnityEngine.CoreModule"
+                                    },
+                                    {
+                                        "$id": 242,
+                                        "$type": 39
                                     },
                                     {
                                         "$id": 243,
@@ -2362,10 +2363,6 @@
                                     {
                                         "$id": 246,
                                         "$type": 39
-                                    },
-                                    {
-                                        "$id": 247,
-                                        "$type": 39
                                     }
                                 ]
                             }
@@ -2374,18 +2371,22 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 248,
+                    "$id": 247,
                     "$type": 13
                 },
                 "drawer": {
-                    "$id": 249,
+                    "$id": 248,
                     "$type": 13
                 },
                 "slotPivot": {
-                    "$id": 250,
+                    "$id": 249,
                     "$type": 38,
                     "$rlength": 5,
                     "$rcontent": [
+                        {
+                            "$id": 250,
+                            "$type": 39
+                        },
                         {
                             "$id": 251,
                             "$type": 39
@@ -2400,10 +2401,6 @@
                         },
                         {
                             "$id": 254,
-                            "$type": 39
-                        },
-                        {
-                            "$id": 255,
                             "$type": 39
                         }
                     ]
