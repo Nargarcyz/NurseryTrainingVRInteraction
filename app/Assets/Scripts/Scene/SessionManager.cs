@@ -160,7 +160,7 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         SetUpForExecution();
 
         MessageSystem.SendMessage("Application Start");
-        MessageSystem.SendMessage("Excercise Started");
+        MessageSystem.SendMessage("Exercise Started");
     }
 
     public void EndExercise()
