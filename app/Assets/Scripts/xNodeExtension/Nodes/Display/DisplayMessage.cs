@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NT.Atributes;
 using NT.SceneObjects;
+using TMPro;
 
 namespace NT.Nodes.Display {
     
@@ -11,6 +12,7 @@ namespace NT.Nodes.Display {
         public string messageText;
 
         [NTInput] public SceneGameObjectReference objectPosition;
+        //[Input(ShowBackingValue.Never, ConnectionType.Override)] public SceneGameObjectReference objectPosition;
         
 
         public object GetValue() {
@@ -22,22 +24,27 @@ namespace NT.Nodes.Display {
             GameObject messageGameObject = GameObject.Find("ShowMessage/Bocadillo/MessageText");
             GameObject showMessageGameObject = getGameObjectParent(getGameObjectParent(messageGameObject));
 
+            // Make object visible by modifying scale
             bool visible = !string.IsNullOrEmpty(messageText);
-            showMessageGameObject.SetActive(visible);
+            //Vector3 scale = visible ? Vector3.one : Vector3.zero;
+            //showMessageGameObject.transform.localScale = scale;
 
             if (visible)
             {
-                Text textComponent = messageGameObject.GetComponent<Text>();
+                showMessageGameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                TextMeshPro textComponent = messageGameObject.GetComponent<TextMeshPro>();
                 textComponent.text = messageText;
-                // Centered in the object, message outside its bounding box
+                // Place message outside the object's bounding box
                 SceneGameObject positionGameObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null);
                 showMessageGameObject.transform.position = positionGameObject.gameObject.transform.position;
 
-                /*showMessageGameObject.transform.position = objectPosition.reference.transform.position;
-                messageGameObject.transform.position = Vector3.zero;
-                    // TODO: Get corresponding bounding box
-                Vector3 boundingBox = new Vector3(100, 100, 0);
-                messageGameObject.transform.Translate(boundingBox);*/
+                // TODO: Mover dependiendo del bounding box (desde MESH o RENDER)
+                showMessageGameObject.transform.Translate(1, 1, 0);
+                // showMessageGameObject.transform.Translate(boundingBox);*/
+            }
+            else
+            {
+                showMessageGameObject.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
             }
 
             yield return null;
