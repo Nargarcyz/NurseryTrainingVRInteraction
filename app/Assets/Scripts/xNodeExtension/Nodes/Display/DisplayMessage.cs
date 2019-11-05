@@ -9,7 +9,7 @@ namespace NT.Nodes.Display {
     
     public class DisplayMessage : FlowNode {
 
-        public string messageText;
+        [NTInput] public string messageText;
 
         [NTInput] public SceneGameObjectReference objectPosition;
         //[Input(ShowBackingValue.Never, ConnectionType.Override)] public SceneGameObjectReference objectPosition;
@@ -25,15 +25,17 @@ namespace NT.Nodes.Display {
             GameObject showMessageGameObject = getGameObjectParent(getGameObjectParent(messageGameObject));
 
             // Make object visible by modifying scale
-            bool visible = !string.IsNullOrEmpty(messageText);
+            string message = GetInputValue<string>(nameof(this.messageText), this.messageText);
+            bool visible = !string.IsNullOrEmpty(message);
             //Vector3 scale = visible ? Vector3.one : Vector3.zero;
             //showMessageGameObject.transform.localScale = scale;
 
             if (visible)
             {
                 showMessageGameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
                 TextMeshPro textComponent = messageGameObject.GetComponent<TextMeshPro>();
-                textComponent.text = messageText;
+                textComponent.text = message;
                 // Place message outside the object's bounding box
                 SceneGameObject positionGameObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null);
                 showMessageGameObject.transform.position = positionGameObject.gameObject.transform.position;

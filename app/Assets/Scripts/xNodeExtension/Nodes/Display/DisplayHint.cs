@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using NT.Atributes;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ namespace NT.Nodes.Display
 {
     public class DisplayHint : FlowNode
     {
-        public string hintText;
+        [NTInput] public string hintText;
 
 
         public object GetValue()
@@ -18,7 +19,8 @@ namespace NT.Nodes.Display
         {
             GameObject hintGameObject = GameObject.Find("Session Hints/Panel/Hint Text");
             Text textComponent = hintGameObject.GetComponent<Text>();
-            textComponent.text = hintText;
+            string hint = GetInputValue<string>(nameof(this.hintText), this.hintText);
+            textComponent.text = hint;
 
             yield return null;
         }
