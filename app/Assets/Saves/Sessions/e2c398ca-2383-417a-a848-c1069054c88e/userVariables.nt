@@ -5,7 +5,19 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 0,
+    "$rlength": 1,
     "$rcontent": [
+        {
+            "$k": "test",
+            "$v": {
+                "$type": "2|SessionManager+UserVariable, Assembly-CSharp",
+                "value": {
+                    "$id": 2,
+                    "$type": "3|System.Single, mscorlib",
+                    5
+                },
+                "defaultValue": $iref:2
+            }
+        }
     ]
 }
