@@ -94,8 +94,8 @@ public class ExerciseManager : MonoBehaviour
 
     public void Exit(){
         MessageSystem.onMessageSent -= RecieveMessage;
-        SceneManager.LoadScene(0);
-	}
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
 
 
 }

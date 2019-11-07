@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using NT.Atributes;
 using NT.SceneObjects;
 using TMPro;
@@ -22,31 +21,29 @@ namespace NT.Nodes.Display {
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
         {
             GameObject messageGameObject = GameObject.Find("ShowMessage/Bocadillo/MessageText");
-            GameObject showMessageGameObject = getGameObjectParent(getGameObjectParent(messageGameObject));
+            GameObject parentMessageGameObject = getGameObjectParent(getGameObjectParent(messageGameObject));
 
-            // Make object visible by modifying scale
+            // Check if message is empty
             string message = GetInputValue<string>(nameof(this.messageText), this.messageText);
             bool visible = !string.IsNullOrEmpty(message);
-            //Vector3 scale = visible ? Vector3.one : Vector3.zero;
-            //showMessageGameObject.transform.localScale = scale;
+            // Modify visibility by changing scale
+            Vector3 scale = visible ? Vector3.one : Vector3.zero;
+            parentMessageGameObject.transform.localScale = scale;
 
             if (visible)
             {
-                showMessageGameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-
                 TextMeshPro textComponent = messageGameObject.GetComponent<TextMeshPro>();
                 textComponent.text = message;
                 // Place message outside the object's bounding box
                 SceneGameObject positionGameObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null);
-                showMessageGameObject.transform.position = positionGameObject.gameObject.transform.position;
+                parentMessageGameObject.transform.position = positionGameObject.gameObject.transform.position;
 
                 // TODO: Mover dependiendo del bounding box (desde MESH o RENDER)
-                showMessageGameObject.transform.Translate(1, 1, 0);
-                // showMessageGameObject.transform.Translate(boundingBox);*/
-            }
-            else
-            {
-                showMessageGameObject.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
+                BoxCollider collider = positionGameObject.gameObject.GetComponentInChildren<BoxCollider>();
+                Vector3 offset = (collider == null) ? new Vector3(1, 1, 0) : collider.size;
+                parentMessageGameObject.transform.Translate(offset);
+
+                // Rotación de seguimiento alrededor del objeto de posición??
             }
 
             yield return null;
