@@ -1,7 +1,7 @@
 ﻿using NT.Atributes;
 using System.Collections;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace NT.Nodes.Display
 {
@@ -18,7 +18,7 @@ namespace NT.Nodes.Display
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
         {
             GameObject hintGameObject = GameObject.Find("Session Hints/Panel/Hint Text");
-            Text textComponent = hintGameObject.GetComponent<Text>();
+            TextMeshPro textComponent = hintGameObject.GetComponent<TextMeshPro>();
             string hint = GetInputValue<string>(nameof(this.hintText), this.hintText);
             textComponent.text = hint;
 
