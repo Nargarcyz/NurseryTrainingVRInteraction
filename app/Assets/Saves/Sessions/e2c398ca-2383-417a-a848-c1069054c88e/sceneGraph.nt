@@ -5,7 +5,7 @@
     "nodes": {
         "$id": 1,
         "$type": "1|System.Collections.Generic.List`1[[XNode.Node, Assembly-CSharp]], mscorlib",
-        "$rlength": 10,
+        "$rlength": 11,
         "$rcontent": [
             {
                 "$id": 2,
@@ -661,8 +661,78 @@
                                                                 "connections": {
                                                                     "$id": 73,
                                                                     "$type": 7,
-                                                                    "$rlength": 0,
+                                                                    "$rlength": 1,
                                                                     "$rcontent": [
+                                                                        {
+                                                                            "$id": 74,
+                                                                            "$type": 8,
+                                                                            "fieldName": "result",
+                                                                            "node": {
+                                                                                "$id": 75,
+                                                                                "$type": 12,
+                                                                                "_name": "Math Expression",
+                                                                                "graph": $iref:0,
+                                                                                "position": {
+                                                                                    "$type": 3,
+                                                                                    -653.404236,
+                                                                                    -624.085144
+                                                                                },
+                                                                                "ports": {
+                                                                                    "$id": 76,
+                                                                                    "$type": 4,
+                                                                                    "comparer": $iref:4,
+                                                                                    "$rlength": 1,
+                                                                                    "$rcontent": [
+                                                                                        {
+                                                                                            "$k": "result",
+                                                                                            "$v": {
+                                                                                                "$id": 77,
+                                                                                                "$type": 6,
+                                                                                                "_fieldName": "result",
+                                                                                                "_node": $iref:75,
+                                                                                                "_typeQualifiedName": "System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                                                                                "connections": {
+                                                                                                    "$id": 78,
+                                                                                                    "$type": 7,
+                                                                                                    "$rlength": 1,
+                                                                                                    "$rcontent": [
+                                                                                                        {
+                                                                                                            "$id": 79,
+                                                                                                            "$type": 8,
+                                                                                                            "fieldName": "messageText",
+                                                                                                            "node": $iref:70,
+                                                                                                            "reroutePoints": {
+                                                                                                                "$id": 80,
+                                                                                                                "$type": 10,
+                                                                                                                "$rlength": 0,
+                                                                                                                "$rcontent": [
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                "_direction": 1,
+                                                                                                "_connectionType": 0,
+                                                                                                "_typeConstraint": 0,
+                                                                                                "_dynamic": false
+                                                                                            }
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "hasError": false,
+                                                                                "error": "",
+                                                                                "isExecuting": false,
+                                                                                "expression": "VarN + VarM",
+                                                                                "result": 0
+                                                                            },
+                                                                            "reroutePoints": {
+                                                                                "$id": 81,
+                                                                                "$type": 10,
+                                                                                "$rlength": 0,
+                                                                                "$rcontent": [
+                                                                                ]
+                                                                            }
+                                                                        }
                                                                     ]
                                                                 },
                                                                 "_direction": 0,
@@ -674,23 +744,23 @@
                                                         {
                                                             "$k": "objectPosition",
                                                             "$v": {
-                                                                "$id": 74,
+                                                                "$id": 82,
                                                                 "$type": 6,
                                                                 "_fieldName": "objectPosition",
                                                                 "_node": $iref:70,
                                                                 "_typeQualifiedName": "NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                 "connections": {
-                                                                    "$id": 75,
+                                                                    "$id": 83,
                                                                     "$type": 7,
                                                                     "$rlength": 1,
                                                                     "$rcontent": [
                                                                         {
-                                                                            "$id": 76,
+                                                                            "$id": 84,
                                                                             "$type": 8,
                                                                             "fieldName": "value",
                                                                             "node": $iref:65,
                                                                             "reroutePoints": {
-                                                                                "$id": 77,
+                                                                                "$id": 85,
                                                                                 "$type": 10,
                                                                                 "$rlength": 0,
                                                                                 "$rcontent": [
@@ -708,22 +778,22 @@
                                                         {
                                                             "$k": "flowIn",
                                                             "$v": {
-                                                                "$id": 78,
+                                                                "$id": 86,
                                                                 "$type": 6,
                                                                 "_fieldName": "flowIn",
                                                                 "_node": $iref:70,
                                                                 "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                 "connections": {
-                                                                    "$id": 79,
+                                                                    "$id": 87,
                                                                     "$type": 7,
                                                                     "$rlength": 1,
                                                                     "$rcontent": [
                                                                         {
-                                                                            "$id": 80,
+                                                                            "$id": 88,
                                                                             "$type": 8,
                                                                             "fieldName": "flowOut",
                                                                             "node": {
-                                                                                "$id": 81,
+                                                                                "$id": 89,
                                                                                 "$type": 2,
                                                                                 "_name": "Message Received",
                                                                                 "graph": $iref:0,
@@ -733,7 +803,7 @@
                                                                                     -358.423523
                                                                                 },
                                                                                 "ports": {
-                                                                                    "$id": 82,
+                                                                                    "$id": 90,
                                                                                     "$type": 4,
                                                                                     "comparer": $iref:4,
                                                                                     "$rlength": 1,
@@ -741,23 +811,23 @@
                                                                                         {
                                                                                             "$k": "flowOut",
                                                                                             "$v": {
-                                                                                                "$id": 83,
+                                                                                                "$id": 91,
                                                                                                 "$type": 6,
                                                                                                 "_fieldName": "flowOut",
-                                                                                                "_node": $iref:81,
+                                                                                                "_node": $iref:89,
                                                                                                 "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                 "connections": {
-                                                                                                    "$id": 84,
+                                                                                                    "$id": 92,
                                                                                                     "$type": 7,
                                                                                                     "$rlength": 1,
                                                                                                     "$rcontent": [
                                                                                                         {
-                                                                                                            "$id": 85,
+                                                                                                            "$id": 93,
                                                                                                             "$type": 8,
                                                                                                             "fieldName": "flowIn",
                                                                                                             "node": $iref:70,
                                                                                                             "reroutePoints": {
-                                                                                                                "$id": 86,
+                                                                                                                "$id": 94,
                                                                                                                 "$type": 10,
                                                                                                                 "$rlength": 0,
                                                                                                                 "$rcontent": [
@@ -782,7 +852,7 @@
                                                                                 "linkedToSceneObject": null
                                                                             },
                                                                             "reroutePoints": {
-                                                                                "$id": 87,
+                                                                                "$id": 95,
                                                                                 "$type": 10,
                                                                                 "$rlength": 0,
                                                                                 "$rcontent": [
@@ -800,22 +870,22 @@
                                                         {
                                                             "$k": "flowOut",
                                                             "$v": {
-                                                                "$id": 88,
+                                                                "$id": 96,
                                                                 "$type": 6,
                                                                 "_fieldName": "flowOut",
                                                                 "_node": $iref:70,
                                                                 "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                 "connections": {
-                                                                    "$id": 89,
+                                                                    "$id": 97,
                                                                     "$type": 7,
                                                                     "$rlength": 1,
                                                                     "$rcontent": [
                                                                         {
-                                                                            "$id": 90,
+                                                                            "$id": 98,
                                                                             "$type": 8,
                                                                             "fieldName": "flowIn",
                                                                             "node": {
-                                                                                "$id": 91,
+                                                                                "$id": 99,
                                                                                 "$type": 13,
                                                                                 "_name": "Wait For Seconds",
                                                                                 "graph": $iref:0,
@@ -825,7 +895,7 @@
                                                                                     -415.97
                                                                                 },
                                                                                 "ports": {
-                                                                                    "$id": 92,
+                                                                                    "$id": 100,
                                                                                     "$type": 4,
                                                                                     "comparer": $iref:4,
                                                                                     "$rlength": 4,
@@ -833,13 +903,13 @@
                                                                                         {
                                                                                             "$k": "seconds",
                                                                                             "$v": {
-                                                                                                "$id": 93,
+                                                                                                "$id": 101,
                                                                                                 "$type": 6,
                                                                                                 "_fieldName": "seconds",
-                                                                                                "_node": $iref:91,
+                                                                                                "_node": $iref:99,
                                                                                                 "_typeQualifiedName": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                                 "connections": {
-                                                                                                    "$id": 94,
+                                                                                                    "$id": 102,
                                                                                                     "$type": 7,
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
@@ -854,13 +924,13 @@
                                                                                         {
                                                                                             "$k": "breakFlow",
                                                                                             "$v": {
-                                                                                                "$id": 95,
+                                                                                                "$id": 103,
                                                                                                 "$type": 6,
                                                                                                 "_fieldName": "breakFlow",
-                                                                                                "_node": $iref:91,
+                                                                                                "_node": $iref:99,
                                                                                                 "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                 "connections": {
-                                                                                                    "$id": 96,
+                                                                                                    "$id": 104,
                                                                                                     "$type": 7,
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
@@ -875,23 +945,23 @@
                                                                                         {
                                                                                             "$k": "flowIn",
                                                                                             "$v": {
-                                                                                                "$id": 97,
+                                                                                                "$id": 105,
                                                                                                 "$type": 6,
                                                                                                 "_fieldName": "flowIn",
-                                                                                                "_node": $iref:91,
+                                                                                                "_node": $iref:99,
                                                                                                 "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                 "connections": {
-                                                                                                    "$id": 98,
+                                                                                                    "$id": 106,
                                                                                                     "$type": 7,
                                                                                                     "$rlength": 1,
                                                                                                     "$rcontent": [
                                                                                                         {
-                                                                                                            "$id": 99,
+                                                                                                            "$id": 107,
                                                                                                             "$type": 8,
                                                                                                             "fieldName": "flowOut",
                                                                                                             "node": $iref:70,
                                                                                                             "reroutePoints": {
-                                                                                                                "$id": 100,
+                                                                                                                "$id": 108,
                                                                                                                 "$type": 10,
                                                                                                                 "$rlength": 0,
                                                                                                                 "$rcontent": [
@@ -909,13 +979,13 @@
                                                                                         {
                                                                                             "$k": "flowOut",
                                                                                             "$v": {
-                                                                                                "$id": 101,
+                                                                                                "$id": 109,
                                                                                                 "$type": 6,
                                                                                                 "_fieldName": "flowOut",
-                                                                                                "_node": $iref:91,
+                                                                                                "_node": $iref:99,
                                                                                                 "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                 "connections": {
-                                                                                                    "$id": 102,
+                                                                                                    "$id": 110,
                                                                                                     "$type": 7,
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
@@ -938,7 +1008,7 @@
                                                                                 "breakFlow": null
                                                                             },
                                                                             "reroutePoints": {
-                                                                                "$id": 103,
+                                                                                "$id": 111,
                                                                                 "$type": 10,
                                                                                 "$rlength": 0,
                                                                                 "$rcontent": [
@@ -964,7 +1034,7 @@
                                                 "objectPosition": null
                                             },
                                             "reroutePoints": {
-                                                "$id": 104,
+                                                "$id": 112,
                                                 "$type": 10,
                                                 "$rlength": 0,
                                                 "$rcontent": [
@@ -985,48 +1055,49 @@
                 "error": "",
                 "isExecuting": false,
                 "variableType": {
-                    "$id": 105,
+                    "$id": 113,
                     "$type": "16|System.RuntimeType, mscorlib",
                     "SceneGameObject, Assembly-CSharp"
                 },
                 "variablePath": "",
                 "dataType": {
-                    "$id": 106,
+                    "$id": 114,
                     "$type": 16,
                     "System.String, mscorlib"
                 },
                 "dataKey": "SteelTableb7bd91e5-bd0a-4cd0-b1ba-2445a6265d82"
             },
-            $iref:81,
-            $iref:91,
+            $iref:89,
+            $iref:99,
             $iref:70,
             $iref:24,
             $iref:8,
             $iref:38,
-            $iref:51
+            $iref:51,
+            $iref:75
         ]
     },
     "packedNodes": {
-        "$id": 107,
+        "$id": 115,
         "$type": "17|System.Collections.Generic.List`1[[NT.Graph.NodeGroupGraph, Assembly-CSharp]], mscorlib",
         "$rlength": 0,
         "$rcontent": [
         ]
     },
     "callbackNodes": {
-        "$id": 108,
+        "$id": 116,
         "$type": "18|System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib",
         "$rlength": 2,
         "$rcontent": [
             $iref:2,
-            $iref:81
+            $iref:89
         ]
     },
     "callbackNodesDict": {
-        "$id": 109,
+        "$id": 117,
         "$type": "19|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib]], mscorlib",
         "comparer": {
-            "$id": 110,
+            "$id": 118,
             "$type": 5
         },
         "$rlength": 2,
@@ -1034,7 +1105,7 @@
             {
                 "$k": "Exercise End",
                 "$v": {
-                    "$id": 111,
+                    "$id": 119,
                     "$type": 18,
                     "$rlength": 1,
                     "$rcontent": [
@@ -1045,11 +1116,11 @@
             {
                 "$k": "Exercise Started",
                 "$v": {
-                    "$id": 112,
+                    "$id": 120,
                     "$type": 18,
                     "$rlength": 1,
                     "$rcontent": [
-                        $iref:81
+                        $iref:89
                     ]
                 }
             }

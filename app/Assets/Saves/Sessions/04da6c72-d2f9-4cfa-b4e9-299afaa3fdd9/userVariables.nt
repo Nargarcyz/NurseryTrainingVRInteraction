@@ -5,7 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 3,
+    "$rlength": 6,
     "$rcontent": [
         {
             "$k": "FinalGrade",
@@ -16,11 +16,19 @@
                     "$type": "3|System.Single, mscorlib",
                     0
                 },
-                "defaultValue": {
+                "defaultValue": $iref:2
+            }
+        },
+        {
+            "$k": "WrongGrade",
+            "$v": {
+                "$type": 2,
+                "value": {
                     "$id": 3,
                     "$type": 3,
                     0
-                }
+                },
+                "defaultValue": $iref:3
             }
         },
         {
@@ -36,19 +44,43 @@
             }
         },
         {
-            "$k": "WrongGrade",
+            "$k": "MaxGrade",
             "$v": {
                 "$type": 2,
                 "value": {
                     "$id": 5,
                     "$type": 3,
-                    1
+                    10
+                },
+                "defaultValue": $iref:5
+            }
+        },
+        {
+            "$k": "GlovesOn",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 6,
+                    "$type": "4|System.Boolean, mscorlib",
+                    true
                 },
                 "defaultValue": {
-                    "$id": 6,
-                    "$type": 3,
-                    0
+                    "$id": 7,
+                    "$type": 4,
+                    false
                 }
+            }
+        },
+        {
+            "$k": "Table Cover On",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 8,
+                    "$type": 4,
+                    false
+                },
+                "defaultValue": $iref:8
             }
         }
     ]

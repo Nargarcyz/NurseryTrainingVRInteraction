@@ -19,7 +19,8 @@ public class GlovesSceneGameObjects : SceneGameObject
             {
                 h.GetComponentInChildren<SkinnedMeshRenderer>().material.color = glovesColor;      
             }
-            MessageSystem.SendMessage(data.id + "Gloves On");
+            //MessageSystem.SendMessage(data.id + "Gloves On");
+            MessageSystem.SendMessage("Gloves On");
             gameObject.SetActive(false);
         }
     }

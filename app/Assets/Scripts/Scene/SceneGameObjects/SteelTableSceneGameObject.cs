@@ -64,7 +64,8 @@ public class SteelTableSceneGameObject : SceneGameObject
         if (!anyItem)
         {
             coverVisual.gameObject.SetActive(true);
-            MessageSystem.SendMessage(data.id + "Cover On");
+            //MessageSystem.SendMessage(data.id + "Cover On");
+            MessageSystem.SendMessage("Cover On");
         }
     }
     
