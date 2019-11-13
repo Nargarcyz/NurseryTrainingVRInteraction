@@ -14,25 +14,17 @@
                 "value": {
                     "$id": 2,
                     "$type": "3|System.Single, mscorlib",
-                    0
+                    10
                 },
-                "defaultValue": $iref:2
+                "defaultValue": {
+                    "$id": 3,
+                    "$type": 3,
+                    0
+                }
             }
         },
         {
             "$k": "WrongGrade",
-            "$v": {
-                "$type": 2,
-                "value": {
-                    "$id": 3,
-                    "$type": 3,
-                    0
-                },
-                "defaultValue": $iref:3
-            }
-        },
-        {
-            "$k": "CorrectGrade",
             "$v": {
                 "$type": 2,
                 "value": {
@@ -44,15 +36,31 @@
             }
         },
         {
-            "$k": "MaxGrade",
+            "$k": "CorrectGrade",
             "$v": {
                 "$type": 2,
                 "value": {
                     "$id": 5,
                     "$type": 3,
+                    1
+                },
+                "defaultValue": {
+                    "$id": 6,
+                    "$type": 3,
+                    0
+                }
+            }
+        },
+        {
+            "$k": "MaxGrade",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 7,
+                    "$type": 3,
                     10
                 },
-                "defaultValue": $iref:5
+                "defaultValue": $iref:7
             }
         },
         {
@@ -60,12 +68,12 @@
             "$v": {
                 "$type": 2,
                 "value": {
-                    "$id": 6,
+                    "$id": 8,
                     "$type": "4|System.Boolean, mscorlib",
                     true
                 },
                 "defaultValue": {
-                    "$id": 7,
+                    "$id": 9,
                     "$type": 4,
                     false
                 }
@@ -76,11 +84,15 @@
             "$v": {
                 "$type": 2,
                 "value": {
-                    "$id": 8,
+                    "$id": 10,
+                    "$type": 4,
+                    true
+                },
+                "defaultValue": {
+                    "$id": 11,
                     "$type": 4,
                     false
-                },
-                "defaultValue": $iref:8
+                }
             }
         }
     ]
