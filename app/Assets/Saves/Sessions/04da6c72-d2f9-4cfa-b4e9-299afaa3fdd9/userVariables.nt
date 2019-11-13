@@ -14,7 +14,7 @@
                 "value": {
                     "$id": 2,
                     "$type": "3|System.Single, mscorlib",
-                    10
+                    0
                 },
                 "defaultValue": {
                     "$id": 3,
@@ -30,9 +30,13 @@
                 "value": {
                     "$id": 4,
                     "$type": 3,
-                    0
+                    2
                 },
-                "defaultValue": $iref:4
+                "defaultValue": {
+                    "$id": 5,
+                    "$type": 3,
+                    0
+                }
             }
         },
         {
@@ -40,15 +44,11 @@
             "$v": {
                 "$type": 2,
                 "value": {
-                    "$id": 5,
-                    "$type": 3,
-                    1
-                },
-                "defaultValue": {
                     "$id": 6,
                     "$type": 3,
                     0
-                }
+                },
+                "defaultValue": $iref:6
             }
         },
         {
@@ -70,13 +70,9 @@
                 "value": {
                     "$id": 8,
                     "$type": "4|System.Boolean, mscorlib",
-                    true
-                },
-                "defaultValue": {
-                    "$id": 9,
-                    "$type": 4,
                     false
-                }
+                },
+                "defaultValue": $iref:8
             }
         },
         {
@@ -84,15 +80,11 @@
             "$v": {
                 "$type": 2,
                 "value": {
-                    "$id": 10,
-                    "$type": 4,
-                    true
-                },
-                "defaultValue": {
-                    "$id": 11,
+                    "$id": 9,
                     "$type": 4,
                     false
-                }
+                },
+                "defaultValue": $iref:9
             }
         }
     ]

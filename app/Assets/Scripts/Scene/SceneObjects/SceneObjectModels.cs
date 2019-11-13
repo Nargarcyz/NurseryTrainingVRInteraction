@@ -17,7 +17,8 @@ namespace NT.SceneObjects
         Devices = 2,
         Tools = 3,
         Decoration = 4,
-        UserPrefabs = 5
+        UserPrefabs = 5,
+        Humanoids = 6
     }
 
     [System.Serializable]
