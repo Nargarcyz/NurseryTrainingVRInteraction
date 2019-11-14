@@ -16,11 +16,7 @@
                     "$type": "3|System.Single, mscorlib",
                     0
                 },
-                "defaultValue": {
-                    "$id": 3,
-                    "$type": 3,
-                    0
-                }
+                "defaultValue": $iref:2
             }
         },
         {
@@ -28,15 +24,11 @@
             "$v": {
                 "$type": 2,
                 "value": {
-                    "$id": 4,
-                    "$type": 3,
-                    2
-                },
-                "defaultValue": {
-                    "$id": 5,
+                    "$id": 3,
                     "$type": 3,
                     0
-                }
+                },
+                "defaultValue": $iref:3
             }
         },
         {
@@ -44,11 +36,11 @@
             "$v": {
                 "$type": 2,
                 "value": {
-                    "$id": 6,
+                    "$id": 4,
                     "$type": 3,
                     0
                 },
-                "defaultValue": $iref:6
+                "defaultValue": $iref:4
             }
         },
         {
@@ -56,11 +48,11 @@
             "$v": {
                 "$type": 2,
                 "value": {
-                    "$id": 7,
+                    "$id": 5,
                     "$type": 3,
                     10
                 },
-                "defaultValue": $iref:7
+                "defaultValue": $iref:5
             }
         },
         {
@@ -68,11 +60,15 @@
             "$v": {
                 "$type": 2,
                 "value": {
-                    "$id": 8,
+                    "$id": 6,
                     "$type": "4|System.Boolean, mscorlib",
-                    false
+                    true
                 },
-                "defaultValue": $iref:8
+                "defaultValue": {
+                    "$id": 7,
+                    "$type": 4,
+                    false
+                }
             }
         },
         {
@@ -80,11 +76,15 @@
             "$v": {
                 "$type": 2,
                 "value": {
+                    "$id": 8,
+                    "$type": 4,
+                    true
+                },
+                "defaultValue": {
                     "$id": 9,
                     "$type": 4,
                     false
-                },
-                "defaultValue": $iref:9
+                }
             }
         }
     ]

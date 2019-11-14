@@ -210,15 +210,15 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.0389339626,
-                        -3.110498,
-                        8.787494E-05
+                        69.6373444,
+                        0.240000784,
+                        3.13437939
                     },
                     "rotation": {
                         "$type": 7,
-                        0.0310849249,
-                        359.8584,
-                        359.9788
+                        0,
+                        270,
+                        0
                     },
                     "graph": {
                         "$id": 24,
@@ -285,8 +285,28 @@
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
-                    "secondaryGrabActionScript": null,
+                    "grabAttachMechanicScript": {
+                        "$id": 33,
+                        "$type": "18|VRTK.GrabAttachMechanics.VRTK_FixedJointGrabAttach, Assembly-CSharp",
+                        "precisionGrab": false,
+                        "rightSnapHandle": {
+                            "$id": 34,
+                            "$type": "19|UnityEngine.Transform, UnityEngine.CoreModule"
+                        },
+                        "leftSnapHandle": {
+                            "$id": 35,
+                            "$type": 19
+                        },
+                        "throwVelocityWithAttachDistance": false,
+                        "throwMultiplier": 1,
+                        "onGrabCollisionDelay": 0,
+                        "destroyImmediatelyOnThrow": true,
+                        "breakForce": 1500
+                    },
+                    "secondaryGrabActionScript": {
+                        "$id": 36,
+                        "$type": "20|VRTK.SecondaryControllerGrabActions.VRTK_SwapControllerGrabAction, Assembly-CSharp"
+                    },
                     "isUsable": false,
                     "holdButtonToUse": true,
                     "useOnlyIfGrabbed": false,
@@ -295,7 +315,7 @@
                     "allowedUseControllers": 0,
                     "objectHighlighter": null,
                     "touchHighlightColor": {
-                        "$type": "18|UnityEngine.Color, UnityEngine.CoreModule",
+                        "$type": "21|UnityEngine.Color, UnityEngine.CoreModule",
                         0,
                         0,
                         0,
@@ -308,13 +328,13 @@
         {
             "$k": "Closet61628be2-5f22-404f-8361-08321e01101a",
             "$v": {
-                "$id": 33,
-                "$type": "19|ClosetSceneGameObject, Assembly-CSharp",
+                "$id": 37,
+                "$type": "22|ClosetSceneGameObject, Assembly-CSharp",
                 "data": {
                     "$type": 3,
                     "id": "Closet61628be2-5f22-404f-8361-08321e01101a",
                     "childs": {
-                        "$id": 34,
+                        "$id": 38,
                         "$type": 4,
                         "$rlength": 2,
                         "$rcontent": [
@@ -324,58 +344,58 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 35,
-                        "$type": "20|NT.Variables.NTVariable`1[[NT.SceneObjects.ClosetData, Assembly-CSharp]], Assembly-CSharp",
+                        "$id": 39,
+                        "$type": "23|NT.Variables.NTVariable`1[[NT.SceneObjects.ClosetData, Assembly-CSharp]], Assembly-CSharp",
                         "collapsed": true,
                         "name": null,
                         "value": {
-                            "$type": "21|NT.SceneObjects.ClosetData, Assembly-CSharp",
+                            "$type": "24|NT.SceneObjects.ClosetData, Assembly-CSharp",
                             "mainDrawer": {
-                                "$type": "22|NT.SceneObjects.Drawer, Assembly-CSharp",
+                                "$type": "25|NT.SceneObjects.Drawer, Assembly-CSharp",
                                 "canBeOpened": false,
                                 "slot00": {
-                                    "$id": 36,
-                                    "$type": "23|NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp",
+                                    "$id": 40,
+                                    "$type": "26|NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp",
                                     "linkedSGO": "Scissors52949435-8475-4426-91bf-9c27b73ba7f7"
                                 },
                                 "slot01": {
-                                    "$id": 37,
-                                    "$type": 23,
+                                    "$id": 41,
+                                    "$type": 26,
                                     "linkedSGO": "Scissors_bigf32f6629-d12e-4cb2-9063-48a57130e13b"
                                 },
                                 "slot02": {
-                                    "$id": 38,
-                                    "$type": 23,
+                                    "$id": 42,
+                                    "$type": 26,
                                     "linkedSGO": "Forceps_big47ae0c3c-83de-4703-8c11-1bda3de139ec"
                                 },
                                 "slot03": {
-                                    "$id": 39,
-                                    "$type": 23,
+                                    "$id": 43,
+                                    "$type": 26,
                                     "linkedSGO": "Forceps_small9550033c-f839-43aa-8cac-86fd660917ac"
                                 },
                                 "slot04": {
-                                    "$id": 40,
-                                    "$type": 23,
+                                    "$id": 44,
+                                    "$type": 26,
                                     "linkedSGO": "Clamp6a586cca-aebe-4fc5-8e15-509efbef1a14"
                                 },
                                 "slot05": {
-                                    "$id": 41,
-                                    "$type": 23,
+                                    "$id": 45,
+                                    "$type": 26,
                                     "linkedSGO": "TableCoverb1c4d3e3-d54d-4176-bba1-1e8479e3d0c4"
                                 }
                             }
                         },
                         "defaultValue": {
-                            "$type": 21,
+                            "$type": 24,
                             "mainDrawer": {
-                                "$type": 22,
+                                "$type": 25,
                                 "canBeOpened": false,
-                                "slot00": $iref:36,
-                                "slot01": $iref:37,
-                                "slot02": $iref:38,
-                                "slot03": $iref:39,
-                                "slot04": $iref:40,
-                                "slot05": $iref:41
+                                "slot00": $iref:40,
+                                "slot01": $iref:41,
+                                "slot02": $iref:42,
+                                "slot03": $iref:43,
+                                "slot04": $iref:44,
+                                "slot05": $iref:45
                             }
                         }
                     },
@@ -394,32 +414,32 @@
                         0
                     },
                     "graph": {
-                        "$id": 42,
+                        "$id": 46,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 43,
+                            "$id": 47,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 44,
+                            "$id": 48,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 45,
+                            "$id": 49,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 46,
+                            "$id": 50,
                             "$type": 12,
                             "comparer": $iref:29,
                             "$rlength": 0,
@@ -432,37 +452,37 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 47,
+                    "$id": 51,
                     "$type": 13
                 },
                 "drawer": {
-                    "$id": 48,
+                    "$id": 52,
                     "$type": 13
                 },
                 "slotPivot": {
-                    "$id": 49,
-                    "$type": "24|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
+                    "$id": 53,
+                    "$type": "27|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
                     "$rlength": 5,
                     "$rcontent": [
                         {
-                            "$id": 50,
-                            "$type": "25|UnityEngine.Transform, UnityEngine.CoreModule"
-                        },
-                        {
-                            "$id": 51,
-                            "$type": 25
-                        },
-                        {
-                            "$id": 52,
-                            "$type": 25
-                        },
-                        {
-                            "$id": 53,
-                            "$type": 25
-                        },
-                        {
                             "$id": 54,
-                            "$type": 25
+                            "$type": 19
+                        },
+                        {
+                            "$id": 55,
+                            "$type": 19
+                        },
+                        {
+                            "$id": 56,
+                            "$type": 19
+                        },
+                        {
+                            "$id": 57,
+                            "$type": 19
+                        },
+                        {
+                            "$id": 58,
+                            "$type": 19
                         }
                     ]
                 }
@@ -471,13 +491,13 @@
         {
             "$k": "SteelTablefd6b858d-c158-42c9-9ee4-db9be0a73f53",
             "$v": {
-                "$id": 55,
-                "$type": "26|SteelTableSceneGameObject, Assembly-CSharp",
+                "$id": 59,
+                "$type": "28|SteelTableSceneGameObject, Assembly-CSharp",
                 "data": {
                     "$type": 3,
                     "id": "SteelTablefd6b858d-c158-42c9-9ee4-db9be0a73f53",
                     "childs": {
-                        "$id": 56,
+                        "$id": 60,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -485,20 +505,32 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 57,
-                        "$type": "27|NT.Variables.NTVariable`1[[NT.SceneObjects.TableData, Assembly-CSharp]], Assembly-CSharp",
+                        "$id": 61,
+                        "$type": "29|NT.Variables.NTVariable`1[[NT.SceneObjects.TableData, Assembly-CSharp]], Assembly-CSharp",
                         "collapsed": true,
                         "name": null,
                         "value": {
-                            "$type": "28|NT.SceneObjects.TableData, Assembly-CSharp",
-                            "slot00": null,
-                            "slot01": null,
+                            "$type": "30|NT.SceneObjects.TableData, Assembly-CSharp",
+                            "slot00": {
+                                "$id": 62,
+                                "$type": 26,
+                                "linkedSGO": "Scissors52949435-8475-4426-91bf-9c27b73ba7f7"
+                            },
+                            "slot01": {
+                                "$id": 63,
+                                "$type": 26,
+                                "linkedSGO": "Scissors52949435-8475-4426-91bf-9c27b73ba7f7"
+                            },
                             "slot02": null,
-                            "slot03": null,
+                            "slot03": {
+                                "$id": 64,
+                                "$type": 26,
+                                "linkedSGO": "Clamp6a586cca-aebe-4fc5-8e15-509efbef1a14"
+                            },
                             "slot04": null
                         },
                         "defaultValue": {
-                            "$type": 28,
+                            "$type": 30,
                             "slot00": null,
                             "slot01": null,
                             "slot02": null,
@@ -521,84 +553,84 @@
                         0
                     },
                     "graph": {
-                        "$id": 58,
+                        "$id": 65,
                         "$type": 8,
                         "_name": "SceneObjectGraph",
                         "nodes": {
-                            "$id": 59,
+                            "$id": 66,
                             "$type": 9,
                             "$rlength": 3,
                             "$rcontent": [
                                 {
-                                    "$id": 60,
-                                    "$type": "29|NT.Nodes.Messages.CallbackNode, Assembly-CSharp",
+                                    "$id": 67,
+                                    "$type": "31|NT.Nodes.Messages.CallbackNode, Assembly-CSharp",
                                     "_name": "Message Received",
-                                    "graph": $iref:58,
+                                    "graph": $iref:65,
                                     "position": {
-                                        "$type": "30|UnityEngine.Vector2, UnityEngine.CoreModule",
+                                        "$type": "32|UnityEngine.Vector2, UnityEngine.CoreModule",
                                         -293.5,
                                         -187.639984
                                     },
                                     "ports": {
-                                        "$id": 61,
-                                        "$type": "31|XNode.Node+NodePortDictionary, Assembly-CSharp",
+                                        "$id": 68,
+                                        "$type": "33|XNode.Node+NodePortDictionary, Assembly-CSharp",
                                         "comparer": $iref:1,
                                         "$rlength": 1,
                                         "$rcontent": [
                                             {
                                                 "$k": "flowOut",
                                                 "$v": {
-                                                    "$id": 62,
-                                                    "$type": "32|XNode.NodePort, Assembly-CSharp",
+                                                    "$id": 69,
+                                                    "$type": "34|XNode.NodePort, Assembly-CSharp",
                                                     "_fieldName": "flowOut",
-                                                    "_node": $iref:60,
+                                                    "_node": $iref:67,
                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                     "connections": {
-                                                        "$id": 63,
-                                                        "$type": "33|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, Assembly-CSharp]], mscorlib",
+                                                        "$id": 70,
+                                                        "$type": "35|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, Assembly-CSharp]], mscorlib",
                                                         "$rlength": 1,
                                                         "$rcontent": [
                                                             {
-                                                                "$id": 64,
-                                                                "$type": "34|XNode.NodePort+PortConnection, Assembly-CSharp",
+                                                                "$id": 71,
+                                                                "$type": "36|XNode.NodePort+PortConnection, Assembly-CSharp",
                                                                 "fieldName": "flowIn",
                                                                 "node": {
-                                                                    "$id": 65,
-                                                                    "$type": "35|NT.Nodes.Variables.SetUserVariableNode, Assembly-CSharp",
+                                                                    "$id": 72,
+                                                                    "$type": "37|NT.Nodes.Variables.SetUserVariableNode, Assembly-CSharp",
                                                                     "_name": "SET - (Table Cover On)",
-                                                                    "graph": $iref:58,
+                                                                    "graph": $iref:65,
                                                                     "position": {
-                                                                        "$type": 30,
+                                                                        "$type": 32,
                                                                         -0.5,
                                                                         -178.639984
                                                                     },
                                                                     "ports": {
-                                                                        "$id": 66,
-                                                                        "$type": 31,
+                                                                        "$id": 73,
+                                                                        "$type": 33,
                                                                         "comparer": $iref:1,
                                                                         "$rlength": 3,
                                                                         "$rcontent": [
                                                                             {
                                                                                 "$k": "flowIn",
                                                                                 "$v": {
-                                                                                    "$id": 67,
-                                                                                    "$type": 32,
+                                                                                    "$id": 74,
+                                                                                    "$type": 34,
                                                                                     "_fieldName": "flowIn",
-                                                                                    "_node": $iref:65,
+                                                                                    "_node": $iref:72,
                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                     "connections": {
-                                                                                        "$id": 68,
-                                                                                        "$type": 33,
+                                                                                        "$id": 75,
+                                                                                        "$type": 35,
                                                                                         "$rlength": 1,
                                                                                         "$rcontent": [
                                                                                             {
-                                                                                                "$id": 69,
-                                                                                                "$type": 34,
+                                                                                                "$id": 76,
+                                                                                                "$type": 36,
                                                                                                 "fieldName": "flowOut",
-                                                                                                "node": $iref:60,
+                                                                                                "node": $iref:67,
                                                                                                 "reroutePoints": {
-                                                                                                    "$id": 70,
-                                                                                                    "$type": "36|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]], mscorlib",
+                                                                                                    "$id": 77,
+                                                                                                    "$type": "38|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]], mscorlib",
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
                                                                                                     ]
@@ -615,47 +647,47 @@
                                                                             {
                                                                                 "$k": "flowOut",
                                                                                 "$v": {
-                                                                                    "$id": 71,
-                                                                                    "$type": 32,
+                                                                                    "$id": 78,
+                                                                                    "$type": 34,
                                                                                     "_fieldName": "flowOut",
-                                                                                    "_node": $iref:65,
+                                                                                    "_node": $iref:72,
                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                     "connections": {
-                                                                                        "$id": 72,
-                                                                                        "$type": 33,
+                                                                                        "$id": 79,
+                                                                                        "$type": 35,
                                                                                         "$rlength": 1,
                                                                                         "$rcontent": [
                                                                                             {
-                                                                                                "$id": 73,
-                                                                                                "$type": 34,
+                                                                                                "$id": 80,
+                                                                                                "$type": 36,
                                                                                                 "fieldName": "flowIn",
                                                                                                 "node": {
-                                                                                                    "$id": 74,
-                                                                                                    "$type": "37|NT.Nodes.Display.DisplayHint, Assembly-CSharp",
+                                                                                                    "$id": 81,
+                                                                                                    "$type": "39|NT.Nodes.Display.DisplayHint, Assembly-CSharp",
                                                                                                     "_name": "Display Hint",
-                                                                                                    "graph": $iref:58,
+                                                                                                    "graph": $iref:65,
                                                                                                     "position": {
-                                                                                                        "$type": 30,
+                                                                                                        "$type": 32,
                                                                                                         269,
                                                                                                         -166.639984
                                                                                                     },
                                                                                                     "ports": {
-                                                                                                        "$id": 75,
-                                                                                                        "$type": 31,
+                                                                                                        "$id": 82,
+                                                                                                        "$type": 33,
                                                                                                         "comparer": $iref:1,
                                                                                                         "$rlength": 3,
                                                                                                         "$rcontent": [
                                                                                                             {
                                                                                                                 "$k": "hintText",
                                                                                                                 "$v": {
-                                                                                                                    "$id": 76,
-                                                                                                                    "$type": 32,
+                                                                                                                    "$id": 83,
+                                                                                                                    "$type": 34,
                                                                                                                     "_fieldName": "hintText",
-                                                                                                                    "_node": $iref:74,
+                                                                                                                    "_node": $iref:81,
                                                                                                                     "_typeQualifiedName": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                                                     "connections": {
-                                                                                                                        "$id": 77,
-                                                                                                                        "$type": 33,
+                                                                                                                        "$id": 84,
+                                                                                                                        "$type": 35,
                                                                                                                         "$rlength": 0,
                                                                                                                         "$rcontent": [
                                                                                                                         ]
@@ -669,24 +701,24 @@
                                                                                                             {
                                                                                                                 "$k": "flowIn",
                                                                                                                 "$v": {
-                                                                                                                    "$id": 78,
-                                                                                                                    "$type": 32,
+                                                                                                                    "$id": 85,
+                                                                                                                    "$type": 34,
                                                                                                                     "_fieldName": "flowIn",
-                                                                                                                    "_node": $iref:74,
+                                                                                                                    "_node": $iref:81,
                                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                                     "connections": {
-                                                                                                                        "$id": 79,
-                                                                                                                        "$type": 33,
+                                                                                                                        "$id": 86,
+                                                                                                                        "$type": 35,
                                                                                                                         "$rlength": 1,
                                                                                                                         "$rcontent": [
                                                                                                                             {
-                                                                                                                                "$id": 80,
-                                                                                                                                "$type": 34,
+                                                                                                                                "$id": 87,
+                                                                                                                                "$type": 36,
                                                                                                                                 "fieldName": "flowOut",
-                                                                                                                                "node": $iref:65,
+                                                                                                                                "node": $iref:72,
                                                                                                                                 "reroutePoints": {
-                                                                                                                                    "$id": 81,
-                                                                                                                                    "$type": 36,
+                                                                                                                                    "$id": 88,
+                                                                                                                                    "$type": 38,
                                                                                                                                     "$rlength": 0,
                                                                                                                                     "$rcontent": [
                                                                                                                                     ]
@@ -703,14 +735,14 @@
                                                                                                             {
                                                                                                                 "$k": "flowOut",
                                                                                                                 "$v": {
-                                                                                                                    "$id": 82,
-                                                                                                                    "$type": 32,
+                                                                                                                    "$id": 89,
+                                                                                                                    "$type": 34,
                                                                                                                     "_fieldName": "flowOut",
-                                                                                                                    "_node": $iref:74,
+                                                                                                                    "_node": $iref:81,
                                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                                     "connections": {
-                                                                                                                        "$id": 83,
-                                                                                                                        "$type": 33,
+                                                                                                                        "$id": 90,
+                                                                                                                        "$type": 35,
                                                                                                                         "$rlength": 0,
                                                                                                                         "$rcontent": [
                                                                                                                         ]
@@ -731,8 +763,8 @@
                                                                                                     "hintText": "Table cover ON"
                                                                                                 },
                                                                                                 "reroutePoints": {
-                                                                                                    "$id": 84,
-                                                                                                    "$type": 36,
+                                                                                                    "$id": 91,
+                                                                                                    "$type": 38,
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
                                                                                                     ]
@@ -749,14 +781,14 @@
                                                                             {
                                                                                 "$k": "Table Cover On",
                                                                                 "$v": {
-                                                                                    "$id": 85,
-                                                                                    "$type": 32,
+                                                                                    "$id": 92,
+                                                                                    "$type": 34,
                                                                                     "_fieldName": "Table Cover On",
-                                                                                    "_node": $iref:65,
+                                                                                    "_node": $iref:72,
                                                                                     "_typeQualifiedName": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                     "connections": {
-                                                                                        "$id": 86,
-                                                                                        "$type": 33,
+                                                                                        "$id": 93,
+                                                                                        "$type": 35,
                                                                                         "$rlength": 0,
                                                                                         "$rcontent": [
                                                                                         ]
@@ -775,15 +807,15 @@
                                                                     "flowIn": null,
                                                                     "flowOut": null,
                                                                     "backingValue": {
-                                                                        "$id": 87,
-                                                                        "$type": "38|System.Boolean, mscorlib",
+                                                                        "$id": 94,
+                                                                        "$type": "40|System.Boolean, mscorlib",
                                                                         true
                                                                     },
                                                                     "dataKey": "Table Cover On"
                                                                 },
                                                                 "reroutePoints": {
-                                                                    "$id": 88,
-                                                                    "$type": 36,
+                                                                    "$id": 95,
+                                                                    "$type": 38,
                                                                     "$rlength": 0,
                                                                     "$rcontent": [
                                                                     ]
@@ -806,27 +838,27 @@
                                     "key": "Cover On",
                                     "linkedToSceneObject": null
                                 },
-                                $iref:65,
-                                $iref:74
+                                $iref:72,
+                                $iref:81
                             ]
                         },
                         "packedNodes": {
-                            "$id": 89,
+                            "$id": 96,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 90,
+                            "$id": 97,
                             "$type": 11,
                             "$rlength": 1,
                             "$rcontent": [
-                                $iref:60
+                                $iref:67
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 91,
+                            "$id": 98,
                             "$type": 12,
                             "comparer": $iref:1,
                             "$rlength": 1,
@@ -834,11 +866,11 @@
                                 {
                                     "$k": "Cover On",
                                     "$v": {
-                                        "$id": 92,
+                                        "$id": 99,
                                         "$type": 11,
                                         "$rlength": 1,
                                         "$rcontent": [
-                                            $iref:60
+                                            $iref:67
                                         ]
                                     }
                                 }
@@ -846,20 +878,20 @@
                         },
                         "linkedNTVariable": "SteelTablefd6b858d-c158-42c9-9ee4-db9be0a73f53",
                         "assignedSCGO": {
-                            "$id": 93,
-                            "$type": 26,
+                            "$id": 100,
+                            "$type": 28,
                             "data": {
                                 "$type": 3,
                                 "id": "SteelTablefd6b858d-c158-42c9-9ee4-db9be0a73f53",
                                 "childs": {
-                                    "$id": 94,
+                                    "$id": 101,
                                     "$type": 4,
                                     "$rlength": 0,
                                     "$rcontent": [
                                     ]
                                 },
                                 "parent": "",
-                                "data": $iref:57,
+                                "data": $iref:61,
                                 "sceneObjectGUID": "1d69c319-2f83-4919-9a46-ffcd3fa8cab1",
                                 "graphJSON": "",
                                 "position": {
@@ -874,26 +906,26 @@
                                     0,
                                     0
                                 },
-                                "graph": $iref:58
+                                "graph": $iref:65
                             },
                             "outlineRoot": {
-                                "$id": 95,
+                                "$id": 102,
                                 "$type": 13
                             },
                             "coverVisual": {
-                                "$id": 96,
+                                "$id": 103,
                                 "$type": 13
                             },
                             "dropZones": {
-                                "$id": 97,
-                                "$type": "39|System.Collections.Generic.List`1[[VRTK.VRTK_SnapDropZone, Assembly-CSharp]], mscorlib",
+                                "$id": 104,
+                                "$type": "41|System.Collections.Generic.List`1[[VRTK.VRTK_SnapDropZone, Assembly-CSharp]], mscorlib",
                                 "$rlength": 5,
                                 "$rcontent": [
                                     {
-                                        "$id": 98,
-                                        "$type": "40|VRTK.VRTK_SnapDropZone, Assembly-CSharp",
+                                        "$id": 105,
+                                        "$type": "42|VRTK.VRTK_SnapDropZone, Assembly-CSharp",
                                         "highlightObjectPrefab": {
-                                            "$id": 99,
+                                            "$id": 106,
                                             "$type": 13
                                         },
                                         "snapType": 0,
@@ -901,14 +933,14 @@
                                         "applyScalingOnSnap": false,
                                         "cloneNewOnUnsnap": false,
                                         "highlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             0,
                                             0.361998081,
                                             1,
                                             1
                                         },
                                         "validHighlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             0,
                                             1,
                                             0.7211733,
@@ -919,27 +951,27 @@
                                         "displayDropZoneInEditor": true,
                                         "defaultSnappedInteractableObject": null,
                                         "defaultSnappedObject": {
-                                            "$id": 100,
+                                            "$id": 107,
                                             "$type": 13
                                         }
                                     },
                                     {
-                                        "$id": 101,
-                                        "$type": 40,
-                                        "highlightObjectPrefab": $iref:99,
+                                        "$id": 108,
+                                        "$type": 42,
+                                        "highlightObjectPrefab": $iref:106,
                                         "snapType": 0,
                                         "snapDuration": 0,
                                         "applyScalingOnSnap": false,
                                         "cloneNewOnUnsnap": false,
                                         "highlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             0,
                                             0.361998081,
                                             1,
                                             1
                                         },
                                         "validHighlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             0,
                                             0.3647059,
                                             1,
@@ -950,27 +982,27 @@
                                         "displayDropZoneInEditor": true,
                                         "defaultSnappedInteractableObject": null,
                                         "defaultSnappedObject": {
-                                            "$id": 102,
+                                            "$id": 109,
                                             "$type": 13
                                         }
                                     },
                                     {
-                                        "$id": 103,
-                                        "$type": 40,
-                                        "highlightObjectPrefab": $iref:99,
+                                        "$id": 110,
+                                        "$type": 42,
+                                        "highlightObjectPrefab": $iref:106,
                                         "snapType": 0,
                                         "snapDuration": 0,
                                         "applyScalingOnSnap": false,
                                         "cloneNewOnUnsnap": false,
                                         "highlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             1,
                                             0,
                                             0,
                                             1
                                         },
                                         "validHighlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             1,
                                             0.624981165,
                                             0,
@@ -981,27 +1013,27 @@
                                         "displayDropZoneInEditor": true,
                                         "defaultSnappedInteractableObject": null,
                                         "defaultSnappedObject": {
-                                            "$id": 104,
+                                            "$id": 111,
                                             "$type": 13
                                         }
                                     },
                                     {
-                                        "$id": 105,
-                                        "$type": 40,
-                                        "highlightObjectPrefab": $iref:99,
+                                        "$id": 112,
+                                        "$type": 42,
+                                        "highlightObjectPrefab": $iref:106,
                                         "snapType": 0,
                                         "snapDuration": 0,
                                         "applyScalingOnSnap": false,
                                         "cloneNewOnUnsnap": false,
                                         "highlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             1,
                                             0,
                                             0,
                                             1
                                         },
                                         "validHighlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             1,
                                             0,
                                             0,
@@ -1012,27 +1044,27 @@
                                         "displayDropZoneInEditor": true,
                                         "defaultSnappedInteractableObject": null,
                                         "defaultSnappedObject": {
-                                            "$id": 106,
+                                            "$id": 113,
                                             "$type": 13
                                         }
                                     },
                                     {
-                                        "$id": 107,
-                                        "$type": 40,
-                                        "highlightObjectPrefab": $iref:99,
+                                        "$id": 114,
+                                        "$type": 42,
+                                        "highlightObjectPrefab": $iref:106,
                                         "snapType": 0,
                                         "snapDuration": 0,
                                         "applyScalingOnSnap": false,
                                         "cloneNewOnUnsnap": false,
                                         "highlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             0.2171346,
                                             1,
                                             0,
                                             1
                                         },
                                         "validHighlightColor": {
-                                            "$type": 18,
+                                            "$type": 21,
                                             0.215686291,
                                             1,
                                             0,
@@ -1043,7 +1075,7 @@
                                         "displayDropZoneInEditor": true,
                                         "defaultSnappedInteractableObject": null,
                                         "defaultSnappedObject": {
-                                            "$id": 108,
+                                            "$id": 115,
                                             "$type": 13
                                         }
                                     }
@@ -1055,23 +1087,23 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 109,
+                    "$id": 116,
                     "$type": 13
                 },
                 "coverVisual": {
-                    "$id": 110,
+                    "$id": 117,
                     "$type": 13
                 },
                 "dropZones": {
-                    "$id": 111,
-                    "$type": 39,
+                    "$id": 118,
+                    "$type": 41,
                     "$rlength": 5,
                     "$rcontent": [
                         {
-                            "$id": 112,
-                            "$type": 40,
+                            "$id": 119,
+                            "$type": 42,
                             "highlightObjectPrefab": {
-                                "$id": 113,
+                                "$id": 120,
                                 "$type": 13
                             },
                             "snapType": 0,
@@ -1079,14 +1111,14 @@
                             "applyScalingOnSnap": false,
                             "cloneNewOnUnsnap": false,
                             "highlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 0,
                                 0.361998081,
                                 1,
                                 1
                             },
                             "validHighlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 0,
                                 1,
                                 0.7211733,
@@ -1097,27 +1129,27 @@
                             "displayDropZoneInEditor": true,
                             "defaultSnappedInteractableObject": null,
                             "defaultSnappedObject": {
-                                "$id": 114,
+                                "$id": 121,
                                 "$type": 13
                             }
                         },
                         {
-                            "$id": 115,
-                            "$type": 40,
-                            "highlightObjectPrefab": $iref:113,
+                            "$id": 122,
+                            "$type": 42,
+                            "highlightObjectPrefab": $iref:120,
                             "snapType": 0,
                             "snapDuration": 0,
                             "applyScalingOnSnap": false,
                             "cloneNewOnUnsnap": false,
                             "highlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 0,
                                 0.361998081,
                                 1,
                                 1
                             },
                             "validHighlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 0,
                                 0.3647059,
                                 1,
@@ -1128,27 +1160,27 @@
                             "displayDropZoneInEditor": true,
                             "defaultSnappedInteractableObject": null,
                             "defaultSnappedObject": {
-                                "$id": 116,
+                                "$id": 123,
                                 "$type": 13
                             }
                         },
                         {
-                            "$id": 117,
-                            "$type": 40,
-                            "highlightObjectPrefab": $iref:113,
+                            "$id": 124,
+                            "$type": 42,
+                            "highlightObjectPrefab": $iref:120,
                             "snapType": 0,
                             "snapDuration": 0,
                             "applyScalingOnSnap": false,
                             "cloneNewOnUnsnap": false,
                             "highlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 1,
                                 0,
                                 0,
                                 1
                             },
                             "validHighlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 1,
                                 0.624981165,
                                 0,
@@ -1159,27 +1191,27 @@
                             "displayDropZoneInEditor": true,
                             "defaultSnappedInteractableObject": null,
                             "defaultSnappedObject": {
-                                "$id": 118,
+                                "$id": 125,
                                 "$type": 13
                             }
                         },
                         {
-                            "$id": 119,
-                            "$type": 40,
-                            "highlightObjectPrefab": $iref:113,
+                            "$id": 126,
+                            "$type": 42,
+                            "highlightObjectPrefab": $iref:120,
                             "snapType": 0,
                             "snapDuration": 0,
                             "applyScalingOnSnap": false,
                             "cloneNewOnUnsnap": false,
                             "highlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 1,
                                 0,
                                 0,
                                 1
                             },
                             "validHighlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 1,
                                 0,
                                 0,
@@ -1190,27 +1222,27 @@
                             "displayDropZoneInEditor": true,
                             "defaultSnappedInteractableObject": null,
                             "defaultSnappedObject": {
-                                "$id": 120,
+                                "$id": 127,
                                 "$type": 13
                             }
                         },
                         {
-                            "$id": 121,
-                            "$type": 40,
-                            "highlightObjectPrefab": $iref:113,
+                            "$id": 128,
+                            "$type": 42,
+                            "highlightObjectPrefab": $iref:120,
                             "snapType": 0,
                             "snapDuration": 0,
                             "applyScalingOnSnap": false,
                             "cloneNewOnUnsnap": false,
                             "highlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 0.2171346,
                                 1,
                                 0,
                                 1
                             },
                             "validHighlightColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 0.215686291,
                                 1,
                                 0,
@@ -1221,7 +1253,7 @@
                             "displayDropZoneInEditor": true,
                             "defaultSnappedInteractableObject": null,
                             "defaultSnappedObject": {
-                                "$id": 122,
+                                "$id": 129,
                                 "$type": 13
                             }
                         }
@@ -1233,13 +1265,13 @@
         {
             "$k": "TableDa8be9cde-85b9-4e62-b5a1-a04ba770311b",
             "$v": {
-                "$id": 123,
+                "$id": 130,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "TableDa8be9cde-85b9-4e62-b5a1-a04ba770311b",
                     "childs": {
-                        "$id": 124,
+                        "$id": 131,
                         "$type": 4,
                         "$rlength": 2,
                         "$rcontent": [
@@ -1249,7 +1281,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 125,
+                        "$id": 132,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -1275,32 +1307,32 @@
                         0
                     },
                     "graph": {
-                        "$id": 126,
+                        "$id": 133,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 127,
+                            "$id": 134,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 128,
+                            "$id": 135,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 129,
+                            "$id": 136,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 130,
+                            "$id": 137,
                             "$type": 12,
                             "comparer": $iref:29,
                             "$rlength": 0,
@@ -1313,7 +1345,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 131,
+                    "$id": 138,
                     "$type": 13
                 }
             }
@@ -1321,13 +1353,13 @@
         {
             "$k": "TableCoverb58733ae-3c06-4dc2-8d9c-98b087959e09",
             "$v": {
-                "$id": 132,
+                "$id": 139,
                 "$type": 14,
                 "data": {
                     "$type": 3,
                     "id": "TableCoverb58733ae-3c06-4dc2-8d9c-98b087959e09",
                     "childs": {
-                        "$id": 133,
+                        "$id": 140,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1335,7 +1367,7 @@
                     },
                     "parent": "TableDa8be9cde-85b9-4e62-b5a1-a04ba770311b",
                     "data": {
-                        "$id": 134,
+                        "$id": 141,
                         "$type": 15,
                         "collapsed": true,
                         "name": null,
@@ -1357,32 +1389,32 @@
                         0
                     },
                     "graph": {
-                        "$id": 135,
+                        "$id": 142,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 136,
+                            "$id": 143,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 137,
+                            "$id": 144,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 138,
+                            "$id": 145,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 139,
+                            "$id": 146,
                             "$type": 12,
                             "comparer": $iref:29,
                             "$rlength": 0,
@@ -1391,20 +1423,20 @@
                         },
                         "linkedNTVariable": "TableCoverb58733ae-3c06-4dc2-8d9c-98b087959e09",
                         "assignedSCGO": {
-                            "$id": 140,
+                            "$id": 147,
                             "$type": 14,
                             "data": {
                                 "$type": 3,
                                 "id": "TableCoverb58733ae-3c06-4dc2-8d9c-98b087959e09",
                                 "childs": {
-                                    "$id": 141,
+                                    "$id": 148,
                                     "$type": 4,
                                     "$rlength": 0,
                                     "$rcontent": [
                                     ]
                                 },
                                 "parent": "TableDa8be9cde-85b9-4e62-b5a1-a04ba770311b",
-                                "data": $iref:134,
+                                "data": $iref:141,
                                 "sceneObjectGUID": "f4cce02e-47f2-4cbd-839c-520b86d2f282",
                                 "graphJSON": "",
                                 "position": {
@@ -1419,21 +1451,21 @@
                                     0,
                                     0
                                 },
-                                "graph": $iref:135
+                                "graph": $iref:142
                             },
                             "outlineRoot": {
-                                "$id": 142,
+                                "$id": 149,
                                 "$type": 13
                             },
                             "toolType": 0,
                             "grabObject": {
-                                "$id": 143,
+                                "$id": 150,
                                 "$type": 16,
                                 "disableWhenIdle": true,
                                 "allowedNearTouchControllers": 0,
                                 "allowedTouchControllers": 0,
                                 "ignoredColliders": {
-                                    "$id": 144,
+                                    "$id": 151,
                                     "$type": 17,
                                     "$rlength": 0,
                                     "$rcontent": [
@@ -1455,7 +1487,7 @@
                                 "allowedUseControllers": 0,
                                 "objectHighlighter": null,
                                 "touchHighlightColor": {
-                                    "$type": 18,
+                                    "$type": 21,
                                     0,
                                     0,
                                     0,
@@ -1468,18 +1500,18 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 145,
+                    "$id": 152,
                     "$type": 13
                 },
                 "toolType": 0,
                 "grabObject": {
-                    "$id": 146,
+                    "$id": 153,
                     "$type": 16,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 147,
+                        "$id": 154,
                         "$type": 17,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1491,8 +1523,28 @@
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
-                    "secondaryGrabActionScript": null,
+                    "grabAttachMechanicScript": {
+                        "$id": 155,
+                        "$type": 18,
+                        "precisionGrab": false,
+                        "rightSnapHandle": {
+                            "$id": 156,
+                            "$type": 19
+                        },
+                        "leftSnapHandle": {
+                            "$id": 157,
+                            "$type": 19
+                        },
+                        "throwVelocityWithAttachDistance": false,
+                        "throwMultiplier": 1,
+                        "onGrabCollisionDelay": 0,
+                        "destroyImmediatelyOnThrow": true,
+                        "breakForce": 1500
+                    },
+                    "secondaryGrabActionScript": {
+                        "$id": 158,
+                        "$type": 20
+                    },
                     "isUsable": false,
                     "holdButtonToUse": true,
                     "useOnlyIfGrabbed": false,
@@ -1501,7 +1553,7 @@
                     "allowedUseControllers": 0,
                     "objectHighlighter": null,
                     "touchHighlightColor": {
-                        "$type": 18,
+                        "$type": 21,
                         0,
                         0,
                         0,
@@ -1514,13 +1566,13 @@
         {
             "$k": "Gloves41bf0e21-d0ac-4646-a322-3bbbb3ad0207",
             "$v": {
-                "$id": 148,
-                "$type": "41|GlovesSceneGameObjects, Assembly-CSharp",
+                "$id": 159,
+                "$type": "43|GlovesSceneGameObjects, Assembly-CSharp",
                 "data": {
                     "$type": 3,
                     "id": "Gloves41bf0e21-d0ac-4646-a322-3bbbb3ad0207",
                     "childs": {
-                        "$id": 149,
+                        "$id": 160,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1528,15 +1580,15 @@
                     },
                     "parent": "TableDa8be9cde-85b9-4e62-b5a1-a04ba770311b",
                     "data": {
-                        "$id": 150,
-                        "$type": "42|NT.Variables.NTVariable`1[[NT.SceneObjects.GlovesData, Assembly-CSharp]], Assembly-CSharp",
+                        "$id": 161,
+                        "$type": "44|NT.Variables.NTVariable`1[[NT.SceneObjects.GlovesData, Assembly-CSharp]], Assembly-CSharp",
                         "collapsed": true,
                         "name": null,
                         "value": {
-                            "$type": "43|NT.SceneObjects.GlovesData, Assembly-CSharp"
+                            "$type": "45|NT.SceneObjects.GlovesData, Assembly-CSharp"
                         },
                         "defaultValue": {
-                            "$type": 43
+                            "$type": 45
                         }
                     },
                     "sceneObjectGUID": "689a793f-636f-4b2d-a8af-bd418691a091",
@@ -1554,84 +1606,84 @@
                         0
                     },
                     "graph": {
-                        "$id": 151,
+                        "$id": 162,
                         "$type": 8,
                         "_name": "SceneObjectGraph",
                         "nodes": {
-                            "$id": 152,
+                            "$id": 163,
                             "$type": 9,
                             "$rlength": 3,
                             "$rcontent": [
                                 {
-                                    "$id": 153,
-                                    "$type": 29,
+                                    "$id": 164,
+                                    "$type": 31,
                                     "_name": "Message Received",
-                                    "graph": $iref:151,
+                                    "graph": $iref:162,
                                     "position": {
-                                        "$type": 30,
+                                        "$type": 32,
                                         -376.551727,
                                         -475.241333
                                     },
                                     "ports": {
-                                        "$id": 154,
-                                        "$type": 31,
+                                        "$id": 165,
+                                        "$type": 33,
                                         "comparer": $iref:1,
                                         "$rlength": 1,
                                         "$rcontent": [
                                             {
                                                 "$k": "flowOut",
                                                 "$v": {
-                                                    "$id": 155,
-                                                    "$type": 32,
+                                                    "$id": 166,
+                                                    "$type": 34,
                                                     "_fieldName": "flowOut",
-                                                    "_node": $iref:153,
+                                                    "_node": $iref:164,
                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                     "connections": {
-                                                        "$id": 156,
-                                                        "$type": 33,
+                                                        "$id": 167,
+                                                        "$type": 35,
                                                         "$rlength": 1,
                                                         "$rcontent": [
                                                             {
-                                                                "$id": 157,
-                                                                "$type": 34,
+                                                                "$id": 168,
+                                                                "$type": 36,
                                                                 "fieldName": "flowIn",
                                                                 "node": {
-                                                                    "$id": 158,
-                                                                    "$type": 35,
+                                                                    "$id": 169,
+                                                                    "$type": 37,
                                                                     "_name": "SET - (GlovesOn)",
-                                                                    "graph": $iref:151,
+                                                                    "graph": $iref:162,
                                                                     "position": {
-                                                                        "$type": 30,
+                                                                        "$type": 32,
                                                                         -71.37931,
                                                                         -468.344818
                                                                     },
                                                                     "ports": {
-                                                                        "$id": 159,
-                                                                        "$type": 31,
+                                                                        "$id": 170,
+                                                                        "$type": 33,
                                                                         "comparer": $iref:1,
                                                                         "$rlength": 3,
                                                                         "$rcontent": [
                                                                             {
                                                                                 "$k": "flowIn",
                                                                                 "$v": {
-                                                                                    "$id": 160,
-                                                                                    "$type": 32,
+                                                                                    "$id": 171,
+                                                                                    "$type": 34,
                                                                                     "_fieldName": "flowIn",
-                                                                                    "_node": $iref:158,
+                                                                                    "_node": $iref:169,
                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                     "connections": {
-                                                                                        "$id": 161,
-                                                                                        "$type": 33,
+                                                                                        "$id": 172,
+                                                                                        "$type": 35,
                                                                                         "$rlength": 1,
                                                                                         "$rcontent": [
                                                                                             {
-                                                                                                "$id": 162,
-                                                                                                "$type": 34,
+                                                                                                "$id": 173,
+                                                                                                "$type": 36,
                                                                                                 "fieldName": "flowOut",
-                                                                                                "node": $iref:153,
+                                                                                                "node": $iref:164,
                                                                                                 "reroutePoints": {
-                                                                                                    "$id": 163,
-                                                                                                    "$type": 36,
+                                                                                                    "$id": 174,
+                                                                                                    "$type": 38,
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
                                                                                                     ]
@@ -1648,47 +1700,47 @@
                                                                             {
                                                                                 "$k": "flowOut",
                                                                                 "$v": {
-                                                                                    "$id": 164,
-                                                                                    "$type": 32,
+                                                                                    "$id": 175,
+                                                                                    "$type": 34,
                                                                                     "_fieldName": "flowOut",
-                                                                                    "_node": $iref:158,
+                                                                                    "_node": $iref:169,
                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                     "connections": {
-                                                                                        "$id": 165,
-                                                                                        "$type": 33,
+                                                                                        "$id": 176,
+                                                                                        "$type": 35,
                                                                                         "$rlength": 1,
                                                                                         "$rcontent": [
                                                                                             {
-                                                                                                "$id": 166,
-                                                                                                "$type": 34,
+                                                                                                "$id": 177,
+                                                                                                "$type": 36,
                                                                                                 "fieldName": "flowIn",
                                                                                                 "node": {
-                                                                                                    "$id": 167,
-                                                                                                    "$type": 37,
+                                                                                                    "$id": 178,
+                                                                                                    "$type": 39,
                                                                                                     "_name": "Display Hint",
-                                                                                                    "graph": $iref:151,
+                                                                                                    "graph": $iref:162,
                                                                                                     "position": {
-                                                                                                        "$type": 30,
+                                                                                                        "$type": 32,
                                                                                                         192,
                                                                                                         -443.639984
                                                                                                     },
                                                                                                     "ports": {
-                                                                                                        "$id": 168,
-                                                                                                        "$type": 31,
+                                                                                                        "$id": 179,
+                                                                                                        "$type": 33,
                                                                                                         "comparer": $iref:1,
                                                                                                         "$rlength": 3,
                                                                                                         "$rcontent": [
                                                                                                             {
                                                                                                                 "$k": "hintText",
                                                                                                                 "$v": {
-                                                                                                                    "$id": 169,
-                                                                                                                    "$type": 32,
+                                                                                                                    "$id": 180,
+                                                                                                                    "$type": 34,
                                                                                                                     "_fieldName": "hintText",
-                                                                                                                    "_node": $iref:167,
+                                                                                                                    "_node": $iref:178,
                                                                                                                     "_typeQualifiedName": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                                                     "connections": {
-                                                                                                                        "$id": 170,
-                                                                                                                        "$type": 33,
+                                                                                                                        "$id": 181,
+                                                                                                                        "$type": 35,
                                                                                                                         "$rlength": 0,
                                                                                                                         "$rcontent": [
                                                                                                                         ]
@@ -1702,24 +1754,24 @@
                                                                                                             {
                                                                                                                 "$k": "flowIn",
                                                                                                                 "$v": {
-                                                                                                                    "$id": 171,
-                                                                                                                    "$type": 32,
+                                                                                                                    "$id": 182,
+                                                                                                                    "$type": 34,
                                                                                                                     "_fieldName": "flowIn",
-                                                                                                                    "_node": $iref:167,
+                                                                                                                    "_node": $iref:178,
                                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                                     "connections": {
-                                                                                                                        "$id": 172,
-                                                                                                                        "$type": 33,
+                                                                                                                        "$id": 183,
+                                                                                                                        "$type": 35,
                                                                                                                         "$rlength": 1,
                                                                                                                         "$rcontent": [
                                                                                                                             {
-                                                                                                                                "$id": 173,
-                                                                                                                                "$type": 34,
+                                                                                                                                "$id": 184,
+                                                                                                                                "$type": 36,
                                                                                                                                 "fieldName": "flowOut",
-                                                                                                                                "node": $iref:158,
+                                                                                                                                "node": $iref:169,
                                                                                                                                 "reroutePoints": {
-                                                                                                                                    "$id": 174,
-                                                                                                                                    "$type": 36,
+                                                                                                                                    "$id": 185,
+                                                                                                                                    "$type": 38,
                                                                                                                                     "$rlength": 0,
                                                                                                                                     "$rcontent": [
                                                                                                                                     ]
@@ -1736,14 +1788,14 @@
                                                                                                             {
                                                                                                                 "$k": "flowOut",
                                                                                                                 "$v": {
-                                                                                                                    "$id": 175,
-                                                                                                                    "$type": 32,
+                                                                                                                    "$id": 186,
+                                                                                                                    "$type": 34,
                                                                                                                     "_fieldName": "flowOut",
-                                                                                                                    "_node": $iref:167,
+                                                                                                                    "_node": $iref:178,
                                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                                     "connections": {
-                                                                                                                        "$id": 176,
-                                                                                                                        "$type": 33,
+                                                                                                                        "$id": 187,
+                                                                                                                        "$type": 35,
                                                                                                                         "$rlength": 0,
                                                                                                                         "$rcontent": [
                                                                                                                         ]
@@ -1764,8 +1816,8 @@
                                                                                                     "hintText": "Gloves ON"
                                                                                                 },
                                                                                                 "reroutePoints": {
-                                                                                                    "$id": 177,
-                                                                                                    "$type": 36,
+                                                                                                    "$id": 188,
+                                                                                                    "$type": 38,
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
                                                                                                     ]
@@ -1782,14 +1834,14 @@
                                                                             {
                                                                                 "$k": "GlovesOn",
                                                                                 "$v": {
-                                                                                    "$id": 178,
-                                                                                    "$type": 32,
+                                                                                    "$id": 189,
+                                                                                    "$type": 34,
                                                                                     "_fieldName": "GlovesOn",
-                                                                                    "_node": $iref:158,
+                                                                                    "_node": $iref:169,
                                                                                     "_typeQualifiedName": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                     "connections": {
-                                                                                        "$id": 179,
-                                                                                        "$type": 33,
+                                                                                        "$id": 190,
+                                                                                        "$type": 35,
                                                                                         "$rlength": 0,
                                                                                         "$rcontent": [
                                                                                         ]
@@ -1808,15 +1860,15 @@
                                                                     "flowIn": null,
                                                                     "flowOut": null,
                                                                     "backingValue": {
-                                                                        "$id": 180,
-                                                                        "$type": 38,
+                                                                        "$id": 191,
+                                                                        "$type": 40,
                                                                         true
                                                                     },
                                                                     "dataKey": "GlovesOn"
                                                                 },
                                                                 "reroutePoints": {
-                                                                    "$id": 181,
-                                                                    "$type": 36,
+                                                                    "$id": 192,
+                                                                    "$type": 38,
                                                                     "$rlength": 0,
                                                                     "$rcontent": [
                                                                     ]
@@ -1839,27 +1891,27 @@
                                     "key": "Gloves On",
                                     "linkedToSceneObject": null
                                 },
-                                $iref:158,
-                                $iref:167
+                                $iref:169,
+                                $iref:178
                             ]
                         },
                         "packedNodes": {
-                            "$id": 182,
+                            "$id": 193,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 183,
+                            "$id": 194,
                             "$type": 11,
                             "$rlength": 1,
                             "$rcontent": [
-                                $iref:153
+                                $iref:164
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 184,
+                            "$id": 195,
                             "$type": 12,
                             "comparer": $iref:1,
                             "$rlength": 1,
@@ -1867,11 +1919,11 @@
                                 {
                                     "$k": "Gloves On",
                                     "$v": {
-                                        "$id": 185,
+                                        "$id": 196,
                                         "$type": 11,
                                         "$rlength": 1,
                                         "$rcontent": [
-                                            $iref:153
+                                            $iref:164
                                         ]
                                     }
                                 }
@@ -1879,20 +1931,20 @@
                         },
                         "linkedNTVariable": "Gloves41bf0e21-d0ac-4646-a322-3bbbb3ad0207",
                         "assignedSCGO": {
-                            "$id": 186,
-                            "$type": 41,
+                            "$id": 197,
+                            "$type": 43,
                             "data": {
                                 "$type": 3,
                                 "id": "Gloves41bf0e21-d0ac-4646-a322-3bbbb3ad0207",
                                 "childs": {
-                                    "$id": 187,
+                                    "$id": 198,
                                     "$type": 4,
                                     "$rlength": 0,
                                     "$rcontent": [
                                     ]
                                 },
                                 "parent": "TableDa8be9cde-85b9-4e62-b5a1-a04ba770311b",
-                                "data": $iref:150,
+                                "data": $iref:161,
                                 "sceneObjectGUID": "689a793f-636f-4b2d-a8af-bd418691a091",
                                 "graphJSON": "",
                                 "position": {
@@ -1907,14 +1959,14 @@
                                     0,
                                     0
                                 },
-                                "graph": $iref:151
+                                "graph": $iref:162
                             },
                             "outlineRoot": {
-                                "$id": 188,
+                                "$id": 199,
                                 "$type": 13
                             },
                             "glovesColor": {
-                                "$type": 18,
+                                "$type": 21,
                                 0.407843173,
                                 0.5294118,
                                 0.607843161,
@@ -1925,11 +1977,11 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 189,
+                    "$id": 200,
                     "$type": 13
                 },
                 "glovesColor": {
-                    "$type": 18,
+                    "$type": 21,
                     0.407843173,
                     0.5294118,
                     0.607843161,
@@ -1940,13 +1992,13 @@
         {
             "$k": "DesktopTable2e984e63-9558-48fb-920b-e93031abe02c",
             "$v": {
-                "$id": 190,
+                "$id": 201,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "DesktopTable2e984e63-9558-48fb-920b-e93031abe02c",
                     "childs": {
-                        "$id": 191,
+                        "$id": 202,
                         "$type": 4,
                         "$rlength": 1,
                         "$rcontent": [
@@ -1955,7 +2007,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 192,
+                        "$id": 203,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -1981,35 +2033,35 @@
                         0
                     },
                     "graph": {
-                        "$id": 193,
+                        "$id": 204,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 194,
+                            "$id": 205,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 195,
+                            "$id": 206,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 196,
+                            "$id": 207,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 197,
+                            "$id": 208,
                             "$type": 12,
                             "comparer": {
-                                "$id": 198,
+                                "$id": 209,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -2022,7 +2074,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 199,
+                    "$id": 210,
                     "$type": 13
                 }
             }
@@ -2030,13 +2082,13 @@
         {
             "$k": "DesktopTable78e22a0b-b4ce-498e-b667-165858c652a0",
             "$v": {
-                "$id": 200,
+                "$id": 211,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "DesktopTable78e22a0b-b4ce-498e-b667-165858c652a0",
                     "childs": {
-                        "$id": 201,
+                        "$id": 212,
                         "$type": 4,
                         "$rlength": 1,
                         "$rcontent": [
@@ -2045,7 +2097,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 202,
+                        "$id": 213,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2071,34 +2123,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 203,
+                        "$id": 214,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 204,
+                            "$id": 215,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 205,
+                            "$id": 216,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 206,
+                            "$id": 217,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 207,
+                            "$id": 218,
                             "$type": 12,
-                            "comparer": $iref:198,
+                            "comparer": $iref:209,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2109,7 +2161,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 208,
+                    "$id": 219,
                     "$type": 13
                 }
             }
@@ -2117,13 +2169,13 @@
         {
             "$k": "DesktopTable521a3806-4bc6-4fee-a7e7-d3057f8d86fd",
             "$v": {
-                "$id": 209,
+                "$id": 220,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "DesktopTable521a3806-4bc6-4fee-a7e7-d3057f8d86fd",
                     "childs": {
-                        "$id": 210,
+                        "$id": 221,
                         "$type": 4,
                         "$rlength": 1,
                         "$rcontent": [
@@ -2132,7 +2184,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 211,
+                        "$id": 222,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2158,34 +2210,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 212,
+                        "$id": 223,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 213,
+                            "$id": 224,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 214,
+                            "$id": 225,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 215,
+                            "$id": 226,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 216,
+                            "$id": 227,
                             "$type": 12,
-                            "comparer": $iref:198,
+                            "comparer": $iref:209,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2196,7 +2248,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 217,
+                    "$id": 228,
                     "$type": 13
                 }
             }
@@ -2204,13 +2256,13 @@
         {
             "$k": "Monitor961519e2-7fb1-42f5-8e97-283e82285a33",
             "$v": {
-                "$id": 218,
+                "$id": 229,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "Monitor961519e2-7fb1-42f5-8e97-283e82285a33",
                     "childs": {
-                        "$id": 219,
+                        "$id": 230,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2218,7 +2270,7 @@
                     },
                     "parent": "DesktopTable2e984e63-9558-48fb-920b-e93031abe02c",
                     "data": {
-                        "$id": 220,
+                        "$id": 231,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2244,34 +2296,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 221,
+                        "$id": 232,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 222,
+                            "$id": 233,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 223,
+                            "$id": 234,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 224,
+                            "$id": 235,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 225,
+                            "$id": 236,
                             "$type": 12,
-                            "comparer": $iref:198,
+                            "comparer": $iref:209,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2282,7 +2334,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 226,
+                    "$id": 237,
                     "$type": 13
                 }
             }
@@ -2290,13 +2342,13 @@
         {
             "$k": "Monitor39c9fb9f-44b5-4590-819b-75a484665466",
             "$v": {
-                "$id": 227,
+                "$id": 238,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "Monitor39c9fb9f-44b5-4590-819b-75a484665466",
                     "childs": {
-                        "$id": 228,
+                        "$id": 239,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2304,7 +2356,7 @@
                     },
                     "parent": "DesktopTable78e22a0b-b4ce-498e-b667-165858c652a0",
                     "data": {
-                        "$id": 229,
+                        "$id": 240,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2330,34 +2382,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 230,
+                        "$id": 241,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 231,
+                            "$id": 242,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 232,
+                            "$id": 243,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 233,
+                            "$id": 244,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 234,
+                            "$id": 245,
                             "$type": 12,
-                            "comparer": $iref:198,
+                            "comparer": $iref:209,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2368,7 +2420,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 235,
+                    "$id": 246,
                     "$type": 13
                 }
             }
@@ -2376,13 +2428,13 @@
         {
             "$k": "Monitorb021e92f-aa1f-437e-ba09-79b92969a38a",
             "$v": {
-                "$id": 236,
+                "$id": 247,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "Monitorb021e92f-aa1f-437e-ba09-79b92969a38a",
                     "childs": {
-                        "$id": 237,
+                        "$id": 248,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2390,7 +2442,7 @@
                     },
                     "parent": "DesktopTable521a3806-4bc6-4fee-a7e7-d3057f8d86fd",
                     "data": {
-                        "$id": 238,
+                        "$id": 249,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2416,34 +2468,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 239,
+                        "$id": 250,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 240,
+                            "$id": 251,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 241,
+                            "$id": 252,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 242,
+                            "$id": 253,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 243,
+                            "$id": 254,
                             "$type": 12,
-                            "comparer": $iref:198,
+                            "comparer": $iref:209,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2454,7 +2506,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 244,
+                    "$id": 255,
                     "$type": 13
                 }
             }
@@ -2462,13 +2514,13 @@
         {
             "$k": "TableD07f5d0f9-0fef-49d6-892c-626940349e9c",
             "$v": {
-                "$id": 245,
+                "$id": 256,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "TableD07f5d0f9-0fef-49d6-892c-626940349e9c",
                     "childs": {
-                        "$id": 246,
+                        "$id": 257,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2476,7 +2528,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 247,
+                        "$id": 258,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2502,34 +2554,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 248,
+                        "$id": 259,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 249,
+                            "$id": 260,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 250,
+                            "$id": 261,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 251,
+                            "$id": 262,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 252,
+                            "$id": 263,
                             "$type": 12,
-                            "comparer": $iref:198,
+                            "comparer": $iref:209,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2540,7 +2592,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 253,
+                    "$id": 264,
                     "$type": 13
                 }
             }
@@ -2548,13 +2600,13 @@
         {
             "$k": "TableD45645afe-7831-445e-8d54-453b45511328",
             "$v": {
-                "$id": 254,
+                "$id": 265,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "TableD45645afe-7831-445e-8d54-453b45511328",
                     "childs": {
-                        "$id": 255,
+                        "$id": 266,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2562,7 +2614,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 256,
+                        "$id": 267,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2588,34 +2640,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 257,
+                        "$id": 268,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 258,
+                            "$id": 269,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 259,
+                            "$id": 270,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 260,
+                            "$id": 271,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 261,
+                            "$id": 272,
                             "$type": 12,
-                            "comparer": $iref:198,
+                            "comparer": $iref:209,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2626,7 +2678,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 262,
+                    "$id": 273,
                     "$type": 13
                 }
             }
@@ -2634,13 +2686,13 @@
         {
             "$k": "TableDd209edb2-85ae-45b0-8135-a63791912a8e",
             "$v": {
-                "$id": 263,
+                "$id": 274,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "TableDd209edb2-85ae-45b0-8135-a63791912a8e",
                     "childs": {
-                        "$id": 264,
+                        "$id": 275,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2648,7 +2700,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 265,
+                        "$id": 276,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2674,34 +2726,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 266,
+                        "$id": 277,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 267,
+                            "$id": 278,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 268,
+                            "$id": 279,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 269,
+                            "$id": 280,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 270,
+                            "$id": 281,
                             "$type": 12,
-                            "comparer": $iref:198,
+                            "comparer": $iref:209,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2712,7 +2764,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 271,
+                    "$id": 282,
                     "$type": 13
                 }
             }
@@ -2720,13 +2772,13 @@
         {
             "$k": "TableD92df3510-620a-4632-9f25-c7c7a8bc63c3",
             "$v": {
-                "$id": 272,
+                "$id": 283,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "TableD92df3510-620a-4632-9f25-c7c7a8bc63c3",
                     "childs": {
-                        "$id": 273,
+                        "$id": 284,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2734,7 +2786,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 274,
+                        "$id": 285,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2760,35 +2812,35 @@
                         0
                     },
                     "graph": {
-                        "$id": 275,
+                        "$id": 286,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 276,
+                            "$id": 287,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 277,
+                            "$id": 288,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 278,
+                            "$id": 289,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 279,
+                            "$id": 290,
                             "$type": 12,
                             "comparer": {
-                                "$id": 280,
+                                "$id": 291,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -2801,7 +2853,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 281,
+                    "$id": 292,
                     "$type": 13
                 }
             }
@@ -2809,13 +2861,13 @@
         {
             "$k": "TableD5214e43f-b621-4d9d-ad58-cf9bbfbb4ac5",
             "$v": {
-                "$id": 282,
+                "$id": 293,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "TableD5214e43f-b621-4d9d-ad58-cf9bbfbb4ac5",
                     "childs": {
-                        "$id": 283,
+                        "$id": 294,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2823,7 +2875,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 284,
+                        "$id": 295,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2849,34 +2901,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 285,
+                        "$id": 296,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 286,
+                            "$id": 297,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 287,
+                            "$id": 298,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 288,
+                            "$id": 299,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 289,
+                            "$id": 300,
                             "$type": 12,
-                            "comparer": $iref:280,
+                            "comparer": $iref:291,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2887,7 +2939,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 290,
+                    "$id": 301,
                     "$type": 13
                 }
             }
@@ -2895,13 +2947,13 @@
         {
             "$k": "TableDf6789db2-9a60-4620-9901-ade745951330",
             "$v": {
-                "$id": 291,
+                "$id": 302,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "TableDf6789db2-9a60-4620-9901-ade745951330",
                     "childs": {
-                        "$id": 292,
+                        "$id": 303,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2909,7 +2961,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 293,
+                        "$id": 304,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -2935,34 +2987,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 294,
+                        "$id": 305,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 295,
+                            "$id": 306,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 296,
+                            "$id": 307,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 297,
+                            "$id": 308,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 298,
+                            "$id": 309,
                             "$type": 12,
-                            "comparer": $iref:280,
+                            "comparer": $iref:291,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -2973,7 +3025,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 299,
+                    "$id": 310,
                     "$type": 13
                 }
             }
@@ -2981,13 +3033,13 @@
         {
             "$k": "TableDb19c26a1-8c24-4677-92ff-08a9b604895d",
             "$v": {
-                "$id": 300,
+                "$id": 311,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "TableDb19c26a1-8c24-4677-92ff-08a9b604895d",
                     "childs": {
-                        "$id": 301,
+                        "$id": 312,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -2995,7 +3047,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 302,
+                        "$id": 313,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -3021,34 +3073,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 303,
+                        "$id": 314,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 304,
+                            "$id": 315,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 305,
+                            "$id": 316,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 306,
+                            "$id": 317,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 307,
+                            "$id": 318,
                             "$type": 12,
-                            "comparer": $iref:280,
+                            "comparer": $iref:291,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -3059,7 +3111,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 308,
+                    "$id": 319,
                     "$type": 13
                 }
             }
@@ -3067,13 +3119,13 @@
         {
             "$k": "TableD403d4f6c-c7f7-4515-bd9e-5b0f18ee08bb",
             "$v": {
-                "$id": 309,
+                "$id": 320,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "TableD403d4f6c-c7f7-4515-bd9e-5b0f18ee08bb",
                     "childs": {
-                        "$id": 310,
+                        "$id": 321,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -3081,7 +3133,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 311,
+                        "$id": 322,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -3107,34 +3159,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 312,
+                        "$id": 323,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 313,
+                            "$id": 324,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 314,
+                            "$id": 325,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 315,
+                            "$id": 326,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 316,
+                            "$id": 327,
                             "$type": 12,
-                            "comparer": $iref:280,
+                            "comparer": $iref:291,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -3145,7 +3197,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 317,
+                    "$id": 328,
                     "$type": 13
                 }
             }
@@ -3153,13 +3205,13 @@
         {
             "$k": "DesktopTable34887d4f-79a9-4bb6-88f1-25483cc8d6e0",
             "$v": {
-                "$id": 318,
+                "$id": 329,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "DesktopTable34887d4f-79a9-4bb6-88f1-25483cc8d6e0",
                     "childs": {
-                        "$id": 319,
+                        "$id": 330,
                         "$type": 4,
                         "$rlength": 1,
                         "$rcontent": [
@@ -3168,7 +3220,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 320,
+                        "$id": 331,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -3194,34 +3246,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 321,
+                        "$id": 332,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 322,
+                            "$id": 333,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 323,
+                            "$id": 334,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 324,
+                            "$id": 335,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 325,
+                            "$id": 336,
                             "$type": 12,
-                            "comparer": $iref:280,
+                            "comparer": $iref:291,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -3232,7 +3284,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 326,
+                    "$id": 337,
                     "$type": 13
                 }
             }
@@ -3240,13 +3292,13 @@
         {
             "$k": "MicroscopeMonitor6c9fc651-df76-4463-8a57-10a834efacf7",
             "$v": {
-                "$id": 327,
+                "$id": 338,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "MicroscopeMonitor6c9fc651-df76-4463-8a57-10a834efacf7",
                     "childs": {
-                        "$id": 328,
+                        "$id": 339,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -3254,7 +3306,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 329,
+                        "$id": 340,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -3280,34 +3332,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 330,
+                        "$id": 341,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 331,
+                            "$id": 342,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 332,
+                            "$id": 343,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 333,
+                            "$id": 344,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 334,
+                            "$id": 345,
                             "$type": 12,
-                            "comparer": $iref:280,
+                            "comparer": $iref:291,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -3318,7 +3370,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 335,
+                    "$id": 346,
                     "$type": 13
                 }
             }
@@ -3326,13 +3378,13 @@
         {
             "$k": "Monitor692688c3-dc00-481e-b79a-4e24c98df88f",
             "$v": {
-                "$id": 336,
+                "$id": 347,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "Monitor692688c3-dc00-481e-b79a-4e24c98df88f",
                     "childs": {
-                        "$id": 337,
+                        "$id": 348,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -3340,7 +3392,7 @@
                     },
                     "parent": "DesktopTable34887d4f-79a9-4bb6-88f1-25483cc8d6e0",
                     "data": {
-                        "$id": 338,
+                        "$id": 349,
                         "$type": 5,
                         "collapsed": true,
                         "name": null,
@@ -3366,34 +3418,34 @@
                         0
                     },
                     "graph": {
-                        "$id": 339,
+                        "$id": 350,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 340,
+                            "$id": 351,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 341,
+                            "$id": 352,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 342,
+                            "$id": 353,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 343,
+                            "$id": 354,
                             "$type": 12,
-                            "comparer": $iref:280,
+                            "comparer": $iref:291,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -3404,7 +3456,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 344,
+                    "$id": 355,
                     "$type": 13
                 }
             }
@@ -3412,13 +3464,13 @@
         {
             "$k": "Bed6aa7fb2c-3c28-4aff-b5ff-a9cbab008f00",
             "$v": {
-                "$id": 345,
+                "$id": 356,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "Bed6aa7fb2c-3c28-4aff-b5ff-a9cbab008f00",
                     "childs": {
-                        "$id": 346,
+                        "$id": 357,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -3426,19 +3478,19 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 347,
-                        "$type": "44|NT.Variables.NTVariable`1[[NT.SceneObjects.BedData, Assembly-CSharp]], Assembly-CSharp",
+                        "$id": 358,
+                        "$type": "46|NT.Variables.NTVariable`1[[NT.SceneObjects.BedData, Assembly-CSharp]], Assembly-CSharp",
                         "collapsed": true,
                         "name": null,
                         "value": {
-                            "$type": "45|NT.SceneObjects.BedData, Assembly-CSharp",
+                            "$type": "47|NT.SceneObjects.BedData, Assembly-CSharp",
                             "bedHeight": 0,
                             "tilt": 0,
                             "temperature": 0,
                             "wheelsBlocked": false
                         },
                         "defaultValue": {
-                            "$type": 45,
+                            "$type": 47,
                             "bedHeight": 0,
                             "tilt": 0,
                             "temperature": 0,
@@ -3460,35 +3512,35 @@
                         0
                     },
                     "graph": {
-                        "$id": 348,
+                        "$id": 359,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 349,
+                            "$id": 360,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 350,
+                            "$id": 361,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 351,
+                            "$id": 362,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 352,
+                            "$id": 363,
                             "$type": 12,
                             "comparer": {
-                                "$id": 353,
+                                "$id": 364,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -3501,7 +3553,7 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 354,
+                    "$id": 365,
                     "$type": 13
                 }
             }
@@ -3509,13 +3561,13 @@
         {
             "$k": "Clamp6a586cca-aebe-4fc5-8e15-509efbef1a14",
             "$v": {
-                "$id": 355,
+                "$id": 366,
                 "$type": 14,
                 "data": {
                     "$type": 3,
                     "id": "Clamp6a586cca-aebe-4fc5-8e15-509efbef1a14",
                     "childs": {
-                        "$id": 356,
+                        "$id": 367,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -3523,7 +3575,7 @@
                     },
                     "parent": "Closet61628be2-5f22-404f-8361-08321e01101a",
                     "data": {
-                        "$id": 357,
+                        "$id": 368,
                         "$type": 15,
                         "collapsed": true,
                         "name": null,
@@ -3534,46 +3586,46 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.08024663,
-                        -3.11049843,
-                        0.006082058
+                        64.72814,
+                        -18.5954361,
+                        10.8351536
                     },
                     "rotation": {
                         "$type": 7,
-                        0.153594226,
-                        359.32193,
-                        359.951141
+                        0.001033154,
+                        267.9073,
+                        0.000268990669
                     },
                     "graph": {
-                        "$id": 358,
+                        "$id": 369,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 359,
+                            "$id": 370,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 360,
+                            "$id": 371,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 361,
+                            "$id": 372,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 362,
+                            "$id": 373,
                             "$type": 12,
                             "comparer": {
-                                "$id": 363,
+                                "$id": 374,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -3586,18 +3638,18 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 364,
+                    "$id": 375,
                     "$type": 13
                 },
                 "toolType": 4,
                 "grabObject": {
-                    "$id": 365,
+                    "$id": 376,
                     "$type": 16,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 366,
+                        "$id": 377,
                         "$type": 17,
                         "$rlength": 0,
                         "$rcontent": [
@@ -3609,8 +3661,28 @@
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
-                    "secondaryGrabActionScript": null,
+                    "grabAttachMechanicScript": {
+                        "$id": 378,
+                        "$type": 18,
+                        "precisionGrab": false,
+                        "rightSnapHandle": {
+                            "$id": 379,
+                            "$type": 19
+                        },
+                        "leftSnapHandle": {
+                            "$id": 380,
+                            "$type": 19
+                        },
+                        "throwVelocityWithAttachDistance": false,
+                        "throwMultiplier": 1,
+                        "onGrabCollisionDelay": 0,
+                        "destroyImmediatelyOnThrow": true,
+                        "breakForce": 1500
+                    },
+                    "secondaryGrabActionScript": {
+                        "$id": 381,
+                        "$type": 20
+                    },
                     "isUsable": false,
                     "holdButtonToUse": true,
                     "useOnlyIfGrabbed": false,
@@ -3619,7 +3691,7 @@
                     "allowedUseControllers": 0,
                     "objectHighlighter": null,
                     "touchHighlightColor": {
-                        "$type": 18,
+                        "$type": 21,
                         0,
                         0,
                         0,
@@ -3632,13 +3704,13 @@
         {
             "$k": "SurgeonAssistant900ef547-ae38-4aea-ae0e-1b832ed68ff7",
             "$v": {
-                "$id": 367,
+                "$id": 382,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "SurgeonAssistant900ef547-ae38-4aea-ae0e-1b832ed68ff7",
                     "childs": {
-                        "$id": 368,
+                        "$id": 383,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -3646,35 +3718,35 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 369,
-                        "$type": "46|NT.Variables.NTVariable`1[[NT.SceneObjects.TeammateData, Assembly-CSharp]], Assembly-CSharp",
+                        "$id": 384,
+                        "$type": "48|NT.Variables.NTVariable`1[[NT.SceneObjects.TeammateData, Assembly-CSharp]], Assembly-CSharp",
                         "collapsed": true,
                         "name": null,
                         "value": {
-                            "$type": "47|NT.SceneObjects.TeammateData, Assembly-CSharp"
+                            "$type": "49|NT.SceneObjects.TeammateData, Assembly-CSharp"
                         },
                         "defaultValue": {
-                            "$type": 47
+                            "$type": 49
                         }
                     },
                     "sceneObjectGUID": "297bdcf1-1f37-4a86-9ca0-4c3a6ee0047b",
                     "graphJSON": null,
                     "position": {
                         "$type": 7,
-                        -0.0504455566,
-                        -0.00146484375,
-                        -2.43775535
+                        -0.103153363,
+                        0.0127388518,
+                        -2.454593
                     },
                     "rotation": {
                         "$type": 7,
                         0,
-                        5.085302,
+                        30.5677471,
                         0
                     },
                     "graph": null
                 },
                 "outlineRoot": {
-                    "$id": 370,
+                    "$id": 385,
                     "$type": 13
                 }
             }

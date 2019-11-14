@@ -2879,7 +2879,7 @@
                                                                                                                                 "isExecuting": false,
                                                                                                                                 "valueA": 0,
                                                                                                                                 "valueB": 10,
-                                                                                                                                "result": 0
+                                                                                                                                "result": 10
                                                                                                                             },
                                                                                                                             "reroutePoints": {
                                                                                                                                 "$id": 312,
@@ -2904,7 +2904,7 @@
                                                                                                 "isExecuting": false,
                                                                                                 "valueA": 0,
                                                                                                 "valueB": 0,
-                                                                                                "result": 0
+                                                                                                "result": 1
                                                                                             },
                                                                                             "reroutePoints": {
                                                                                                 "$id": 313,
@@ -7037,7 +7037,7 @@
                                                                                                                                                                 "isExecuting": false,
                                                                                                                                                                 "valueA": 0,
                                                                                                                                                                 "valueB": 1,
-                                                                                                                                                                "result": 1
+                                                                                                                                                                "result": 2
                                                                                                                                                             },
                                                                                                                                                             "reroutePoints": {
                                                                                                                                                                 "$id": 739,
