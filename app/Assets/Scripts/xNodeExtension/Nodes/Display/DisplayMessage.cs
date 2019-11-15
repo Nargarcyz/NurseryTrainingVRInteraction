@@ -34,13 +34,14 @@ namespace NT.Nodes.Display {
             {
                 TextMeshPro textComponent = messageGameObject.GetComponent<TextMeshPro>();
                 textComponent.text = message;
-                // Place message outside the object's bounding box
+                // Place message outside the object's bounding box, towards the scene center (to avoid walls collision)
                 SceneGameObject positionGameObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null);
-                parentMessageGameObject.transform.position = positionGameObject.gameObject.transform.position;
-
-                // TODO: Mover dependiendo del bounding box (desde MESH o RENDER)
                 BoxCollider collider = positionGameObject.gameObject.GetComponentInChildren<BoxCollider>();
-                Vector3 offset = (collider == null) ? new Vector3(1, 1, 0) : collider.size;
+                //parentMessageGameObject.transform.position = positionGameObject.gameObject.transform.position;
+                parentMessageGameObject.transform.position = collider.center;
+                Vector3 unitXY = new Vector3(1, 1, 0);
+                Vector3 offset = (collider == null) ? unitXY : collider.size;
+                offset = Vector3.Project(offset, Vector3.Cross(unitXY, collider.center));
                 parentMessageGameObject.transform.Translate(offset);
 
                 // Rotación de seguimiento alrededor del objeto de posición??
