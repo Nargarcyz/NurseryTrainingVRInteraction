@@ -9330,11 +9330,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShowMessage
       objectReference: {fileID: 0}
-    - target: {fileID: 1428473038272195102, guid: 1a3f6660c70305640baf305fe1d1572a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1428473038272195103, guid: 1a3f6660c70305640baf305fe1d1572a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9445,11 +9440,6 @@ PrefabInstance:
       propertyPath: gameObjectToFollow
       value: 
       objectReference: {fileID: 408772823}
-    - target: {fileID: 1428473038272195100, guid: 1a3f6660c70305640baf305fe1d1572a,
-        type: 3}
-      propertyPath: followsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1428473038482313883, guid: 1a3f6660c70305640baf305fe1d1572a,
         type: 3}
       propertyPath: m_Mesh
