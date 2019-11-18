@@ -37,11 +37,14 @@ namespace NT.Nodes.Display {
                 // Place message outside the object's bounding box, towards the scene center (to avoid walls collision)
                 SceneGameObject positionGameObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null);
                 BoxCollider collider = positionGameObject.gameObject.GetComponentInChildren<BoxCollider>();
-                //parentMessageGameObject.transform.position = positionGameObject.gameObject.transform.position;
-                parentMessageGameObject.transform.position = collider.center;
+                parentMessageGameObject.transform.position = positionGameObject.gameObject.transform.position;
+                //parentMessageGameObject.transform.position = positionGameObject.transform.TransformDirection(collider.center);
                 Vector3 unitXY = new Vector3(1, 1, 0);
-                Vector3 offset = (collider == null) ? unitXY : collider.size;
-                offset = Vector3.Project(offset, Vector3.Cross(unitXY, collider.center));
+                Vector3 offset = (collider == null) ? unitXY : collider.transform.TransformDirection(collider.size) * 1.5f;//positionGameObject.gameObject.transform.
+                //offset.x = 0;
+                //offset.y = 0;
+                offset.z = 0;
+                //offset = Vector3.Project(offset, Vector3.Cross(unitXY, collider.center));
                 parentMessageGameObject.transform.Translate(offset);
 
                 // Rotación de seguimiento alrededor del objeto de posición??
