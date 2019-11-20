@@ -5,7 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 1,
+    "$rlength": 2,
     "$rcontent": [
         {
             "$k": "SteelTableb7bd91e5-bd0a-4cd0-b1ba-2445a6265d82",
@@ -274,6 +274,56 @@
                     ]
                 },
                 "anyItem": false
+            }
+        },
+        {
+            "$k": "SurgeonAssistant62f9096e-d2e4-45a5-a251-b4134b88054a",
+            "$v": {
+                "$id": 25,
+                "$type": "17|SceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "SurgeonAssistant62f9096e-d2e4-45a5-a251-b4134b88054a",
+                    "childs": {
+                        "$id": 26,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 27,
+                        "$type": "18|NT.Variables.NTVariable`1[[NT.SceneObjects.TeammateData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "19|NT.SceneObjects.TeammateData, Assembly-CSharp"
+                        },
+                        "defaultValue": {
+                            "$type": 19
+                        }
+                    },
+                    "sceneObjectGUID": "297bdcf1-1f37-4a86-9ca0-4c3a6ee0047b",
+                    "graphJSON": null,
+                    "position": {
+                        "$type": 7,
+                        2.6522522,
+                        0.00720214844,
+                        2.657911
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        196.084335,
+                        0
+                    },
+                    "graph": null
+                },
+                "outlineRoot": {
+                    "$id": 28,
+                    "$type": 13
+                }
             }
         }
     ]

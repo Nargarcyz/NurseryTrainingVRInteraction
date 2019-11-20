@@ -35,17 +35,25 @@ namespace NT.Nodes.Display {
                 TextMeshPro textComponent = messageGameObject.GetComponent<TextMeshPro>();
                 textComponent.text = message;
                 // Place message outside the object's bounding box, towards the scene center (to avoid walls collision)
-                SceneGameObject positionGameObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null);
+                GameObject positionGameObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null).gameObject;
                 BoxCollider collider = positionGameObject.gameObject.GetComponentInChildren<BoxCollider>();
-                parentMessageGameObject.transform.position = positionGameObject.gameObject.transform.position;
-                //parentMessageGameObject.transform.position = positionGameObject.transform.TransformDirection(collider.center);
-                Vector3 unitXY = new Vector3(1, 1, 0);
-                Vector3 offset = (collider == null) ? unitXY : collider.transform.TransformDirection(collider.size) * 1.5f;//positionGameObject.gameObject.transform.
-                //offset.x = 0;
-                //offset.y = 0;
-                offset.z = 0;
-                //offset = Vector3.Project(offset, Vector3.Cross(unitXY, collider.center));
-                parentMessageGameObject.transform.Translate(offset);
+
+                if (collider != null)
+                {
+                    Vector3 colliderCenter = collider.transform.TransformPoint(collider.center);
+                    colliderCenter.y = 0;
+                    parentMessageGameObject.transform.position = colliderCenter;
+
+                    Vector3 offset = collider.size;
+                    offset.x += 0.5f;  // Message size fixed offset
+                    offset.z = 0;
+                    parentMessageGameObject.transform.Translate(offset);
+                }
+                else
+                {
+                    parentMessageGameObject.transform.position = positionGameObject.transform.position;
+                    parentMessageGameObject.transform.Translate(new Vector3(1, 1, 0));
+                }
 
                 // Rotación de seguimiento alrededor del objeto de posición??
             }
