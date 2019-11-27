@@ -85,6 +85,8 @@ public class ExerciseManager : MonoBehaviour
 	public void StartExercise(){
         SessionManager.Instance.StartExecution();
         MessageSystem.onMessageSent += RecieveMessage;
+        TogglePause(this, new ControllerInteractionEventArgs());
+        //rightController.buttonTwoPressed;
     }
 
     public void EndExercise()
