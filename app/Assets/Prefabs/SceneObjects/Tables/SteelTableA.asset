@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78601271c15c4141b8f029025374509, type: 3}
+  m_Name: SteelTableA
+  m_EditorClassIdentifier: 
+  displayName: Steel Table A
+  sceneGameObject:
+    canBePlacedOver:
+      serializedVersion: 2
+      m_Bits: 512
+    model: {fileID: 1991040896282038438, guid: 437aa36a70f52aa42a771b7ec2ebc1a2, type: 3}
+  sceneObjectUI:
+    color: {r: 0, g: 0.4482946, b: 0.94509804, a: 0}
+    icon: {fileID: 21300000, guid: 0813d23417e6b974cb20c1ac2fba38e0, type: 3}
+    category: 1
+  GUID: 04083b50-f681-46c3-8094-0b76a017bc60
