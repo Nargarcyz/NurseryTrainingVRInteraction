@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1991040894496604055}
   - component: {fileID: 1991040894496604052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1991040896282038437}
   - component: {fileID: 1991040896282038436}
   - component: {fileID: 1178554166101548196}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SteelTableA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1991040896470773004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,6 +207,18 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_Name
       value: Steel_Table_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_LocalPosition.x
