@@ -25,4 +25,16 @@ namespace NT.Atributes{
         }
     }
 
+    [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
+    public class NTInputSelectAttribute : Node.InputAttribute
+    {
+        public NTInputSelectAttribute(  Node.ShowBackingValue backingValue = Node.ShowBackingValue.Unconnected,
+                                        Node.ConnectionType connectionType = Node.ConnectionType.Override,
+                                        Node.TypeConstraint typeConstraint = Node.TypeConstraint.Strict,
+                                        bool instancePortList = false) :
+            base(backingValue, connectionType, typeConstraint, instancePortList)
+        {
+        }
+    }
+
 }

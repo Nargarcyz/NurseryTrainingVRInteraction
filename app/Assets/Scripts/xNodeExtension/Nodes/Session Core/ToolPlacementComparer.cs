@@ -8,19 +8,21 @@ namespace NT.Nodes.SessionCore
     [System.Serializable]
     public class ToolPlacementComparer : NTNode
     {
-        /*
-        [NTInput] public float valueA;
-        [NTInput] public float valueB;
+        [NTInputSelect] public Tools tool1;
+        [NTInputSelect] public Tools tool2;
 
+        /*
         [NTOutput] public float result;
         */
+        protected override void Init() {
+            /*
+            this.AddInstanceInput(typeof(string), fieldName: "myDynamicInput");
+            this.AddInstanceOutput(typeof(int), fieldName: "myDynamicOutput");
+            */
+        }
 
         public override object GetValue(NodePort port)
         {
-            // Further modifications when use of Lists is implemented
-
-
-
             /*
             float val1 = GetInputValue<float>(nameof(valueA), this.valueA);
             float val2 = GetInputValue<float>(nameof(valueB), this.valueB);
