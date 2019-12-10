@@ -8,9 +8,11 @@ using VRTK;
 
 public class SteelTableASceneGameObject : SceneGameObject
 {
+    [Header("Steel Table Interaction")]
     public GameObject coverVisual;
-    public GameObject surface;
     public bool coverVisible;
+    public GameObject surface;
+    public GameObject triggerCollider;
 
 
     private void Start()
@@ -20,66 +22,72 @@ public class SteelTableASceneGameObject : SceneGameObject
 
     private void OnTriggerEnter(Collider other)
     {
+        GameObject collisionObject = other.gameObject;
         if (other.tag == "Cover")
         {
-            other.gameObject.SetActive(false);
+            collisionObject.SetActive(false);
             SetCover();
         }
         // Logica de superficie con interacción VR
         if (other.tag == "Tool")
         {
-            VRTK_InteractableObject interactable = other.gameObject.GetComponentInParent<VRTK_InteractableObject>();
-            if (!interactable.IsGrabbed())
-            {
-                TranslateToSurface(other.gameObject);
-                other.gameObject.transform.rotation = Quaternion.identity;
-
-                other.gameObject.transform.SetParent(this.gameObject.transform);
-            }
+            VRTK_InteractableObject interactable = collisionObject.GetComponentInParent<VRTK_InteractableObject>();
+            interactable.gameObject.transform.SetParent(surface.transform);
+            Debug.Log("ENTER TRIGGER");
         }
     }
 
-
-    /*public void OnObjectSnapped(object sender, SnapDropZoneEventArgs e)
+    /*private void OnTriggerStay(Collider other)
     {
-        SteelTableAData d = (SteelTableAData)data.data.GetValue();
-        VRTK_SnapDropZone dropZone = ((VRTK_SnapDropZone)sender);
-        SceneGameObjectReference sor = new SceneGameObjectReference(e.snappedObject.gameObject.GetComponentInChildren<SceneGameObject>());
-
-        // Lógica de asignar el objeto en la posición
-        // recibimos slotN, nos quedamos con N
-        string s = dropZone.gameObject.name.Split(new string[] { "slot" }, StringSplitOptions.None)[1];
-        int posicion = Int32.Parse(s);
+        // No realizar las comprobaciones en cada frame
+        if (timer <= 0)
+        {
+           timer = 5f;
+            // Logica de superficie con interacción VR
+            GameObject collisionObject = other.gameObject;
+            GameObject parentObject = other.gameObject.transform.parent.gameObject;
+            if (other.tag == "Tool")
+            {
+                VRTK_InteractableObject interactable = collisionObject.GetComponentInParent<VRTK_InteractableObject>();
+                if (!interactable.IsGrabbed())
+                {
+                    Rigidbody rb = collisionObject.GetComponentInParent<Rigidbody>();
+                    if (rb.velocity == Vector3.zero)
+                    {
+                        parentObject.transform.SetParent(surface.transform);
+                    }
+                }
+            }
+        } else
+        {
+            timer -= Time.deltaTime;
+        }
     }*/
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerExit(Collider other)
     {
+        GameObject collisionObject = other.gameObject;
         // Logica de superficie con interacción VR
         if (other.tag == "Tool")
         {
-            VRTK_InteractableObject interactable = other.gameObject.GetComponentInParent<VRTK_InteractableObject>();
-            if (!interactable.IsGrabbed())
-            {
-                other.gameObject.transform.SetParent(this.gameObject.transform);
-            }
+            VRTK_InteractableObject interactable = collisionObject.GetComponentInParent<VRTK_InteractableObject>();
+            //if (interactable.IsGrabbed())
+                interactable.gameObject.transform.SetParent(null);
+                Debug.Log("EXIT TRIGGER");
         }
     }
 
-    /*private void OnTriggerExit(Collider other)
-    {
-    }*/
-
-    private void TranslateToSurface(GameObject obj)
-    {
-        BoxCollider collider = surface.GetComponent<BoxCollider>();
-        float posY = this.transform.InverseTransformPoint(collider.transform.TransformPoint(collider.center + collider.size / 2)).y;
-        obj.transform.position = new Vector3(obj.transform.position.x, posY, obj.transform.position.z);
-    }
+    //private void TranslateToSurface(GameObject obj)
+    //{
+    //    BoxCollider collider = surface.GetComponent<BoxCollider>();
+    //    float posY = this.transform.InverseTransformPoint(collider.transform.TransformPoint(collider.center + collider.size / 2)).y;
+    //    obj.transform.position = new Vector3(obj.transform.position.x, posY, obj.transform.position.z);
+    //}
 
 
     public void SetCover()
     {
-        coverVisual.gameObject.SetActive(true);
+        coverVisual.SetActive(true);
         MessageSystem.SendMessage(data.id + "Cover On");
     }
 
