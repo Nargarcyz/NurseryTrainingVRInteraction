@@ -1,4 +1,5 @@
 ﻿using NT.Atributes;
+using System.Collections.Generic;
 using UnityEngine;
 using XNode;
 
@@ -10,6 +11,8 @@ namespace NT.Nodes.SessionCore
     {
         [NTInputSelect] public Tools tool1;
         [NTInputSelect] public Tools tool2;
+
+        //[HideInInspector] public List<Tools> rules;
 
         /*
         [NTOutput] public float result;

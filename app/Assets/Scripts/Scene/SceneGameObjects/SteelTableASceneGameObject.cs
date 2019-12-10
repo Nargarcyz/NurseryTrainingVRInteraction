@@ -12,7 +12,6 @@ public class SteelTableASceneGameObject : SceneGameObject
     public GameObject coverVisual;
     public bool coverVisible;
     public GameObject surface;
-    public GameObject triggerCollider;
 
 
     private void Start()
@@ -32,37 +31,10 @@ public class SteelTableASceneGameObject : SceneGameObject
         if (other.tag == "Tool")
         {
             VRTK_InteractableObject interactable = collisionObject.GetComponentInParent<VRTK_InteractableObject>();
+            //if (interactable.IsGrabbed())
             interactable.gameObject.transform.SetParent(surface.transform);
-            Debug.Log("ENTER TRIGGER");
         }
     }
-
-    /*private void OnTriggerStay(Collider other)
-    {
-        // No realizar las comprobaciones en cada frame
-        if (timer <= 0)
-        {
-           timer = 5f;
-            // Logica de superficie con interacción VR
-            GameObject collisionObject = other.gameObject;
-            GameObject parentObject = other.gameObject.transform.parent.gameObject;
-            if (other.tag == "Tool")
-            {
-                VRTK_InteractableObject interactable = collisionObject.GetComponentInParent<VRTK_InteractableObject>();
-                if (!interactable.IsGrabbed())
-                {
-                    Rigidbody rb = collisionObject.GetComponentInParent<Rigidbody>();
-                    if (rb.velocity == Vector3.zero)
-                    {
-                        parentObject.transform.SetParent(surface.transform);
-                    }
-                }
-            }
-        } else
-        {
-            timer -= Time.deltaTime;
-        }
-    }*/
 
     private void OnTriggerExit(Collider other)
     {
@@ -71,9 +43,7 @@ public class SteelTableASceneGameObject : SceneGameObject
         if (other.tag == "Tool")
         {
             VRTK_InteractableObject interactable = collisionObject.GetComponentInParent<VRTK_InteractableObject>();
-            //if (interactable.IsGrabbed())
-                interactable.gameObject.transform.SetParent(null);
-                Debug.Log("EXIT TRIGGER");
+            interactable.gameObject.transform.SetParent(null);
         }
     }
 
