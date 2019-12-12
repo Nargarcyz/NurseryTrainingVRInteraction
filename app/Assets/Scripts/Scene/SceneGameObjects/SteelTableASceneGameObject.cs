@@ -12,6 +12,7 @@ public class SteelTableASceneGameObject : SceneGameObject
     public GameObject coverVisual;
     public bool coverVisible;
     public GameObject surface;
+    public GameObject toolsOut;
 
 
     private void Start()
@@ -44,6 +45,9 @@ public class SteelTableASceneGameObject : SceneGameObject
         {
             VRTK_InteractableObject interactable = collisionObject.GetComponentInParent<VRTK_InteractableObject>();
             interactable.gameObject.transform.SetParent(null);
+            // VRTK guarda el parent de antes de agarrar, y lo aplica al soltar. Debemos cambiarlo ahí tambien.
+            interactable.GetPreviousState(out Transform preParent, out bool preKinem, out bool preGrab);
+            interactable.OverridePreviousState(interactable.gameObject.transform.parent, preKinem, preGrab);
         }
     }
 
