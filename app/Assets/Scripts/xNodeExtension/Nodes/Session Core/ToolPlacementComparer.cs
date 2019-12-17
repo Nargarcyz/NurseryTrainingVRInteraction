@@ -1,6 +1,7 @@
 ﻿using NT.Atributes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using XNode;
 
@@ -40,6 +41,18 @@ namespace NT.Nodes.SessionCore
 
         public override object GetValue(NodePort port)
         {
+            // LOGICA COMPROBACION
+            var graphs = SessionManager.Instance.GetAllGraphs();
+            var currentGraph = graphs.Where(g => g.name == this.graph.name).FirstOrDefault();
+            if (currentGraph != null)
+            {
+                if (currentGraph.assignedSCGO != null)
+                {
+                    var currentGameobject = currentGraph.assignedSCGO.gameObject;
+                    BoxCollider bc = currentGameobject.GetComponentInParent<BoxCollider>();
+                }
+            }
+
             /*
             float val1 = GetInputValue<float>(nameof(valueA), this.valueA);
             float val2 = GetInputValue<float>(nameof(valueB), this.valueB);
