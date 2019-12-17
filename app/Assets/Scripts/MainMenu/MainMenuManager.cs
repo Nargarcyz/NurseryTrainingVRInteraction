@@ -13,6 +13,13 @@ public class MainMenuManager : MonoBehaviour {
     public TMP_InputField sessionID;
 
     private Dictionary<string, GameObject> sessions = new Dictionary<string, GameObject>();
+
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     private void Awake() {
         DirectoryInfo sessionsDir = new DirectoryInfo(SessionManager.GetSavePath());
 
