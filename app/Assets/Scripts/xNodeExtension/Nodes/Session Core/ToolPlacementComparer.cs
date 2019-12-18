@@ -1,5 +1,6 @@
-﻿using NT.Atributes;
+﻿using NT.Graph;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace NT.Nodes.SessionCore
 {
 
     [System.Serializable]
-    public class ToolPlacementComparer : NTNode
+    public class ToolPlacementComparer : FlowNode
     {
         //[NTInputSelect] public List<Tools> toolList1;
         //[NTInputSelect] public List<Tools> toolList2;
@@ -39,28 +40,43 @@ namespace NT.Nodes.SessionCore
             */
         }
 
-        public override object GetValue(NodePort port)
+        public override IEnumerator ExecuteNode(NodeExecutionContext context)
         {
             // LOGICA COMPROBACION
-            var graphs = SessionManager.Instance.GetAllGraphs();
-            var currentGraph = graphs.Where(g => g.name == this.graph.name).FirstOrDefault();
-            if (currentGraph != null)
-            {
-                if (currentGraph.assignedSCGO != null)
-                {
-                    var currentGameobject = currentGraph.assignedSCGO.gameObject;
-                    BoxCollider bc = currentGameobject.GetComponentInParent<BoxCollider>();
-                }
+            var sgo = GetNodeGameObject() as SteelTableASceneGameObject;    // TODO: Cambiar por clase en capa superior (p.e. ToolSurfaceSceneGameObject --> (hereda) SteelTableASceneGameObject)
+            if (sgo != null) {
+
+                List<GameObject> children = GetGameObjectChildren(sgo.transform.gameObject);
+                //children.Sort();
+
+                
+                /*var currentGameobject = sgo.gameObject;
+                BoxCollider bc = currentGameobject.GetComponentInParent<BoxCollider>();*/
             }
 
-            /*
-            float val1 = GetInputValue<float>(nameof(valueA), this.valueA);
-            float val2 = GetInputValue<float>(nameof(valueB), this.valueB);
+            yield return null;
+        }
 
-            result = val1 + val2;
-
-            return result;*/
+        public override object GetValue(NodePort port)
+        {
             return false;
+        }
+
+
+        private SceneGameObject GetNodeGameObject()
+        {
+            var nodeGraph = this.graph as SceneObjectGraph;
+            return SessionManager.Instance.GetSceneGameObject(nodeGraph.linkedNTVariable);
+        }
+
+        private List<GameObject> GetGameObjectChildren(GameObject go)
+        {
+            List<GameObject> children = new List<GameObject>();
+            foreach (Transform child in go.transform)
+            {
+                children.Add(child.gameObject);
+            }
+            return children;
         }
 
         public override string GetDisplayName()
