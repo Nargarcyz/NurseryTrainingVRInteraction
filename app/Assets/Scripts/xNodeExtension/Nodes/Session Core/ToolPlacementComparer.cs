@@ -45,13 +45,14 @@ namespace NT.Nodes.SessionCore
             // LOGICA COMPROBACION
             var sgo = GetNodeGameObject() as SteelTableASceneGameObject;    // TODO: Cambiar por clase en capa superior (p.e. ToolSurfaceSceneGameObject --> (hereda) SteelTableASceneGameObject)
             if (sgo != null) {
-
-                List<GameObject> children = GetGameObjectChildren(sgo.transform.gameObject);
+                GameObject surfaceGameobject = sgo.surface.gameObject;
+                List<GameObject> children = GetGameObjectChildren(surfaceGameobject);
                 //children.Sort();
+                // The transforms of the GameObjects has its anchor point in the center (look tool.transform.position)
 
-                
-                /*var currentGameobject = sgo.gameObject;
-                BoxCollider bc = currentGameobject.GetComponentInParent<BoxCollider>();*/
+
+                BoxCollider bc = surfaceGameobject.GetComponent<BoxCollider>();
+                // Divide BoxCollider
             }
 
             yield return null;
