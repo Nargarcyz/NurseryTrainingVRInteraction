@@ -357,6 +357,12 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
             return null;
         }
     }
+
+    public List<SceneGameObject> GetSceneGameObjectsWithTag(string tag)
+    {
+        var result = sceneGameObjects.Where(g => g.Value.CompareTag(tag)).Select(g => g.Value).ToList();
+        return result;
+    }
 #endregion
 
 #region  Graph functions
