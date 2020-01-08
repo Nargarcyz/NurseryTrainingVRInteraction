@@ -17,6 +17,8 @@ namespace NT.Nodes.SessionCore
 
         [HideInInspector]
         private List<Tuple<NodePort, NodePort>> rules;
+        [HideInInspector]
+        private List<Tools> options;
 
         [ContextMenu("Add rule")]
         public void AddRule()
@@ -38,6 +40,10 @@ namespace NT.Nodes.SessionCore
             this.AddInstanceInput(typeof(string), fieldName: "myDynamicInput");
             this.AddInstanceOutput(typeof(int), fieldName: "myDynamicOutput");
             */
+
+            // Dynamic list of Tools
+            UpdateOptionsList();
+            SessionManager.Instance.OnSceneGameObjectsChanged.AddListener(UpdateOptionsList);
         }
 
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
@@ -85,6 +91,11 @@ namespace NT.Nodes.SessionCore
             return "Tool Placement Comparer";
         }
 
+        private void UpdateOptionsList()
+        {
+            var tools = SessionManager.Instance.GetSceneGameObjectsWithTag("Tool");
+            options = tools.Cast<ITool>().Select(t => t.GetToolType()).Distinct().ToList();
+        }
 
     }
 
