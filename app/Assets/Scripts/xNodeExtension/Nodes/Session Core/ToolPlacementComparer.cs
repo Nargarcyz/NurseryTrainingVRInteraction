@@ -1,4 +1,5 @@
 ﻿using NT.Graph;
+using NT.SceneObjects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -59,6 +60,13 @@ namespace NT.Nodes.SessionCore
 
                 BoxCollider bc = surfaceGameobject.GetComponent<BoxCollider>();
                 // Divide BoxCollider
+                List<BoxCollider> rowColliders = new List<BoxCollider>();
+                for (int i=0; i<3; i++)
+                {
+                    var sceneobj = sgo.sceneObject as SceneObject<SteelTableAData>;
+                    var data = sceneobj.GetDefaultData();
+                    var value = (SteelTableAData) data.GetValue();
+                }
             }
 
             yield return null;
