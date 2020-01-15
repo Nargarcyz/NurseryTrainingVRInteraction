@@ -60,13 +60,9 @@ namespace NT.Nodes.SessionCore
 
                 BoxCollider bc = surfaceGameobject.GetComponent<BoxCollider>();
                 // Divide BoxCollider
-                List<BoxCollider> rowColliders = new List<BoxCollider>();
-                for (int i=0; i<3; i++)
-                {
-                    var sceneobj = sgo.sceneObject as SceneObject<SteelTableAData>;
-                    var data = sceneobj.GetDefaultData();
-                    var value = (SteelTableAData) data.GetValue();
-                }
+                int rowSize = GetRowSize(sgo.sceneObject);
+                var rowColliders = DivideColliderByRows(bc, rowSize);
+                
             }
 
             yield return null;
@@ -103,6 +99,47 @@ namespace NT.Nodes.SessionCore
         {
             var tools = SessionManager.Instance.GetSceneGameObjectsWithTag("Tool");
             options = tools.Cast<ITool>().Select(t => t.GetToolType()).Distinct().ToList();
+        }
+
+
+        private int GetRowSize(ISceneObject sgo)
+        {
+            var sceneobj = sgo as SceneObject<SteelTableAData>;
+            var data = sceneobj.GetDefaultData();
+            var value = (SteelTableAData)data.GetValue();
+            return value.rowSize;
+        }
+        private List<BoxCollider> DivideColliderByRows(BoxCollider bc, int rowSize)
+        {
+            bool rowOnX = bc.size.x >= bc.size.z;
+            float minCoord = rowOnX ? (bc.center.x - bc.size.x / 2) : (bc.center.z - bc.size.z / 2);
+            float incrCoord = rowOnX ? (bc.size.x / rowSize) : (bc.size.z / rowSize);
+
+            var bcList = new List<BoxCollider>();
+            for (int i = 0; i < rowSize; i++)
+            {
+                BoxCollider row = bc.gameObject.AddComponent<BoxCollider>();
+                if (rowOnX) {
+                    row.center = new Vector3(minCoord + (i*incrCoord) + (incrCoord/2), bc.center.y, bc.center.z);
+                    row.size = new Vector3(bc.size.x / rowSize, bc.size.y, bc.size.z);
+                } else
+                {
+                    row.center = new Vector3(bc.center.x, bc.center.y, minCoord + (i * incrCoord) + (incrCoord / 2));
+                    row.size = new Vector3(bc.size.x, bc.size.y, bc.size.z / rowSize);
+                }
+                bcList.Add(row);
+            }
+
+            return bcList;
+        }
+
+        // Requires you to do all the transformations (centre, scale etc) on the parent gameobject
+        // rather than the collider component (so the collider centre is 0,0,0 and scale is 1,1,1)
+        private bool ColliderContainsPoint(Transform ColliderTransform, Vector3 Point)
+        {
+            Vector3 localPos = ColliderTransform.InverseTransformPoint(Point);
+            // Mirar size para hacerlo genérico?
+            return (Math.Abs(localPos.x) < 0.5f && Math.Abs(localPos.y) < 0.5f && Math.Abs(localPos.z) < 0.5f);
         }
 
     }
