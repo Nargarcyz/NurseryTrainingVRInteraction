@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f475e278828a1eb45b64ecf2f3b8f0f4, type: 3}
-  m_Name: Forceps_big
+  m_Name: Scissors_big
   m_EditorClassIdentifier: 
   displayName: 
   sceneGameObject:
     canBePlacedOver:
       serializedVersion: 2
       m_Bits: 1024
-    model: {fileID: 8105793770081520070, guid: 204acaba3e2968449b820fdd626a1eb7, type: 3}
+    model: {fileID: 8105793770081520070, guid: 45c83f80edc92c44f9ff6e0fb726d377, type: 3}
   sceneObjectUI:
-    color: {r: 0.9245283, g: 0.047970813, b: 0.5069318, a: 0.5882353}
+    color: {r: 0, g: 0.68458986, b: 1, a: 0.5882353}
     icon: {fileID: 21300000, guid: 9281abada1fd93948a7382fa957728b1, type: 3}
     category: 3
-  GUID: 
+  GUID: ce14f39a-f656-42f3-a435-48a8a2c4f160
