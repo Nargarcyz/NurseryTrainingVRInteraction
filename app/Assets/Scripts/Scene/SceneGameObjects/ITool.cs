@@ -8,5 +8,12 @@ public enum Tools
     Scissors02,
     Forceps01,
     Forceps02,
-    Clamp01
+    Clamp01,
+
+    Pinset_recto,
+    Forceps_Hoskin,
+    Forceps_McPherson,
+    Forceps_Anatomical,
+    Mosquito_Kocher_Small,
+    Mosquito_Kocher_Large,
 }

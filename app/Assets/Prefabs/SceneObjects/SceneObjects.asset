@@ -36,6 +36,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c80d7e867cda1e042831c6ed71caaae7, type: 2}
   - {fileID: 11400000, guid: 338c0e0e559d02645bae12f564047798, type: 2}
   - {fileID: 11400000, guid: 1bcc7f6f988eec049b214c1cd808005b, type: 2}
+  - {fileID: 11400000, guid: f0271d540dc8fcb4b8bbbb3ccc8be21b, type: 2}
+  - {fileID: 11400000, guid: 64df50c36e4b4e4448231c6cbf1eb14c, type: 2}
+  - {fileID: 11400000, guid: 6ac6e8583dba82c48877ffa94e83b9e6, type: 2}
+  - {fileID: 11400000, guid: 50a901dd530ed3f409d9f54ba1dbc6b6, type: 2}
+  - {fileID: 11400000, guid: 06fe05ae4cc591441abe1a7645b5916a, type: 2}
+  - {fileID: 11400000, guid: f679736342e17974380b7930d7e5ed4e, type: 2}
   prefabSet:
   - {fileID: 0}
   - {fileID: 0}

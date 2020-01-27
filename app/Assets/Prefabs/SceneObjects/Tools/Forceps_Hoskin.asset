@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f475e278828a1eb45b64ecf2f3b8f0f4, type: 3}
+  m_Name: Forceps_Hoskin
+  m_EditorClassIdentifier: 
+  displayName: 
+  sceneGameObject:
+    canBePlacedOver:
+      serializedVersion: 2
+      m_Bits: 1024
+    model: {fileID: 2903005808956194852, guid: 3c71313f9b168ce4ab8a9e0cf5bfcd03, type: 3}
+  sceneObjectUI:
+    color: {r: 0.1882353, g: 0.49411765, b: 0.7764706, a: 0}
+    icon: {fileID: 21300000, guid: 9281abada1fd93948a7382fa957728b1, type: 3}
+    category: 3
+  GUID: 355aad03-49e1-4034-ae8a-5acf1d4d8630
