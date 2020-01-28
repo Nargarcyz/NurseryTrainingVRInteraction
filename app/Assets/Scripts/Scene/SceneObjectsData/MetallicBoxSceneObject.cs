@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace NT.SceneObjects{
     public struct MetallicBoxData{
-        public float sharpness;
+        public List<SceneGameObjectReference> toolsList;
     }
 
     [CreateAssetMenu(fileName = "MetallicBoxSceneObject", menuName = "NT/Scene/MetallicBox")]
