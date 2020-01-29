@@ -16,7 +16,7 @@ MonoBehaviour:
   sceneGameObject:
     canBePlacedOver:
       serializedVersion: 2
-      m_Bits: 1024
+      m_Bits: 8192
     model: {fileID: 8184754874467182343, guid: 10300c98e8d9e184f97369227d696e6f, type: 3}
   sceneObjectUI:
     color: {r: 0.1882353, g: 0.49411765, b: 0.7764706, a: 0}

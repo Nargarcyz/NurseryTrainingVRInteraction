@@ -71,7 +71,7 @@ public class MapEditor : MapLoader {
         }
     }   
     private LayerMask currentObjectLayer;
-    public LayerMask allExceptFloor = ~0;
+    public LayerMask allLayersExceptFloor = ~0;
 
     public override void ReloadUI(){
         LoadObjectsButtons();
@@ -282,7 +282,7 @@ public class MapEditor : MapLoader {
 
     private void DeleteObjects()
     {
-        if(TryRaycastFromScreen(allExceptFloor, out RaycastHit hit)){
+        if(TryRaycastFromScreen(allLayersExceptFloor, out RaycastHit hit)){
             SceneGameObject soc = hit.transform.GetComponent<SceneGameObject>();
 
             if(soc != null){
@@ -322,7 +322,7 @@ public class MapEditor : MapLoader {
 
 
     private void InspectObject(){
-        if(TryRaycastFromScreen(allExceptFloor, out RaycastHit hit)){
+        if(TryRaycastFromScreen(allLayersExceptFloor, out RaycastHit hit)){
             SceneGameObject soc = hit.transform.GetComponent<SceneGameObject>();
 
             if(soc != null){

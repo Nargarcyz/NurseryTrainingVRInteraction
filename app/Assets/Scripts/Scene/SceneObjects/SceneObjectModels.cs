@@ -18,7 +18,8 @@ namespace NT.SceneObjects
         Tools = 3,
         Decoration = 4,
         UserPrefabs = 5,
-        Humanoids = 6
+        Humanoids = 6,
+        Containers = 7
     }
 
     [System.Serializable]
