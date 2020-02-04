@@ -19,6 +19,7 @@ public class RuntimeGraph : MonoBehaviour, IPointerClickHandler {
     [Header("Node Parts")]
     public GameObject inputPort;
     public GameObject outputPort;
+    public GameObject dynamicPort;
     
     [Header("Node Properties")]
     public GameObject Property;

@@ -1,4 +1,5 @@
-﻿using NT.Graph;
+﻿using NT.Atributes;
+using NT.Graph;
 using NT.SceneObjects;
 using System;
 using System.Collections;
@@ -13,7 +14,7 @@ namespace NT.Nodes.SessionCore
     [System.Serializable]
     public class ToolPlacementComparer : FlowNode
     {
-        //[NTInputSelect] public List<Tools> toolList1;
+        [NTInputSelect] public List<Tools> toolList1;
         //[NTInputSelect] public List<Tools> toolList2;
 
         [HideInInspector]
@@ -27,7 +28,6 @@ namespace NT.Nodes.SessionCore
             int i = rules.Count;
             NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName:$"Less{i}");
             NodePort np2 = this.AddInstanceInput(typeof(Tools), fieldName:$"Great{i}");
-            this.
             rules.Add(new Tuple<NodePort, NodePort> (np1,np2));
         }
 
@@ -36,7 +36,7 @@ namespace NT.Nodes.SessionCore
         */
         protected override void Init() {
             rules = new List<Tuple<NodePort, NodePort>>();
-            AddRule();
+            //AddRule();
             /*
             this.AddInstanceInput(typeof(string), fieldName: "myDynamicInput");
             this.AddInstanceOutput(typeof(int), fieldName: "myDynamicOutput");

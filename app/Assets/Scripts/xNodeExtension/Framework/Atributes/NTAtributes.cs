@@ -29,7 +29,7 @@ namespace NT.Atributes{
     public class NTInputSelectAttribute : Node.InputAttribute
     {
         public NTInputSelectAttribute(  Node.ShowBackingValue backingValue = Node.ShowBackingValue.Always,
-                                        Node.ConnectionType connectionType = Node.ConnectionType.Override,
+                                        Node.ConnectionType connectionType = Node.ConnectionType.Multiple,
                                         Node.TypeConstraint typeConstraint = Node.TypeConstraint.Strict,
                                         bool instancePortList = true) :
             base(backingValue, connectionType, typeConstraint, instancePortList)

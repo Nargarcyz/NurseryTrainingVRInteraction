@@ -24,7 +24,8 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
 
             foreach (NodePort port in node.Ports)
             {
-                GameObject portGO =  Instantiate(port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
+                GameObject portGO = Instantiate(port.IsDynamic ? graph.dynamicPort : port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
+                //GameObject portGO =  Instantiate(port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
 
                 portGO.transform.Find("Label").GetComponent<Text>().text = port.fieldName.NicifyString();
                 UGUIPort guiport = portGO.GetComponentInChildren<UGUIPort>();
