@@ -981,7 +981,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: X
 --- !u!1 &4544013230533708765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,6 +1442,7 @@ GameObject:
   - component: {fileID: 7567246461209197124}
   - component: {fileID: 5355938348193014427}
   - component: {fileID: 3581539917789349244}
+  - component: {fileID: 1301672012785167905}
   m_Layer: 5
   m_Name: DeleteOption
   m_TagString: Untagged
@@ -1547,7 +1548,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5355938348193014427}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1301672012785167905}
+        m_MethodName: DeleteDynamicElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1301672012785167905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6445490405927103512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea732097839628a46be1a91ed8f330b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 3581539917789349244}
+  dynamicPort: {fileID: 2687435180882509033}
 --- !u!1 &6646158327380646060
 GameObject:
   m_ObjectHideFlags: 0

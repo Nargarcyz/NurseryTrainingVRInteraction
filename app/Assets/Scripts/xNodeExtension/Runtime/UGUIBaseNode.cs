@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using XNode;
 using TMPro;
+using System.Runtime.CompilerServices;
 
 public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextItem {
     public Node node;
@@ -24,7 +25,9 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
 
             foreach (NodePort port in node.Ports)
             {
-                GameObject portGO = Instantiate(port.IsDynamic ? graph.dynamicPort : port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
+                //bool customDynamic = port.ValueType is ITuple;
+                bool customDynamic = port.IsDynamic && port.node is NTNode ntnode && ntnode.GetDisplayName().Equals("Tool Placement Comparer");
+                GameObject portGO = Instantiate(customDynamic ? graph.dynamicPort : port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
                 //GameObject portGO =  Instantiate(port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
 
                 portGO.transform.Find("Label").GetComponent<Text>().text = port.fieldName.NicifyString();
@@ -67,6 +70,10 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
                     {
                         gp.SetData(value, variable, GUIProperty.PropertyType.Enumeration);
                     }
+                    //else if (kvp.Key is ITuple)
+                    //{
+                    //    gp.SetData(value, variable, GUIProperty.PropertyType.Tuple);
+                    //}
 
                     gp.OnValueChanged.RemoveAllListeners();
                     gp.OnValueChanged.AddListener(PropertyChanged);

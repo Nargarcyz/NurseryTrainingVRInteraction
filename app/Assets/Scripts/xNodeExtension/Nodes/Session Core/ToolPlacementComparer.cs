@@ -14,21 +14,25 @@ namespace NT.Nodes.SessionCore
     [System.Serializable]
     public class ToolPlacementComparer : FlowNode
     {
-        [NTInputSelect] public List<Tools> toolList1;
+        //[NTInputSelect] public List<Tools> toolList1;
         //[NTInputSelect] public List<Tools> toolList2;
 
         [HideInInspector]
         private List<Tuple<NodePort, NodePort>> rules;
+        //private List<NodePort> rules;
         [HideInInspector]
         private List<Tools> options;
 
         [ContextMenu("Add rule")]
         public void AddRule()
         {
+            // Intento de uso de tuplas
+            //NodePort np = this.AddInstanceInput(typeof(Tuple<Tools,Tools>), fieldName:$"Less{i}");
+            //rules.Add(np);
             int i = rules.Count;
-            NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName:$"Less{i}");
-            NodePort np2 = this.AddInstanceInput(typeof(Tools), fieldName:$"Great{i}");
-            rules.Add(new Tuple<NodePort, NodePort> (np1,np2));
+            NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName: $"Less{i}");
+            NodePort np2 = this.AddInstanceInput(typeof(Tools), fieldName: $"Great{i}");
+            rules.Add(new Tuple<NodePort, NodePort>(np1, np2));
         }
 
         /*
@@ -36,7 +40,10 @@ namespace NT.Nodes.SessionCore
         */
         protected override void Init() {
             rules = new List<Tuple<NodePort, NodePort>>();
-            //AddRule();
+            //rules = new List<NodePort>();
+            AddRule();
+            AddRule();
+            AddRule();
             /*
             this.AddInstanceInput(typeof(string), fieldName: "myDynamicInput");
             this.AddInstanceOutput(typeof(int), fieldName: "myDynamicOutput");

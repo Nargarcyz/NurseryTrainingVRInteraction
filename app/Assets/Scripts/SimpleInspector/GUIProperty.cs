@@ -30,7 +30,8 @@ public class GUIProperty : MonoBehaviour {
         Number,
         Boolean,
         Enumeration,
-        SceneReference
+        SceneReference,
+        //Tuple
     }
 
     public void SetData(object data, string path, PropertyType propertyType){
@@ -115,6 +116,9 @@ public class GUIProperty : MonoBehaviour {
                 enumInput.gameObject.SetActive(false);
                 textInput.gameObject.SetActive(false);
             break;
+            //case PropertyType.Tuple:
+
+            //break;
         }
 
         int start = path.LastIndexOf('/');
