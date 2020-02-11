@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace NT.SceneObjects{
     public struct MetallicBoxData{
+        public bool canBeOpened;
         public List<SceneGameObjectReference> toolsList;
     }
 
@@ -12,6 +13,16 @@ namespace NT.SceneObjects{
         public override List<string> GetCallbacks()
         {
             return new List<string>() { "Grabbed" };
+        }
+
+        public override bool CanHoldItem(SceneGameObject obj)
+        {
+            return true;
+        }
+
+        public override void HoldItem(SceneGameObject obj)
+        {
+            obj.gameObject.SetActive(true);
         }
     }
 }

@@ -1,8 +1,7 @@
 using UnityEngine;
-using VRTK;
-using NT;
 using NT.SceneObjects;
 using System.Collections.Generic;
+using System.Linq;
 
 public class CajaInstrumentalSceneGameObject : SceneGameObject
 {
@@ -11,71 +10,33 @@ public class CajaInstrumentalSceneGameObject : SceneGameObject
     public override bool CanHoldItem(SceneGameObject previewSGO)
     {
         MetallicBoxData metallicBoxData = (MetallicBoxData)data.data.GetValue();
-        bool freeSpace = false;
-
-        BoxCollider bc = previewSGO.GetComponentInChildren<BoxCollider>();
-        if (bc != null)
-        {
-            // Spawn new tool and see if fits
-            foreach (var sp in spawnPoints)
-            {
-                var hitCollider = Physics.OverlapBox(sp.position, bc.size/2, bc.transform.rotation);
-                if (hitCollider.Length == 0)
-                {
-                    freeSpace = true;
-                    break;
-                }
-            }
-        }
+        Transform spawnPoint = CheckSpawnpointFit(previewSGO);
+        bool freeSpace = spawnPoint != null;
+       
         return freeSpace && previewSGO is ITool;
     }
 
     public override void HoldItem(SceneGameObject childOfElement, bool instancing = true)
     {
-        /*ClosetData closetData = (ClosetData)data.data.GetDefaultValue();
-        List<SceneGameObjectReference> slots = SlotsList(closetData);
 
-        //Destroy(childOfElement.GetComponent<Rigidbody>());
-        childOfElement.gameObject.SetActive(true);
+    }
 
-        if (instancing)
+    private Transform CheckSpawnpointFit(SceneGameObject previewSGO)
+    {
+        BoxCollider bc = previewSGO.GetComponentInChildren<BoxCollider>();
+        if (bc != null)
         {
-
-            bool stored = false;
-
-            for (int i = 0; i < slots.Count && !stored; i++)
+            foreach (var sp in spawnPoints)
             {
-                if (slots[i] == null)
+                var hitCollider = Physics.OverlapBox(sp.position, bc.size / 2, bc.transform.rotation, ~0, QueryTriggerInteraction.Ignore);
+                var hitCollider2 = Physics.OverlapBox(sp.position, bc.size / 2, bc.transform.rotation * Quaternion.Euler(0, 90, 0), ~0, QueryTriggerInteraction.Ignore);
+                if (hitCollider.Length == 0 || hitCollider2.Length == 0)
                 {
-                    stored = true;
-                    slots[i] = new SceneGameObjectReference(childOfElement);
+                    return sp;
                 }
             }
-
-            ListToSlots(ref closetData, slots);
-
-            data.data.SetDefaultValue(closetData);
         }
-        else
-        {
-            for (int i = 0; i < slots.Count; i++)
-            {
-                if (slots[i].linkedSGO == childOfElement.data.id)
-                {
-
-                    childOfElement.transform.SetParent(slotPivot[i]);
-                    childOfElement.transform.localPosition = Vector3.zero;
-                    childOfElement.transform.localRotation = Quaternion.identity;
-
-                    slotPivot[i].gameObject.SetActive(true);
-
-                    return;
-                }
-            }
-
-            Debug.Log("There is no slot fot ?¿" + childOfElement.data.id);
-            childOfElement.gameObject.SetActive(false);
-        }*/
+        return null;
     }
 
     public override void LoadFromData(SceneGameObjectData data)
