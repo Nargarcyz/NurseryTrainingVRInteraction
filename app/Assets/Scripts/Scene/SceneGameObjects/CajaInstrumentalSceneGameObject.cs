@@ -18,7 +18,29 @@ public class CajaInstrumentalSceneGameObject : SceneGameObject
 
     public override void HoldItem(SceneGameObject childOfElement, bool instancing = true)
     {
+        MetallicBoxData metallicBoxData = (MetallicBoxData) data.data.GetDefaultValue();
+        childOfElement.gameObject.SetActive(true);
 
+        var spawnPoint = CheckSpawnpointFit(childOfElement);
+        if (spawnPoint != null)
+        {
+            if (instancing)
+            {
+                metallicBoxData.toolsList.Add(new SceneGameObjectReference(childOfElement));
+                data.data.SetDefaultValue(metallicBoxData);
+            }
+            else
+            {
+                childOfElement.transform.SetParent(spawnPoint);
+                childOfElement.transform.localPosition = Vector3.zero;
+                childOfElement.transform.localRotation = Quaternion.identity;
+            }
+        }
+        else
+        {
+            Debug.Log("Cannot place object with id " + childOfElement.data.id + " inside the container");
+            childOfElement.gameObject.SetActive(false);
+        }
     }
 
     private Transform CheckSpawnpointFit(SceneGameObject previewSGO)
@@ -28,12 +50,15 @@ public class CajaInstrumentalSceneGameObject : SceneGameObject
         {
             foreach (var sp in spawnPoints)
             {
-                var hitCollider = Physics.OverlapBox(sp.position, bc.size / 2, bc.transform.rotation, ~0, QueryTriggerInteraction.Ignore);
-                var hitCollider2 = Physics.OverlapBox(sp.position, bc.size / 2, bc.transform.rotation * Quaternion.Euler(0, 90, 0), ~0, QueryTriggerInteraction.Ignore);
-                if (hitCollider.Length == 0 || hitCollider2.Length == 0)
+                LayerMask allLayers = ~0;
+                var hitCollider = Physics.OverlapBox(sp.position, bc.size / 2, bc.transform.rotation, allLayers, QueryTriggerInteraction.Ignore);
+                if (hitCollider.Length == 0)
                 {
                     return sp;
                 }
+                // Rotate 90º? Rotate the same angle as the box?
+                // var hitColliderRotated = Physics.OverlapBox(sp.position, bc.size / 2, bc.transform.rotation * Quaternion.Euler(0, 90, 0), allLayers, QueryTriggerInteraction.Ignore);
+                // || hitColliderRotated.Length == 0
             }
         }
         return null;

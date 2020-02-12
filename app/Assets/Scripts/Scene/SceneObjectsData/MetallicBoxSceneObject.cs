@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace NT.SceneObjects{
+namespace NT.SceneObjects
+{
+    [System.Serializable]
     public struct MetallicBoxData{
         public bool canBeOpened;
         public List<SceneGameObjectReference> toolsList;
