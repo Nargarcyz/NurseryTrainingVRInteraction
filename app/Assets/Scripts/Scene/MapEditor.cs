@@ -169,7 +169,7 @@ public class MapEditor : MapLoader {
     private bool TryRaycastFromScreen(LayerMask mask, out RaycastHit hit){
         Ray ray = raycastCamera.ViewportPointToRay(mapRaycast.textureCoords);
 
-        if (Physics.Raycast(ray, out hit, 5000, mask)) {
+        if (Physics.Raycast(ray, out hit, 5000, mask, QueryTriggerInteraction.Ignore)) {
             Transform objectHit = hit.transform;
             if(objectHit != null){
                 return true;

@@ -86,8 +86,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5821543, y: 0.043017805, z: 0.6815047}
-  m_Center: {x: -0.0011295676, y: 0.019286186, z: 0.052361965}
+  m_Size: {x: 0.5821543, y: 0.044484377, z: 0.6815047}
+  m_Center: {x: -0.0011295676, y: 0.020019472, z: 0.052361965}
 --- !u!65 &1991040896389832724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
   coverVisual: {fileID: 1991040895340276286}
   coverVisible: 0
   surface: {fileID: 1991040894496604054}
-  triggerCollider: {fileID: 0}
+  toolsOut: {fileID: 0}
 --- !u!1 &1991040896470773007
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,12 +7,6 @@ namespace NT.SceneObjects
     public struct MetallicBoxData{
         public bool canBeOpened;
         public List<SceneGameObjectReference> toolsList;
-
-        public MetallicBoxData(List<SceneGameObjectReference> tools)
-        {
-            canBeOpened = true;
-            toolsList = tools;
-        }
     }
 
     [CreateAssetMenu(fileName = "MetallicBoxSceneObject", menuName = "NT/Scene/MetallicBox")]

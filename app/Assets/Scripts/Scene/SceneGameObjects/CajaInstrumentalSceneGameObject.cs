@@ -26,15 +26,19 @@ public class CajaInstrumentalSceneGameObject : SceneGameObject
         {
             if (instancing)
             {
+                if (metallicBoxData.toolsList == null)
+                {
+                    metallicBoxData.toolsList = new List<SceneGameObjectReference>();
+                }
                 metallicBoxData.toolsList.Add(new SceneGameObjectReference(childOfElement));
                 data.data.SetDefaultValue(metallicBoxData);
             }
-            else
-            {
-                childOfElement.transform.SetParent(spawnPoint);
-                childOfElement.transform.localPosition = Vector3.zero;
-                childOfElement.transform.localRotation = Quaternion.identity;
-            }
+
+            childOfElement.transform.SetParent(spawnPoint);
+            childOfElement.transform.localPosition = Vector3.zero;
+            childOfElement.transform.localRotation = Quaternion.identity;
+            // Evitar que los spawnpoint se muevan junto las herramientas
+            childOfElement.transform.SetParent(null);
         }
         else
         {
