@@ -38,7 +38,7 @@ public class CajaInstrumentalSceneGameObject : SceneGameObject
             childOfElement.transform.localPosition = Vector3.zero;
             childOfElement.transform.localRotation = Quaternion.identity;
             // Evitar que los spawnpoint se muevan junto las herramientas
-            childOfElement.transform.SetParent(null);
+            childOfElement.transform.SetParent(this.gameObject.transform);
         }
         else
         {
