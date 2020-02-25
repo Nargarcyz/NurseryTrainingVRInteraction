@@ -19,9 +19,12 @@ namespace NT.Nodes.SessionCore
 
         [HideInInspector]
         private List<Tuple<NodePort, NodePort>> rules;
-        //private List<NodePort> rules;
+
         [HideInInspector]
         private List<Tools> options;
+
+        private const string FIELD_LESS = "#Less";
+        private const string FIELD_GREAT = "#Great";
 
         [ContextMenu("Add rule")]
         public void AddRule()
@@ -30,9 +33,21 @@ namespace NT.Nodes.SessionCore
             //NodePort np = this.AddInstanceInput(typeof(Tuple<Tools,Tools>), fieldName:$"Less{i}");
             //rules.Add(np);
             int i = rules.Count;
-            NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName: $"Less{i}");
-            NodePort np2 = this.AddInstanceInput(typeof(Tools), fieldName: $"Great{i}");
+            NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_LESS}{i}");
+            NodePort np2 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_GREAT}{i}");
             rules.Add(new Tuple<NodePort, NodePort>(np1, np2));
+        }
+
+        public void DeleteInstanceInput(UGUIPort port)
+        {
+            string portNumber = port.fieldName.Replace(FIELD_LESS, String.Empty).Replace(FIELD_GREAT, String.Empty);
+            string portLess = FIELD_LESS + portNumber;
+            string portGreat = FIELD_GREAT + portNumber;
+
+            this.RemoveInstancePort(portLess);
+            this.RemoveInstancePort(portGreat);
+
+            rules.RemoveAll(r => r.Item1.fieldName.Equals(portLess) && r.Item2.fieldName.Equals(portGreat));
         }
 
         /*

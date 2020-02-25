@@ -26,7 +26,7 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
             foreach (NodePort port in node.Ports)
             {
                 //bool customDynamic = port.ValueType is ITuple;
-                bool customDynamic = port.IsDynamic && port.node is NTNode ntnode && ntnode.GetDisplayName().Equals("Tool Placement Comparer");
+                bool customDynamic = port.IsDynamic && port.fieldName.StartsWith("#"); // && port.node is NTNode ntnode && ntnode.GetDisplayName().Equals("Tool Placement Comparer");
                 GameObject portGO = Instantiate(customDynamic ? graph.dynamicPort : port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
                 //GameObject portGO =  Instantiate(port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
 
