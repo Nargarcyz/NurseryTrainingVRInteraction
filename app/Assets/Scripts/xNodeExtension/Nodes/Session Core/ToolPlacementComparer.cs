@@ -12,7 +12,7 @@ namespace NT.Nodes.SessionCore
 {
 
     [System.Serializable]
-    public class ToolPlacementComparer : FlowNode
+    public class ToolPlacementComparer : FlowNode, IUGUIDynamicListNode
     {
         //[NTInputSelect] public List<Tools> toolList1;
         //[NTInputSelect] public List<Tools> toolList2;
@@ -32,9 +32,10 @@ namespace NT.Nodes.SessionCore
             // Intento de uso de tuplas
             //NodePort np = this.AddInstanceInput(typeof(Tuple<Tools,Tools>), fieldName:$"Less{i}");
             //rules.Add(np);
-            int i = rules.Count;
-            NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_LESS}{i}");
-            NodePort np2 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_GREAT}{i}");
+
+            string id = Guid.NewGuid().ToString();
+            NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_LESS}{id}");
+            NodePort np2 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_GREAT}{id}");
             rules.Add(new Tuple<NodePort, NodePort>(np1, np2));
         }
 
