@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using XNode;
 using TMPro;
 using System.Runtime.CompilerServices;
+using System.Collections;
 
 public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextItem {
     public Node node;
@@ -22,22 +23,31 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
     private void Awake() {
         if(node != null){
             List<string> ignored = new List<string>();
+            List<GameObject> listNodes = new List<GameObject>();
 
             foreach (NodePort port in node.Ports)
             {
-                //bool customDynamic = port.ValueType is ITuple;
-                bool customDynamic = port.IsDynamic && port.fieldName.StartsWith("#"); // && port.node is NTNode ntnode && ntnode.GetDisplayName().Equals("Tool Placement Comparer");
-                GameObject portGO = Instantiate(customDynamic ? graph.dynamicPort : port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
-                //GameObject portGO =  Instantiate(port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
+                GameObject portGO;
+                if (CheckTypeIsGenericList(port.ValueType))
+                {
+                    portGO = Instantiate(graph.dynamicList, body.transform);
+                    listNodes.Add(portGO);
+                }
+                else if (port.IsDynamic && port.fieldName.StartsWith("#"))
+                {
+                    // Dynamic list elements
 
-                portGO.transform.Find("Label").GetComponent<Text>().text = port.fieldName.NicifyString();
-                UGUIPort guiport = portGO.GetComponentInChildren<UGUIPort>();
-                guiport.fieldName = port.fieldName;
-                guiport.node = node;
-                guiport.name = port.fieldName;
+                    GameObject dl = listNodes.Where(n => n.name=="").FirstOrDefault();
 
-                ports.Add(guiport);
-
+                    // SET NEW PORT AS PARENT OF LIST'S LAYOUT
+                    portGO = Instantiate(graph.dynamicPort, body.transform);
+                }
+                else
+                {
+                    // Default ports
+                    portGO = Instantiate(port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
+                    SetDefaultPortText(portGO, port);
+                }
                 ignored.Add(port.fieldName);
             }
 
@@ -90,6 +100,17 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
         }
 
         ntNode = node as NTNode;
+    }
+
+    private void SetDefaultPortText(GameObject portGO, NodePort port)
+    {
+        portGO.transform.Find("Label").GetComponent<Text>().text = port.fieldName.NicifyString();
+        UGUIPort guiport = portGO.GetComponentInChildren<UGUIPort>();
+        guiport.fieldName = port.fieldName;
+        guiport.node = node;
+        guiport.name = port.fieldName;
+
+        ports.Add(guiport);
     }
 
     private void PropertyChanged(object value, string path)
@@ -184,5 +205,10 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
     public string GetKey()
     {
         return node.name;
+    }
+
+    public bool CheckTypeIsGenericList(Type t)
+    {
+        return t.IsGenericType && t.GetGenericTypeDefinition() == typeof(List<>);
     }
 }

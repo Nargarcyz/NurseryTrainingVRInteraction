@@ -17,12 +17,15 @@ namespace NT.Nodes.SessionCore
         //[NTInputSelect] public List<Tools> toolList1;
         //[NTInputSelect] public List<Tools> toolList2;
 
+        [NTInputSelect] public List<Tuple<Tools, Tools>> reglas;
+
         [HideInInspector]
         private List<Tuple<NodePort, NodePort>> rules;
 
         [HideInInspector]
         private List<Tools> options;
 
+        private const string LIST_TOOLS = "#List#reglas#";
         private const string FIELD_LESS = "#Less";
         private const string FIELD_GREAT = "#Great";
 
@@ -34,9 +37,13 @@ namespace NT.Nodes.SessionCore
             //rules.Add(np);
 
             string id = Guid.NewGuid().ToString();
-            NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_LESS}{id}");
+            this.AddInstanceInput(typeof(Tuple<Tools, Tools>), fieldName: $"{LIST_TOOLS}{id}");
+
+
+
+            /*NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_LESS}{id}");
             NodePort np2 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_GREAT}{id}");
-            rules.Add(new Tuple<NodePort, NodePort>(np1, np2));
+            rules.Add(new Tuple<NodePort, NodePort>(np1, np2));*/
         }
 
         public void DeleteInstanceInput(UGUIPort port)
@@ -56,14 +63,10 @@ namespace NT.Nodes.SessionCore
         */
         protected override void Init() {
             rules = new List<Tuple<NodePort, NodePort>>();
-            //rules = new List<NodePort>();
-            AddRule();
-            AddRule();
-            AddRule();
-            /*
-            this.AddInstanceInput(typeof(string), fieldName: "myDynamicInput");
-            this.AddInstanceOutput(typeof(int), fieldName: "myDynamicOutput");
-            */
+            reglas = new List<Tuple<Tools, Tools>>();
+            //AddRule();
+            //AddRule();
+            //AddRule();
 
             // Dynamic list of Tools
             UpdateOptionsList();

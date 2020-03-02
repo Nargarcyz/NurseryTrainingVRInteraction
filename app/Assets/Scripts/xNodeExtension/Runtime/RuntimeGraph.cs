@@ -24,6 +24,7 @@ public class RuntimeGraph : MonoBehaviour, IPointerClickHandler {
     [Header("Node Properties")]
     public GameObject Property;
     public GameObject PropertyObject;
+    public GameObject dynamicList;
 
     [Header("References")]
     public UGUINodeContextMenu graphContextMenu;
