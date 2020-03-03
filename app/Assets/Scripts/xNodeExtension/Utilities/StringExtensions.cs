@@ -8,7 +8,8 @@ public static class StringExtensions
 {
 
     public static string NicifyString(this string name){
-        string[] nameParts = name.Split('/');
+        char[] separators = new char[] { '/', '_'};
+        string[] nameParts = name.Split(separators);
 
         for(int i = 0; i < nameParts.Length; i++){
             nameParts[i] = nameParts[i].SplitCamelCase();

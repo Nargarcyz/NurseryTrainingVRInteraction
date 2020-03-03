@@ -31,16 +31,17 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
                 if (CheckTypeIsGenericList(port.ValueType))
                 {
                     portGO = Instantiate(graph.dynamicList, body.transform);
+                    SetDefaultListText(portGO, port);
                     listNodes.Add(portGO);
                 }
                 else if (port.IsDynamic && port.fieldName.StartsWith("#"))
                 {
                     // Dynamic list elements
-
-                    GameObject dl = listNodes.Where(n => n.name=="").FirstOrDefault();
-
+                    string[] portName = port.fieldName.Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                    GameObject dl = listNodes.Where(n => n.name == portName[1]).FirstOrDefault();
                     // SET NEW PORT AS PARENT OF LIST'S LAYOUT
-                    portGO = Instantiate(graph.dynamicPort, body.transform);
+                    var layout = dl.GetComponent<LayoutGroup>();
+                    portGO = Instantiate(graph.dynamicPort, layout.transform);
                 }
                 else
                 {
@@ -111,6 +112,11 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
         guiport.name = port.fieldName;
 
         ports.Add(guiport);
+    }
+
+    private void SetDefaultListText(GameObject portGO, NodePort port)
+    {
+        portGO.transform.Find("Label").GetComponent<Text>().text = port.fieldName.NicifyString();
     }
 
     private void PropertyChanged(object value, string path)

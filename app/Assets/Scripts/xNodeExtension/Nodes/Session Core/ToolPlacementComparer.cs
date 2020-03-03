@@ -17,7 +17,7 @@ namespace NT.Nodes.SessionCore
         //[NTInputSelect] public List<Tools> toolList1;
         //[NTInputSelect] public List<Tools> toolList2;
 
-        [NTInputSelect] public List<Tuple<Tools, Tools>> reglas;
+        [NTInputSelect] public List<Tools> reglas;
 
         [HideInInspector]
         private List<Tuple<NodePort, NodePort>> rules;
@@ -37,7 +37,8 @@ namespace NT.Nodes.SessionCore
             //rules.Add(np);
 
             string id = Guid.NewGuid().ToString();
-            this.AddInstanceInput(typeof(Tuple<Tools, Tools>), fieldName: $"{LIST_TOOLS}{id}");
+            //this.AddInstanceInput(typeof(Tuple<Tools, Tools>), fieldName: $"{LIST_TOOLS}{id}");
+            this.AddInstanceInput(typeof(Tools), fieldName: $"{LIST_TOOLS}{id}");
 
 
 
@@ -48,14 +49,15 @@ namespace NT.Nodes.SessionCore
 
         public void DeleteInstanceInput(UGUIPort port)
         {
-            string portNumber = port.fieldName.Replace(FIELD_LESS, String.Empty).Replace(FIELD_GREAT, String.Empty);
-            string portLess = FIELD_LESS + portNumber;
-            string portGreat = FIELD_GREAT + portNumber;
+            this.RemoveInstancePort(port.fieldName);
+            //string portNumber = port.fieldName.Replace(FIELD_LESS, String.Empty).Replace(FIELD_GREAT, String.Empty);
+            //string portLess = FIELD_LESS + portNumber;
+            //string portGreat = FIELD_GREAT + portNumber;
 
-            this.RemoveInstancePort(portLess);
-            this.RemoveInstancePort(portGreat);
+            //this.RemoveInstancePort(portLess);
+            //this.RemoveInstancePort(portGreat);
 
-            rules.RemoveAll(r => r.Item1.fieldName.Equals(portLess) && r.Item2.fieldName.Equals(portGreat));
+            //rules.RemoveAll(r => r.Item1.fieldName.Equals(portLess) && r.Item2.fieldName.Equals(portGreat));
         }
 
         /*
@@ -63,7 +65,7 @@ namespace NT.Nodes.SessionCore
         */
         protected override void Init() {
             rules = new List<Tuple<NodePort, NodePort>>();
-            reglas = new List<Tuple<Tools, Tools>>();
+            reglas = new List<Tools>();
             //AddRule();
             //AddRule();
             //AddRule();

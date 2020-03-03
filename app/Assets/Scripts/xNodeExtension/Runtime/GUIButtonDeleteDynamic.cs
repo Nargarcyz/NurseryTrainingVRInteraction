@@ -11,7 +11,7 @@ public class GUIButtonDeleteDynamic : MonoBehaviour
     public void DeleteDynamicElement()
     {
         var port = dynamicPort.GetComponentInChildren<UGUIPort>();
-        var guiNode = this.gameObject.GetComponentInParent<IUGUINode>();
+        var baseNode = this.gameObject.GetComponentInParent<UGUIBaseNode>();
         var currentNode = SessionManager.Instance.sceneGraph.nodes.Where(n => n.Ports.Any(p => p.fieldName == port.fieldName)).FirstOrDefault();
 
         // Delete Port reference in Node
@@ -20,7 +20,7 @@ public class GUIButtonDeleteDynamic : MonoBehaviour
             // TODO: DEFINE FUNCTION IN NODE INTERFACE
             tpc.DeleteInstanceInput(port);
             // Visual Update Runtime Graph
-            guiNode.GetRuntimeGraph().Refresh();
+            baseNode.GetRuntimeGraph().Refresh();
         }
         else
         {
