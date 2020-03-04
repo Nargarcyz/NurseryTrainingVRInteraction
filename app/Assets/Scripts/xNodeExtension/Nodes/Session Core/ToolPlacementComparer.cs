@@ -14,8 +14,6 @@ namespace NT.Nodes.SessionCore
     [System.Serializable]
     public class ToolPlacementComparer : FlowNode, IUGUIDynamicListNode
     {
-        //[NTInputSelect] public List<Tools> toolList1;
-        //[NTInputSelect] public List<Tools> toolList2;
 
         [NTInputSelect] public List<Tools> reglas;
 
@@ -25,44 +23,26 @@ namespace NT.Nodes.SessionCore
         [HideInInspector]
         private List<Tools> options;
 
-        private const string LIST_TOOLS = "#List#reglas#";
-        private const string FIELD_LESS = "#Less";
-        private const string FIELD_GREAT = "#Great";
+        private const string LIST_TOOLS = "#List#reglas#less_than#";
 
         [ContextMenu("Add rule")]
         public void AddRule()
         {
-            // Intento de uso de tuplas
-            //NodePort np = this.AddInstanceInput(typeof(Tuple<Tools,Tools>), fieldName:$"Less{i}");
-            //rules.Add(np);
-
             string id = Guid.NewGuid().ToString();
-            //this.AddInstanceInput(typeof(Tuple<Tools, Tools>), fieldName: $"{LIST_TOOLS}{id}");
             this.AddInstanceInput(typeof(Tools), fieldName: $"{LIST_TOOLS}{id}");
-
-
-
-            /*NodePort np1 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_LESS}{id}");
-            NodePort np2 = this.AddInstanceInput(typeof(Tools), fieldName: $"{FIELD_GREAT}{id}");
-            rules.Add(new Tuple<NodePort, NodePort>(np1, np2));*/
         }
 
         public void DeleteInstanceInput(UGUIPort port)
         {
             this.RemoveInstancePort(port.fieldName);
-            //string portNumber = port.fieldName.Replace(FIELD_LESS, String.Empty).Replace(FIELD_GREAT, String.Empty);
-            //string portLess = FIELD_LESS + portNumber;
-            //string portGreat = FIELD_GREAT + portNumber;
-
-            //this.RemoveInstancePort(portLess);
-            //this.RemoveInstancePort(portGreat);
-
-            //rules.RemoveAll(r => r.Item1.fieldName.Equals(portLess) && r.Item2.fieldName.Equals(portGreat));
         }
 
-        /*
-        [NTOutput] public float result;
-        */
+        public void DeleteInstanceInput(string portName)
+        {
+            this.RemoveInstancePort(portName);
+        }
+
+
         protected override void Init() {
             rules = new List<Tuple<NodePort, NodePort>>();
             reglas = new List<Tools>();
