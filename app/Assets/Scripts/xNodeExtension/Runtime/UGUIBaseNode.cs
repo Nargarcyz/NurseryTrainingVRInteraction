@@ -24,7 +24,6 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
         if(node != null){
             List<string> ignored = new List<string>();
             Dictionary<string, GameObject> listNodes = new Dictionary<string, GameObject>();
-            //List<GameObject> listNodes = new List<GameObject>();
 
             foreach (NodePort port in node.Ports)
             {
@@ -40,16 +39,17 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
                     // Dynamic list elements
                     string[] portName = port.fieldName.Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
                     GameObject dl = listNodes[portName[1]];
-                    // Instantiate port in list's Layout
+
                     var layout = dl.GetComponentInChildren<LayoutGroup>();
                     portGO = Instantiate(graph.dynamicPort, layout.transform);
                     SetDefaultLabelText(portGO, portName[2]);
+                    SetDefaultListElementData(portGO, port);
                 }
                 else
                 {
                     portGO = Instantiate(port.direction == NodePort.IO.Input ? graph.inputPort : graph.outputPort, body.transform);
                     SetDefaultLabelText(portGO, port.fieldName);
-                    SetDefaultPortText(portGO, port);
+                    SetDefaultPortData(portGO, port);
                 }
                 ignored.Add(port.fieldName);
             }
@@ -83,10 +83,11 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
                     {
                         gp.SetData(value, variable, GUIProperty.PropertyType.Enumeration);
                     }
-                    else if (kvp.Key is ITuple)
-                    {
-                        gp.SetData(value, variable, GUIProperty.PropertyType.Tuple);
-                    }
+                    //else if (kvp.Key is ITuple)
+                    //{
+                    //    // Dividir en sus tipos basicos
+                    //    //gp.SetData(value, variable, GUIProperty.PropertyType.Tuple);
+                    //}
 
                     gp.OnValueChanged.RemoveAllListeners();
                     gp.OnValueChanged.AddListener(PropertyChanged);
@@ -105,7 +106,7 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
         ntNode = node as NTNode;
     }
 
-    private void SetDefaultPortText(GameObject portGO, NodePort port)
+    private void SetDefaultPortData(GameObject portGO, NodePort port)
     {
         UGUIPort guiport = portGO.GetComponentInChildren<UGUIPort>();
         guiport.fieldName = port.fieldName;
@@ -118,6 +119,14 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
     private void SetDefaultLabelText(GameObject portGO, string labelText)
     {
         portGO.transform.Find("Label").GetComponent<Text>().text = labelText.NicifyString();
+    }
+
+    private void SetDefaultListElementData(GameObject portGO, NodePort port)
+    {
+        UGUIListElement guiProperties = portGO.GetComponent<UGUIListElement>();
+        guiProperties.fieldName = port.fieldName;
+        guiProperties.node = node;
+        guiProperties.name = port.fieldName;
     }
 
     private void PropertyChanged(object value, string path)

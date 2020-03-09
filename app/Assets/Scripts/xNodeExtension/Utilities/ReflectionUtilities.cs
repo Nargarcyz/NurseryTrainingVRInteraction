@@ -154,9 +154,37 @@ namespace NT
                             t == typeof(double) ||
                             t == typeof(bool)   ||
                             t.IsEnum            ||
-                            t == typeof(SceneGameObjectReference));
+                            t == typeof(SceneGameObjectReference) ||
+                            isTupleType(t));
 
             return isBasic;
+        }
+
+        public static bool isTupleType(Type type)
+        {
+            if (type == typeof(Tuple))
+            {
+                return true;
+            }
+            else
+            {
+                if (type.IsGenericType)
+                {
+                    var genType = type.GetGenericTypeDefinition();
+                    return (genType == typeof(Tuple<>)
+                        || genType == typeof(Tuple<,>)
+                        || genType == typeof(Tuple<,,>)
+                        || genType == typeof(Tuple<,,,>)
+                        || genType == typeof(Tuple<,,,,>)
+                        || genType == typeof(Tuple<,,,,,>)
+                        || genType == typeof(Tuple<,,,,,,>)
+                        || genType == typeof(Tuple<,,,,,,,>));
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
     
 

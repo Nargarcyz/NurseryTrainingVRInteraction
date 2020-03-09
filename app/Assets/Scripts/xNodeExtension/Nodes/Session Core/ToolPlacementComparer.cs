@@ -15,10 +15,10 @@ namespace NT.Nodes.SessionCore
     public class ToolPlacementComparer : FlowNode, IUGUIDynamicListNode
     {
 
-        [NTInputSelect] public List<Tools> reglas;
+        [NTInputSelect] public List<Tuple<Tools,Tools>> reglas;
 
         [HideInInspector]
-        private List<Tuple<NodePort, NodePort>> rules;
+        private List<NodePort> reglasPorts;
 
         [HideInInspector]
         private List<Tools> options;
@@ -29,26 +29,25 @@ namespace NT.Nodes.SessionCore
         public void AddRule()
         {
             string id = Guid.NewGuid().ToString();
-            this.AddInstanceInput(typeof(Tools), fieldName: $"{LIST_TOOLS}{id}");
-        }
+            var port = this.AddInstanceInput(typeof(Tuple<Tools, Tools>), fieldName: $"{LIST_TOOLS}{id}");
 
-        public void DeleteInstanceInput(UGUIPort port)
-        {
-            this.RemoveInstancePort(port.fieldName);
+            reglas.Add(new Tuple<Tools, Tools>(default(Tools),default(Tools)));
+            reglasPorts.Add(port);
         }
 
         public void DeleteInstanceInput(string portName)
         {
             this.RemoveInstancePort(portName);
+
+            int elementIndex = reglasPorts.FindIndex(p => p.fieldName == portName);
+            reglas.RemoveAt(elementIndex);
+            reglasPorts.RemoveAt(elementIndex);
         }
 
 
         protected override void Init() {
-            rules = new List<Tuple<NodePort, NodePort>>();
-            reglas = new List<Tools>();
-            //AddRule();
-            //AddRule();
-            //AddRule();
+            reglasPorts = new List<NodePort>();
+            reglas = new List<Tuple<Tools, Tools>>();
 
             // Dynamic list of Tools
             UpdateOptionsList();
