@@ -5,7 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 5,
+    "$rlength": 10,
     "$rcontent": [
         {
             "$k": "SurgeonAssistant62f9096e-d2e4-45a5-a251-b4134b88054a",
@@ -39,14 +39,14 @@
                     "graphJSON": null,
                     "position": {
                         "$type": "7|UnityEngine.Vector3, UnityEngine.CoreModule",
-                        2.98208618,
-                        0.0238037109,
-                        2.6488533
+                        3.06051636,
+                        0.02722168,
+                        2.62170124
                     },
                     "rotation": {
                         "$type": 7,
                         0,
-                        215.1968,
+                        219.193542,
                         0
                     },
                     "graph": null
@@ -498,6 +498,609 @@
                             "$type": 29
                         }
                     ]
+                }
+            }
+        },
+        {
+            "$k": "SteelTableA978a8ebd-889c-48f5-9141-7972f96b638e",
+            "$v": {
+                "$id": 53,
+                "$type": "30|SteelTableASceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "SteelTableA978a8ebd-889c-48f5-9141-7972f96b638e",
+                    "childs": {
+                        "$id": 54,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 55,
+                        "$type": "31|NT.Variables.NTVariable`1[[NT.SceneObjects.SteelTableAData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "32|NT.SceneObjects.SteelTableAData, Assembly-CSharp",
+                            "rowSize": 0,
+                            "colSize": 0
+                        },
+                        "defaultValue": {
+                            "$type": 32,
+                            "rowSize": 0,
+                            "colSize": 0
+                        }
+                    },
+                    "sceneObjectGUID": "04083b50-f681-46c3-8094-0b76a017bc60",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        -0.006439209,
+                        0,
+                        1.30429709
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 56,
+                        "$type": 11,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 57,
+                            "$type": 12,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 58,
+                            "$type": 13,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 59,
+                            "$type": 14,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 60,
+                            "$type": 15,
+                            "comparer": $iref:1,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 61,
+                    "$type": 8
+                },
+                "coverVisual": {
+                    "$id": 62,
+                    "$type": 8
+                },
+                "coverVisible": false,
+                "surface": {
+                    "$id": 63,
+                    "$type": 8
+                },
+                "ToolChange": {
+                    "$id": 64,
+                    "$type": "33|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule",
+                    "m_PersistentCalls": {
+                        "$id": 65,
+                        "$type": "34|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule",
+                        "m_Calls": {
+                            "$id": 66,
+                            "$type": "35|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall, UnityEngine.CoreModule]], mscorlib",
+                            "$rlength": 1,
+                            "$rcontent": [
+                                {
+                                    "$id": 67,
+                                    "$type": "36|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule",
+                                    "m_Target": {
+                                        "$id": 68,
+                                        "$type": "37|CameraScreenshot, Assembly-CSharp",
+                                        "screenshotCamera": {
+                                            "$id": 69,
+                                            "$type": "38|UnityEngine.Camera, UnityEngine.CoreModule"
+                                        },
+                                        "triggerCollider": {
+                                            "$id": 70,
+                                            "$type": "39|UnityEngine.BoxCollider, UnityEngine.PhysicsModule"
+                                        },
+                                        "resWidth": 1920,
+                                        "resHeight": 1080,
+                                        "waitSeconds": 3
+                                    },
+                                    "m_MethodName": "TakeScreenshotAfterSeconds",
+                                    "m_Mode": 1,
+                                    "m_Arguments": {
+                                        "$id": 71,
+                                        "$type": "40|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule",
+                                        "m_ObjectArgument": {
+                                            "$id": 72,
+                                            "$type": "41|UnityEngine.Object, UnityEngine.CoreModule"
+                                        },
+                                        "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                                        "m_IntArgument": 0,
+                                        "m_FloatArgument": 0,
+                                        "m_StringArgument": "",
+                                        "m_BoolArgument": false
+                                    },
+                                    "m_CallState": 2
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "$k": "TableD2a042950-13c2-4ca5-8edd-dc0fe954f2d6",
+            "$v": {
+                "$id": 73,
+                "$type": 2,
+                "data": {
+                    "$type": 3,
+                    "id": "TableD2a042950-13c2-4ca5-8edd-dc0fe954f2d6",
+                    "childs": {
+                        "$id": 74,
+                        "$type": 4,
+                        "$rlength": 1,
+                        "$rcontent": [
+                            "MetallicBoxc0d6d9e2-21bf-4c53-b4a5-a86db6d9714e"
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 75,
+                        "$type": 9,
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": 10
+                        },
+                        "defaultValue": {
+                            "$type": 10
+                        }
+                    },
+                    "sceneObjectGUID": "ab5094e2-3174-46ce-b5b5-276dcbc29029",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        -2.0463562,
+                        0,
+                        3.74612975
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 76,
+                        "$type": 11,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 77,
+                            "$type": 12,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 78,
+                            "$type": 13,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 79,
+                            "$type": 14,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 80,
+                            "$type": 15,
+                            "comparer": $iref:1,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 81,
+                    "$type": 8
+                }
+            }
+        },
+        {
+            "$k": "MetallicBoxc0d6d9e2-21bf-4c53-b4a5-a86db6d9714e",
+            "$v": {
+                "$id": 82,
+                "$type": "42|CajaInstrumentalSceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "MetallicBoxc0d6d9e2-21bf-4c53-b4a5-a86db6d9714e",
+                    "childs": {
+                        "$id": 83,
+                        "$type": 4,
+                        "$rlength": 2,
+                        "$rcontent": [
+                            "Scissors14a66673-4a61-40ca-906e-f635a5528055",
+                            "Scissors_bigf780ab6c-79ab-45f7-bbb8-f8161fb82c9b"
+                        ]
+                    },
+                    "parent": "TableD2a042950-13c2-4ca5-8edd-dc0fe954f2d6",
+                    "data": {
+                        "$id": 84,
+                        "$type": "43|NT.Variables.NTVariable`1[[NT.SceneObjects.MetallicBoxData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "44|NT.SceneObjects.MetallicBoxData, Assembly-CSharp",
+                            "canBeOpened": false,
+                            "toolsList": {
+                                "$id": 85,
+                                "$type": "45|System.Collections.Generic.List`1[[NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp]], mscorlib",
+                                "$rlength": 2,
+                                "$rcontent": [
+                                    {
+                                        "$id": 86,
+                                        "$type": "46|NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp",
+                                        "linkedSGO": "Scissors14a66673-4a61-40ca-906e-f635a5528055"
+                                    },
+                                    {
+                                        "$id": 87,
+                                        "$type": 46,
+                                        "linkedSGO": "Scissors_bigf780ab6c-79ab-45f7-bbb8-f8161fb82c9b"
+                                    }
+                                ]
+                            }
+                        },
+                        "defaultValue": {
+                            "$type": 44,
+                            "canBeOpened": false,
+                            "toolsList": $iref:85
+                        }
+                    },
+                    "sceneObjectGUID": "d0de4209-699c-46e5-b4ae-0a50eda8d470",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        0.00561523438,
+                        1.00579834,
+                        -0.103627205
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        3.33322125E-09,
+                        1.56819158E-09,
+                        2.26783982E-07
+                    },
+                    "graph": {
+                        "$id": 88,
+                        "$type": 11,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 89,
+                            "$type": 12,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 90,
+                            "$type": 13,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 91,
+                            "$type": 14,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 92,
+                            "$type": 15,
+                            "comparer": $iref:1,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 93,
+                    "$type": 8
+                },
+                "spawnPoints": {
+                    "$id": 94,
+                    "$type": 28,
+                    "$rlength": 3,
+                    "$rcontent": [
+                        {
+                            "$id": 95,
+                            "$type": 29
+                        },
+                        {
+                            "$id": 96,
+                            "$type": 29
+                        },
+                        {
+                            "$id": 97,
+                            "$type": 29
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$k": "Scissors14a66673-4a61-40ca-906e-f635a5528055",
+            "$v": {
+                "$id": 98,
+                "$type": 20,
+                "data": {
+                    "$type": 3,
+                    "id": "Scissors14a66673-4a61-40ca-906e-f635a5528055",
+                    "childs": {
+                        "$id": 99,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "MetallicBoxc0d6d9e2-21bf-4c53-b4a5-a86db6d9714e",
+                    "data": {
+                        "$id": 100,
+                        "$type": 21,
+                        "collapsed": true,
+                        "name": null,
+                        "value": null,
+                        "defaultValue": null
+                    },
+                    "sceneObjectGUID": "7ee3bff5-d777-41ff-ba1b-8ee1d83dd392",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        -0.000122070225,
+                        0.0242919922,
+                        0.214418411
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0.150210634,
+                        178.367264,
+                        180.103134
+                    },
+                    "graph": {
+                        "$id": 101,
+                        "$type": 11,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 102,
+                            "$type": 12,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 103,
+                            "$type": 13,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 104,
+                            "$type": 14,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 105,
+                            "$type": 15,
+                            "comparer": $iref:1,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 106,
+                    "$type": 8
+                },
+                "toolType": 0,
+                "grabObject": {
+                    "$id": 107,
+                    "$type": 22,
+                    "disableWhenIdle": true,
+                    "allowedNearTouchControllers": 0,
+                    "allowedTouchControllers": 0,
+                    "ignoredColliders": {
+                        "$id": 108,
+                        "$type": 23,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "isGrabbable": true,
+                    "holdButtonToGrab": true,
+                    "stayGrabbedOnTeleport": true,
+                    "validDrop": 1,
+                    "grabOverrideButton": 0,
+                    "allowedGrabControllers": 0,
+                    "grabAttachMechanicScript": null,
+                    "secondaryGrabActionScript": null,
+                    "isUsable": false,
+                    "holdButtonToUse": true,
+                    "useOnlyIfGrabbed": false,
+                    "pointerActivatesUseAction": false,
+                    "useOverrideButton": 0,
+                    "allowedUseControllers": 0,
+                    "objectHighlighter": null,
+                    "touchHighlightColor": {
+                        "$type": 19,
+                        0,
+                        0,
+                        0,
+                        0
+                    },
+                    "usingState": 0
+                }
+            }
+        },
+        {
+            "$k": "Scissors_bigf780ab6c-79ab-45f7-bbb8-f8161fb82c9b",
+            "$v": {
+                "$id": 109,
+                "$type": 20,
+                "data": {
+                    "$type": 3,
+                    "id": "Scissors_bigf780ab6c-79ab-45f7-bbb8-f8161fb82c9b",
+                    "childs": {
+                        "$id": 110,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "MetallicBoxc0d6d9e2-21bf-4c53-b4a5-a86db6d9714e",
+                    "data": {
+                        "$id": 111,
+                        "$type": 21,
+                        "collapsed": true,
+                        "name": null,
+                        "value": null,
+                        "defaultValue": null
+                    },
+                    "sceneObjectGUID": "ce14f39a-f656-42f3-a435-48a8a2c4f160",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        -0.000793457,
+                        0.0192260742,
+                        0.3065338
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0.04021912,
+                        2.17032957,
+                        359.972473
+                    },
+                    "graph": {
+                        "$id": 112,
+                        "$type": 11,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 113,
+                            "$type": 12,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 114,
+                            "$type": 13,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 115,
+                            "$type": 14,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 116,
+                            "$type": 15,
+                            "comparer": $iref:1,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 117,
+                    "$type": 8
+                },
+                "toolType": 1,
+                "grabObject": {
+                    "$id": 118,
+                    "$type": 22,
+                    "disableWhenIdle": true,
+                    "allowedNearTouchControllers": 0,
+                    "allowedTouchControllers": 0,
+                    "ignoredColliders": {
+                        "$id": 119,
+                        "$type": 23,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "isGrabbable": true,
+                    "holdButtonToGrab": true,
+                    "stayGrabbedOnTeleport": true,
+                    "validDrop": 1,
+                    "grabOverrideButton": 0,
+                    "allowedGrabControllers": 0,
+                    "grabAttachMechanicScript": null,
+                    "secondaryGrabActionScript": null,
+                    "isUsable": false,
+                    "holdButtonToUse": true,
+                    "useOnlyIfGrabbed": false,
+                    "pointerActivatesUseAction": false,
+                    "useOverrideButton": 0,
+                    "allowedUseControllers": 0,
+                    "objectHighlighter": null,
+                    "touchHighlightColor": {
+                        "$type": 19,
+                        0,
+                        0,
+                        0,
+                        0
+                    },
+                    "usingState": 0
                 }
             }
         }

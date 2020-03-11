@@ -1,9 +1,6 @@
 ﻿using NT;
-using NT.SceneObjects;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using VRTK;
 
 public class SteelTableASceneGameObject : SceneGameObject
@@ -12,8 +9,10 @@ public class SteelTableASceneGameObject : SceneGameObject
     public GameObject coverVisual;
     public bool coverVisible;
     public GameObject surface;
-    public GameObject toolsOut;
 
+    #region Event Logging
+    public UnityEvent ToolChange;
+    #endregion
 
     private void Start()
     {
@@ -34,6 +33,8 @@ public class SteelTableASceneGameObject : SceneGameObject
             VRTK_InteractableObject interactable = collisionObject.GetComponentInParent<VRTK_InteractableObject>();
             //if (interactable.IsGrabbed())
             interactable.gameObject.transform.SetParent(surface.transform);
+
+            ThrowToolChangeEvent();
         }
     }
 
@@ -48,6 +49,8 @@ public class SteelTableASceneGameObject : SceneGameObject
             // VRTK guarda el parent de antes de agarrar, y lo aplica al soltar. Debemos cambiarlo ahí tambien.
             interactable.GetPreviousState(out Transform preParent, out bool preKinem, out bool preGrab);
             interactable.OverridePreviousState(interactable.gameObject.transform.parent, preKinem, preGrab);
+
+            ThrowToolChangeEvent();
         }
     }
 
@@ -63,6 +66,11 @@ public class SteelTableASceneGameObject : SceneGameObject
     {
         coverVisual.SetActive(true);
         MessageSystem.SendMessage(data.id + "Cover On");
+    }
+
+    private void ThrowToolChangeEvent()
+    {
+        ToolChange?.Invoke();
     }
 
 }

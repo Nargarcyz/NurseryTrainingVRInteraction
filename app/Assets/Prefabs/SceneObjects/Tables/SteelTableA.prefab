@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5821543, y: 0.08450675, z: 0.6815047}
-  m_Center: {x: -0.0011295676, y: 0.04003066, z: 0.052361965}
+  m_Size: {x: 0.5821543, y: 0.041365087, z: 0.6815047}
+  m_Center: {x: -0.0011295676, y: 0.029215544, z: 0.052361965}
 --- !u!1 &1991040894496604054
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,8 +86,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5821543, y: 0.044484377, z: 0.6815047}
-  m_Center: {x: -0.0011295676, y: 0.020019472, z: 0.052361965}
+  m_Size: {x: 0.5821543, y: 0.04367423, z: 0.6815047}
+  m_Center: {x: -0.0011295676, y: 0.019614398, z: 0.052361965}
 --- !u!65 &1991040896389832724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -211,7 +211,20 @@ MonoBehaviour:
   coverVisual: {fileID: 1991040895340276286}
   coverVisible: 0
   surface: {fileID: 1991040894496604054}
-  toolsOut: {fileID: 0}
+  ToolChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9092634943284798189}
+        m_MethodName: TakeScreenshotAfterSeconds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1991040896470773007
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,8 +345,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenshotCamera: {fileID: 5299405671630924715}
+  triggerCollider: {fileID: 359219060}
   resWidth: 1920
   resHeight: 1080
+  waitSeconds: 3
 --- !u!1001 &1991040895340375196
 PrefabInstance:
   m_ObjectHideFlags: 0
