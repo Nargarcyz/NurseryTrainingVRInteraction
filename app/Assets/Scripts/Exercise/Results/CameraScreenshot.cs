@@ -59,11 +59,20 @@ public class CameraScreenshot : MonoBehaviour
 
     private string GetScreenshotPath()
     {
-        string path = SessionManager.GetSavePath() + "/screenshots";
-        if (!Directory.Exists(path))
-        {
-            Directory.CreateDirectory(path);
-        }
+        string path = Application.dataPath + "/Results";
+        FolderExistsOrCreate(path);
+
+        path += "/Screenshots";
+        FolderExistsOrCreate(path);
+
         return path;
+    }
+
+    private void FolderExistsOrCreate(string folder)
+    {
+        if (!Directory.Exists(folder))
+        {
+            Directory.CreateDirectory(folder);
+        }
     }
 }
