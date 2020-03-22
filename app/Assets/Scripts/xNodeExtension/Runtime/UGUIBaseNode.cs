@@ -28,7 +28,7 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
             foreach (NodePort port in node.Ports)
             {
                 GameObject portGO;
-                if (CheckTypeIsGenericList(port.ValueType))
+                if (CheckTypeIsGenericDictionary(port.ValueType))
                 {
                     portGO = Instantiate(graph.dynamicList, body.transform);
                     SetDefaultLabelText(portGO, port.fieldName);
@@ -83,11 +83,6 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
                     {
                         gp.SetData(value, variable, GUIProperty.PropertyType.Enumeration);
                     }
-                    //else if (kvp.Key is ITuple)
-                    //{
-                    //    // Dividir en sus tipos basicos
-                    //    //gp.SetData(value, variable, GUIProperty.PropertyType.Tuple);
-                    //}
 
                     gp.OnValueChanged.RemoveAllListeners();
                     gp.OnValueChanged.AddListener(PropertyChanged);
@@ -223,8 +218,8 @@ public class UGUIBaseNode :  MonoBehaviour, IDragHandler, IUGUINode, IContextIte
         return node.name;
     }
 
-    public bool CheckTypeIsGenericList(Type t)
+    public bool CheckTypeIsGenericDictionary(Type t)
     {
-        return t.IsGenericType && t.GetGenericTypeDefinition() == typeof(List<>);
+        return t.IsGenericType && t.GetGenericTypeDefinition() == typeof(Dictionary<,>);
     }
 }

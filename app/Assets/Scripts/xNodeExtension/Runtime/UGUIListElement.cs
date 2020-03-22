@@ -23,7 +23,6 @@ public class UGUIListElement : MonoBehaviour
             return;
         }
         port = node.GetPort(fieldName);
-        //graph = GetComponentInParent<RuntimeGraph>();
 
         // Save each property
         propertyTypes = new List<GUIProperty.PropertyType>();
@@ -34,7 +33,8 @@ public class UGUIListElement : MonoBehaviour
 
     private void CheckPropertiesTypeConfiguration(Type portType)
     {
-        if (ReflectionUtilities.isTupleType(portType))
+        //if (ReflectionUtilities.isTupleType(portType))
+        if (portType.IsGenericType && portType.GetGenericTypeDefinition() == typeof(MutableTuple<,>))
         {
             var tupleTypes = GetTupleElementTypes(portType);
 
@@ -76,11 +76,12 @@ public class UGUIListElement : MonoBehaviour
         for(int i=0; i<propertyObjects.Count; i++)
         {
             var currentProperty = propertyObjects[i];
-            //var valuePath = fieldName;
-            var valuePath = "reglas";
+            var valueName = fieldName.Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries)[1];
+            var tuplePos = GetTupleAttributeByIndex(i);
+            var valuePath = $"{valueName}/[{fieldName}]/{tuplePos}";
             var selectedObject = ReflectionUtilities.GetValueOf(new List<string>(valuePath.Split('/')), node);
-            var currentType = propertyTypes[i];
 
+            var currentType = propertyTypes[i];
             currentProperty.SetData(selectedObject, valuePath, currentType);
             currentProperty.OnValueChanged.AddListener(ValueChanged);
         }
@@ -89,8 +90,14 @@ public class UGUIListElement : MonoBehaviour
 
     private void ValueChanged(object value, string path)
     {
+        // TODO!
         object n = node;
         ReflectionUtilities.SetValueOf(ref n, value, new List<string>(path.Split('/')));
+    }
+
+    private string GetTupleAttributeByIndex(int index)
+    {
+        return index >= 0 ? $"Item{index + 1}" : String.Empty;
     }
 
     // Update is called once per frame

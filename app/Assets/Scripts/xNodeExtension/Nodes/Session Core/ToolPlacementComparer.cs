@@ -15,7 +15,7 @@ namespace NT.Nodes.SessionCore
     public class ToolPlacementComparer : FlowNode, IUGUIDynamicListNode
     {
 
-        [NTInputSelect] public List<Tuple<Tools,Tools>> reglas;
+        [NTInputSelect] public Dictionary<string, MutableTuple<Tools,Tools>> reglas;
 
         [HideInInspector]
         private List<NodePort> reglasPorts;
@@ -29,25 +29,32 @@ namespace NT.Nodes.SessionCore
         public void AddRule()
         {
             string id = Guid.NewGuid().ToString();
-            var port = this.AddInstanceInput(typeof(Tuple<Tools, Tools>), fieldName: $"{LIST_TOOLS}{id}");
+            string fieldname = $"{LIST_TOOLS}{id}";
+            var port = this.AddInstanceInput(typeof(MutableTuple<Tools, Tools>), fieldName: fieldname);
 
-            reglas.Add(new Tuple<Tools, Tools>(default(Tools),default(Tools)));
-            reglasPorts.Add(port);
+            if (reglas == null)
+            {
+                reglas = new Dictionary<string, MutableTuple<Tools, Tools>>();
+            }
+            reglas.Add(fieldname, new MutableTuple<Tools, Tools>(default,default));
+            //reglasPorts.Add(port);
         }
 
         public void DeleteInstanceInput(string portName)
         {
             this.RemoveInstancePort(portName);
 
-            int elementIndex = reglasPorts.FindIndex(p => p.fieldName == portName);
-            reglas.RemoveAt(elementIndex);
-            reglasPorts.RemoveAt(elementIndex);
+            reglas.Remove(portName);
+            //int elementIndex = reglasPorts.FindIndex(p => p.fieldName == portName);
+            //reglasPorts.RemoveAt(elementIndex);
         }
 
 
         protected override void Init() {
-            reglasPorts = new List<NodePort>();
-            reglas = new List<Tuple<Tools, Tools>>();
+            //if (reglas == null)
+            //{
+            //    reglas = new Dictionary<string, MutableTuple<Tools, Tools>>();
+            //}
 
             // Dynamic list of Tools
             UpdateOptionsList();
