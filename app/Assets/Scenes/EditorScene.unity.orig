@@ -4659,13 +4659,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 8892664280987729423, guid: 11dd07c903f20ca45af0addbe476b07b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+=======
+>>>>>>> feature_6_MetallicBoxLogic
     - target: {fileID: 923601630297619218, guid: 11dd07c903f20ca45af0addbe476b07b,
         type: 3}
       propertyPath: m_TargetTexture
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1532112554}
+    - target: {fileID: 1309226131819591249, guid: 11dd07c903f20ca45af0addbe476b07b,
+=======
+      objectReference: {fileID: 2071087502}
     - target: {fileID: 6396731336658739424, guid: 11dd07c903f20ca45af0addbe476b07b,
+>>>>>>> feature_6_MetallicBoxLogic
         type: 3}
       propertyPath: outlineShaderMaterial
       value: 
@@ -4894,7 +4906,44 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4345028861808590649}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 --- !u!84 &1244412597
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 1
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+>>>>>>> feature_6_MetallicBoxLogic
 --- !u!1 &1274366779
 GameObject:
   m_ObjectHideFlags: 0
@@ -6368,7 +6417,11 @@ PrefabInstance:
     - target: {fileID: 5189149063571136783, guid: 4d6857bde99543046897a89ea901e4ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
+<<<<<<< HEAD
       value: -35.299988
+=======
+      value: -14.299988
+>>>>>>> feature_6_MetallicBoxLogic
       objectReference: {fileID: 0}
     - target: {fileID: 5189149063571136783, guid: 4d6857bde99543046897a89ea901e4ae,
         type: 3}

@@ -16,6 +16,25 @@ public class ExerciseManager : MonoBehaviour
     public GameObject menu;
     public GameObject endMenu;
 
+    #region Session Timer
+    public float _startTime { get; private set; }
+
+    public float GetExerciseTime()
+    {
+        return Time.time - _startTime;
+    }
+
+    public string GetExerciseTimeFormatted()
+    {
+        var time = GetExerciseTime();
+        TimeSpan t = TimeSpan.FromSeconds(time);
+        return string.Format("{0}:{1}:{2}", ((int)t.TotalHours), t.Minutes, t.Seconds);
+    }
+    #endregion
+    private void Start()
+    {
+        _startTime = Time.time;
+    }
 
     private void RecieveMessage(string msg)
     {
@@ -74,10 +93,12 @@ public class ExerciseManager : MonoBehaviour
         if (menu.gameObject.activeInHierarchy)
         {
             MessageSystem.SendMessage("Pause");
+            ExerciseFileLogger.Instance.LogMessage("Se ha abierto el menú principal", true);
         }
         else
         {
             MessageSystem.SendMessage("Resume");
+            ExerciseFileLogger.Instance.LogMessage("Se ha cerrado el menú principal", true);
         }
     }
 

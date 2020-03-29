@@ -71,7 +71,7 @@ public class MapEditor : MapLoader {
         }
     }   
     private LayerMask currentObjectLayer;
-    public LayerMask allExceptFloor = ~0;
+    public LayerMask allLayersExceptFloor = ~0;
 
     public override void ReloadUI(){
         LoadObjectsButtons();
@@ -169,7 +169,7 @@ public class MapEditor : MapLoader {
     private bool TryRaycastFromScreen(LayerMask mask, out RaycastHit hit){
         Ray ray = raycastCamera.ViewportPointToRay(mapRaycast.textureCoords);
 
-        if (Physics.Raycast(ray, out hit, 5000, mask)) {
+        if (Physics.Raycast(ray, out hit, 5000, mask, QueryTriggerInteraction.Ignore)) {
             Transform objectHit = hit.transform;
             if(objectHit != null){
                 return true;
@@ -282,7 +282,7 @@ public class MapEditor : MapLoader {
 
     private void DeleteObjects()
     {
-        if(TryRaycastFromScreen(allExceptFloor, out RaycastHit hit)){
+        if(TryRaycastFromScreen(allLayersExceptFloor, out RaycastHit hit)){
             SceneGameObject soc = hit.transform.GetComponent<SceneGameObject>();
 
             if(soc != null){
@@ -322,7 +322,7 @@ public class MapEditor : MapLoader {
 
 
     private void InspectObject(){
-        if(TryRaycastFromScreen(allExceptFloor, out RaycastHit hit)){
+        if(TryRaycastFromScreen(allLayersExceptFloor, out RaycastHit hit)){
             SceneGameObject soc = hit.transform.GetComponent<SceneGameObject>();
 
             if(soc != null){
