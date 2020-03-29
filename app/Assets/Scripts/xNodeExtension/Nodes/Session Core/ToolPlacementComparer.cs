@@ -14,11 +14,10 @@ namespace NT.Nodes.SessionCore
     [System.Serializable]
     public class ToolPlacementComparer : FlowNode, IUGUIDynamicListNode
     {
+        // TODO: Cambiar por subtipo contenedor
+        [NTInput] public SceneGameObjectReference table;
 
         [NTInputSelect] public Dictionary<string, MutableTuple<Tools,Tools>> reglas;
-
-        [HideInInspector]
-        private List<NodePort> reglasPorts;
 
         [HideInInspector]
         private List<Tools> options;
@@ -31,31 +30,20 @@ namespace NT.Nodes.SessionCore
             string id = Guid.NewGuid().ToString();
             string fieldname = $"{LIST_TOOLS}{id}";
             var port = this.AddInstanceInput(typeof(MutableTuple<Tools, Tools>), fieldName: fieldname);
-
-            if (reglas == null)
-            {
-                reglas = new Dictionary<string, MutableTuple<Tools, Tools>>();
-            }
             reglas.Add(fieldname, new MutableTuple<Tools, Tools>(default,default));
-            //reglasPorts.Add(port);
         }
 
         public void DeleteInstanceInput(string portName)
         {
             this.RemoveInstancePort(portName);
-
             reglas.Remove(portName);
-            //int elementIndex = reglasPorts.FindIndex(p => p.fieldName == portName);
-            //reglasPorts.RemoveAt(elementIndex);
         }
 
-
         protected override void Init() {
-            //if (reglas == null)
-            //{
-            //    reglas = new Dictionary<string, MutableTuple<Tools, Tools>>();
-            //}
-
+            if (reglas == null)
+            {
+                reglas = new Dictionary<string, MutableTuple<Tools, Tools>>();
+            }
             // Dynamic list of Tools
             UpdateOptionsList();
             SessionManager.Instance.OnSceneGameObjectsChanged.AddListener(UpdateOptionsList);
@@ -63,9 +51,33 @@ namespace NT.Nodes.SessionCore
 
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
         {
-            // LOGICA COMPROBACION
+            // Realizar lógica comprobación
+            CheckSurfaceSatisfiesRules();
+            yield return null;
+        }
+
+        #region Node Basic Configuration
+        public override string GetDisplayName()
+        {
+            return "Tool Placement Comparer";
+        }
+        public override object GetValue(NodePort port)
+        {
+            return false;
+        }
+
+        public override int GetWidth()
+        {
+            return 300;
+        }
+        #endregion
+
+        #region Tool Ordering Logic
+        private void CheckSurfaceSatisfiesRules()
+        {
             var sgo = GetNodeGameObject() as SteelTableASceneGameObject;    // TODO: Cambiar por clase en capa superior (p.e. ToolSurfaceSceneGameObject --> (hereda) SteelTableASceneGameObject)
-            if (sgo != null) {
+            if (sgo != null)
+            {
                 GameObject surfaceGameobject = sgo.surface.gameObject;
                 var tools = GetGameObjectChildren(surfaceGameobject);
                 //children.Sort();
@@ -74,27 +86,23 @@ namespace NT.Nodes.SessionCore
 
                 BoxCollider bc = surfaceGameobject.GetComponent<BoxCollider>();
                 // Divide BoxCollider
-                int rowSize = GetRowSize(sgo.sceneObject);
-                var rowColliders = DivideBoxColliderByRows(bc, rowSize);
+                int rowSize = GetRowSize(sgo);
+                var rowColliders = DivideBoxColliderByRows(bc, rowSize).ToList();
                 var rowTools = ClassifyToolsByRows(tools, rowColliders);
+
+                // Check rules
 
 
                 RemoveColliders(rowColliders);
             }
-
-            yield return null;
         }
-
-        public override object GetValue(NodePort port)
-        {
-            return false;
-        }
-
 
         private SceneGameObject GetNodeGameObject()
         {
-            var nodeGraph = this.graph as SceneObjectGraph;
-            return SessionManager.Instance.GetSceneGameObject(nodeGraph.linkedNTVariable);
+            //var nodeGraph = this.graph as SceneObjectGraph;
+            //return SessionManager.Instance.GetSceneGameObject(nodeGraph.linkedNTVariable);
+            var tableGameObject = GetInputValue<SceneGameObject>(nameof(table), null);
+            return tableGameObject;
         }
 
         private IEnumerable<GameObject> GetGameObjectChildren(GameObject go)
@@ -105,27 +113,28 @@ namespace NT.Nodes.SessionCore
             }
         }
 
-        public override string GetDisplayName()
-        {
-            return "Tool Placement Comparer";
-        }
-
-        #region Tool Ordering Logic
-
         private void UpdateOptionsList()
         {
             var tools = SessionManager.Instance.GetSceneGameObjectsWithTag("Tool");
             options = tools.Cast<ITool>().Select(t => t.GetToolType()).Distinct().ToList();
         }
 
-
-        private int GetRowSize(ISceneObject sgo)
+        private int GetRowSize(SceneGameObject sgo)
         {
-            var sceneobj = sgo as SceneObject<SteelTableAData>;
-            var data = sceneobj.GetDefaultData();
-            var value = (SteelTableAData)data.GetValue();
-            return value.rowSize;
+            var dataValue = sgo.data.data.GetDefaultValue();
+            if (dataValue is SteelTableAData d)
+            {
+                return d.rowSize;
+            }
+            else
+            {
+                var sceneObj = sgo.sceneObject as SceneObject<SteelTableAData>;
+                var data = sceneObj.GetDefaultData();
+                var value = (SteelTableAData)data.GetValue();
+                return value.rowSize;
+            }
         }
+
         private IEnumerable<BoxCollider> DivideBoxColliderByRows(BoxCollider bc, int rowSize)
         {
             bool rowOnX = bc.size.x >= bc.size.z;

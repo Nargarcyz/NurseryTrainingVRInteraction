@@ -88,24 +88,6 @@ namespace NT
             }
             else
             {
-                //if(o == null) return;
-                //Type objectType = o.GetType();
-
-                //FieldInfo[] fi = objectType.GetFields();
-
-                //foreach(FieldInfo f in fi){
-                //    if(path[0] == f.Name){
-                //        object fieldVal = f.GetValue(o);
-                //        path.RemoveAt(0);
-
-                //        SetValueOf(ref fieldVal, value, path);
-
-                //        f.SetValue(o, fieldVal);
-
-                //        return;
-                //    }
-                //}
-
                 if (o == null)
                 {
                     return;
