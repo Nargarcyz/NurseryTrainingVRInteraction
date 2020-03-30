@@ -87,12 +87,17 @@ namespace NT.Nodes.SessionCore
                 BoxCollider bc = surfaceGameobject.GetComponent<BoxCollider>();
                 // Divide BoxCollider
                 int rowSize = GetRowSize(sgo);
-                var rowColliders = DivideBoxColliderByRows(bc, rowSize).ToList();
-                var rowTools = ClassifyToolsByRows(tools, rowColliders);
+                bool rowOnX = bc.size.x >= bc.size.z;
+                var rowColliders = DivideBoxColliderByRows(bc, rowSize, rowOnX).ToList();
+                var rowGameObjects = ClassifyToolsByRows(tools, rowColliders, rowOnX);
+                var rowTools = GetToolTypeFromGameObjects(rowGameObjects);
 
                 // Check rules
+                var results = CheckRulesInRows(reglas.Values.ToList(), rowTools);
+                // Save results
+                ExerciseFileLogger.Instance.LogResult("Comprobación de reglas en mesa quirúrgica", results);
 
-
+                // Clean colliders (if wanted)  --> Could be created once at the beginning
                 RemoveColliders(rowColliders);
             }
         }
@@ -135,9 +140,8 @@ namespace NT.Nodes.SessionCore
             }
         }
 
-        private IEnumerable<BoxCollider> DivideBoxColliderByRows(BoxCollider bc, int rowSize)
+        private IEnumerable<BoxCollider> DivideBoxColliderByRows(BoxCollider bc, int rowSize, bool rowOnX)
         {
-            bool rowOnX = bc.size.x >= bc.size.z;
             float minCoord = rowOnX ? (bc.center.x - bc.size.x / 2) : (bc.center.z - bc.size.z / 2);
             float incrCoord = rowOnX ? (bc.size.x / rowSize) : (bc.size.z / rowSize);
 
@@ -156,7 +160,7 @@ namespace NT.Nodes.SessionCore
             }
         }
 
-        private List<List<GameObject>> ClassifyToolsByRows (IEnumerable<GameObject> Tools, IEnumerable<BoxCollider> BoxColliders)
+        private List<List<GameObject>> ClassifyToolsByRows (IEnumerable<GameObject> Tools, IEnumerable<BoxCollider> BoxColliders, bool rowOnX)
         {
             var rowSize = Enumerable.Count(BoxColliders);
             // Initialize result
@@ -185,7 +189,6 @@ namespace NT.Nodes.SessionCore
             foreach (var row in result)
             {
                 BoxCollider bc = BoxColliders.ElementAt(result.IndexOf(row));
-                bool rowOnX = bc.size.x >= bc.size.z;
                 Transform trans = bc.transform;
                 row.Sort((a, b) => rowOnX ? trans.InverseTransformPoint(a.transform.position).x.CompareTo(trans.InverseTransformPoint(b.transform.position).x)
                                             : trans.InverseTransformPoint(a.transform.position).z.CompareTo(trans.InverseTransformPoint(b.transform.position).z));
@@ -210,6 +213,87 @@ namespace NT.Nodes.SessionCore
             {
                 Component.Destroy(collider);
             }
+        }
+
+
+        private List<string> CheckRulesInRows(IEnumerable<MutableTuple<Tools, Tools>> rules, List<List<Tools>> rows)
+        {
+            int[,] unfulfilled = new int[rows.Count, rules.Count()];
+            // Check how many times each rule is not accomplished
+            foreach ((var rule, int i) in rules.Select((value, i) => (value, i)))
+            {
+                foreach ((var row, int j) in rows.Select((value, j) => (value, j)))
+                {
+                    int quantity = CountRuleUnaccomplishedInRow(rule, row);
+                    unfulfilled[i, j] += quantity;
+                }
+            }
+            // Return results as text
+            List<string> results = new List<string>();
+            foreach ((var row, int j) in rows.Select((value, j) => (value, j)))
+            {
+                foreach ((var rule, int i) in rules.Select((value, i) => (value, i)))
+                {
+                    if (unfulfilled[i, j] > 0)
+                    {
+                        results.Add(string.Format("Fila {0}\t\tRegla {1} no cumplida {2} veces.",
+                            j,
+                            rule.ToString(),
+                            unfulfilled[i, j]));
+                    }
+                }
+            }
+
+            return results;
+        }
+
+
+
+        private List<List<Tools>> GetToolTypeFromGameObjects(List<List<GameObject>> toolGameObjects)
+        {
+            float t1 = Time.realtimeSinceStartup; // DEBUG
+            List<List<Tools>> result = new List<List<Tools>>();
+            foreach (var row in toolGameObjects)
+            {
+                List<Tools> temp = new List<Tools>();
+                foreach (var gameObject in row)
+                {
+                    var toolScene = gameObject.GetComponentInChildren<ToolSceneGameObject>();
+                    temp.Add(toolScene.toolType);
+                }
+                result.Add(temp);
+            }
+            float t2 = Time.realtimeSinceStartup; // DEBUG
+
+            //var result2 = toolGameObjects.Select(x => x.Select(y => y.GetComponentInChildren<ToolSceneGameObject>().toolType));
+            var result2 = toolGameObjects.Select(x => x.Select(y => y.GetComponentInChildren<ToolSceneGameObject>().toolType).ToList()).ToList();
+            float t3 = Time.realtimeSinceStartup; // DEBUG
+
+            Console.WriteLine(String.Format("Time Loop: {0}\nTime LINQ: {1}", t2-t1, t3-t2));
+            //return result2;
+            return result;
+        }
+
+        private int CountRuleUnaccomplishedInRow(MutableTuple<Tools,Tools> rule, List<Tools> row)
+        {
+            int count = 0;
+            bool secondFound = false;
+            // When Tool2 is found, each time we found Tool1 afterwards counts as error
+            foreach(var tool in row)
+            {
+                if (secondFound)
+                {
+                    if (rule.Item1 == tool)
+                    {
+                        count++;
+                    }
+                }
+                else
+                {
+                    secondFound = rule.Item2 == tool;
+                }
+            }
+            return count;
         }
 
         #endregion

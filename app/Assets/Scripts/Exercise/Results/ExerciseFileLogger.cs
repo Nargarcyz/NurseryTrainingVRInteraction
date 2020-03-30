@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
@@ -21,6 +22,9 @@ public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
         string filePath = GetLogFilename();
         WriteResultInFile(filePath, title, message);
     }
+
+    public void LogMessage(List<string> message, bool timestamp) => LogMessage(message.ToArray(), timestamp);
+    public void LogResult(string title, List<string> message) => LogResult(title, message.ToArray());
 
     private void WriteMessageInFile(string path, string message, bool timestamp)
     {
