@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 990327564191692215}
   m_Layer: 11
   m_Name: Mc_Pherson
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 7987765094364248137}
   m_Layer: 11
   m_Name: Forceps_McPherson
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

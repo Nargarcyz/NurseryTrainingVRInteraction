@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5102930942533348795}
   m_Layer: 11
   m_Name: Kocher_Mosquito_Small
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 5123952768100346983}
   m_Layer: 11
   m_Name: Mosquito_Kocher_Small
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

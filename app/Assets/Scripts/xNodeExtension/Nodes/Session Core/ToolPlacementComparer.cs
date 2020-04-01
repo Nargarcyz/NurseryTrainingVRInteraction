@@ -44,15 +44,23 @@ namespace NT.Nodes.SessionCore
             {
                 reglas = new Dictionary<string, MutableTuple<Tools, Tools>>();
             }
-            // Dynamic list of Tools
+            
+            // Dynamic list of Tools (currently not used)
             UpdateOptionsList();
             SessionManager.Instance.OnSceneGameObjectsChanged.AddListener(UpdateOptionsList);
+        }
+
+        private void UpdateOptionsList()
+        {
+            var tools = SessionManager.Instance.GetSceneGameObjectsWithTag("Tool");
+            options = tools.Cast<ITool>().Select(t => t.GetToolType()).Distinct().ToList();
         }
 
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
         {
             // Realizar lógica comprobación
             CheckSurfaceSatisfiesRules();
+
             yield return null;
         }
 
@@ -79,33 +87,29 @@ namespace NT.Nodes.SessionCore
             if (sgo != null)
             {
                 GameObject surfaceGameobject = sgo.surface.gameObject;
-                var tools = GetGameObjectChildren(surfaceGameobject);
-                //children.Sort();
-                // The transforms of the GameObjects has its anchor point in the center (look tool.transform.position)
-
-
                 BoxCollider bc = surfaceGameobject.GetComponent<BoxCollider>();
+                
+                // Get tools from surface
+                var tools = GetGameObjectChildren(surfaceGameobject).ToList();
+
                 // Divide BoxCollider
                 int rowSize = GetRowSize(sgo);
                 bool rowOnX = bc.size.x >= bc.size.z;
                 var rowColliders = DivideBoxColliderByRows(bc, rowSize, rowOnX).ToList();
-                var rowGameObjects = ClassifyToolsByRows(tools, rowColliders, rowOnX);
+                var rowGameObjects = ClassifyAndOrderToolsByRows(tools, rowColliders, rowOnX);
                 var rowTools = GetToolTypeFromGameObjects(rowGameObjects);
 
-                // Check rules
+                // Check rules and save results
                 var results = CheckRulesInRows(reglas.Values.ToList(), rowTools);
-                // Save results
                 ExerciseFileLogger.Instance.LogResult("Comprobación de reglas en mesa quirúrgica", results);
 
-                // Clean colliders (if wanted)  --> Could be created once at the beginning
-                RemoveColliders(rowColliders);
+                // Clean division colliders (if wanted)
+                //RemoveColliders(rowColliders);
             }
         }
 
         private SceneGameObject GetNodeGameObject()
         {
-            //var nodeGraph = this.graph as SceneObjectGraph;
-            //return SessionManager.Instance.GetSceneGameObject(nodeGraph.linkedNTVariable);
             var tableGameObject = GetInputValue<SceneGameObject>(nameof(table), null);
             return tableGameObject;
         }
@@ -116,12 +120,6 @@ namespace NT.Nodes.SessionCore
             {
                 yield return child.gameObject;
             }
-        }
-
-        private void UpdateOptionsList()
-        {
-            var tools = SessionManager.Instance.GetSceneGameObjectsWithTag("Tool");
-            options = tools.Cast<ITool>().Select(t => t.GetToolType()).Distinct().ToList();
         }
 
         private int GetRowSize(SceneGameObject sgo)
@@ -160,10 +158,10 @@ namespace NT.Nodes.SessionCore
             }
         }
 
-        private List<List<GameObject>> ClassifyToolsByRows (IEnumerable<GameObject> Tools, IEnumerable<BoxCollider> BoxColliders, bool rowOnX)
+        private List<List<GameObject>> ClassifyAndOrderToolsByRows (IEnumerable<GameObject> Tools, IEnumerable<BoxCollider> BoxColliders, bool rowOnX)
         {
-            var rowSize = Enumerable.Count(BoxColliders);
             // Initialize result
+            var rowSize = Enumerable.Count(BoxColliders);
             List<List<GameObject>> result = new List<List<GameObject>>();
             for (int i = 0; i < rowSize; i++)
             {
@@ -173,10 +171,10 @@ namespace NT.Nodes.SessionCore
             // Classify tools
             foreach (var tool in Tools)
             {
+                Collider toolCollider = tool.GetComponentInChildren<Collider>();
                 for (int i = 0; i < rowSize; i++)
                 {
                     BoxCollider bc = BoxColliders.ElementAt(i);
-                    Collider toolCollider = tool.GetComponentInChildren<Collider>();
                     if (BoxColliderContainsPoint(bc, toolCollider.bounds.center, true))
                     {
                         result[i].Add(tool);
@@ -198,12 +196,14 @@ namespace NT.Nodes.SessionCore
         }
 
 
-        private bool BoxColliderContainsPoint(BoxCollider boxCollider, Vector3 Point, bool ignoreY)
+        private bool BoxColliderContainsPoint(BoxCollider boxCollider, Vector3 point, bool ignoreY)
         {
-            Vector3 localPos = boxCollider.transform.InverseTransformPoint(Point);
-            Vector3 halfSize = boxCollider.size / 2;
-            // Revisar < o <=
-            bool result = (Math.Abs(localPos.x) < halfSize.x && Math.Abs(localPos.z) < halfSize.z);
+            // Reference: http://answers.unity.com/answers/1103394/view.html
+            // Convert point to Collider's local axis and check if inside
+            Vector3 localPos = boxCollider.transform.InverseTransformPoint(point) - boxCollider.center;
+            Vector3 halfSize = boxCollider.size * 0.5f;
+
+            bool result = (Math.Abs(localPos.x) <= halfSize.x && Math.Abs(localPos.z) <= halfSize.z);
             return ignoreY ? result : (result && Math.Abs(localPos.y) < halfSize.y);
         }
 
@@ -243,15 +243,15 @@ namespace NT.Nodes.SessionCore
                     }
                 }
             }
-
+            if (results.Count() == 0)
+            {
+                results.Add("Todas las reglas se han comprobado sin errores.");
+            }
             return results;
         }
 
-
-
         private List<List<Tools>> GetToolTypeFromGameObjects(List<List<GameObject>> toolGameObjects)
         {
-            float t1 = Time.realtimeSinceStartup; // DEBUG
             List<List<Tools>> result = new List<List<Tools>>();
             foreach (var row in toolGameObjects)
             {
@@ -263,15 +263,10 @@ namespace NT.Nodes.SessionCore
                 }
                 result.Add(temp);
             }
-            float t2 = Time.realtimeSinceStartup; // DEBUG
 
-            //var result2 = toolGameObjects.Select(x => x.Select(y => y.GetComponentInChildren<ToolSceneGameObject>().toolType));
-            var result2 = toolGameObjects.Select(x => x.Select(y => y.GetComponentInChildren<ToolSceneGameObject>().toolType).ToList()).ToList();
-            float t3 = Time.realtimeSinceStartup; // DEBUG
-
-            Console.WriteLine(String.Format("Time Loop: {0}\nTime LINQ: {1}", t2-t1, t3-t2));
-            //return result2;
             return result;
+            // SAME DONE WITH LINQ (compute time x2):
+            // var result2 = toolGameObjects.Select(x => x.Select(y => y.GetComponentInChildren<ToolSceneGameObject>().toolType).ToList()).ToList();
         }
 
         private int CountRuleUnaccomplishedInRow(MutableTuple<Tools,Tools> rule, List<Tools> row)

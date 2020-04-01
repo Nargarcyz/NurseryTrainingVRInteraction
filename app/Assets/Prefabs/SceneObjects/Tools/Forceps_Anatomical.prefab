@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6578845048035758100}
   m_Layer: 11
   m_Name: Forceps_Anatomical
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 99398673657112253}
   m_Layer: 11
   m_Name: Anatomisch_Pincet
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

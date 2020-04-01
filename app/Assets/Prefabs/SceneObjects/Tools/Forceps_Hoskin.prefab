@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3759400833408586128}
   m_Layer: 11
   m_Name: Forceps_Hoskin
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 7940272503339191024}
   m_Layer: 11
   m_Name: Hoskin_22
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

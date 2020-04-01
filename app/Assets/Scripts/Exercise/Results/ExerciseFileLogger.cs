@@ -5,13 +5,40 @@ using UnityEngine;
 public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
 {
     public ExerciseManager exerciseManager;
+    private string currentDate;
 
     #region Log Main Functions
+    private void Start()
+    {
+        currentDate = System.DateTime.Now.ToString("yyyy-MM-dd");
+    }
+
     public void LogMessage(string message, bool timestamp)
     {
         string filePath = GetLogFilename();
+        WriteHeaderIfNotExists(filePath);
         WriteMessageInFile(filePath, message, timestamp);
     }
+
+    private void WriteHeaderIfNotExists(string path)
+    {
+        if (!File.Exists(path))
+        {
+            string text = string.Format("/// Nombre sesión: {0}      Fecha de ejecución: {1} ///",
+                SessionManager.Instance.SessionData.displayName,
+                System.DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+            string header = new string('/', text.Length);
+
+            using (StreamWriter sw = new StreamWriter(path, append: true))
+            {
+                sw.WriteLine(header);
+                sw.WriteLine(text);
+                sw.WriteLine(header);
+                sw.WriteLine();
+            }
+        }
+    }
+
     public void LogMessage(string[] message, bool timestamp)
     {
         string filePath = GetLogFilename();
@@ -50,18 +77,24 @@ public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
     }
     private void WriteResultInFile(string path, string title, string[] message)
     {
-        string header = new string('*', 40);
+        string header = new string('*', title.Length + 16);
         using (StreamWriter sw = new StreamWriter(path, append: true))
         {
+            sw.WriteLine();
             sw.WriteLine(header);
-            sw.WriteLine(title);
-            sw.WriteLine("Time: " + exerciseManager.GetExerciseTimeFormatted());
+            sw.WriteLine("\t\t" + title);
+            sw.WriteLine("\t\tTime: " + exerciseManager.GetExerciseTimeFormatted());
             sw.WriteLine(header);
 
             foreach (var line in message)
             {
                 sw.WriteLine(line);
             }
+
+            sw.WriteLine(header);
+            sw.WriteLine("\t* FIN * " + title);
+            sw.WriteLine(header);
+            sw.WriteLine();
         }
     }
     #endregion
@@ -72,7 +105,7 @@ public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
         string folder = GetLogPath();
         return string.Format("{0}/sessionLog_{1}_{2}.{3}",
             folder,
-            System.DateTime.Now.ToString("yyyy-MM-dd"),
+            currentDate,
             exerciseManager.GetInstanceID(),
             "txt");
     }

@@ -28,7 +28,7 @@ public class ExerciseManager : MonoBehaviour
     {
         var time = GetExerciseTime();
         TimeSpan t = TimeSpan.FromSeconds(time);
-        return string.Format("{0}:{1}:{2}", ((int)t.TotalHours), t.Minutes, t.Seconds);
+        return t.ToString("g");
     }
     #endregion
     private void Start()
