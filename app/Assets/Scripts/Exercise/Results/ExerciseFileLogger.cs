@@ -7,19 +7,16 @@ public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
     public ExerciseManager exerciseManager;
     private string currentDate;
 
-    #region Log Main Functions
     private void Start()
     {
-        currentDate = System.DateTime.Now.ToString("yyyy-MM-dd");
-    }
+        currentDate = System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
 
-    public void LogMessage(string message, bool timestamp)
-    {
+        // Initial write
         string filePath = GetLogFilename();
         WriteHeaderIfNotExists(filePath);
-        WriteMessageInFile(filePath, message, timestamp);
     }
 
+    #region Log Main Functions
     private void WriteHeaderIfNotExists(string path)
     {
         if (!File.Exists(path))
@@ -38,6 +35,13 @@ public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
             }
         }
     }
+
+    public void LogMessage(string message, bool timestamp)
+    {
+        string filePath = GetLogFilename();
+        WriteMessageInFile(filePath, message, timestamp);
+    }
+
 
     public void LogMessage(string[] message, bool timestamp)
     {
