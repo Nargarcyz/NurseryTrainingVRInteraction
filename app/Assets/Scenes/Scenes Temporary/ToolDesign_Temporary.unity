@@ -303,7 +303,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b210a39f243ccf54e9838020e5f85751,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b210a39f243ccf54e9838020e5f85751,
         type: 3}
@@ -1040,6 +1040,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 914727441}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &954060305
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1790430442}
+    m_Modifications:
+    - target: {fileID: 100000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_Name
+      value: Patient
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2539291
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5642271
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e, type: 3}
+--- !u!4 &954060306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: c9b2a9cdf2090e4449f51dcc0a101d5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 954060305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1062161272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1626,7 +1689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 04e6247ca3b94824a976b6afaf9e623f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 04e6247ca3b94824a976b6afaf9e623f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1693,7 +1756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400076, guid: cd0f8f2ba4f832942b85fdd16ec4cb12, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400076, guid: cd0f8f2ba4f832942b85fdd16ec4cb12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1825,6 +1888,7 @@ Transform:
   - {fileID: 1432052505}
   - {fileID: 1582609095}
   - {fileID: 160101370}
+  - {fileID: 954060306}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -2430,11 +2494,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainSurgeon
-      objectReference: {fileID: 0}
-    - target: {fileID: 3088778371455932430, guid: 917db02c5756f2243a0ce9e0df167b81,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3088778371456156718, guid: 917db02c5756f2243a0ce9e0df167b81,
         type: 3}

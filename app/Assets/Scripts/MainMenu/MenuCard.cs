@@ -15,7 +15,7 @@ public class MenuCard : MonoBehaviour {
     }
 
     public void Remove(){
-        manager.RemoveSession(sessionData);
+        manager.ConfirmRemoveSession(sessionData);
     }
 
     public void Edit(){
