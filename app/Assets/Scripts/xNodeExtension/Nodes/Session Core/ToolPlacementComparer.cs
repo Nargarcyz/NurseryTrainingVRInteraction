@@ -19,9 +19,6 @@ namespace NT.Nodes.SessionCore
 
         [NTInputSelect] public Dictionary<string, MutableTuple<Tools,Tools>> reglas;
 
-        [HideInInspector]
-        private List<Tools> options;
-
         private const string LIST_TOOLS = "#List#reglas#less_than#";
 
         [ContextMenu("Add rule")]
@@ -44,16 +41,6 @@ namespace NT.Nodes.SessionCore
             {
                 reglas = new Dictionary<string, MutableTuple<Tools, Tools>>();
             }
-            
-            // Dynamic list of Tools (currently not used)
-            UpdateOptionsList();
-            SessionManager.Instance.OnSceneGameObjectsChanged.AddListener(UpdateOptionsList);
-        }
-
-        private void UpdateOptionsList()
-        {
-            var tools = SessionManager.Instance.GetSceneGameObjectsWithTag("Tool");
-            options = tools.Cast<ITool>().Select(t => t.GetToolType()).Distinct().ToList();
         }
 
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
@@ -259,7 +246,7 @@ namespace NT.Nodes.SessionCore
                 foreach (var gameObject in row)
                 {
                     var toolScene = gameObject.GetComponentInChildren<ToolSceneGameObject>();
-                    temp.Add(toolScene.toolType);
+                    temp.Add(toolScene.GetToolType());
                 }
                 result.Add(temp);
             }

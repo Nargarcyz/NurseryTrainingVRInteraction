@@ -14,8 +14,10 @@ public class MainMenuManager : MonoBehaviour {
     public GameObject confirmDelete;
 
     public TMP_InputField sessionID;
+    public TMP_Dropdown templateDropdown;
 
     private Dictionary<string, GameObject> sessions = new Dictionary<string, GameObject>();
+    private List<SessionData> templateSessions = new List<SessionData>();
 
     private void Start()
     {
@@ -80,11 +82,24 @@ public class MainMenuManager : MonoBehaviour {
         SessionManager.DeleteSession(sessionData.sessionID);
     }
 
-    public void CreateFromWindow(){
+    public void CreateFromWindow()
+    {
         SessionData data = new SessionData();
 
         data.sessionID = Guid.NewGuid().ToString();
         data.displayName = sessionID.text;
+
+        if (templateDropdown.value > 0)
+        {
+            SessionData templateData = templateSessions[templateDropdown.value - 1];
+
+            data.lastModified = DateTime.Now.ToString();
+            data.sceneFile = templateData.sceneFile;
+            data.sceneGraphFile = templateData.sceneGraphFile;
+            data.userVariables = templateData.userVariables;
+
+            SessionManager.CreateSessionFromTemplate(data, templateData);
+        }
 
         EditSession(data);
     }
@@ -97,9 +112,25 @@ public class MainMenuManager : MonoBehaviour {
         textBody.text = $"Are you sure you want to delete the session \"{sessionData.displayName}\"?";
 
         var button = confirmDelete.transform
-            .Find("ConfirmDeleteButton")
+            .Find("Buttons/ConfirmDeleteButton")
             .GetComponentInChildren<Button>();
         button.onClick.RemoveAllListeners();
         button.onClick.AddListener(() => RemoveSession(sessionData));
+    }
+
+    public void RefreshTemplateSessions()
+    {
+        templateSessions.Clear();
+        templateDropdown.options.RemoveRange(1, templateDropdown.options.Count - 1);
+
+        DirectoryInfo templatesDir = new DirectoryInfo(SessionManager.GetTemplatePath());
+        var files = templatesDir.GetFiles("config.nt", SearchOption.AllDirectories);
+        var templateData = files
+            .Select(x => SessionManager.GetTemplateSession(x.Directory.Name))
+            .OrderBy(x => x.displayName);
+        var templateNames = templateData.Select(x => x.displayName).ToList();
+
+        templateSessions.AddRange(templateData);
+        templateDropdown.AddOptions(templateNames);
     }
 }

@@ -30,11 +30,64 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         return Application.dataPath  + "/Saves/Sessions/";
     }
 
-    public static SessionData GetSession(string sessionID){
+    public static string GetTemplatePath()
+    {
+        if (!Directory.Exists(Application.dataPath + "/Saves"))
+        {
+            Directory.CreateDirectory(Application.dataPath + "/Saves");
+        }
 
+        if (!Directory.Exists(Application.dataPath + "/Saves/Templates/"))
+        {
+            Directory.CreateDirectory(Application.dataPath + "/Saves/Templates/");
+        }
+        return Application.dataPath + "/Saves/Templates/";
+    }
+
+    public static void CreateSessionFromTemplate(SessionData sd, SessionData template)
+    {
+        string templatePath = Path.Combine(GetTemplatePath(), template.sessionID);
+        string destPath = Path.Combine(GetSavePath(), sd.sessionID);
+
+        DirectoryCopy(templatePath, destPath, true);
+        // Assure config.nt has the updated data
+        string sessionJson = JsonUtility.ToJson(sd);
+        File.WriteAllText(destPath + "/" + "config.nt", sessionJson);
+    }
+
+    private static void DirectoryCopy(string sourceDir, string destDir, bool copySubDirs)
+    {
+        DirectoryInfo source = new DirectoryInfo(sourceDir);
+        if (!Directory.Exists(destDir))
+        {
+            Directory.CreateDirectory(destDir);
+        }
+
+        FileInfo[] files = source.GetFiles();
+        foreach (var file in files)
+        {
+            string destFile = Path.Combine(destDir, file.Name);
+            file.CopyTo(destFile, false);
+        }
+
+        if (copySubDirs)
+        {
+            var dirs = source.GetDirectories();
+            foreach(var subdir in dirs)
+            {
+                string destSubPath = Path.Combine(destDir, subdir.Name);
+                DirectoryCopy(subdir.FullName, destSubPath, copySubDirs);
+            }
+        }
+    }
+
+    public static SessionData GetSession(string sessionID){
         string configJSON = File.ReadAllText(GetSavePath() + sessionID + "/" + "config.nt");
         return JsonUtility.FromJson<SessionData>(configJSON);
-    
+    }
+    public static SessionData GetTemplateSession(string sessionID){
+        string configJSON = File.ReadAllText(GetTemplatePath() + sessionID + "/" + "config.nt");
+        return JsonUtility.FromJson<SessionData>(configJSON);
     }
 
     public static void DeleteSession(string sessionID)
