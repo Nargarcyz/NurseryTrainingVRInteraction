@@ -16,6 +16,9 @@ public class MutableTuple<T1, T2> // IComparable, IStructuralEquatable, IStructu
         this.Item1 = item1;
         this.Item2 = item2;
     }
-    
-    
+
+    public override string ToString()
+    {
+        return String.Format("({0}, {1})",this.Item1, this.Item2);
+    }
 }

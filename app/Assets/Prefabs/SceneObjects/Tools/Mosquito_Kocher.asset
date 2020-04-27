@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f475e278828a1eb45b64ecf2f3b8f0f4, type: 3}
-  m_Name: Mosquito_Kocher_Small
+  m_Name: Mosquito_Kocher
   m_EditorClassIdentifier: 
   displayName: 
   sceneGameObject:
@@ -19,7 +19,7 @@ MonoBehaviour:
       m_Bits: 8192
     model: {fileID: 8184754874467182343, guid: 10300c98e8d9e184f97369227d696e6f, type: 3}
   sceneObjectUI:
-    color: {r: 0.1882353, g: 0.49411765, b: 0.7764706, a: 0}
+    color: {r: 0.9150943, g: 0.60862404, b: 0.7687001, a: 1}
     icon: {fileID: 21300000, guid: 9281abada1fd93948a7382fa957728b1, type: 3}
     category: 3
   GUID: fb34987d-5457-4ae6-8922-a9d243149c59

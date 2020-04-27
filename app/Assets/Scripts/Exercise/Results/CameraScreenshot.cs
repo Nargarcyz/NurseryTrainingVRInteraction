@@ -11,7 +11,7 @@ public class CameraScreenshot : MonoBehaviour
     public int resWidth = 1920;
     public int resHeight = 1080;
 
-    public float waitSeconds = 3;
+    public float waitSeconds = 1.5f;
 
     public void TakeScreenshotAfterSeconds()
     {

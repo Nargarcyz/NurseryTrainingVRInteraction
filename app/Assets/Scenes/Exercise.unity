@@ -9636,6 +9636,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6296423694746410536, guid: 1a3f6660c70305640baf305fe1d1572a,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3f6660c70305640baf305fe1d1572a, type: 3}
 --- !u!23 &6380359437716115684
@@ -9751,7 +9756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db096b614cd3764f8bf0f70d03533b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorTrigger: {fileID: 6380359437716115693}
 --- !u!65 &6380359437716115693
 BoxCollider:
   m_ObjectHideFlags: 0

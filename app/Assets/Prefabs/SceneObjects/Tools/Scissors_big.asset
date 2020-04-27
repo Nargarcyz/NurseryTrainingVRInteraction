@@ -19,7 +19,7 @@ MonoBehaviour:
       m_Bits: 8192
     model: {fileID: 8105793770081520070, guid: 45c83f80edc92c44f9ff6e0fb726d377, type: 3}
   sceneObjectUI:
-    color: {r: 0, g: 0.68458986, b: 1, a: 0.5882353}
+    color: {r: 0.9150943, g: 0.60862404, b: 0.7687001, a: 1}
     icon: {fileID: 21300000, guid: 9281abada1fd93948a7382fa957728b1, type: 3}
     category: 3
   GUID: ce14f39a-f656-42f3-a435-48a8a2c4f160

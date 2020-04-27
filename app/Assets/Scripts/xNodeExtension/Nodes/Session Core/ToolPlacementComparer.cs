@@ -207,9 +207,9 @@ namespace NT.Nodes.SessionCore
         {
             int[,] unfulfilled = new int[rows.Count, rules.Count()];
             // Check how many times each rule is not accomplished
-            foreach ((var rule, int i) in rules.Select((value, i) => (value, i)))
+            foreach ((var row, int i) in rows.Select((value, i) => (value, i)))
             {
-                foreach ((var row, int j) in rows.Select((value, j) => (value, j)))
+                foreach ((var rule, int j) in rules.Select((value, j) => (value, j)))
                 {
                     int quantity = CountRuleUnaccomplishedInRow(rule, row);
                     unfulfilled[i, j] += quantity;
@@ -217,9 +217,9 @@ namespace NT.Nodes.SessionCore
             }
             // Return results as text
             List<string> results = new List<string>();
-            foreach ((var row, int j) in rows.Select((value, j) => (value, j)))
+            foreach ((var row, int i) in rows.Select((value, i) => (value, i)))
             {
-                foreach ((var rule, int i) in rules.Select((value, i) => (value, i)))
+                foreach ((var rule, int j) in rules.Select((value, j) => (value, j)))
                 {
                     if (unfulfilled[i, j] > 0)
                     {

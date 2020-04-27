@@ -17,6 +17,9 @@ public class MainSurgeonSceneGameObject : SceneGameObject
     private List<Tools>.Enumerator toolsEnumerator;
     private TextMeshPro messageText;
 
+    private List<string> toolResults = new List<string>();
+    private float timeToolAsked;
+
     void Start()
     {
         surgeonAnimator.SetBool("RightHandHasTool", false);
@@ -44,7 +47,13 @@ public class MainSurgeonSceneGameObject : SceneGameObject
     {
         if (msg.Contains("Exercise Started"))
         {
-            ExerciseStart();
+            // TODO: CHANGE TO DETECT SESSION BY NODE
+            var currentSession = SessionManager.Instance.SessionData;
+            string[] names = { "Delivery", "ToolDelivery", "Tool Delivery" };
+            if (names.Any( s => currentSession.displayName.ToLower().Contains( s.ToLower() )))
+            {
+                ExerciseStart();
+            }
         }
     }
 
@@ -69,13 +78,15 @@ public class MainSurgeonSceneGameObject : SceneGameObject
         {
             surgeonAnimator.SetTrigger("CorrectTool");
             showMessage.transform.localScale = Vector3.zero;
-
+            AddCorrectResultRegister(toolsEnumerator.Current);
+            
             float seconds = Random.Range(5f, 15f);
             StartCoroutine(WaitSecondsAndReturnTool(seconds));
         }
         else
         {
             surgeonAnimator.SetTrigger("IncorrectTool");
+            AddWrongResultRegister(e.snappedObject);
         }
     }
     private void HandleObjectUnsnapped(object sender, SnapDropZoneEventArgs e)
@@ -104,11 +115,13 @@ public class MainSurgeonSceneGameObject : SceneGameObject
             surgeonAnimator.SetTrigger("AskNewTool");
 
             showMessage.transform.localScale = Vector3.one;
-            messageText.text = string.Format("Need tool \"{0}\"", toolsEnumerator.Current.ToString());
+            messageText.text = string.Format("Necesito la herramienta \"{0}\"", toolsEnumerator.Current.ToString());
+            timeToolAsked = GetExerciseTime();
         }
         else
         {
             surgeonAnimator.SetTrigger("SessionEnd");
+            LogResultToolGiven();
         }
     }
     #endregion
@@ -127,14 +140,48 @@ public class MainSurgeonSceneGameObject : SceneGameObject
         returningTool = true;
 
         showMessage.transform.localScale = Vector3.one;
-        messageText.text = "Pick up the tool, please";
+        messageText.text = "Recoge la herramienta, por favor";
     }
     #endregion
 
+    #region Log Results Functions
     private void LogResultToolGiven()
     {
+        ExerciseFileLogger.Instance.LogResult("Entrega de material a cirujano", toolResults);
+    }
+
+    private float GetExerciseTime()
+    {
+        return ExerciseFileLogger.Instance.exerciseManager.GetExerciseTime();
+    }
+
+    private void AddCorrectResultRegister(Tools current)
+    {
+        string currentTime = ExerciseFileLogger.Instance.exerciseManager.GetExerciseTimeFormatted();
+        float elapsedTime = GetExerciseTime() - timeToolAsked;
+
+        toolResults.Add(string.Format("{0} - Instrumental {1} entregado en {2} segundos",
+            currentTime,
+            current.ToString(),
+            elapsedTime.ToString()));
 
     }
+    private void AddWrongResultRegister(GameObject current)
+    {
+        string currentTime = ExerciseFileLogger.Instance.exerciseManager.GetExerciseTimeFormatted();
+        var tool = current.GetComponentInChildren<ToolSceneGameObject>();
+
+        if (tool == null)
+        {
+            toolResults.Add(string.Format("\t{0} - Instrumental INCORRECTO", currentTime));
+
+        }
+        else
+        {
+            toolResults.Add(string.Format("\t{0} - Instrumental INCORRECTO {1}", currentTime, tool.toolType.ToString()));
+        }
+    }
+    #endregion
 }
 
 #region Shuffle List extension

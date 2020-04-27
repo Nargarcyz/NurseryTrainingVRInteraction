@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4811330874749068577}
   - component: {fileID: 5102930942533348795}
   m_Layer: 11
-  m_Name: Kocher_Mosquito_Small
+  m_Name: Kocher_Mosquito
   m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4372650705656973815}
   - component: {fileID: 5123952768100346983}
   m_Layer: 11
-  m_Name: Mosquito_Kocher_Small
+  m_Name: Mosquito_Kocher
   m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
