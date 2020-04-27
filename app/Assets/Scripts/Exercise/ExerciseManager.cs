@@ -6,6 +6,7 @@ using UnityEngine;
 using VRTK;
 using TMPro;
 using UnityEngine.SceneManagement;
+using VRTK.Examples;
 
 public class ExerciseManager : MonoBehaviour
 {
@@ -107,7 +108,9 @@ public class ExerciseManager : MonoBehaviour
         SessionManager.Instance.StartExecution();
         MessageSystem.onMessageSent += RecieveMessage;
         TogglePause(this, new ControllerInteractionEventArgs());
-        //rightController.buttonTwoPressed;
+
+        var toggleHands = GameObject.FindObjectOfType<ToggleCustomHands>();
+        toggleHands.ToggleHandsVisibility();
     }
 
     public void EndExercise()

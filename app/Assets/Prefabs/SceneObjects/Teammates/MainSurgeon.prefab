@@ -1507,7 +1507,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6966725359336568490}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa31935730602684ca098655260a7c33, type: 3}
   m_Name: 
@@ -1517,8 +1517,8 @@ MonoBehaviour:
   snapDuration: 1
   applyScalingOnSnap: 0
   cloneNewOnUnsnap: 0
-  highlightColor: {r: 0.78978425, g: 1, b: 0.7877358, a: 0.78431374}
-  validHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 1, g: 0.99413854, b: 0.7882353, a: 0.78431374}
+  validHighlightColor: {r: 0.2652058, g: 0.8867924, b: 0.12130654, a: 0}
   highlightAlwaysActive: 0
   validObjectListPolicy: {fileID: 1393825315724725540}
   displayDropZoneInEditor: 1
@@ -1597,6 +1597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShowMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428473038272195102, guid: 1a3f6660c70305640baf305fe1d1572a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1428473038272195103, guid: 1a3f6660c70305640baf305fe1d1572a,
         type: 3}
@@ -1706,17 +1711,27 @@ PrefabInstance:
     - target: {fileID: 1428473038272195103, guid: 1a3f6660c70305640baf305fe1d1572a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1428473038272195103, guid: 1a3f6660c70305640baf305fe1d1572a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1428473038272195103, guid: 1a3f6660c70305640baf305fe1d1572a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428473038482313883, guid: 1a3f6660c70305640baf305fe1d1572a,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428473038482313877, guid: 1a3f6660c70305640baf305fe1d1572a,
+        type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3f6660c70305640baf305fe1d1572a, type: 3}

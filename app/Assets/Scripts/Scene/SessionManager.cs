@@ -208,7 +208,7 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 
     [ContextMenu("Start execution")]
     public void StartExecution(){
-        MessageSystem.onMessageSent = null;
+        //MessageSystem.onMessageSent = null;
 
         SetUpForExecution();
 

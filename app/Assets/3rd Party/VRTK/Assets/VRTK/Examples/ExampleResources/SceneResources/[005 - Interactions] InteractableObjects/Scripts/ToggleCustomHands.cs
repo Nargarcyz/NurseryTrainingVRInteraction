@@ -40,6 +40,10 @@
             }
         }
 
+        public virtual void ToggleHandsVisibility()
+        {
+            ToggleHands(null, new ControllerInteractionEventArgs());
+        }
         protected virtual void ToggleHands(object sender, ControllerInteractionEventArgs e)
         {
             state = !state;

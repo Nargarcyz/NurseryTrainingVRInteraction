@@ -30,7 +30,7 @@ public class MainSurgeonSceneGameObject : SceneGameObject
         sceneTools.Shuffle();
         toolsEnumerator = sceneTools.GetEnumerator();
         MessageSystem.onMessageSent += RecieveMessage;
-        // Hide message box
+
         showMessage.transform.localScale = Vector3.zero;
         messageText = showMessage.GetComponentInChildren<TextMeshPro>();
     }
@@ -47,11 +47,6 @@ public class MainSurgeonSceneGameObject : SceneGameObject
             ExerciseStart();
         }
     }
-
-    //void Update()
-    //{
-    //    if (rightHandSnap.enabled && rightHandSnap.)
-    //}
 
     public void ExerciseStart()
     {
@@ -72,9 +67,9 @@ public class MainSurgeonSceneGameObject : SceneGameObject
 
         if (toolCorrect)
         {
+            surgeonAnimator.SetTrigger("CorrectTool");
             showMessage.transform.localScale = Vector3.zero;
 
-            surgeonAnimator.SetTrigger("CorrectTool");
             float seconds = Random.Range(5f, 15f);
             StartCoroutine(WaitSecondsAndReturnTool(seconds));
         }
@@ -86,6 +81,15 @@ public class MainSurgeonSceneGameObject : SceneGameObject
     private void HandleObjectUnsnapped(object sender, SnapDropZoneEventArgs e)
     {
         surgeonAnimator.SetBool("RightHandHasTool", false);
+
+        if (returningTool)
+        {
+            returningTool = false;
+            showMessage.transform.localScale = Vector3.zero;
+
+            float seconds = Random.Range(5f, 10f);
+            StartCoroutine(WaitSecondsAndAskTool(seconds));
+        }
     }
 
     #region AskNewTool
@@ -97,10 +101,10 @@ public class MainSurgeonSceneGameObject : SceneGameObject
     private void AskTool()
     {
         if (toolsEnumerator.MoveNext()) {
+            surgeonAnimator.SetTrigger("AskNewTool");
+
             showMessage.transform.localScale = Vector3.one;
             messageText.text = string.Format("Need tool \"{0}\"", toolsEnumerator.Current.ToString());
-
-            surgeonAnimator.SetTrigger("AskNewTool");
         }
         else
         {
@@ -116,12 +120,14 @@ public class MainSurgeonSceneGameObject : SceneGameObject
         ReturnTool();
     }
 
+    private bool returningTool = false;
     private void ReturnTool()
     {
         surgeonAnimator.SetTrigger("ReturnTool");
+        returningTool = true;
 
-        float seconds = Random.Range(5f, 10f);
-        StartCoroutine(WaitSecondsAndAskTool(seconds));
+        showMessage.transform.localScale = Vector3.one;
+        messageText.text = "Pick up the tool, please";
     }
     #endregion
 
