@@ -694,9 +694,9 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        3.636078,
+                        3.50927734,
                         0,
-                        0.782054
+                        0.6879895
                     },
                     "rotation": {
                         "$type": 7,
@@ -1447,7 +1447,7 @@
                         "$rcontent": [
                             "Scissorsa17b925f-8ff2-4d1d-b7e3-b8da8dbc9376",
                             "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06",
-                            "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34"
+                            "Mosquito_Kocher9b11d172-f59c-45c5-afc9-f89945bc9baa"
                         ]
                     },
                     "parent": "TableD3d14eacf-a7ce-48f5-93e6-1255c997d0d1",
@@ -1462,7 +1462,7 @@
                             "toolsList": {
                                 "$id": 158,
                                 "$type": "43|System.Collections.Generic.List`1[[NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp]], mscorlib",
-                                "$rlength": 3,
+                                "$rlength": 4,
                                 "$rcontent": [
                                     {
                                         "$id": 159,
@@ -1478,6 +1478,11 @@
                                         "$id": 161,
                                         "$type": 44,
                                         "linkedSGO": "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34"
+                                    },
+                                    {
+                                        "$id": 162,
+                                        "$type": 44,
+                                        "linkedSGO": "Mosquito_Kocher9b11d172-f59c-45c5-afc9-f89945bc9baa"
                                     }
                                 ]
                             }
@@ -1503,35 +1508,35 @@
                         0
                     },
                     "graph": {
-                        "$id": 162,
+                        "$id": 163,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 163,
+                            "$id": 164,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 164,
+                            "$id": 165,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 165,
+                            "$id": 166,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 166,
+                            "$id": 167,
                             "$type": 12,
                             "comparer": {
-                                "$id": 167,
+                                "$id": 168,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -1544,24 +1549,24 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 168,
+                    "$id": 169,
                     "$type": 13
                 },
                 "spawnPoints": {
-                    "$id": 169,
+                    "$id": 170,
                     "$type": "45|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
                     "$rlength": 3,
                     "$rcontent": [
                         {
-                            "$id": 170,
+                            "$id": 171,
                             "$type": "46|UnityEngine.Transform, UnityEngine.CoreModule"
                         },
                         {
-                            "$id": 171,
+                            "$id": 172,
                             "$type": 46
                         },
                         {
-                            "$id": 172,
+                            "$id": 173,
                             "$type": 46
                         }
                     ]
@@ -1571,13 +1576,13 @@
         {
             "$k": "Scissorsa17b925f-8ff2-4d1d-b7e3-b8da8dbc9376",
             "$v": {
-                "$id": 173,
+                "$id": 174,
                 "$type": 24,
                 "data": {
                     "$type": 3,
                     "id": "Scissorsa17b925f-8ff2-4d1d-b7e3-b8da8dbc9376",
                     "childs": {
-                        "$id": 174,
+                        "$id": 175,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1585,7 +1590,7 @@
                     },
                     "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
                     "data": {
-                        "$id": 175,
+                        "$id": 176,
                         "$type": 25,
                         "collapsed": true,
                         "name": null,
@@ -1596,46 +1601,46 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.00158690684,
+                        0.00170897716,
                         0.03540039,
-                        0.238997042
+                        0.239079535
                     },
                     "rotation": {
                         "$type": 7,
-                        7.345668E-05,
-                        3.28403854,
-                        -0.000218230532
+                        7.940229E-05,
+                        3.33035612,
+                        -0.000217523615
                     },
                     "graph": {
-                        "$id": 176,
+                        "$id": 177,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 177,
+                            "$id": 178,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 178,
+                            "$id": 179,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 179,
+                            "$id": 180,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 180,
+                            "$id": 181,
                             "$type": 12,
                             "comparer": {
-                                "$id": 181,
+                                "$id": 182,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -1648,18 +1653,18 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 182,
+                    "$id": 183,
                     "$type": 13
                 },
                 "toolType": 0,
                 "grabObject": {
-                    "$id": 183,
+                    "$id": 184,
                     "$type": 26,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 184,
+                        "$id": 185,
                         "$type": 27,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1694,13 +1699,13 @@
         {
             "$k": "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06",
             "$v": {
-                "$id": 185,
+                "$id": 186,
                 "$type": 24,
                 "data": {
                     "$type": 3,
                     "id": "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06",
                     "childs": {
-                        "$id": 186,
+                        "$id": 187,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1708,7 +1713,7 @@
                     },
                     "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
                     "data": {
-                        "$id": 187,
+                        "$id": 188,
                         "$type": 25,
                         "collapsed": true,
                         "name": null,
@@ -1719,45 +1724,45 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.00122070278,
-                        0.0784301758,
-                        -0.0033664708
+                        0.00122070324,
+                        0.07849121,
+                        -0.000295162317
                     },
                     "rotation": {
                         "$type": 7,
-                        272.489624,
-                        174.584534,
-                        184.917511
+                        272.590576,
+                        176.969254,
+                        184.928085
                     },
                     "graph": {
-                        "$id": 188,
+                        "$id": 189,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 189,
+                            "$id": 190,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 190,
+                            "$id": 191,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 191,
+                            "$id": 192,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 192,
+                            "$id": 193,
                             "$type": 12,
-                            "comparer": $iref:181,
+                            "comparer": $iref:182,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -1768,138 +1773,18 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 193,
+                    "$id": 194,
                     "$type": 13
                 },
                 "toolType": 5,
                 "grabObject": {
-                    "$id": 194,
+                    "$id": 195,
                     "$type": 26,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 195,
-                        "$type": 27,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "isGrabbable": true,
-                    "holdButtonToGrab": true,
-                    "stayGrabbedOnTeleport": true,
-                    "validDrop": 1,
-                    "grabOverrideButton": 0,
-                    "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
-                    "secondaryGrabActionScript": null,
-                    "isUsable": false,
-                    "holdButtonToUse": true,
-                    "useOnlyIfGrabbed": false,
-                    "pointerActivatesUseAction": false,
-                    "useOverrideButton": 0,
-                    "allowedUseControllers": 0,
-                    "objectHighlighter": null,
-                    "touchHighlightColor": {
-                        "$type": 19,
-                        0,
-                        0,
-                        0,
-                        0
-                    },
-                    "usingState": 0
-                }
-            }
-        },
-        {
-            "$k": "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34",
-            "$v": {
-                "$id": 196,
-                "$type": 24,
-                "data": {
-                    "$type": 3,
-                    "id": "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34",
-                    "childs": {
-                        "$id": 197,
-                        "$type": 4,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
-                    "data": {
-                        "$id": 198,
-                        "$type": 25,
-                        "collapsed": true,
-                        "name": null,
-                        "value": null,
-                        "defaultValue": null
-                    },
-                    "sceneObjectGUID": "fb34987d-5457-4ae6-8922-a9d243149c59",
-                    "graphJSON": "",
-                    "position": {
-                        "$type": 7,
-                        0.0041503855,
-                        0.0181274414,
-                        0.019923931
-                    },
-                    "rotation": {
-                        "$type": 7,
-                        5.499434,
-                        6.35512161,
-                        0.0678478554
-                    },
-                    "graph": {
-                        "$id": 199,
-                        "$type": 8,
-                        "_name": "",
-                        "nodes": {
-                            "$id": 200,
-                            "$type": 9,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "packedNodes": {
-                            "$id": 201,
-                            "$type": 10,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodes": {
-                            "$id": 202,
-                            "$type": 11,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodesDict": {
-                            "$id": 203,
-                            "$type": 12,
-                            "comparer": $iref:181,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "linkedNTVariable": "",
-                        "assignedSCGO": null,
-                        "displayName": ""
-                    }
-                },
-                "outlineRoot": {
-                    "$id": 204,
-                    "$type": 13
-                },
-                "toolType": 9,
-                "grabObject": {
-                    "$id": 205,
-                    "$type": 26,
-                    "disableWhenIdle": true,
-                    "allowedNearTouchControllers": 0,
-                    "allowedTouchControllers": 0,
-                    "ignoredColliders": {
-                        "$id": 206,
+                        "$id": 196,
                         "$type": 27,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1934,13 +1819,13 @@
         {
             "$k": "SurgeonAssistantA0e8a9a28-597b-4d38-af91-fce73dd672d6",
             "$v": {
-                "$id": 207,
+                "$id": 197,
                 "$type": 2,
                 "data": {
                     "$type": 3,
                     "id": "SurgeonAssistantA0e8a9a28-597b-4d38-af91-fce73dd672d6",
                     "childs": {
-                        "$id": 208,
+                        "$id": 198,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1948,7 +1833,7 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 209,
+                        "$id": 199,
                         "$type": 14,
                         "collapsed": true,
                         "name": null,
@@ -1963,21 +1848,144 @@
                     "graphJSON": null,
                     "position": {
                         "$type": 7,
-                        3.16879272,
-                        -0.0200805664,
-                        -0.855313838
+                        2.9234314,
+                        -0.0299682617,
+                        -1.26044118
                     },
                     "rotation": {
                         "$type": 7,
                         0,
-                        15.0865974,
+                        17.854414,
                         0
                     },
                     "graph": null
                 },
                 "outlineRoot": {
+                    "$id": 200,
+                    "$type": 13
+                }
+            }
+        },
+        {
+            "$k": "Mosquito_Kocher9b11d172-f59c-45c5-afc9-f89945bc9baa",
+            "$v": {
+                "$id": 201,
+                "$type": 24,
+                "data": {
+                    "$type": 3,
+                    "id": "Mosquito_Kocher9b11d172-f59c-45c5-afc9-f89945bc9baa",
+                    "childs": {
+                        "$id": 202,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
+                    "data": {
+                        "$id": 203,
+                        "$type": 25,
+                        "collapsed": true,
+                        "name": null,
+                        "value": null,
+                        "defaultValue": null
+                    },
+                    "sceneObjectGUID": "fb34987d-5457-4ae6-8922-a9d243149c59",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        0.0041503855,
+                        0.0181884766,
+                        0.0211296137
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        5.715064,
+                        5.58320427,
+                        0.0654275045
+                    },
+                    "graph": {
+                        "$id": 204,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 205,
+                            "$type": 9,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 206,
+                            "$type": 10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 207,
+                            "$type": 11,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 208,
+                            "$type": 12,
+                            "comparer": {
+                                "$id": 209,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
                     "$id": 210,
                     "$type": 13
+                },
+                "toolType": 9,
+                "grabObject": {
+                    "$id": 211,
+                    "$type": 26,
+                    "disableWhenIdle": true,
+                    "allowedNearTouchControllers": 0,
+                    "allowedTouchControllers": 0,
+                    "ignoredColliders": {
+                        "$id": 212,
+                        "$type": 27,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "isGrabbable": true,
+                    "holdButtonToGrab": true,
+                    "stayGrabbedOnTeleport": true,
+                    "validDrop": 1,
+                    "grabOverrideButton": 0,
+                    "allowedGrabControllers": 0,
+                    "grabAttachMechanicScript": null,
+                    "secondaryGrabActionScript": null,
+                    "isUsable": false,
+                    "holdButtonToUse": true,
+                    "useOnlyIfGrabbed": false,
+                    "pointerActivatesUseAction": false,
+                    "useOverrideButton": 0,
+                    "allowedUseControllers": 0,
+                    "objectHighlighter": null,
+                    "touchHighlightColor": {
+                        "$type": 19,
+                        0,
+                        0,
+                        0,
+                        0
+                    },
+                    "usingState": 0
                 }
             }
         }

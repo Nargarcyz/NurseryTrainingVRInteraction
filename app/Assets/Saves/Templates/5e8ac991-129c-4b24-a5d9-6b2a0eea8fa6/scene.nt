@@ -5,7 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 20,
+    "$rlength": 19,
     "$rcontent": [
         {
             "$k": "Door8041cf8c-741c-4906-a57f-568cfe74f358",
@@ -694,9 +694,9 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        3.636078,
+                        3.55026245,
                         0,
-                        0.782054
+                        0.739379346
                     },
                     "rotation": {
                         "$type": 7,
@@ -1443,11 +1443,10 @@
                     "childs": {
                         "$id": 156,
                         "$type": 4,
-                        "$rlength": 3,
+                        "$rlength": 2,
                         "$rcontent": [
                             "Scissorsa17b925f-8ff2-4d1d-b7e3-b8da8dbc9376",
-                            "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06",
-                            "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34"
+                            "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06"
                         ]
                     },
                     "parent": "TableD3d14eacf-a7ce-48f5-93e6-1255c997d0d1",
@@ -1598,13 +1597,13 @@
                         "$type": 7,
                         0.00158690684,
                         0.03540039,
-                        0.238997042
+                        0.239115775
                     },
                     "rotation": {
                         "$type": 7,
-                        7.345668E-05,
-                        3.28403854,
-                        -0.000218230532
+                        7.47599843E-05,
+                        3.248179,
+                        -0.000217378387
                     },
                     "graph": {
                         "$id": 176,
@@ -1719,15 +1718,15 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.00122070278,
-                        0.0784301758,
-                        -0.0033664708
+                        0.00122070371,
+                        0.07757568,
+                        0.00319385575
                     },
                     "rotation": {
                         "$type": 7,
-                        272.489624,
-                        174.584534,
-                        184.917511
+                        270,
+                        2.812035,
+                        0
                     },
                     "graph": {
                         "$id": 188,
@@ -1812,13 +1811,13 @@
             }
         },
         {
-            "$k": "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34",
+            "$k": "SurgeonAssistantA0e8a9a28-597b-4d38-af91-fce73dd672d6",
             "$v": {
                 "$id": 196,
-                "$type": 24,
+                "$type": 2,
                 "data": {
                     "$type": 3,
-                    "id": "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34",
+                    "id": "SurgeonAssistantA0e8a9a28-597b-4d38-af91-fce73dd672d6",
                     "childs": {
                         "$id": 197,
                         "$type": 4,
@@ -1826,129 +1825,9 @@
                         "$rcontent": [
                         ]
                     },
-                    "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
-                    "data": {
-                        "$id": 198,
-                        "$type": 25,
-                        "collapsed": true,
-                        "name": null,
-                        "value": null,
-                        "defaultValue": null
-                    },
-                    "sceneObjectGUID": "fb34987d-5457-4ae6-8922-a9d243149c59",
-                    "graphJSON": "",
-                    "position": {
-                        "$type": 7,
-                        0.0041503855,
-                        0.0181274414,
-                        0.019923931
-                    },
-                    "rotation": {
-                        "$type": 7,
-                        5.499434,
-                        6.35512161,
-                        0.0678478554
-                    },
-                    "graph": {
-                        "$id": 199,
-                        "$type": 8,
-                        "_name": "",
-                        "nodes": {
-                            "$id": 200,
-                            "$type": 9,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "packedNodes": {
-                            "$id": 201,
-                            "$type": 10,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodes": {
-                            "$id": 202,
-                            "$type": 11,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodesDict": {
-                            "$id": 203,
-                            "$type": 12,
-                            "comparer": $iref:181,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "linkedNTVariable": "",
-                        "assignedSCGO": null,
-                        "displayName": ""
-                    }
-                },
-                "outlineRoot": {
-                    "$id": 204,
-                    "$type": 13
-                },
-                "toolType": 9,
-                "grabObject": {
-                    "$id": 205,
-                    "$type": 26,
-                    "disableWhenIdle": true,
-                    "allowedNearTouchControllers": 0,
-                    "allowedTouchControllers": 0,
-                    "ignoredColliders": {
-                        "$id": 206,
-                        "$type": 27,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "isGrabbable": true,
-                    "holdButtonToGrab": true,
-                    "stayGrabbedOnTeleport": true,
-                    "validDrop": 1,
-                    "grabOverrideButton": 0,
-                    "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
-                    "secondaryGrabActionScript": null,
-                    "isUsable": false,
-                    "holdButtonToUse": true,
-                    "useOnlyIfGrabbed": false,
-                    "pointerActivatesUseAction": false,
-                    "useOverrideButton": 0,
-                    "allowedUseControllers": 0,
-                    "objectHighlighter": null,
-                    "touchHighlightColor": {
-                        "$type": 19,
-                        0,
-                        0,
-                        0,
-                        0
-                    },
-                    "usingState": 0
-                }
-            }
-        },
-        {
-            "$k": "SurgeonAssistantA0e8a9a28-597b-4d38-af91-fce73dd672d6",
-            "$v": {
-                "$id": 207,
-                "$type": 2,
-                "data": {
-                    "$type": 3,
-                    "id": "SurgeonAssistantA0e8a9a28-597b-4d38-af91-fce73dd672d6",
-                    "childs": {
-                        "$id": 208,
-                        "$type": 4,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
                     "parent": "",
                     "data": {
-                        "$id": 209,
+                        "$id": 198,
                         "$type": 14,
                         "collapsed": true,
                         "name": null,
@@ -1963,20 +1842,20 @@
                     "graphJSON": null,
                     "position": {
                         "$type": 7,
-                        3.16879272,
-                        -0.0200805664,
-                        -0.855313838
+                        3.02658081,
+                        -0.02331543,
+                        -1.04299963
                     },
                     "rotation": {
                         "$type": 7,
                         0,
-                        15.0865974,
+                        14.2007675,
                         0
                     },
                     "graph": null
                 },
                 "outlineRoot": {
-                    "$id": 210,
+                    "$id": 199,
                     "$type": 13
                 }
             }

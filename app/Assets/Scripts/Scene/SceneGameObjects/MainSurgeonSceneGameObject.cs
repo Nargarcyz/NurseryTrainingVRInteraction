@@ -49,7 +49,7 @@ public class MainSurgeonSceneGameObject : SceneGameObject
         {
             // TODO: CHANGE TO DETECT SESSION BY NODE
             var currentSession = SessionManager.Instance.SessionData;
-            string[] names = { "Delivery", "ToolDelivery", "Tool Delivery" };
+            string[] names = { "Delivery", "ToolDelivery", "Tool Delivery", "Entrega Material" };
             if (names.Any( s => currentSession.displayName.ToLower().Contains( s.ToLower() )))
             {
                 ExerciseStart();
@@ -121,6 +121,8 @@ public class MainSurgeonSceneGameObject : SceneGameObject
         else
         {
             surgeonAnimator.SetTrigger("SessionEnd");
+            showMessage.transform.localScale = Vector3.one;
+            messageText.text = string.Format("La operación ha sido un éxito");
             LogResultToolGiven();
         }
     }
