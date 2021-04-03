@@ -6,6 +6,7 @@
     {
         public VRTK_ControllerEvents leftController;
         public VRTK_ControllerEvents rightController;
+        public OvrAvatar avatarScript;
 
         public GameObject leftHandAvatar;
         public GameObject rightHandAvatar;
@@ -67,6 +68,7 @@
             {
                 rightHandAvatar.SetActive(state);
             }
+            // avatarScript.EnableHands = state;
         }
 
         protected virtual void ToggleSDKVisibility()

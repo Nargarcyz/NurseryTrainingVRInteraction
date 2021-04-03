@@ -104,12 +104,12 @@ namespace VRTK
                 return ControllerType.Oculus_OculusGamepad;
             }
 
-            if ((connectedControllers & OVRInput.Controller.Touchpad) == OVRInput.Controller.Touchpad)
+            if ((connectedControllers & OVRInput.Controller.Touch) == OVRInput.Controller.Touch)
             {
                 return ControllerType.Oculus_GearVRHMD;
             }
 
-            if ((connectedControllers & (OVRInput.Controller.LTrackedRemote | OVRInput.Controller.RTrackedRemote)) != 0)
+            if ((connectedControllers & (OVRInput.Controller.LHand | OVRInput.Controller.RHand)) != 0)
             {
                 return ControllerType.Oculus_GearVRController;
             }
@@ -829,12 +829,12 @@ namespace VRTK
                     return (index == 0 ? OVRInput.Controller.LTouch : OVRInput.Controller.None);
                 case OVRInput.Controller.RTouch:
                     return (index == 1 ? OVRInput.Controller.RTouch : OVRInput.Controller.None);
-                case OVRInput.Controller.LTrackedRemote:
-                    return (index == 0 ? OVRInput.Controller.LTrackedRemote : OVRInput.Controller.None);
-                case OVRInput.Controller.RTrackedRemote:
-                    return (index == 1 ? OVRInput.Controller.RTrackedRemote : OVRInput.Controller.None);
-                case OVRInput.Controller.Touchpad:
-                    return (index == 1 ? OVRInput.Controller.Touchpad : OVRInput.Controller.None);
+                case OVRInput.Controller.LHand:
+                    return (index == 0 ? OVRInput.Controller.LHand : OVRInput.Controller.None);
+                case OVRInput.Controller.RHand:
+                    return (index == 1 ? OVRInput.Controller.RHand : OVRInput.Controller.None);
+                    // case OVRInput.Controller.Touch:
+                    //     return (index == 1 ? OVRInput.Controller.Touch : OVRInput.Controller.None);
             }
             return activeControllerType;
         }

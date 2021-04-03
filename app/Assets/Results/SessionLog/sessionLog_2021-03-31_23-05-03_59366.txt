@@ -1,0 +1,8 @@
+///////////////////////////////////////////////////////////////////////////////////////
+/// Nombre sesión: Ordenación material      Fecha de ejecución: 31/03/2021 23:05:03 ///
+///////////////////////////////////////////////////////////////////////////////////////
+
+0:00:04.642 - Se ha cerrado el menú principal
+0:00:58.255 - La herramienta Pinset_Cartrect ha entrado en contacto con el suelo.
+0:01:19.706 - Se ha abierto el menú principal
+0:01:20.136 - Se ha cerrado el menú principal

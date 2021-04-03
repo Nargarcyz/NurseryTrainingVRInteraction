@@ -875,16 +875,13 @@
     "callbackNodesDict": {
         "$id": 93,
         "$type": "18|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib]], mscorlib",
-        "comparer": {
-            "$id": 94,
-            "$type": 5
-        },
+        "comparer": $iref:4,
         "$rlength": 2,
         "$rcontent": [
             {
                 "$k": "Exercise Started",
                 "$v": {
-                    "$id": 95,
+                    "$id": 94,
                     "$type": 17,
                     "$rlength": 1,
                     "$rcontent": [
@@ -895,7 +892,7 @@
             {
                 "$k": "Exercise End",
                 "$v": {
-                    "$id": 96,
+                    "$id": 95,
                     "$type": 17,
                     "$rlength": 2,
                     "$rcontent": [

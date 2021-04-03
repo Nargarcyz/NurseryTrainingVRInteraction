@@ -916,16 +916,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4251297257186063385}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 14f75d25bc40e84409117c73e1a3680a,
-        type: 3}
-      propertyPath: m_Name
-      value: caja-instrumental
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 14f75d25bc40e84409117c73e1a3680a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 14f75d25bc40e84409117c73e1a3680a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1001,6 +991,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3055e6a79ef80e1409547d56b1461033, type: 2}
+    - target: {fileID: -927199367670048503, guid: 14f75d25bc40e84409117c73e1a3680a,
+        type: 3}
+      propertyPath: m_Name
+      value: caja-instrumental
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 14f75d25bc40e84409117c73e1a3680a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f75d25bc40e84409117c73e1a3680a, type: 3}
 --- !u!4 &9188768870403190435 stripped
@@ -1022,16 +1022,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7936284051388448895}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: cab64b06724a90b4f80a8d2314598101,
-        type: 3}
-      propertyPath: m_Name
-      value: caja-instrumental-tapa
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: cab64b06724a90b4f80a8d2314598101,
-        type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cab64b06724a90b4f80a8d2314598101,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1092,6 +1082,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 66dc659c282e3e74fac17806b85c5624, type: 2}
+    - target: {fileID: -927199367670048503, guid: cab64b06724a90b4f80a8d2314598101,
+        type: 3}
+      propertyPath: m_Name
+      value: caja-instrumental-tapa
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: cab64b06724a90b4f80a8d2314598101,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cab64b06724a90b4f80a8d2314598101, type: 3}
 --- !u!4 &9188768870378430745 stripped
