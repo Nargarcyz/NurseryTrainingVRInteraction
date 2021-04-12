@@ -2146,7 +2146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SessionData:
     displayName: 
-    sessionID: 4c258646-03e0-45a4-9464-0c855719637f
+    sessionID: 108b8201-c194-4f61-9f5e-52adce6be366
     lastModified: 
     sceneGraphFile: 
     sceneFile: 
@@ -9662,6 +9662,7 @@ GameObject:
   - component: {fileID: 2033924108}
   - component: {fileID: 2033924107}
   - component: {fileID: 2033924106}
+  - component: {fileID: 2033924109}
   m_Layer: 0
   m_Name: OVRCameraRig
   m_TagString: Untagged
@@ -9776,6 +9777,25 @@ MonoBehaviour:
   usePerEyeCameras: 0
   useFixedUpdateForTracking: 0
   disableEyeAnchorCameras: 0
+--- !u!114 &2033924109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033924104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef7e6bfad51b1f24f8bba548c8dcecb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkToColor: {r: 0, g: 0, b: 0, a: 1}
+  blinkTransitionSpeed: 0.6
+  distanceBlinkDelay: 0
+  headsetPositionCompensation: 1
+  targetListPolicy: {fileID: 0}
+  navMeshData: {fileID: 0}
+  navMeshLimitDistance: 0
 --- !u!1 &2037540284
 GameObject:
   m_ObjectHideFlags: 0

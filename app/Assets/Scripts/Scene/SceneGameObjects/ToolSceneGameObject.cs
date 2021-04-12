@@ -8,6 +8,8 @@ public class ToolSceneGameObject : SceneGameObject, ITool
     public Tools toolType;
     public VRTK_InteractableObject grabObject;
 
+
+
     private void Start()
     {
         grabObject = GetComponentInChildren<VRTK_InteractableObject>();
@@ -15,6 +17,7 @@ public class ToolSceneGameObject : SceneGameObject, ITool
         {
             grabObject.InteractableObjectGrabbed += ObjectGrabbed;
         }
+        Debug.Log(toolType);
     }
 
     private void ObjectGrabbed(object sender, InteractableObjectEventArgs e)
