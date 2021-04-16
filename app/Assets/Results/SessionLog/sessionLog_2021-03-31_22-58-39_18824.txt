@@ -1,8 +1,0 @@
-////////////////////////////////////////////////////////////////////
-/// Nombre sesión:       Fecha de ejecución: 31/03/2021 22:58:39 ///
-////////////////////////////////////////////////////////////////////
-
-0:00:03.875 - Se ha cerrado el menú principal
-0:00:04.292 - Se ha abierto el menú principal
-0:00:04.75 - Se ha cerrado el menú principal
-0:00:11.736 - Se ha abierto el menú principal

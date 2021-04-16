@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,34 +14,51 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using XNode;
+using Better;
+using Better.StreamingAssets;
 
-public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
+public class SessionManager : Singleton<SessionManager>, IVariableDelegate
+{
 
     public static SessionData sessionToLoad;
 
-    public static string GetSavePath(){
-        if(!Directory.Exists(Application.dataPath  + "/Saves")){
-            Directory.CreateDirectory(Application.dataPath  + "/Saves");
+    public static string GetSavePath()
+    {
+
+        if (!BetterStreamingAssets.DirectoryExists("Saves"))
+        {
+            Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves");
         }
 
-        if(!Directory.Exists(Application.dataPath  + "/Saves/Sessions/")){
-            Directory.CreateDirectory(Application.dataPath  + "/Saves/Sessions/");
+        if (!BetterStreamingAssets.DirectoryExists("Saves/Sessions"))
+        {
+            Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves/Sessions");
         }
-        return Application.dataPath  + "/Saves/Sessions/";
+        Debug.Log("Save Path: " + "/Saves/Sessions");
+        return "/Saves/Sessions/";
+
+
     }
 
     public static string GetTemplatePath()
     {
-        if (!Directory.Exists(Application.dataPath + "/Saves"))
+
+        if (!BetterStreamingAssets.DirectoryExists("Saves"))
         {
-            Directory.CreateDirectory(Application.dataPath + "/Saves");
+            Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves");
         }
 
-        if (!Directory.Exists(Application.dataPath + "/Saves/Templates/"))
+        if (!BetterStreamingAssets.DirectoryExists("Saves/Templates"))
         {
-            Directory.CreateDirectory(Application.dataPath + "/Saves/Templates/");
+            Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves/Templates");
         }
-        return Application.dataPath + "/Saves/Templates/";
+
+        // if (!Directory.Exists(Application.dataPath + "/Saves/Templates/"))
+        // {
+        //     Directory.CreateDirectory(Application.dataPath + "/Saves/Templates/");
+        // }
+        Debug.Log("Templates Path: " + Application.streamingAssetsPath + "/Saves/Templates");
+        return "/Saves/Templates/";
     }
 
     public static void CreateSessionFromTemplate(SessionData sd, SessionData template)
@@ -49,10 +66,13 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         string templatePath = Path.Combine(GetTemplatePath(), template.sessionID);
         string destPath = Path.Combine(GetSavePath(), sd.sessionID);
 
+
         DirectoryCopy(templatePath, destPath, true);
         // Assure config.nt has the updated data
         string sessionJson = JsonUtility.ToJson(sd);
+        // File.WriteAllText(destPath + "/" + "config.nt", sessionJson);
         File.WriteAllText(destPath + "/" + "config.nt", sessionJson);
+
     }
 
     private static void DirectoryCopy(string sourceDir, string destDir, bool copySubDirs)
@@ -70,10 +90,11 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
             file.CopyTo(destFile, false);
         }
 
+
         if (copySubDirs)
         {
             var dirs = source.GetDirectories();
-            foreach(var subdir in dirs)
+            foreach (var subdir in dirs)
             {
                 string destSubPath = Path.Combine(destDir, subdir.Name);
                 DirectoryCopy(subdir.FullName, destSubPath, copySubDirs);
@@ -81,20 +102,26 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         }
     }
 
-    public static SessionData GetSession(string sessionID){
-        string configJSON = File.ReadAllText(GetSavePath() + sessionID + "/" + "config.nt");
+    public static SessionData GetSession(string sessionID)
+    {
+        // string configJSON = File.ReadAllText(GetSavePath() + sessionID + "/" + "config.nt");
+        string configJSON = BetterStreamingAssets.ReadAllText(GetSavePath() + sessionID + "/" + "config.nt");
         return JsonUtility.FromJson<SessionData>(configJSON);
     }
-    public static SessionData GetTemplateSession(string sessionID){
-        string configJSON = File.ReadAllText(GetTemplatePath() + sessionID + "/" + "config.nt");
+    public static SessionData GetTemplateSession(string sessionID)
+    {
+        // string configJSON = File.ReadAllText(GetTemplatePath() + sessionID + "/" + "config.nt");
+        string configJSON = BetterStreamingAssets.ReadAllText(GetTemplatePath() + sessionID + "/" + "config.nt");
         return JsonUtility.FromJson<SessionData>(configJSON);
     }
 
     public static void DeleteSession(string sessionID)
     {
         string sessionPath = GetSavePath() + sessionID;
-        if(Directory.Exists(sessionPath)){
-            Directory.Delete(sessionPath, true);            
+        if (Directory.Exists(sessionPath))
+        {
+            Directory.Delete(sessionPath, true);
+
         }
     }
 
@@ -120,7 +147,8 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
     public Dictionary<string, UserVariable> userVariables = new Dictionary<string, UserVariable>();
 
     [System.Serializable]
-    public struct UserVariable{
+    public struct UserVariable
+    {
         public object value;
         public object defaultValue;
 
@@ -132,14 +160,18 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 
     private SceneGameObject _selectedObjectSceneObject;
 
-    public SceneGameObject selectedSceneObject{
+    public SceneGameObject selectedSceneObject
+    {
 
-        get{
+        get
+        {
             return _selectedObjectSceneObject;
         }
 
-        private set{
-            if(_selectedObjectSceneObject != value){
+        private set
+        {
+            if (_selectedObjectSceneObject != value)
+            {
                 _selectedObjectSceneObject = value;
                 OnCurrentChanged.Invoke();
             }
@@ -147,13 +179,17 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
     }
 
     private NodeGraph _showingGraph;
-    public NodeGraph showingGraph{
-        get{
+    public NodeGraph showingGraph
+    {
+        get
+        {
             return _showingGraph;
         }
 
-        set{
-            if(_showingGraph != value){
+        set
+        {
+            if (_showingGraph != value)
+            {
                 _showingGraph = value;
                 OnShowingGraphChanged.Invoke();
             }
@@ -168,8 +204,12 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
     [HideInInspector] public UnityEvent OnSessionLoaded = new UnityEvent();
     [HideInInspector] public UnityEvent OnSceneGameObjectsChanged = new UnityEvent();
 
-    private void Awake() {
-        if(sceneGraph == null){
+    private void Awake()
+    {
+
+        BetterStreamingAssets.Initialize();
+        if (sceneGraph == null)
+        {
             sceneGraph = new SceneGraph();
             sceneGraph.variableDelegate = this;
         }
@@ -181,23 +221,30 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         var sceneRoot = new GameObject("SceneRoot");
     }
 
-    private void Start() {
-        if(!string.IsNullOrEmpty(sessionToLoad.sessionID)){
+    private void Start()
+    {
+        if (!string.IsNullOrEmpty(sessionToLoad.sessionID))
+        {
             SessionData = sessionToLoad;
         }
+        Debug.Log("<color=red>" + sessionToLoad.sessionID + "</color>");
 
-        if(loadOnAwake){
-           LoadSession( SessionData.sessionID);
+        if (loadOnAwake)
+        {
+            LoadSession(SessionData.sessionID);
         }
     }
 
 
     float timer = 0;
-    private void Update() {
-        if(autoSave ){
+    private void Update()
+    {
+        if (autoSave)
+        {
             timer += Time.deltaTime;
 
-            if(timer > autoSaveInterval){
+            if (timer > autoSaveInterval)
+            {
                 Debug.Log("<color=green> AUTOSave </color>");
                 timer = 0;
                 SaveSession();
@@ -207,7 +254,8 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 
 
     [ContextMenu("Start execution")]
-    public void StartExecution(){
+    public void StartExecution()
+    {
         //MessageSystem.onMessageSent = null;
 
         SetUpForExecution();
@@ -251,33 +299,39 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         sceneGraph.StartExecution();
     }
 
-    public void StartExecutionWithMessage(string message ){
+    public void StartExecutionWithMessage(string message)
+    {
         SetUpForExecution();
         MessageSystem.SendMessage(message);
 
     }
 
-#region Export/Import
+    #region Export/Import
 
-    public void SaveScene(string path){
+    public void SaveScene(string path)
+    {
 
         byte[] ojson = SerializationUtility.SerializeValue(sceneGameObjects, DataFormat.JSON);
 
-        if(!string.IsNullOrEmpty(path)){
+        if (!string.IsNullOrEmpty(path))
+        {
             File.WriteAllBytes(path, ojson);
         }
     }
 
     [ContextMenu("Save")]
-    public void SaveSession(){
-        if(string.IsNullOrEmpty(SessionData.sessionID)){
+    public void SaveSession()
+    {
+        if (string.IsNullOrEmpty(SessionData.sessionID))
+        {
             SessionData.sessionID = DateTime.Now.ToString();
         }
 
-        Debug.Log( $" Saving session to: {GetSavePath()} ");
+        Debug.Log($" Saving session to: {GetSavePath()} ");
 
         string saveFolder = GetSavePath() + SessionData.sessionID;
-        if(Directory.Exists(saveFolder) ){
+        if (Directory.Exists(saveFolder))
+        {
             Directory.Delete(saveFolder, true);
         }
 
@@ -302,54 +356,68 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 
     }
 
-    public void LoadScene(string path){
-        byte[] ojson = File.ReadAllBytes(path);
+    public void LoadScene(string path)
+    {
+        // byte[] ojson = File.ReadAllBytes(path);
+        byte[] ojson = BetterStreamingAssets.ReadAllBytes(path);
 
-        var newRoot = SerializationUtility.DeserializeValue<Dictionary<string,SceneGameObject>>(ojson, DataFormat.JSON);
+        var newRoot = SerializationUtility.DeserializeValue<Dictionary<string, SceneGameObject>>(ojson, DataFormat.JSON);
 
         mapLoader.LoadMap(newRoot);
     }
 
-    public void LoadSession(string sessionID){
+    public void LoadSession(string sessionID)
+    {
 
         string saveFolder = GetSavePath() + sessionID;
 
-        if(string.IsNullOrEmpty(sessionID)) return;
+        if (string.IsNullOrEmpty(sessionID)) return;
 
-        if(!Directory.Exists(saveFolder) ){
-            return;
-        }
+        if (!BetterStreamingAssets.DirectoryExists(saveFolder)) return;
+        // if (!Directory.Exists(saveFolder))
+        // {
+        //     return;
+        // }
 
         sceneGameObjects = new Dictionary<string, SceneGameObject>();
 
 
-        string configJSON = File.ReadAllText(saveFolder + "/" + "config.nt");
+        // string configJSON = File.ReadAllText(saveFolder + "/" + "config.nt");
+        string configJSON = BetterStreamingAssets.ReadAllText(saveFolder + "/" + "config.nt");
         SessionData = JsonUtility.FromJson<SessionData>(configJSON);
 
-        if(File.Exists(saveFolder +  "/" + SessionData.sceneGraphFile)){
-            byte[] sceneGraphData = File.ReadAllBytes(saveFolder +  "/" + SessionData.sceneGraphFile);
+        if (BetterStreamingAssets.FileExists(saveFolder + "/" + SessionData.sceneGraphFile))
+        // if (File.Exists(saveFolder + "/" + SessionData.sceneGraphFile))
+        {
+            // byte[] sceneGraphData = File.ReadAllBytes(saveFolder + "/" + SessionData.sceneGraphFile);
+            byte[] sceneGraphData = BetterStreamingAssets.ReadAllBytes(saveFolder + "/" + SessionData.sceneGraphFile);
             sceneGraph = SerializationUtility.DeserializeValue<SceneGraph>(sceneGraphData, DataFormat.JSON);
             sceneGraph.variableDelegate = this;
         }
 
-        if(File.Exists(saveFolder +  "/" + SessionData.userVariables)){
-            byte[] userVariablesData = File.ReadAllBytes(saveFolder +  "/" + SessionData.userVariables);
+        // if (File.Exists(saveFolder + "/" + SessionData.userVariables))
+        if (BetterStreamingAssets.FileExists(saveFolder + "/" + SessionData.userVariables))
+        {
+            // byte[] userVariablesData = File.ReadAllBytes(saveFolder + "/" + SessionData.userVariables);
+            byte[] userVariablesData = BetterStreamingAssets.ReadAllBytes(saveFolder + "/" + SessionData.userVariables);
             userVariables = SerializationUtility.DeserializeValue<Dictionary<string, UserVariable>>(userVariablesData, DataFormat.JSON);
         }
 
-        LoadScene(saveFolder +  "/" + SessionData.sceneFile);
+        LoadScene(saveFolder + "/" + SessionData.sceneFile);
 
         OnSessionLoaded.Invoke();
 
         showingGraph = sceneGraph;
     }
-#endregion
+    #endregion
 
-#region Scene GameObjcts
-    public void AddSceneGameObject(SceneGameObject so){
+    #region Scene GameObjcts
+    public void AddSceneGameObject(SceneGameObject so)
+    {
         sceneGameObjects.Add(so.data.id, so);
 
-        if(so.data.graph != null){
+        if (so.data.graph != null)
+        {
             so.data.graph.variableDelegate = this;
         }
 
@@ -357,17 +425,21 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         OnGraphListChanged.Invoke();
     }
 
-    public void RemoveSceneGameObject(string key){
+    public void RemoveSceneGameObject(string key)
+    {
 
-        if(sceneGameObjects.ContainsKey(key)){
+        if (sceneGameObjects.ContainsKey(key))
+        {
             SceneGameObject toRemove = sceneGameObjects[key];
             sceneGameObjects.Remove(key);
 
-            if(toRemove.data.graph != null){
+            if (toRemove.data.graph != null)
+            {
                 showingGraph = sceneGraph;
             }
 
-            if(!string.IsNullOrEmpty(toRemove.data.parent) ){
+            if (!string.IsNullOrEmpty(toRemove.data.parent))
+            {
                 SceneGameObject toRemoveParent = sceneGameObjects[toRemove.data.parent];
                 toRemoveParent.data.childs.Remove(key);
 
@@ -376,7 +448,8 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 
             List<SceneGameObject> childsToRemove = new List<SceneGameObject>(toRemove.GetComponentsInChildren<SceneGameObject>());
 
-            foreach(SceneGameObject childToRemove in childsToRemove){
+            foreach (SceneGameObject childToRemove in childsToRemove)
+            {
                 string childKey = childToRemove.data.id;
                 sceneGameObjects.Remove(childKey);
             }
@@ -387,11 +460,13 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         }
     }
 
-    public void SetSelected(string key){
+    public void SetSelected(string key)
+    {
 
-        if(selectedSceneObject != null) selectedSceneObject.isSelected = false;
+        if (selectedSceneObject != null) selectedSceneObject.isSelected = false;
 
-        if(!string.IsNullOrEmpty(key) && sceneGameObjects.ContainsKey(key)){
+        if (!string.IsNullOrEmpty(key) && sceneGameObjects.ContainsKey(key))
+        {
             selectedSceneObject = sceneGameObjects[key];
             selectedSceneObject.isSelected = true;
         }
@@ -401,8 +476,10 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         }
     }
 
-    public SceneGameObject GetSceneGameObject(string key){
-        if(sceneGameObjects.ContainsKey(key)){
+    public SceneGameObject GetSceneGameObject(string key)
+    {
+        if (sceneGameObjects.ContainsKey(key))
+        {
             return sceneGameObjects[key];
         }
         else
@@ -416,15 +493,17 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
         var result = sceneGameObjects.Where(g => g.Value.CompareTag(tag)).Select(g => g.Value).ToList();
         return result;
     }
-#endregion
+    #endregion
 
-#region  Graph functions
-    public void OpenGraphFor(string key){
+    #region  Graph functions
+    public void OpenGraphFor(string key)
+    {
         SceneGameObject sobj = GetSceneGameObject(key);
 
-        if(sobj == null) return;
+        if (sobj == null) return;
 
-        if(sobj.data.graph == null){
+        if (sobj.data.graph == null)
+        {
             SceneObjectGraph soc = new SceneObjectGraph();
             soc.linkedNTVariable = sobj.data.id;
             soc.variableDelegate = this;
@@ -439,25 +518,28 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 
     }
 
-    public void OpenSceneGraph(){
+    public void OpenSceneGraph()
+    {
         showingGraph = sceneGraph;
     }
 
     public List<SceneObjectGraph> GetAllGraphs()
     {
-        List<SceneObjectGraph> graphs =  new List<SceneObjectGraph>();
+        List<SceneObjectGraph> graphs = new List<SceneObjectGraph>();
 
-        if(sceneGameObjects == null) return graphs;
+        if (sceneGameObjects == null) return graphs;
 
-        foreach(var sceneGameObject in sceneGameObjects){
-            if( sceneGameObject.Value.data.graph != null &&
-                (sceneGameObject.Value.data.graph.nodes.Count > 0 || sceneGameObject.Value.data.graph == showingGraph)){
+        foreach (var sceneGameObject in sceneGameObjects)
+        {
+            if (sceneGameObject.Value.data.graph != null &&
+                (sceneGameObject.Value.data.graph.nodes.Count > 0 || sceneGameObject.Value.data.graph == showingGraph))
+            {
                 SceneObjectGraph sog = sceneGameObject.Value.data.graph;
 
                 sog.linkedNTVariable = sceneGameObject.Value.data.id;
                 sog.displayName = sceneGameObject.Value.sceneObject.GetDisplayName();
 
-                if(sog.variableDelegate == null) sog.variableDelegate = this;
+                if (sog.variableDelegate == null) sog.variableDelegate = this;
 
                 graphs.Add(sceneGameObject.Value.data.graph);
             }
@@ -468,36 +550,43 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 
     public object GetValue(string key)
     {
-        SceneGameObject scgo =  GetSceneGameObject(key);
-        if(scgo != null){
+        SceneGameObject scgo = GetSceneGameObject(key);
+        if (scgo != null)
+        {
             return scgo.data.data.GetValue();
         }
 
         return null;
     }
 
-    public void SetValue(string key, object value){
-        SceneGameObject scgo =  GetSceneGameObject(key);
-        if(scgo != null){
+    public void SetValue(string key, object value)
+    {
+        SceneGameObject scgo = GetSceneGameObject(key);
+        if (scgo != null)
+        {
             scgo.data.data.SetValue(value);
         }
     }
 
 
-    public void SetDefaultUserVariable(string key, object value){
-        if(userVariables.ContainsKey(key)){
+    public void SetDefaultUserVariable(string key, object value)
+    {
+        if (userVariables.ContainsKey(key))
+        {
 
-            userVariables[key] = new UserVariable{ value = value, defaultValue = value};
+            userVariables[key] = new UserVariable { value = value, defaultValue = value };
         }
         else
         {
-            userVariables.Add(key, new UserVariable{ value = value, defaultValue = value});
+            userVariables.Add(key, new UserVariable { value = value, defaultValue = value });
             OnUserVariablesModified.Invoke();
         }
     }
 
-    public void RemoveUserVariable(string key){
-        if(userVariables.ContainsKey(key)){
+    public void RemoveUserVariable(string key)
+    {
+        if (userVariables.ContainsKey(key))
+        {
             userVariables.Remove(key);
         }
 
@@ -508,7 +597,8 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 
     public object GetUserVariable(string key)
     {
-        if(userVariables.ContainsKey(key)){
+        if (userVariables.ContainsKey(key))
+        {
             return userVariables[key].value;
         }
 
@@ -517,20 +607,23 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 
     public void SetUserVariable(string key, object value)
     {
-        if(userVariables.ContainsKey(key)){
+        if (userVariables.ContainsKey(key))
+        {
 
             UserVariable uv = userVariables[key];
-            uv.value = value; 
+            uv.value = value;
             userVariables[key] = uv;
         }
     }
 
-    public void Quit(){
+    public void Quit()
+    {
         SaveSession();
         Application.Quit();
     }
 
-    public void Back(){
+    public void Back()
+    {
         SaveSession();
         SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
     }
@@ -542,7 +635,8 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate {
 }
 
 [System.Serializable]
-public struct SessionData{
+public struct SessionData
+{
     public string displayName;
     public string sessionID;
     public string lastModified;
@@ -550,3 +644,4 @@ public struct SessionData{
     public string sceneFile;
     public string userVariables;
 }
+

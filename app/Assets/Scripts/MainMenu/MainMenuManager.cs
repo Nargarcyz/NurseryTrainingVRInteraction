@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 using UnityEngine.UI;
 
-public class MainMenuManager : MonoBehaviour {
+public class MainMenuManager : MonoBehaviour
+{
     public Transform content;
     public GameObject emptyList;
     public GameObject sessionPrototype;
@@ -25,28 +26,36 @@ public class MainMenuManager : MonoBehaviour {
         Cursor.lockState = CursorLockMode.None;
     }
 
-    private void Awake() {
-        DirectoryInfo sessionsDir = new DirectoryInfo(SessionManager.GetSavePath());
+    private string GetDirectoryName(string path)
+    {
+        string[] substrings = path.Split('/');
+        return substrings[substrings.Length - 2];
+    }
 
-        if(!sessionsDir.Exists) {
+    private void Awake()
+    {
+        BetterStreamingAssets.Initialize();
+        // DirectoryInfo sessionsDir = new DirectoryInfo(SessionManager.GetSavePath());
+
+
+        // if (!sessionsDir.Exists)
+        if (!BetterStreamingAssets.DirectoryExists(SessionManager.GetSavePath()))
+        {
             emptyList.SetActive(true);
             return;
         }
+        string[] files = BetterStreamingAssets.GetFiles(SessionManager.GetSavePath(), "config.nt", SearchOption.AllDirectories);
 
-        FileInfo[] files = sessionsDir.GetFiles("config.nt", SearchOption.AllDirectories);
-        
-        if(files.Length == 0) {
+        if (files.Length == 0)
+        {
             emptyList.SetActive(true);
         }
         else
         {
             emptyList.SetActive(false);
 
-            var sessionsData = files
-                .Select(x => SessionManager.GetSession(x.Directory.Name))
-                .OrderBy(x => x.displayName);
-
-            foreach(SessionData sd in sessionsData)
+            var sessionsData = files.Select(x => SessionManager.GetSession(GetDirectoryName(x))).OrderBy(x => x.displayName);
+            foreach (SessionData sd in sessionsData)
             {
                 GameObject itemCard = Instantiate(sessionPrototype, content);
                 itemCard.SetActive(true);
@@ -55,11 +64,28 @@ public class MainMenuManager : MonoBehaviour {
             }
         }
 
+        // else
+        // {
+        //     emptyList.SetActive(false);
+
+        // var sessionsData = files
+        //     .Select(x => SessionManager.GetSession(x.Directory.Name))
+        //     .OrderBy(x => x.displayName);
+
+        //     foreach (SessionData sd in sessionsData)
+        //     {
+        //         GameObject itemCard = Instantiate(sessionPrototype, content);
+        //         itemCard.SetActive(true);
+        //         itemCard.GetComponent<MenuCard>().SetSessionData(sd, this);
+        //         sessions.Add(sd.sessionID, itemCard);
+        //     }
+        // }
+
     }
 
     public void PlayeSession(SessionData sessionData)
     {
-         SessionManager.sessionToLoad = sessionData;
+        SessionManager.sessionToLoad = sessionData;
         SceneManager.LoadScene(2, LoadSceneMode.Single);
     }
 
@@ -73,7 +99,8 @@ public class MainMenuManager : MonoBehaviour {
     {
         confirmDelete.SetActive(false);
 
-        if(sessions.ContainsKey(sessionData.sessionID)){
+        if (sessions.ContainsKey(sessionData.sessionID))
+        {
             GameObject go = sessions[sessionData.sessionID];
             Destroy(go);
             sessions.Remove(sessionData.sessionID);

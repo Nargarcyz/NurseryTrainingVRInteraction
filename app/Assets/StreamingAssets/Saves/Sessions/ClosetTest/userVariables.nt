@@ -1,0 +1,59 @@
+{
+    "$id": 0,
+    "$type": "0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[SessionManager+UserVariable, Assembly-CSharp]], mscorlib",
+    "comparer": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
+    },
+    "$rlength": 4,
+    "$rcontent": [
+        {
+            "$k": "Clean hands",
+            "$v": {
+                "$type": "2|SessionManager+UserVariable, Assembly-CSharp",
+                "value": {
+                    "$id": 2,
+                    "$type": "3|System.Boolean, mscorlib",
+                    false
+                },
+                "defaultValue": $iref:2
+            }
+        },
+        {
+            "$k": "Grade",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 3,
+                    "$type": "4|System.Single, mscorlib",
+                    0
+                },
+                "defaultValue": $iref:3
+            }
+        },
+        {
+            "$k": "Gloves on",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 4,
+                    "$type": 3,
+                    false
+                },
+                "defaultValue": $iref:4
+            }
+        },
+        {
+            "$k": "Cover table on",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 5,
+                    "$type": 3,
+                    false
+                },
+                "defaultValue": $iref:5
+            }
+        }
+    ]
+}
