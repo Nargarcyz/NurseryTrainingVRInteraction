@@ -17,6 +17,7 @@ using XNode;
 using Better;
 using Better.StreamingAssets;
 
+
 public class SessionManager : Singleton<SessionManager>, IVariableDelegate
 {
 
@@ -24,47 +25,46 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate
 
     public static string GetSavePath()
     {
-
-        if (!BetterStreamingAssets.DirectoryExists("Saves"))
+        if (Application.platform == RuntimePlatform.Android)
+            return "/Saves/Sessions/";
+        else
         {
-            Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves");
-        }
+            if (!Directory.Exists(Application.streamingAssetsPath + "/Saves"))
+                Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves");
 
-        if (!BetterStreamingAssets.DirectoryExists("Saves/Sessions"))
-        {
-            Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves/Sessions");
-        }
-        Debug.Log("Save Path: " + "/Saves/Sessions");
-        return "/Saves/Sessions/";
+            if (!Directory.Exists(Application.streamingAssetsPath + "/Saves/Sessions"))
+                Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves/Sessions");
 
+            return "/Saves/Sessions/";
+        }
 
     }
 
     public static string GetTemplatePath()
     {
 
-        if (!BetterStreamingAssets.DirectoryExists("Saves"))
+        if (Application.platform == RuntimePlatform.Android)
+            return "/Saves/Templates/";
+        else
         {
-            Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves");
+            if (!Directory.Exists(Application.streamingAssetsPath + "/Saves"))
+                Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves");
+
+            if (!Directory.Exists(Application.streamingAssetsPath + "/Saves/Templates"))
+                Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves/Templates");
+
+            return "/Saves/Templates/";
         }
 
-        if (!BetterStreamingAssets.DirectoryExists("Saves/Templates"))
-        {
-            Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves/Templates");
-        }
 
-        // if (!Directory.Exists(Application.dataPath + "/Saves/Templates/"))
-        // {
-        //     Directory.CreateDirectory(Application.dataPath + "/Saves/Templates/");
-        // }
-        Debug.Log("Templates Path: " + Application.streamingAssetsPath + "/Saves/Templates");
-        return "/Saves/Templates/";
+
+
     }
 
     public static void CreateSessionFromTemplate(SessionData sd, SessionData template)
     {
-        string templatePath = Path.Combine(GetTemplatePath(), template.sessionID);
-        string destPath = Path.Combine(GetSavePath(), sd.sessionID);
+        string templatePath = Path.Combine(Application.streamingAssetsPath + GetTemplatePath(), template.sessionID);
+        string destPath = Path.Combine(Application.streamingAssetsPath + GetSavePath(), sd.sessionID);
 
 
         DirectoryCopy(templatePath, destPath, true);
@@ -117,7 +117,7 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate
 
     public static void DeleteSession(string sessionID)
     {
-        string sessionPath = GetSavePath() + sessionID;
+        string sessionPath = Application.streamingAssetsPath + GetSavePath() + sessionID;
         if (Directory.Exists(sessionPath))
         {
             Directory.Delete(sessionPath, true);
@@ -329,7 +329,7 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate
 
         Debug.Log($" Saving session to: {GetSavePath()} ");
 
-        string saveFolder = GetSavePath() + SessionData.sessionID;
+        string saveFolder = Application.streamingAssetsPath + GetSavePath() + SessionData.sessionID;
         if (Directory.Exists(saveFolder))
         {
             Directory.Delete(saveFolder, true);

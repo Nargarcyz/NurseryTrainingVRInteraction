@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2963683514753445399}
   - component: {fileID: 2963683514753445398}
   - component: {fileID: 990327564191692215}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Mc_Pherson
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -55,6 +55,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -106,7 +107,7 @@ GameObject:
   - component: {fileID: 2944324986549369007}
   - component: {fileID: 716772040134062376}
   - component: {fileID: 7987765094364248137}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Forceps_McPherson
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -174,7 +175,7 @@ MonoBehaviour:
       assignedSCGO: {fileID: 0}
       displayName: 
   outlineRoot: {fileID: 0}
-  toolType: 7
+  toolType: 0
   grabObject: {fileID: 0}
 --- !u!114 &2944324986549369007
 MonoBehaviour:
@@ -192,7 +193,7 @@ MonoBehaviour:
   allowedNearTouchControllers: 0
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 1
+  isGrabbable: 0
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1

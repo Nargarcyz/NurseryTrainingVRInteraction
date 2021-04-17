@@ -293,13 +293,16 @@
     "callbackNodesDict": {
         "$id": 33,
         "$type": "15|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib]], mscorlib",
-        "comparer": $iref:4,
+        "comparer": {
+            "$id": 34,
+            "$type": 5
+        },
         "$rlength": 1,
         "$rcontent": [
             {
                 "$k": "Exercise Started",
                 "$v": {
-                    "$id": 34,
+                    "$id": 35,
                     "$type": 14,
                     "$rlength": 1,
                     "$rcontent": [

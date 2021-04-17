@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8786820706801554526}
   - component: {fileID: 6725993701630176871}
   - component: {fileID: 3664240064763419149}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: 10137_DressGloves_v04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2834157065678092273}
   - component: {fileID: 2071137474972045683}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 8727166839661378831}
   - component: {fileID: 5657919197220872672}
   - component: {fileID: 8162363307991322200}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Gloves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,6 +207,7 @@ MonoBehaviour:
       displayName: 
   outlineRoot: {fileID: 0}
   glovesColor: {r: 0.40784317, g: 0.5294118, b: 0.60784316, a: 1}
+  linkedObject: {fileID: 0}
 --- !u!114 &5657919197220872672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +268,7 @@ GameObject:
   - component: {fileID: 2914640584471221919}
   - component: {fileID: 8488290830421713355}
   - component: {fileID: 5414229388796919577}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: 10137_DressGloves_v04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

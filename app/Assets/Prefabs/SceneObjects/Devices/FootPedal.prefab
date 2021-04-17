@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4437909072868505853}
   - component: {fileID: 4643181305096906070}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 8105793770081520066}
   - component: {fileID: 1640251128722731059}
   - component: {fileID: 1957514844819103292}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: FootPedal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c371a9fd9498011468361b8d623d339e, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c371a9fd9498011468361b8d623d339e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c371a9fd9498011468361b8d623d339e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -152,6 +156,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c371a9fd9498011468361b8d623d339e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c371a9fd9498011468361b8d623d339e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -162,14 +170,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: c371a9fd9498011468361b8d623d339e, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c371a9fd9498011468361b8d623d339e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c371a9fd9498011468361b8d623d339e, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c371a9fd9498011468361b8d623d339e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

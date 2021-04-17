@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4199984119276444810}
   - component: {fileID: 4199984119277444682}
   - component: {fileID: 5772065640881645891}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Forceps
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -55,6 +55,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -106,7 +107,7 @@ GameObject:
   - component: {fileID: 1432588963404872976}
   - component: {fileID: 4102164349433009766}
   - component: {fileID: 8409888821320392980}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Forceps_small
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -174,7 +175,7 @@ MonoBehaviour:
       assignedSCGO: {fileID: 0}
       displayName: 
   outlineRoot: {fileID: 0}
-  toolType: 2
+  toolType: 0
   grabObject: {fileID: 0}
 --- !u!114 &1432588963404872976
 MonoBehaviour:
@@ -192,7 +193,7 @@ MonoBehaviour:
   allowedNearTouchControllers: 0
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 1
+  isGrabbable: 0
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1

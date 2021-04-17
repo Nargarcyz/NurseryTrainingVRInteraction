@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2164051779232167516}
   - component: {fileID: 4226198942663410852}
   - component: {fileID: 6578845048035758100}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Forceps_Anatomical
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ MonoBehaviour:
       assignedSCGO: {fileID: 0}
       displayName: 
   outlineRoot: {fileID: 0}
-  toolType: 8
+  toolType: 0
   grabObject: {fileID: 0}
 --- !u!114 &2164051779232167516
 MonoBehaviour:
@@ -100,7 +100,7 @@ MonoBehaviour:
   allowedNearTouchControllers: 0
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 1
+  isGrabbable: 0
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 8856833429024904017}
   - component: {fileID: 8856833429024904016}
   - component: {fileID: 99398673657112253}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Anatomisch_Pincet
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -204,6 +204,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

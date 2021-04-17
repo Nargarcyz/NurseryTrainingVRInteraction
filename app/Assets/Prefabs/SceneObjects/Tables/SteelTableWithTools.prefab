@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359219061}
   - component: {fileID: 359219060}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,39 +44,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5821543, y: 0.041365087, z: 0.6815047}
   m_Center: {x: -0.0011295676, y: 0.029215544, z: 0.052361965}
---- !u!1 &51196774343941824
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1991040895340375196}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7820319910331459777}
-  m_Layer: 0
-  m_Name: Steel_Table_A (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7820319910331459777
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1991040895340375196}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51196774343941824}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7114392447913781301}
-  - {fileID: 905860739408104568}
-  - {fileID: 1991040895340770844}
-  m_Father: {fileID: 1991040896282038437}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &514060673550346077
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +57,7 @@ GameObject:
   - component: {fileID: 6739575570627130406}
   - component: {fileID: 3304456670925651937}
   - component: {fileID: 9013762898497673817}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Pinset_Cartrect
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -201,7 +168,7 @@ GameObject:
   - component: {fileID: 7165429540817732585}
   - component: {fileID: 6919906156586803929}
   - component: {fileID: 1203170531854932877}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Kocher_Mosquito
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -312,7 +279,7 @@ GameObject:
   - component: {fileID: 971471629838414845}
   - component: {fileID: 5157442623973672050}
   - component: {fileID: 7504816600858270861}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Scissors
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -457,7 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1991040894496604055}
   - component: {fileID: 1991040894496604052}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,40 +461,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5821543, y: 0.04367423, z: 0.6815047}
   m_Center: {x: -0.0011295676, y: 0.019614398, z: 0.052361965}
---- !u!1 &1991040895340276284
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: d0dc649c86b66de40a1ed8f17a031429,
-    type: 3}
-  m_PrefabInstance: {fileID: 1991040895340375196}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7114392447913781301}
-  - component: {fileID: 1991040896389832724}
-  - component: {fileID: 1991040896389832725}
-  - component: {fileID: 1991040896389832726}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7114392447913781301
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1991040895340375196}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991040895340276284}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7820319910331459777}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1991040896389832724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -567,37 +500,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09189606, y: 0.8475626, z: 0.09711814}
   m_Center: {x: 0.0028866902, y: 0.4742495, z: -0.07416475}
---- !u!1 &1991040895340276286
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100002, guid: d0dc649c86b66de40a1ed8f17a031429,
-    type: 3}
-  m_PrefabInstance: {fileID: 1991040895340375196}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 905860739408104568}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &905860739408104568
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1991040895340375196}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991040895340276286}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7820319910331459777}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1991040896282038438
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +511,7 @@ GameObject:
   - component: {fileID: 1991040896282038437}
   - component: {fileID: 1991040896282038436}
   - component: {fileID: 1178554166101548196}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: SteelTableWithTools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,8 +529,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 3.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1991040895340770844}
   - {fileID: 1991040896470773004}
-  - {fileID: 7820319910331459777}
   - {fileID: 8725521102768580125}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -705,7 +607,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1991040896470773004}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +628,7 @@ Transform:
   - {fileID: 1991040894496604055}
   - {fileID: 359219061}
   m_Father: {fileID: 1991040896282038437}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3463111920045892016
 GameObject:
@@ -739,7 +641,7 @@ GameObject:
   - component: {fileID: 8725521102768580125}
   - component: {fileID: 5299405671630924715}
   - component: {fileID: 9092634943284798189}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ScreenshotCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,37 +722,6 @@ MonoBehaviour:
   resWidth: 1920
   resHeight: 1080
   waitSeconds: 3
---- !u!1 &4420142634411526417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1991040895340375196}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1991040895340770844}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1991040895340770844
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429,
-    type: 3}
-  m_PrefabInstance: {fileID: 1991040895340375196}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4420142634411526417}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7820319910331459777}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8620346316635021956
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +736,7 @@ GameObject:
   - component: {fileID: 2297015030418691079}
   - component: {fileID: 3295331320232389004}
   - component: {fileID: 5605284828439804808}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Mosquito_Kocher
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -1014,7 +885,7 @@ GameObject:
   - component: {fileID: 6201523395264885048}
   - component: {fileID: 2434022740232490313}
   - component: {fileID: 1289529631517030187}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Pinset_recto
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -1162,7 +1033,7 @@ GameObject:
   - component: {fileID: 4446454164646459196}
   - component: {fileID: 6687458563736705756}
   - component: {fileID: 6327857756979096523}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Scissors
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -1272,15 +1143,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1295,6 +1170,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -1305,14 +1184,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1328,3 +1199,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
+--- !u!1 &1991040895340276284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d0dc649c86b66de40a1ed8f17a031429,
+    type: 3}
+  m_PrefabInstance: {fileID: 1991040895340375196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1991040895340276286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: d0dc649c86b66de40a1ed8f17a031429,
+    type: 3}
+  m_PrefabInstance: {fileID: 1991040895340375196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1991040895340770844 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429,
+    type: 3}
+  m_PrefabInstance: {fileID: 1991040895340375196}
+  m_PrefabAsset: {fileID: 0}

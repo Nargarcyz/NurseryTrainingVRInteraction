@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8326830875189137059}
   - component: {fileID: 7532270873495471131}
   - component: {fileID: 2591542330496078479}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Pinset_recto
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 6987682772060568830}
   - component: {fileID: 6987682772060568825}
   - component: {fileID: 8446600983077060791}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Pinset_Cartrect
   m_TagString: Tool
   m_Icon: {fileID: 0}

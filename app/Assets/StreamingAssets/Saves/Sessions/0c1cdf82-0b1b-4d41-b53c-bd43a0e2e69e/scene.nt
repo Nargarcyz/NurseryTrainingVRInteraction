@@ -5,7 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 20,
+    "$rlength": 18,
     "$rcontent": [
         {
             "$k": "Door8041cf8c-741c-4906-a57f-568cfe74f358",
@@ -694,9 +694,9 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        3.68157268,
+                        3.681549,
                         0,
-                        0.9488147
+                        0.9487862
                     },
                     "rotation": {
                         "$type": 7,
@@ -1160,19 +1160,56 @@
                     0.5294118,
                     0.607843161,
                     1
+                },
+                "linkedObject": {
+                    "$id": 124,
+                    "$type": "24|VRTK.VRTK_InteractableObject, Assembly-CSharp",
+                    "disableWhenIdle": true,
+                    "allowedNearTouchControllers": 0,
+                    "allowedTouchControllers": 0,
+                    "ignoredColliders": {
+                        "$id": 125,
+                        "$type": "25|UnityEngine.Collider[], UnityEngine.PhysicsModule",
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "isGrabbable": true,
+                    "holdButtonToGrab": true,
+                    "stayGrabbedOnTeleport": true,
+                    "validDrop": 1,
+                    "grabOverrideButton": 0,
+                    "allowedGrabControllers": 0,
+                    "grabAttachMechanicScript": null,
+                    "secondaryGrabActionScript": null,
+                    "isUsable": true,
+                    "holdButtonToUse": true,
+                    "useOnlyIfGrabbed": false,
+                    "pointerActivatesUseAction": false,
+                    "useOverrideButton": 0,
+                    "allowedUseControllers": 0,
+                    "objectHighlighter": null,
+                    "touchHighlightColor": {
+                        "$type": 19,
+                        0,
+                        0,
+                        0,
+                        0
+                    },
+                    "usingState": 0
                 }
             }
         },
         {
             "$k": "TableCover1fe6f2bc-1574-490f-a339-6a56d63e1ff1",
             "$v": {
-                "$id": 124,
-                "$type": "24|ToolSceneGameObject, Assembly-CSharp",
+                "$id": 126,
+                "$type": "26|ToolSceneGameObject, Assembly-CSharp",
                 "data": {
                     "$type": 3,
                     "id": "TableCover1fe6f2bc-1574-490f-a339-6a56d63e1ff1",
                     "childs": {
-                        "$id": 125,
+                        "$id": 127,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1180,8 +1217,8 @@
                     },
                     "parent": "TableD1ad0ec91-372a-4cc8-bfd4-58748a67c904",
                     "data": {
-                        "$id": 126,
-                        "$type": "25|NT.Variables.NTVariable`1[[NT.SceneObjects.ToolObject, Assembly-CSharp]], Assembly-CSharp",
+                        "$id": 128,
+                        "$type": "27|NT.Variables.NTVariable`1[[NT.SceneObjects.ToolObject, Assembly-CSharp]], Assembly-CSharp",
                         "collapsed": true,
                         "name": null,
                         "value": null,
@@ -1202,35 +1239,35 @@
                         0
                     },
                     "graph": {
-                        "$id": 127,
+                        "$id": 129,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 128,
+                            "$id": 130,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 129,
+                            "$id": 131,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 130,
+                            "$id": 132,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 131,
+                            "$id": 133,
                             "$type": 12,
                             "comparer": {
-                                "$id": 132,
+                                "$id": 134,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -1243,19 +1280,19 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 133,
+                    "$id": 135,
                     "$type": 13
                 },
                 "toolType": 0,
                 "grabObject": {
-                    "$id": 134,
-                    "$type": "26|VRTK.VRTK_InteractableObject, Assembly-CSharp",
+                    "$id": 136,
+                    "$type": 24,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 135,
-                        "$type": "27|UnityEngine.Collider[], UnityEngine.PhysicsModule",
+                        "$id": 137,
+                        "$type": 25,
                         "$rlength": 0,
                         "$rcontent": [
                         ]
@@ -1289,13 +1326,13 @@
         {
             "$k": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
             "$v": {
-                "$id": 136,
+                "$id": 138,
                 "$type": "28|CajaInstrumentalSceneGameObject, Assembly-CSharp",
                 "data": {
                     "$type": 3,
                     "id": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
                     "childs": {
-                        "$id": 137,
+                        "$id": 139,
                         "$type": 4,
                         "$rlength": 3,
                         "$rcontent": [
@@ -1306,7 +1343,7 @@
                     },
                     "parent": "TableD3d14eacf-a7ce-48f5-93e6-1255c997d0d1",
                     "data": {
-                        "$id": 138,
+                        "$id": 140,
                         "$type": "29|NT.Variables.NTVariable`1[[NT.SceneObjects.MetallicBoxData, Assembly-CSharp]], Assembly-CSharp",
                         "collapsed": true,
                         "name": null,
@@ -1314,22 +1351,22 @@
                             "$type": "30|NT.SceneObjects.MetallicBoxData, Assembly-CSharp",
                             "canBeOpened": false,
                             "toolsList": {
-                                "$id": 139,
+                                "$id": 141,
                                 "$type": "31|System.Collections.Generic.List`1[[NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp]], mscorlib",
                                 "$rlength": 3,
                                 "$rcontent": [
                                     {
-                                        "$id": 140,
+                                        "$id": 142,
                                         "$type": "32|NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp",
                                         "linkedSGO": "Scissorsa17b925f-8ff2-4d1d-b7e3-b8da8dbc9376"
                                     },
                                     {
-                                        "$id": 141,
+                                        "$id": 143,
                                         "$type": 32,
                                         "linkedSGO": "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06"
                                     },
                                     {
-                                        "$id": 142,
+                                        "$id": 144,
                                         "$type": 32,
                                         "linkedSGO": "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34"
                                     }
@@ -1339,7 +1376,7 @@
                         "defaultValue": {
                             "$type": 30,
                             "canBeOpened": false,
-                            "toolsList": $iref:139
+                            "toolsList": $iref:141
                         }
                     },
                     "sceneObjectGUID": "d0de4209-699c-46e5-b4ae-0a50eda8d470",
@@ -1357,35 +1394,35 @@
                         0
                     },
                     "graph": {
-                        "$id": 143,
+                        "$id": 145,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 144,
+                            "$id": 146,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 145,
+                            "$id": 147,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 146,
+                            "$id": 148,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 147,
+                            "$id": 149,
                             "$type": 12,
                             "comparer": {
-                                "$id": 148,
+                                "$id": 150,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -1398,24 +1435,24 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 149,
+                    "$id": 151,
                     "$type": 13
                 },
                 "spawnPoints": {
-                    "$id": 150,
+                    "$id": 152,
                     "$type": "33|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
                     "$rlength": 3,
                     "$rcontent": [
                         {
-                            "$id": 151,
+                            "$id": 153,
                             "$type": "34|UnityEngine.Transform, UnityEngine.CoreModule"
                         },
                         {
-                            "$id": 152,
+                            "$id": 154,
                             "$type": 34
                         },
                         {
-                            "$id": 153,
+                            "$id": 155,
                             "$type": 34
                         }
                     ]
@@ -1425,13 +1462,13 @@
         {
             "$k": "Scissorsa17b925f-8ff2-4d1d-b7e3-b8da8dbc9376",
             "$v": {
-                "$id": 154,
-                "$type": 24,
+                "$id": 156,
+                "$type": 26,
                 "data": {
                     "$type": 3,
                     "id": "Scissorsa17b925f-8ff2-4d1d-b7e3-b8da8dbc9376",
                     "childs": {
-                        "$id": 155,
+                        "$id": 157,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1439,8 +1476,8 @@
                     },
                     "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
                     "data": {
-                        "$id": 156,
-                        "$type": 25,
+                        "$id": 158,
+                        "$type": 27,
                         "collapsed": true,
                         "name": null,
                         "value": null,
@@ -1450,46 +1487,46 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.044117447,
-                        0.0414513946,
-                        0.0325040855
+                        -0.001129158,
+                        0.0353393555,
+                        0.239202335
                     },
                     "rotation": {
                         "$type": 7,
-                        0.0001743385,
-                        252.085419,
-                        -0.000238237422
+                        359.9005,
+                        359.094971,
+                        359.8956
                     },
                     "graph": {
-                        "$id": 157,
+                        "$id": 159,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 158,
+                            "$id": 160,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 159,
+                            "$id": 161,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 160,
+                            "$id": 162,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 161,
+                            "$id": 163,
                             "$type": 12,
                             "comparer": {
-                                "$id": 162,
+                                "$id": 164,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -1502,19 +1539,19 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 163,
+                    "$id": 165,
                     "$type": 13
                 },
                 "toolType": 0,
                 "grabObject": {
-                    "$id": 164,
-                    "$type": 26,
+                    "$id": 166,
+                    "$type": 24,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 165,
-                        "$type": 27,
+                        "$id": 167,
+                        "$type": 25,
                         "$rlength": 0,
                         "$rcontent": [
                         ]
@@ -1525,28 +1562,8 @@
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": {
-                        "$id": 166,
-                        "$type": "35|VRTK.GrabAttachMechanics.VRTK_FixedJointGrabAttach, Assembly-CSharp",
-                        "precisionGrab": false,
-                        "rightSnapHandle": {
-                            "$id": 167,
-                            "$type": 34
-                        },
-                        "leftSnapHandle": {
-                            "$id": 168,
-                            "$type": 34
-                        },
-                        "throwVelocityWithAttachDistance": false,
-                        "throwMultiplier": 1,
-                        "onGrabCollisionDelay": 0,
-                        "destroyImmediatelyOnThrow": true,
-                        "breakForce": 1500
-                    },
-                    "secondaryGrabActionScript": {
-                        "$id": 169,
-                        "$type": "36|VRTK.SecondaryControllerGrabActions.VRTK_SwapControllerGrabAction, Assembly-CSharp"
-                    },
+                    "grabAttachMechanicScript": null,
+                    "secondaryGrabActionScript": null,
                     "isUsable": false,
                     "holdButtonToUse": true,
                     "useOnlyIfGrabbed": false,
@@ -1568,13 +1585,13 @@
         {
             "$k": "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06",
             "$v": {
-                "$id": 170,
-                "$type": 24,
+                "$id": 168,
+                "$type": 26,
                 "data": {
                     "$type": 3,
                     "id": "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06",
                     "childs": {
-                        "$id": 171,
+                        "$id": 169,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1582,8 +1599,8 @@
                     },
                     "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
                     "data": {
-                        "$id": 172,
-                        "$type": 25,
+                        "$id": 170,
+                        "$type": 27,
                         "collapsed": true,
                         "name": null,
                         "value": null,
@@ -1593,45 +1610,45 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.06959342,
-                        0.083548665,
-                        0.125257254
+                        0.00131226343,
+                        0.0770874,
+                        0.204399869
                     },
                     "rotation": {
                         "$type": 7,
-                        270,
-                        182.998444,
-                        0
+                        271.065674,
+                        4.79607534,
+                        358.270874
                     },
                     "graph": {
-                        "$id": 173,
+                        "$id": 171,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 174,
+                            "$id": 172,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 175,
+                            "$id": 173,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 176,
+                            "$id": 174,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 177,
+                            "$id": 175,
                             "$type": 12,
-                            "comparer": $iref:162,
+                            "comparer": $iref:164,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -1642,19 +1659,19 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 178,
+                    "$id": 176,
                     "$type": 13
                 },
                 "toolType": 5,
                 "grabObject": {
-                    "$id": 179,
-                    "$type": 26,
+                    "$id": 177,
+                    "$type": 24,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 180,
-                        "$type": 27,
+                        "$id": 178,
+                        "$type": 25,
                         "$rlength": 0,
                         "$rcontent": [
                         ]
@@ -1665,28 +1682,8 @@
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": {
-                        "$id": 181,
-                        "$type": 35,
-                        "precisionGrab": false,
-                        "rightSnapHandle": {
-                            "$id": 182,
-                            "$type": 34
-                        },
-                        "leftSnapHandle": {
-                            "$id": 183,
-                            "$type": 34
-                        },
-                        "throwVelocityWithAttachDistance": false,
-                        "throwMultiplier": 1,
-                        "onGrabCollisionDelay": 0,
-                        "destroyImmediatelyOnThrow": true,
-                        "breakForce": 1500
-                    },
-                    "secondaryGrabActionScript": {
-                        "$id": 184,
-                        "$type": 36
-                    },
+                    "grabAttachMechanicScript": null,
+                    "secondaryGrabActionScript": null,
                     "isUsable": false,
                     "holdButtonToUse": true,
                     "useOnlyIfGrabbed": false,
@@ -1708,13 +1705,13 @@
         {
             "$k": "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34",
             "$v": {
-                "$id": 185,
-                "$type": 24,
+                "$id": 179,
+                "$type": 26,
                 "data": {
                     "$type": 3,
                     "id": "Mosquito_Kocher6718821c-792c-40e4-ad05-6c45b1251c34",
                     "childs": {
-                        "$id": 186,
+                        "$id": 180,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1722,8 +1719,8 @@
                     },
                     "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
                     "data": {
-                        "$id": 187,
-                        "$type": 25,
+                        "$id": 181,
+                        "$type": 27,
                         "collapsed": true,
                         "name": null,
                         "value": null,
@@ -1733,45 +1730,45 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        -0.160669073,
-                        0.0212911367,
-                        -0.150702253
+                        0.004852303,
+                        0.0249023438,
+                        0.223949954
                     },
                     "rotation": {
                         "$type": 7,
-                        6.919154E-05,
-                        175.986588,
-                        -0.000195628134
+                        0.185831666,
+                        5.321842,
+                        4.28020859
                     },
                     "graph": {
-                        "$id": 188,
+                        "$id": 182,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 189,
+                            "$id": 183,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 190,
+                            "$id": 184,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 191,
+                            "$id": 185,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 192,
+                            "$id": 186,
                             "$type": 12,
-                            "comparer": $iref:162,
+                            "comparer": $iref:164,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
@@ -1782,51 +1779,31 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 193,
+                    "$id": 187,
                     "$type": 13
                 },
-                "toolType": 9,
+                "toolType": 0,
                 "grabObject": {
-                    "$id": 194,
-                    "$type": 26,
+                    "$id": 188,
+                    "$type": 24,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 195,
-                        "$type": 27,
+                        "$id": 189,
+                        "$type": 25,
                         "$rlength": 0,
                         "$rcontent": [
                         ]
                     },
-                    "isGrabbable": true,
+                    "isGrabbable": false,
                     "holdButtonToGrab": true,
                     "stayGrabbedOnTeleport": true,
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": {
-                        "$id": 196,
-                        "$type": 35,
-                        "precisionGrab": false,
-                        "rightSnapHandle": {
-                            "$id": 197,
-                            "$type": 34
-                        },
-                        "leftSnapHandle": {
-                            "$id": 198,
-                            "$type": 34
-                        },
-                        "throwVelocityWithAttachDistance": false,
-                        "throwMultiplier": 1,
-                        "onGrabCollisionDelay": 0,
-                        "destroyImmediatelyOnThrow": true,
-                        "breakForce": 1500
-                    },
-                    "secondaryGrabActionScript": {
-                        "$id": 199,
-                        "$type": 36
-                    },
+                    "grabAttachMechanicScript": null,
+                    "secondaryGrabActionScript": null,
                     "isUsable": false,
                     "holdButtonToUse": true,
                     "useOnlyIfGrabbed": false,
@@ -1842,205 +1819,6 @@
                         0
                     },
                     "usingState": 0
-                }
-            }
-        },
-        {
-            "$k": "SurgeonAssistantA0e8a9a28-597b-4d38-af91-fce73dd672d6",
-            "$v": {
-                "$id": 200,
-                "$type": 2,
-                "data": {
-                    "$type": 3,
-                    "id": "SurgeonAssistantA0e8a9a28-597b-4d38-af91-fce73dd672d6",
-                    "childs": {
-                        "$id": 201,
-                        "$type": 4,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "parent": "",
-                    "data": {
-                        "$id": 202,
-                        "$type": 14,
-                        "collapsed": true,
-                        "name": null,
-                        "value": {
-                            "$type": 15
-                        },
-                        "defaultValue": {
-                            "$type": 15
-                        }
-                    },
-                    "sceneObjectGUID": "297bdcf1-1f37-4a86-9ca0-4c3a6ee0047b",
-                    "graphJSON": null,
-                    "position": {
-                        "$type": 7,
-                        2.515403,
-                        -0.0250559617,
-                        -0.8807589
-                    },
-                    "rotation": {
-                        "$type": 7,
-                        0,
-                        30.6879387,
-                        0
-                    },
-                    "graph": null
-                },
-                "outlineRoot": {
-                    "$id": 203,
-                    "$type": 13
-                }
-            }
-        },
-        {
-            "$k": "SteelTablea8d2c5f9-c58d-41f9-8165-a0374bbd55b4",
-            "$v": {
-                "$id": 204,
-                "$type": "37|SteelTableASceneGameObject, Assembly-CSharp",
-                "data": {
-                    "$type": 3,
-                    "id": "SteelTablea8d2c5f9-c58d-41f9-8165-a0374bbd55b4",
-                    "childs": {
-                        "$id": 205,
-                        "$type": 4,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "parent": "",
-                    "data": {
-                        "$id": 206,
-                        "$type": "38|NT.Variables.NTVariable`1[[NT.SceneObjects.SteelTableAData, Assembly-CSharp]], Assembly-CSharp",
-                        "collapsed": true,
-                        "name": null,
-                        "value": {
-                            "$type": "39|NT.SceneObjects.SteelTableAData, Assembly-CSharp",
-                            "rowSize": 0,
-                            "colSize": 0
-                        },
-                        "defaultValue": {
-                            "$type": 39,
-                            "rowSize": 0,
-                            "colSize": 0
-                        }
-                    },
-                    "sceneObjectGUID": "04083b50-f681-46c3-8094-0b76a017bc60",
-                    "graphJSON": "",
-                    "position": {
-                        "$type": 7,
-                        2.76895142,
-                        0,
-                        2.173248
-                    },
-                    "rotation": {
-                        "$type": 7,
-                        0,
-                        180,
-                        0
-                    },
-                    "graph": {
-                        "$id": 207,
-                        "$type": 8,
-                        "_name": "",
-                        "nodes": {
-                            "$id": 208,
-                            "$type": 9,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "packedNodes": {
-                            "$id": 209,
-                            "$type": 10,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodes": {
-                            "$id": 210,
-                            "$type": 11,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodesDict": {
-                            "$id": 211,
-                            "$type": 12,
-                            "comparer": $iref:132,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "linkedNTVariable": "",
-                        "assignedSCGO": null,
-                        "displayName": ""
-                    }
-                },
-                "outlineRoot": {
-                    "$id": 212,
-                    "$type": 13
-                },
-                "coverVisual": {
-                    "$id": 213,
-                    "$type": 13
-                },
-                "coverVisible": false,
-                "surface": {
-                    "$id": 214,
-                    "$type": 13
-                },
-                "ToolChange": {
-                    "$id": 215,
-                    "$type": "40|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule",
-                    "m_PersistentCalls": {
-                        "$id": 216,
-                        "$type": "41|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule",
-                        "m_Calls": {
-                            "$id": 217,
-                            "$type": "42|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall, UnityEngine.CoreModule]], mscorlib",
-                            "$rlength": 1,
-                            "$rcontent": [
-                                {
-                                    "$id": 218,
-                                    "$type": "43|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule",
-                                    "m_Target": {
-                                        "$id": 219,
-                                        "$type": "44|CameraScreenshot, Assembly-CSharp",
-                                        "screenshotCamera": {
-                                            "$id": 220,
-                                            "$type": "45|UnityEngine.Camera, UnityEngine.CoreModule"
-                                        },
-                                        "triggerCollider": {
-                                            "$id": 221,
-                                            "$type": "46|UnityEngine.BoxCollider, UnityEngine.PhysicsModule"
-                                        },
-                                        "resWidth": 1920,
-                                        "resHeight": 1080,
-                                        "waitSeconds": 3
-                                    },
-                                    "m_MethodName": "TakeScreenshotAfterSeconds",
-                                    "m_Mode": 1,
-                                    "m_Arguments": {
-                                        "$id": 222,
-                                        "$type": "47|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule",
-                                        "m_ObjectArgument": {
-                                            "$id": 223,
-                                            "$type": "48|UnityEngine.Object, UnityEngine.CoreModule"
-                                        },
-                                        "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
-                                        "m_IntArgument": 0,
-                                        "m_FloatArgument": 0,
-                                        "m_StringArgument": "",
-                                        "m_BoolArgument": false
-                                    },
-                                    "m_CallState": 2
-                                }
-                            ]
-                        }
-                    }
                 }
             }
         }

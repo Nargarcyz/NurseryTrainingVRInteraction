@@ -116,7 +116,7 @@ public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
 
     private string GetLogPath()
     {
-        string path = Application.dataPath + "/Results";
+        string path = Application.streamingAssetsPath + "/Results";
         FolderExistsOrCreate(path);
 
         path += "/SessionLog";
@@ -127,7 +127,12 @@ public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
 
     private void FolderExistsOrCreate(string folder)
     {
-        if (!Directory.Exists(folder))
+        // if (!Directory.Exists(folder))
+        // {
+        //     Directory.CreateDirectory(folder);
+        // }
+
+        if (!BetterStreamingAssets.DirectoryExists(folder))
         {
             Directory.CreateDirectory(folder);
         }

@@ -18,14 +18,30 @@ public class SinkSceneGameObject : SceneGameObject
         Debug.Log(setup);
     }
 
+    void Start()
+    {
+        MessageSystem.onMessageSent += RecieveMessage;
+    }
+
+    private void RecieveMessage(string msg)
+    {
+        if (msg.Contains("Exercise Started"))
+        {
+            VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
+            if (setup != null)
+            {
+                setup.actualBoundaries.transform.position = transform.position;
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
-        if (setup != null)
-        {
-            setup.actualBoundaries.transform.position = Vector3.zero;
-            Debug.Log(setup);
-        }
+        // VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        // if (setup != null)
+        // {
+        //     setup.actualBoundaries.transform.position = Vector3.zero;
+        //     Debug.Log(setup);
+        // }
     }
 }

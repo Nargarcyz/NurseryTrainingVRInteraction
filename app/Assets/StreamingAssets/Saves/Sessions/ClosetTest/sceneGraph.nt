@@ -2548,13 +2548,16 @@
                 "callbackNodesDict": {
                     "$id": 268,
                     "$type": 23,
-                    "comparer": $iref:4,
+                    "comparer": {
+                        "$id": 269,
+                        "$type": 5
+                    },
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$k": "Check",
                             "$v": {
-                                "$id": 269,
+                                "$id": 270,
                                 "$type": 22,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -2571,7 +2574,7 @@
                 },
                 "assetID": "98d98372-21ad-4f00-b288-e95e94cec34a",
                 "ports": {
-                    "$id": 270,
+                    "$id": 271,
                     "$type": "27|System.Collections.Generic.List`1[[XNode.NodePort, Assembly-CSharp]], mscorlib",
                     "$rlength": 7,
                     "$rcontent": [
@@ -2588,7 +2591,7 @@
         ]
     },
     "callbackNodes": {
-        "$id": 271,
+        "$id": 272,
         "$type": 22,
         "$rlength": 2,
         "$rcontent": [
@@ -2597,15 +2600,15 @@
         ]
     },
     "callbackNodesDict": {
-        "$id": 272,
+        "$id": 273,
         "$type": 23,
-        "comparer": $iref:4,
+        "comparer": $iref:269,
         "$rlength": 2,
         "$rcontent": [
             {
                 "$k": "Exercise End",
                 "$v": {
-                    "$id": 273,
+                    "$id": 274,
                     "$type": 22,
                     "$rlength": 1,
                     "$rcontent": [
@@ -2616,7 +2619,7 @@
             {
                 "$k": "Check",
                 "$v": {
-                    "$id": 274,
+                    "$id": 275,
                     "$type": 22,
                     "$rlength": 1,
                     "$rcontent": [

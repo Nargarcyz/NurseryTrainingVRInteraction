@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4199984119276444810}
   - component: {fileID: 4199984119277444682}
   - component: {fileID: 1625120957124718208}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Clamp
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -55,6 +55,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -106,7 +107,7 @@ GameObject:
   - component: {fileID: 1136417744130087682}
   - component: {fileID: 9183253809838911371}
   - component: {fileID: 4263076751349688021}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Clamp
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -174,7 +175,7 @@ MonoBehaviour:
       assignedSCGO: {fileID: 0}
       displayName: 
   outlineRoot: {fileID: 0}
-  toolType: 4
+  toolType: 0
   grabObject: {fileID: 0}
 --- !u!114 &1136417744130087682
 MonoBehaviour:
@@ -192,7 +193,7 @@ MonoBehaviour:
   allowedNearTouchControllers: 0
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 1
+  isGrabbable: 0
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1
