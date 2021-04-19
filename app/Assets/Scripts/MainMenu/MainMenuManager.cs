@@ -20,10 +20,16 @@ public class MainMenuManager : MonoBehaviour
     private Dictionary<string, GameObject> sessions = new Dictionary<string, GameObject>();
     private List<SessionData> templateSessions = new List<SessionData>();
 
+    [Header("UI Type")]
+    public bool VR = false;
     private void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        if (VR)
+        {
+            transform.Find("New Session").gameObject.SetActive(false);
+        }
     }
 
     private string GetDirectoryName(string path)
@@ -58,6 +64,13 @@ public class MainMenuManager : MonoBehaviour
             foreach (SessionData sd in sessionsData)
             {
                 GameObject itemCard = Instantiate(sessionPrototype, content);
+
+                if (this.VR)
+                {
+                    itemCard.transform.Find("Edit").gameObject.SetActive(false);
+                    itemCard.transform.Find("Remove").gameObject.SetActive(false);
+                }
+
                 itemCard.SetActive(true);
                 itemCard.GetComponent<MenuCard>().SetSessionData(sd, this);
                 sessions.Add(sd.sessionID, itemCard);
