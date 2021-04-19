@@ -27,7 +27,7 @@ public class FaucetScript : MonoBehaviour
             waterStream.Play();
             var emission = waterStream.emission;
             var t = Mathf.Lerp(0, 100, 1 - (angle / handle.angleLimits.maximum));
-            Debug.Log(t);
+            // Debug.Log(t);
             emission.rateOverTime = t;
         }
         else

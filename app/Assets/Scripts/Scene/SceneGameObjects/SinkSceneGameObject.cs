@@ -37,7 +37,9 @@ public class SinkSceneGameObject : SceneGameObject
 
     private void OnTriggerEnter(Collider other)
     {
-        // VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        Debug.Log(setup.actualRightController.transform.rotation);
+
         // if (setup != null)
         // {
         //     setup.actualBoundaries.transform.position = Vector3.zero;
