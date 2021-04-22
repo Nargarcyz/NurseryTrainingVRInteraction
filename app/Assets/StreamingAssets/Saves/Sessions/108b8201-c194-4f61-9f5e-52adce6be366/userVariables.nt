@@ -5,55 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 4,
+    "$rlength": 0,
     "$rcontent": [
-        {
-            "$k": "Clean Hands",
-            "$v": {
-                "$type": "2|SessionManager+UserVariable, Assembly-CSharp",
-                "value": {
-                    "$id": 2,
-                    "$type": "3|System.Boolean, mscorlib",
-                    true
-                },
-                "defaultValue": $iref:2
-            }
-        },
-        {
-            "$k": "Grade",
-            "$v": {
-                "$type": 2,
-                "value": {
-                    "$id": 3,
-                    "$type": "4|System.Single, mscorlib",
-                    0
-                },
-                "defaultValue": $iref:3
-            }
-        },
-        {
-            "$k": "Gloves On",
-            "$v": {
-                "$type": 2,
-                "value": {
-                    "$id": 4,
-                    "$type": 3,
-                    false
-                },
-                "defaultValue": $iref:4
-            }
-        },
-        {
-            "$k": "Cover Table On",
-            "$v": {
-                "$type": 2,
-                "value": {
-                    "$id": 5,
-                    "$type": 3,
-                    false
-                },
-                "defaultValue": $iref:5
-            }
-        }
     ]
 }

@@ -397,8 +397,19 @@
             "$id": 45,
             "$type": 5
         },
-        "$rlength": 0,
+        "$rlength": 1,
         "$rcontent": [
+            {
+                "$k": "Exercise Started",
+                "$v": {
+                    "$id": 46,
+                    "$type": 16,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        $iref:22
+                    ]
+                }
+            }
         ]
     }
 }
