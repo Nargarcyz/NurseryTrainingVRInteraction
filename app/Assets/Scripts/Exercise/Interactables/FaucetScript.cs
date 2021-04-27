@@ -103,7 +103,7 @@ public class FaucetScript : MonoBehaviour
             foreach (var c in controllers)
             {
                 var mat = c.GetComponentInChildren<Renderer>().materials[0];
-                Debug.Log(c.name + $" Metallic={mat.GetFloat("_Metallic")} Glossiness={mat.GetFloat("_Glossiness")}");
+                // Debug.Log(c.name + $" Metallic={mat.GetFloat("_Metallic")} Glossiness={mat.GetFloat("_Glossiness")}");
 
                 if (mat.GetFloat("_Metallic") <= 0.5f)
                     mat.SetFloat("_Metallic", mat.GetFloat("_Metallic") + 0.1f * Time.deltaTime);
