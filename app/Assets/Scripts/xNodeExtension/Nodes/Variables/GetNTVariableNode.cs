@@ -19,19 +19,25 @@ namespace NT.Nodes.Variables
         [SerializeField] private Type dataType;
         [SerializeField] private string dataKey;
 
-        public override object GetValue(NodePort port) {
-            if(graph is NTGraph){
-                NTGraph g = (NTGraph) graph;
+        public override object GetValue(NodePort port)
+        {
+            Debug.Log("Getting Value");
+            if (graph is NTGraph)
+            {
+                NTGraph g = (NTGraph)graph;
                 object variableValue = g.variableDelegate.GetValue(dataKey);
 
-                if(variableValue != null){
-                    if(!string.IsNullOrEmpty(variablePath)){
+                if (variableValue != null)
+                {
+                    if (!string.IsNullOrEmpty(variablePath))
+                    {
                         object value = ReflectionUtilities.GetValueOf(new List<string>(variablePath.Split('/')), variableValue);
-                        
-                        if(value != null && value is  SceneGameObjectReference){
-                            value = ( (SceneGameObjectReference) value).reference;                            
+
+                        if (value != null && value is SceneGameObjectReference)
+                        {
+                            value = ((SceneGameObjectReference)value).reference;
                         }
-                        
+
                         return value;
                     }
                     else
@@ -39,24 +45,27 @@ namespace NT.Nodes.Variables
                         return g.variableDelegate.GetSceneGameObject(dataKey);
                     }
                 }
-                else if(string.IsNullOrEmpty(variablePath))
+                else if (string.IsNullOrEmpty(variablePath))
                 {
-                    return g.variableDelegate.GetSceneGameObject(dataKey);;
+                    return g.variableDelegate.GetSceneGameObject(dataKey); ;
                 }
                 else
                 {
+                    Debug.Log("Variable Path null or empty");
                     return null;
                 }
             }
             else
             {
+                Debug.Log("Graph is not NTGraph");
                 return null;
             }
 
         }
 
 
-        public void SetVariableKey(string dataKey,Type dataType, string variablePath, Type variableType){
+        public void SetVariableKey(string dataKey, Type dataType, string variablePath, Type variableType)
+        {
 
             this.dataType = dataType;
             this.dataKey = dataKey;
@@ -68,15 +77,19 @@ namespace NT.Nodes.Variables
         }
 
 
-        private void InitializeNodeTypes(){
-            if(!string.IsNullOrEmpty(variablePath)){
-                if(!HasPort(variablePath)){
+        private void InitializeNodeTypes()
+        {
+            if (!string.IsNullOrEmpty(variablePath))
+            {
+                if (!HasPort(variablePath))
+                {
                     AddInstanceOutput(variableType, ConnectionType.Override, TypeConstraint.Strict, variablePath);
                 }
             }
             else
             {
-                if(!HasPort("value")){
+                if (!HasPort("value"))
+                {
                     AddInstanceOutput(variableType, ConnectionType.Override, TypeConstraint.Strict, "value");
                 }
             }

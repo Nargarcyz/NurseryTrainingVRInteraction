@@ -9,6 +9,7 @@ public class SoapScript : MonoBehaviour
 
     private VRTK_InteractableObject linkedObject;
     private GameObject otherHand = null;
+    private GameObject grabbingHand = null;
     private VRTK_SDKSetup setup;
 
     protected virtual void OnEnable()
@@ -18,7 +19,8 @@ public class SoapScript : MonoBehaviour
         if (linkedObject != null)
         {
             linkedObject.InteractableObjectUsed += InteractableObjectUsed;
-            linkedObject.InteractableObjectUngrabbed += (object sender, InteractableObjectEventArgs e) => { otherHand = null; };
+            linkedObject.InteractableObjectUngrabbed += (object sender, InteractableObjectEventArgs e) => { otherHand = null; grabbingHand = null; };
+            linkedObject.InteractableObjectGrabbed += (object sender, InteractableObjectEventArgs e) => { grabbingHand = linkedObject.GetGrabbingObject(); };
         }
     }
 
@@ -44,6 +46,8 @@ public class SoapScript : MonoBehaviour
 
     }
 
+
+
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
 
@@ -61,11 +65,15 @@ public class SoapScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // if (!linkedObject.IsGrabbed()) return;
+        if (grabbingHand == null) return;
         setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        if (setup == null) return;
         var controller = getController(other.gameObject);
         Debug.Log(controller);
 
-        if (controller != null && controller != linkedObject.GetGrabbingObject())
+        // if (controller != null && controller != linkedObject.GetGrabbingObject())
+        if (controller != null && controller != grabbingHand)
         {
             otherHand = controller;
             Debug.Log(otherHand);
@@ -74,7 +82,10 @@ public class SoapScript : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+         // if (!linkedObject.IsGrabbed()) return;
+        if (grabbingHand == null) return;
         setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        if (setup == null) return;
         var controller = getController(other.gameObject);
 
         // Debug.Log(setup.actualLeftController);

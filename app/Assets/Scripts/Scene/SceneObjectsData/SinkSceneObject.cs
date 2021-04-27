@@ -14,6 +14,9 @@ namespace NT.SceneObjects
     [CreateAssetMenu(fileName = "Sink", menuName = "NT/Scene/Sink")]
     public class SinkSceneObject : SceneObject<SinkData>
     {
-
+        public override List<string> GetCallbacks()
+        {
+            return new List<string>() { "OnHandsCleaned" };
+        }
     }
 }

@@ -17,7 +17,7 @@ MonoBehaviour:
     canBePlacedOver:
       serializedVersion: 2
       m_Bits: 512
-    model: {fileID: 5645379274240863648, guid: 167572f6e13454147a117be925c0e035, type: 3}
+    model: {fileID: 7154647904626145751, guid: 66f4c477cf1cd7d4099916c751939656, type: 3}
   sceneObjectUI:
     color: {r: 0, g: 0, b: 0, a: 0}
     icon: {fileID: 0}

@@ -11,8 +11,8 @@ using VRTK.Examples;
 public class ExerciseManager : MonoBehaviour
 {
 
-	public VRTK_ControllerEvents leftController;
-	public VRTK_ControllerEvents rightController;
+    public VRTK_ControllerEvents leftController;
+    public VRTK_ControllerEvents rightController;
 
     public GameObject menu;
     public GameObject endMenu;
@@ -39,7 +39,7 @@ public class ExerciseManager : MonoBehaviour
 
     private void RecieveMessage(string msg)
     {
-        if(msg.Contains("Fail Session /"))
+        if (msg.Contains("Fail Session /"))
         {
             endMenu.SetActive(true);
             menu.SetActive(true);
@@ -47,8 +47,8 @@ public class ExerciseManager : MonoBehaviour
             float grade = float.Parse(msg.Split('/')[1]);
 
             endMenu.GetComponentInChildren<TextMeshProUGUI>().text = "The session has been failed with an accuracy of " + grade;
-        }   
-        
+        }
+
         if (msg.Contains("Pass Session /"))
         {
 
@@ -62,29 +62,29 @@ public class ExerciseManager : MonoBehaviour
     }
 
     protected virtual void OnEnable()
-	{
-		if (leftController != null)
-		{
-			leftController.ButtonTwoPressed += TogglePause;
-		}
+    {
+        if (leftController != null)
+        {
+            leftController.ButtonTwoPressed += TogglePause;
+        }
 
-		if (rightController != null)
-		{
-			rightController.ButtonTwoPressed += TogglePause;
-		}
+        if (rightController != null)
+        {
+            rightController.ButtonTwoPressed += TogglePause;
+        }
     }
 
-	protected virtual void OnDisable()
-	{
-		if (leftController != null)
-		{
-			leftController.ButtonTwoPressed -= TogglePause;
-		}
+    protected virtual void OnDisable()
+    {
+        if (leftController != null)
+        {
+            leftController.ButtonTwoPressed -= TogglePause;
+        }
 
-		if (rightController != null)
-		{
-			rightController.ButtonTwoPressed -= TogglePause;
-		}
+        if (rightController != null)
+        {
+            rightController.ButtonTwoPressed -= TogglePause;
+        }
     }
 
     public void TogglePause(object sender, ControllerInteractionEventArgs e)
@@ -94,23 +94,24 @@ public class ExerciseManager : MonoBehaviour
         if (menu.gameObject.activeInHierarchy)
         {
             MessageSystem.SendMessage("Pause");
-            ExerciseFileLogger.Instance.LogMessage("Se ha abierto el menú principal", true);
+            // ExerciseFileLogger.Instance.LogMessage("Se ha abierto el menú principal", true);
         }
         else
         {
             MessageSystem.SendMessage("Resume");
-            ExerciseFileLogger.Instance.LogMessage("Se ha cerrado el menú principal", true);
+            // ExerciseFileLogger.Instance.LogMessage("Se ha cerrado el menú principal", true);
         }
     }
 
 
-	public void StartExercise(){
+    public void StartExercise()
+    {
         SessionManager.Instance.StartExecution();
         MessageSystem.onMessageSent += RecieveMessage;
         TogglePause(this, new ControllerInteractionEventArgs());
 
-        var toggleHands = GameObject.FindObjectOfType<ToggleCustomHands>();
-        toggleHands.ToggleHandsVisibility();
+        // var toggleHands = GameObject.FindObjectOfType<ToggleCustomHands>();
+        // toggleHands.ToggleHandsVisibility();
     }
 
     public void EndExercise()
@@ -118,7 +119,8 @@ public class ExerciseManager : MonoBehaviour
         SessionManager.Instance.EndExercise();
     }
 
-    public void Exit(){
+    public void Exit()
+    {
         MessageSystem.onMessageSent -= RecieveMessage;
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }

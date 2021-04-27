@@ -11,13 +11,15 @@ using UnityEngine.EventSystems;
 using XNode;
 using XNode.InportExport;
 
-namespace NT.Graph{
+namespace NT.Graph
+{
 
     public class SceneGraph : NTGraph
     {
 
-        public override List<string> GetCallbacks(){
-            return new List<string>(){"Application Start", "Application End", "Exercise Started", "Exercise End", "Pause", "Resume" };
+        public override List<string> GetCallbacks()
+        {
+            return new List<string>() { "Application Start", "Application End", "Exercise Started", "Exercise End", "Hands Cleaned", "Pause", "Resume" };
         }
 
     }

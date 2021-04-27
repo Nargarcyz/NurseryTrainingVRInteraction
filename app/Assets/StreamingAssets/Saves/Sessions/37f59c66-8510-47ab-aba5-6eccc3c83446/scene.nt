@@ -1,0 +1,331 @@
+{
+    "$id": 0,
+    "$type": "0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[SceneGameObject, Assembly-CSharp]], mscorlib",
+    "comparer": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
+    },
+    "$rlength": 3,
+    "$rcontent": [
+        {
+            "$k": "Closet01bf94da-226f-4867-b0bc-0a7eacf9cfca",
+            "$v": {
+                "$id": 2,
+                "$type": "2|ClosetSceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": "3|SceneGameObjectData, Assembly-CSharp",
+                    "id": "Closet01bf94da-226f-4867-b0bc-0a7eacf9cfca",
+                    "childs": {
+                        "$id": 3,
+                        "$type": "4|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 4,
+                        "$type": "5|NT.Variables.NTVariable`1[[NT.SceneObjects.ClosetData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "6|NT.SceneObjects.ClosetData, Assembly-CSharp",
+                            "mainDrawer": {
+                                "$type": "7|NT.SceneObjects.Drawer, Assembly-CSharp",
+                                "canBeOpened": false,
+                                "slot00": null,
+                                "slot01": null,
+                                "slot02": null,
+                                "slot03": null,
+                                "slot04": null,
+                                "slot05": null
+                            }
+                        },
+                        "defaultValue": {
+                            "$type": 6,
+                            "mainDrawer": {
+                                "$type": 7,
+                                "canBeOpened": false,
+                                "slot00": null,
+                                "slot01": null,
+                                "slot02": null,
+                                "slot03": null,
+                                "slot04": null,
+                                "slot05": null
+                            }
+                        }
+                    },
+                    "sceneObjectGUID": "3a4e8434-b4fe-4101-ad63-cb5f5051df50",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": "8|UnityEngine.Vector3, UnityEngine.CoreModule",
+                        -4.364044,
+                        0,
+                        4.36117458
+                    },
+                    "rotation": {
+                        "$type": 8,
+                        0,
+                        180,
+                        0
+                    },
+                    "graph": {
+                        "$id": 5,
+                        "$type": "9|NT.Graph.SceneObjectGraph, Assembly-CSharp",
+                        "_name": "",
+                        "nodes": {
+                            "$id": 6,
+                            "$type": "10|System.Collections.Generic.List`1[[XNode.Node, Assembly-CSharp]], mscorlib",
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 7,
+                            "$type": "11|System.Collections.Generic.List`1[[NT.Graph.NodeGroupGraph, Assembly-CSharp]], mscorlib",
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 8,
+                            "$type": "12|System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib",
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 9,
+                            "$type": "13|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib]], mscorlib",
+                            "comparer": {
+                                "$id": 10,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 11,
+                    "$type": "14|UnityEngine.GameObject, UnityEngine.CoreModule"
+                },
+                "drawer": {
+                    "$id": 12,
+                    "$type": 14
+                },
+                "slotPivot": {
+                    "$id": 13,
+                    "$type": "15|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
+                    "$rlength": 5,
+                    "$rcontent": [
+                        {
+                            "$id": 14,
+                            "$type": "16|UnityEngine.Transform, UnityEngine.CoreModule"
+                        },
+                        {
+                            "$id": 15,
+                            "$type": 16
+                        },
+                        {
+                            "$id": 16,
+                            "$type": 16
+                        },
+                        {
+                            "$id": 17,
+                            "$type": 16
+                        },
+                        {
+                            "$id": 18,
+                            "$type": 16
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$k": "Bed6cdf58bd-2644-4c23-ad6e-6a7afd50fb8e",
+            "$v": {
+                "$id": 19,
+                "$type": "17|SceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "Bed6cdf58bd-2644-4c23-ad6e-6a7afd50fb8e",
+                    "childs": {
+                        "$id": 20,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 21,
+                        "$type": "18|NT.Variables.NTVariable`1[[NT.SceneObjects.BedData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "19|NT.SceneObjects.BedData, Assembly-CSharp",
+                            "bedHeight": 0,
+                            "tilt": 0,
+                            "temperature": 0,
+                            "wheelsBlocked": false
+                        },
+                        "defaultValue": {
+                            "$type": 19,
+                            "bedHeight": 0,
+                            "tilt": 0,
+                            "temperature": 0,
+                            "wheelsBlocked": false
+                        }
+                    },
+                    "sceneObjectGUID": "9cfa6334-ef52-407b-b870-98ed702c9902",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 8,
+                        0.06893921,
+                        0,
+                        2.00025034
+                    },
+                    "rotation": {
+                        "$type": 8,
+                        0,
+                        6.83019E-06,
+                        0
+                    },
+                    "graph": {
+                        "$id": 22,
+                        "$type": 9,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 23,
+                            "$type": 10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 24,
+                            "$type": 11,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 25,
+                            "$type": 12,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 26,
+                            "$type": 13,
+                            "comparer": $iref:10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 27,
+                    "$type": 14
+                }
+            }
+        },
+        {
+            "$k": "Anesthesia0c51e260-d812-45f2-ac39-ab423bff9377",
+            "$v": {
+                "$id": 28,
+                "$type": 17,
+                "data": {
+                    "$type": 3,
+                    "id": "Anesthesia0c51e260-d812-45f2-ac39-ab423bff9377",
+                    "childs": {
+                        "$id": 29,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 30,
+                        "$type": "20|NT.Variables.NTVariable`1[[NT.SceneObjects.DummyData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "21|NT.SceneObjects.DummyData, Assembly-CSharp"
+                        },
+                        "defaultValue": {
+                            "$type": 21
+                        }
+                    },
+                    "sceneObjectGUID": "a7961692-f3c5-47a9-9fd0-fdffb760b5cf",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 8,
+                        -2.6960144,
+                        0,
+                        4.36117363
+                    },
+                    "rotation": {
+                        "$type": 8,
+                        0,
+                        180,
+                        0
+                    },
+                    "graph": {
+                        "$id": 31,
+                        "$type": 9,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 32,
+                            "$type": 10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 33,
+                            "$type": 11,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 34,
+                            "$type": 12,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 35,
+                            "$type": 13,
+                            "comparer": $iref:10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 36,
+                    "$type": 14
+                }
+            }
+        }
+    ]
+}

@@ -327,9 +327,9 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate
             SessionData.sessionID = DateTime.Now.ToString();
         }
 
-        Debug.Log($" Saving session to: {GetSavePath()} ");
-
         string saveFolder = Application.streamingAssetsPath + GetSavePath() + SessionData.sessionID;
+        Debug.Log($" Saving session to: {saveFolder} ");
+
         if (Directory.Exists(saveFolder))
         {
             Directory.Delete(saveFolder, true);

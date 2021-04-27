@@ -163,7 +163,7 @@ public class MainMenuManager : MonoBehaviour
         templateSessions.Clear();
         templateDropdown.options.RemoveRange(1, templateDropdown.options.Count - 1);
 
-        DirectoryInfo templatesDir = new DirectoryInfo(SessionManager.GetTemplatePath());
+        DirectoryInfo templatesDir = new DirectoryInfo(Application.streamingAssetsPath + SessionManager.GetTemplatePath());
         var files = templatesDir.GetFiles("config.nt", SearchOption.AllDirectories);
         var templateData = files
             .Select(x => SessionManager.GetTemplateSession(x.Directory.Name))

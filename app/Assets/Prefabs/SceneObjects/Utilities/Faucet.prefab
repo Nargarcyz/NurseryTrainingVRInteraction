@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3412643997423271825}
   - component: {fileID: 4258851495403967012}
   - component: {fileID: 7088648849614780513}
+  - component: {fileID: 6625100183111910017}
   m_Layer: 8
   m_Name: Towel
   m_TagString: Untagged
@@ -158,6 +159,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.43, y: 3.04, z: 1.87}
   m_Center: {x: 0.00000023841858, y: 0.00000023841858, z: 0}
+--- !u!114 &6625100183111910017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196597811648750936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9cdeff4abdcb14c8d7c7606bb5b4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5162285413476099265
 GameObject:
   m_ObjectHideFlags: 0
@@ -4956,7 +4969,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5162285413618682946
 Transform:
@@ -5404,6 +5417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5162285414477521008}
   - component: {fileID: 5162285414477521009}
+  - component: {fileID: 4739377480230312423}
   m_Layer: 0
   m_Name: Faucet
   m_TagString: Untagged
@@ -5445,6 +5459,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterStream: {fileID: 5162285413476099292}
+--- !u!136 &4739377480230312423
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5162285414477521015}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.03
+  m_Height: 0.48
+  m_Direction: 1
+  m_Center: {x: 0.4974, y: -0.21, z: 0}
 --- !u!1 &5162285414663621991
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,7 +5755,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5162285415016973793
 Transform:
