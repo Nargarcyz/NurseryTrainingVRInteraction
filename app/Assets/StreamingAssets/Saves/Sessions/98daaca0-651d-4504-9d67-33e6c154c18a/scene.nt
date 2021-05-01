@@ -5,7 +5,488 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 0,
+    "$rlength": 2,
     "$rcontent": [
+        {
+            "$k": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7",
+            "$v": {
+                "$id": 2,
+                "$type": "2|SceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": "3|SceneGameObjectData, Assembly-CSharp",
+                    "id": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7",
+                    "childs": {
+                        "$id": 3,
+                        "$type": "4|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 4,
+                        "$type": "5|NT.Variables.NTVariable`1[[NT.SceneObjects.EquipmentAssistantData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "6|NT.SceneObjects.EquipmentAssistantData, Assembly-CSharp"
+                        },
+                        "defaultValue": {
+                            "$type": 6
+                        }
+                    },
+                    "sceneObjectGUID": "5a8120db-0350-4bb2-bef4-61cf568aa0a6",
+                    "graphJSON": null,
+                    "position": {
+                        "$type": "7|UnityEngine.Vector3, UnityEngine.CoreModule",
+                        -3.38729858,
+                        0,
+                        -2.16657257
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 5,
+                        "$type": "8|NT.Graph.SceneObjectGraph, Assembly-CSharp",
+                        "_name": "",
+                        "nodes": {
+                            "$id": 6,
+                            "$type": "9|System.Collections.Generic.List`1[[XNode.Node, Assembly-CSharp]], mscorlib",
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 7,
+                                    "$type": "10|NT.Nodes.Other.TeleportPlayer, Assembly-CSharp",
+                                    "_name": "Teleport Player",
+                                    "graph": $iref:5,
+                                    "position": {
+                                        "$type": "11|UnityEngine.Vector2, UnityEngine.CoreModule",
+                                        82.5,
+                                        -67.6000061
+                                    },
+                                    "ports": {
+                                        "$id": 8,
+                                        "$type": "12|XNode.Node+NodePortDictionary, Assembly-CSharp",
+                                        "comparer": $iref:1,
+                                        "$rlength": 2,
+                                        "$rcontent": [
+                                            {
+                                                "$k": "flowIn",
+                                                "$v": {
+                                                    "$id": 9,
+                                                    "$type": "13|XNode.NodePort, Assembly-CSharp",
+                                                    "_fieldName": "flowIn",
+                                                    "_node": $iref:7,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 10,
+                                                        "$type": "14|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, Assembly-CSharp]], mscorlib",
+                                                        "$rlength": 1,
+                                                        "$rcontent": [
+                                                            {
+                                                                "$id": 11,
+                                                                "$type": "15|XNode.NodePort+PortConnection, Assembly-CSharp",
+                                                                "fieldName": "flowOut",
+                                                                "node": {
+                                                                    "$id": 12,
+                                                                    "$type": "16|NT.Nodes.Messages.CallbackNode, Assembly-CSharp",
+                                                                    "_name": "Message Received",
+                                                                    "graph": $iref:5,
+                                                                    "position": {
+                                                                        "$type": 11,
+                                                                        -390,
+                                                                        74.3999939
+                                                                    },
+                                                                    "ports": {
+                                                                        "$id": 13,
+                                                                        "$type": 12,
+                                                                        "comparer": $iref:1,
+                                                                        "$rlength": 1,
+                                                                        "$rcontent": [
+                                                                            {
+                                                                                "$k": "flowOut",
+                                                                                "$v": {
+                                                                                    "$id": 14,
+                                                                                    "$type": 13,
+                                                                                    "_fieldName": "flowOut",
+                                                                                    "_node": $iref:12,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 15,
+                                                                                        "$type": 14,
+                                                                                        "$rlength": 1,
+                                                                                        "$rcontent": [
+                                                                                            {
+                                                                                                "$id": 16,
+                                                                                                "$type": 15,
+                                                                                                "fieldName": "flowIn",
+                                                                                                "node": $iref:7,
+                                                                                                "reroutePoints": {
+                                                                                                    "$id": 17,
+                                                                                                    "$type": "17|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]], mscorlib",
+                                                                                                    "$rlength": 0,
+                                                                                                    "$rcontent": [
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 1,
+                                                                                    "_connectionType": 0,
+                                                                                    "_typeConstraint": 0,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "hasError": false,
+                                                                    "error": "",
+                                                                    "isExecuting": false,
+                                                                    "flowOut": null,
+                                                                    "key": "Hands Cleaned",
+                                                                    "linkedToSceneObject": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7"
+                                                                },
+                                                                "reroutePoints": {
+                                                                    "$id": 18,
+                                                                    "$type": 17,
+                                                                    "$rlength": 0,
+                                                                    "$rcontent": [
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_direction": 0,
+                                                    "_connectionType": 1,
+                                                    "_typeConstraint": 2,
+                                                    "_dynamic": false
+                                                }
+                                            },
+                                            {
+                                                "$k": "flowOut",
+                                                "$v": {
+                                                    "$id": 19,
+                                                    "$type": 13,
+                                                    "_fieldName": "flowOut",
+                                                    "_node": $iref:7,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 20,
+                                                        "$type": 14,
+                                                        "$rlength": 0,
+                                                        "$rcontent": [
+                                                        ]
+                                                    },
+                                                    "_direction": 1,
+                                                    "_connectionType": 0,
+                                                    "_typeConstraint": 0,
+                                                    "_dynamic": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "hasError": false,
+                                    "error": "",
+                                    "isExecuting": false,
+                                    "flowIn": null,
+                                    "flowOut": null,
+                                    "dest": 1
+                                },
+                                $iref:12
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 21,
+                            "$type": "18|System.Collections.Generic.List`1[[NT.Graph.NodeGroupGraph, Assembly-CSharp]], mscorlib",
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 22,
+                            "$type": "19|System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib",
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 23,
+                                    "$type": 16,
+                                    "_name": "Message Received",
+                                    "graph": $iref:5,
+                                    "position": {
+                                        "$type": 11,
+                                        -299.5,
+                                        -53.6000061
+                                    },
+                                    "ports": {
+                                        "$id": 24,
+                                        "$type": 12,
+                                        "comparer": $iref:1,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$k": "flowOut",
+                                                "$v": {
+                                                    "$id": 25,
+                                                    "$type": 13,
+                                                    "_fieldName": "flowOut",
+                                                    "_node": $iref:23,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 26,
+                                                        "$type": 14,
+                                                        "$rlength": 0,
+                                                        "$rcontent": [
+                                                        ]
+                                                    },
+                                                    "_direction": 1,
+                                                    "_connectionType": 0,
+                                                    "_typeConstraint": 0,
+                                                    "_dynamic": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "hasError": false,
+                                    "error": "",
+                                    "isExecuting": false,
+                                    "flowOut": null,
+                                    "key": "Application Start",
+                                    "linkedToSceneObject": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7"
+                                },
+                                $iref:12
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 27,
+                            "$type": "20|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib]], mscorlib",
+                            "comparer": {
+                                "$id": 28,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7",
+                        "assignedSCGO": $iref:2,
+                        "displayName": "EquipmentAssistant"
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 29,
+                    "$type": "21|UnityEngine.GameObject, UnityEngine.CoreModule"
+                }
+            }
+        },
+        {
+            "$k": "Closetf1c8669d-efd9-42f9-a922-dea4c4b6d6b9",
+            "$v": {
+                "$id": 30,
+                "$type": "22|ClosetSceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "Closetf1c8669d-efd9-42f9-a922-dea4c4b6d6b9",
+                    "childs": {
+                        "$id": 31,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 32,
+                        "$type": "23|NT.Variables.NTVariable`1[[NT.SceneObjects.ClosetData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "24|NT.SceneObjects.ClosetData, Assembly-CSharp",
+                            "mainDrawer": {
+                                "$type": "25|NT.SceneObjects.Drawer, Assembly-CSharp",
+                                "canBeOpened": false,
+                                "slot00": null,
+                                "slot01": null,
+                                "slot02": null,
+                                "slot03": null,
+                                "slot04": null,
+                                "slot05": null
+                            }
+                        },
+                        "defaultValue": {
+                            "$type": 24,
+                            "mainDrawer": {
+                                "$type": 25,
+                                "canBeOpened": false,
+                                "slot00": null,
+                                "slot01": null,
+                                "slot02": null,
+                                "slot03": null,
+                                "slot04": null,
+                                "slot05": null
+                            }
+                        }
+                    },
+                    "sceneObjectGUID": "3a4e8434-b4fe-4101-ad63-cb5f5051df50",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        -3.72549438,
+                        0,
+                        4.432735
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 33,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 34,
+                            "$type": 9,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 35,
+                            "$type": 18,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 36,
+                            "$type": 19,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 37,
+                            "$type": 20,
+                            "comparer": {
+                                "$id": 38,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "Closetf1c8669d-efd9-42f9-a922-dea4c4b6d6b9",
+                        "assignedSCGO": {
+                            "$id": 39,
+                            "$type": 22,
+                            "data": {
+                                "$type": 3,
+                                "id": "Closetf1c8669d-efd9-42f9-a922-dea4c4b6d6b9",
+                                "childs": {
+                                    "$id": 40,
+                                    "$type": 4,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "parent": "",
+                                "data": $iref:32,
+                                "sceneObjectGUID": "3a4e8434-b4fe-4101-ad63-cb5f5051df50",
+                                "graphJSON": "",
+                                "position": {
+                                    "$type": 7,
+                                    -3.72549438,
+                                    0,
+                                    4.432735
+                                },
+                                "rotation": {
+                                    "$type": 7,
+                                    0,
+                                    0,
+                                    0
+                                },
+                                "graph": $iref:33
+                            },
+                            "outlineRoot": {
+                                "$id": 41,
+                                "$type": 21
+                            },
+                            "drawer": {
+                                "$id": 42,
+                                "$type": 21
+                            },
+                            "slotPivot": {
+                                "$id": 43,
+                                "$type": "26|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
+                                "$rlength": 5,
+                                "$rcontent": [
+                                    {
+                                        "$id": 44,
+                                        "$type": "27|UnityEngine.Transform, UnityEngine.CoreModule"
+                                    },
+                                    {
+                                        "$id": 45,
+                                        "$type": 27
+                                    },
+                                    {
+                                        "$id": 46,
+                                        "$type": 27
+                                    },
+                                    {
+                                        "$id": 47,
+                                        "$type": 27
+                                    },
+                                    {
+                                        "$id": 48,
+                                        "$type": 27
+                                    }
+                                ]
+                            }
+                        },
+                        "displayName": "Closet"
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 49,
+                    "$type": 21
+                },
+                "drawer": {
+                    "$id": 50,
+                    "$type": 21
+                },
+                "slotPivot": {
+                    "$id": 51,
+                    "$type": 26,
+                    "$rlength": 5,
+                    "$rcontent": [
+                        {
+                            "$id": 52,
+                            "$type": 27
+                        },
+                        {
+                            "$id": 53,
+                            "$type": 27
+                        },
+                        {
+                            "$id": 54,
+                            "$type": 27
+                        },
+                        {
+                            "$id": 55,
+                            "$type": 27
+                        },
+                        {
+                            "$id": 56,
+                            "$type": 27
+                        }
+                    ]
+                }
+            }
+        }
     ]
 }

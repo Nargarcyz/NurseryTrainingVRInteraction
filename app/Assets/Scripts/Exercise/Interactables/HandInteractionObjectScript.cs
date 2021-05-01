@@ -71,8 +71,6 @@ public class HandInteractionObjectScript : MonoBehaviour
         setup = VRTK_SDKManager.GetLoadedSDKSetup();
         if (setup == null) return;
         var controller = getController(other.gameObject);
-        Debug.Log(controller);
-
         // if (controller != null && controller != linkedObject.GetGrabbingObject())
         if (controller != null && controller != grabbingHand)
         {

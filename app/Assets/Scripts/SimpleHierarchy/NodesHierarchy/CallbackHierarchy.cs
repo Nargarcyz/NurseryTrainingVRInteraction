@@ -7,35 +7,47 @@ using XNode;
 
 public class CallbackHierarchy : GUIHierarchy
 {
-    private void Start() {
+    private void Start()
+    {
         Rebuild();
         SessionManager.Instance.OnShowingGraphChanged.AddListener(Rebuild);
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         Rebuild();
     }
 
-    public override List<HierarchyModel> GetRoot(){        
+    public override List<HierarchyModel> GetRoot()
+    {
         List<HierarchyModel> root = new List<HierarchyModel>();
-        
+
         NodeGraph showing = SessionManager.Instance.showingGraph;
-        
-        if(showing is NTGraph){
-            List<string> callbacks =  ((NTGraph) showing ).GetCallbacks();
+        // Added
+        NodeGraph mainGraph = SessionManager.Instance.sceneGraph;
+
+
+        if (showing is NTGraph)
+        {
+            List<string> callbacks = ((NTGraph)showing).GetCallbacks();
+            // Added
+            callbacks.AddRange(((NTGraph)mainGraph).GetCallbacks());
 
             foreach (var callback in callbacks)
             {
                 root.Add(new HierarchyModel(
-                        new NodeHierarchyData{
+                        new NodeHierarchyData
+                        {
                             name = callback,
                             key = callback,
-                            onNodeCreated = (n) =>{
+                            onNodeCreated = (n) =>
+                            {
                                 Debug.Log(callback);
-                                ( (CallbackNode) n).key = callback;
-                                ( (CallbackNode) n).linkedToSceneObject = showing is SceneObjectGraph ? ((SceneObjectGraph) showing).linkedNTVariable : "";
-                        },
-                        nodeType = typeof(CallbackNode)}
+                                ((CallbackNode)n).key = callback;
+                                ((CallbackNode)n).linkedToSceneObject = showing is SceneObjectGraph ? ((SceneObjectGraph)showing).linkedNTVariable : "";
+                            },
+                            nodeType = typeof(CallbackNode)
+                        }
                 ));
             }
         }

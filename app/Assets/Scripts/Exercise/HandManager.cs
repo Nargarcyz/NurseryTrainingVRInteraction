@@ -90,40 +90,54 @@ public class HandManager : MonoBehaviour
         switch (hand.state)
         {
             case HandState.Dirty:
-                if (msg.Contains("in water"))
-                    hand.state = HandState.Wetting;
-                else if (msg.Contains("out of water"))
-                    hand.state = HandState.Dirty;
-                break;
+                {
+                    if (msg.Contains("in water"))
+                        hand.state = HandState.Wetting;
+                    else if (msg.Contains("out of water"))
+                        hand.state = HandState.Dirty;
+                    break;
+                }
             case HandState.Wetting:
-                if (msg.Contains("in water"))
-                    hand.state = HandState.Wetting;
-                else if (msg.Contains("out of water"))
-                    hand.state = HandState.Dirty;
-                else if (msg.Contains("wet"))
-                    hand.state = HandState.Wet;
-                break;
+                {
+                    if (msg.Contains("in water"))
+                        hand.state = HandState.Wetting;
+                    else if (msg.Contains("out of water"))
+                        hand.state = HandState.Dirty;
+                    else if (msg.Contains("wet"))
+                        hand.state = HandState.Wet;
+                    break;
+                }
             case HandState.Wet:
-                if (msg.Contains("soap"))
                 {
-                    var soapParticles = Instantiate(soapEffect);
-                    soapParticles.transform.position = hand.handObject.transform.position;
-                    hand.state = HandState.Soapy;
+                    if (msg.Contains("soap"))
+                    {
+                        var soapParticles = Instantiate(soapEffect);
+                        soapParticles.transform.position = hand.handObject.transform.position;
+                        hand.state = HandState.Soapy;
+                    }
+                    break;
                 }
-                break;
             case HandState.Soapy:
-                if (msg.Contains("in water"))
-                    hand.state = HandState.CleanWet;
-                break;
-            case HandState.CleanWet:
-                if (msg.Contains("dry"))
                 {
-                    hand.state = HandState.Clean;
-                    hand.wetness = 0;
-                    ExecuteState(hand);
-                    CheckHands();
+                    if (msg.Contains("in water"))
+                        hand.state = HandState.CleanWet;
+                    break;
                 }
-                break;
+            case HandState.CleanWet:
+                {
+                    if (msg.Contains("dry"))
+                    {
+                        hand.state = HandState.Clean;
+                    }
+                    break;
+                }
+            case HandState.Clean:
+                {
+                    hand.wetness = 0;
+                    // ExecuteState(hand);
+                    CheckHands();
+                    break;
+                }
             default:
                 break;
         }
@@ -142,26 +156,31 @@ public class HandManager : MonoBehaviour
         switch (hand.state)
         {
             case HandState.Wetting:
-                Debug.Log(hand.name + " getting wet");
-                hand.wetness += 0.5f * Time.deltaTime;
-                if (material)
                 {
-                    Debug.Log($" Metallic={material.GetFloat("_Metallic")} Glossiness={material.GetFloat("_Glossiness")}");
-                    if (material.GetFloat("_Metallic") <= wetMetallic)
-                        material.SetFloat("_Metallic", hand.wetness * wetMetallic);
-                    if (material.GetFloat("_Glossiness") <= wetSmoothness)
-                        material.SetFloat("_Glossiness", hand.wetness * wetSmoothness);
-                    if (material.GetFloat("_Metallic") >= wetMetallic && material.GetFloat("_Glossiness") >= wetSmoothness)
-                        MessageSystem.SendMessage(hand.name + " wet");
+                    Debug.Log(hand.name + " getting wet");
+                    hand.wetness += 0.5f * Time.deltaTime;
+                    if (material)
+                    {
+                        // Debug.Log($" Metallic={material.GetFloat("_Metallic")} Glossiness={material.GetFloat("_Glossiness")}");
+                        if (material.GetFloat("_Metallic") <= wetMetallic)
+                            material.SetFloat("_Metallic", hand.wetness * wetMetallic);
+                        if (material.GetFloat("_Glossiness") <= wetSmoothness)
+                            material.SetFloat("_Glossiness", hand.wetness * wetSmoothness);
+                        if (material.GetFloat("_Metallic") >= wetMetallic && material.GetFloat("_Glossiness") >= wetSmoothness)
+                            MessageSystem.SendMessage(hand.name + " wet");
+                    }
+                    break;
                 }
-                break;
-            case HandState.CleanWet:
-                if (hand.wetness == 0) return;
-                Debug.Log(hand.name + " drying");
+            case HandState.Clean:
+                {
+                    if (hand.wetness == 0) return;
+                    Debug.Log(hand.name + " drying");
 
-                material.SetFloat("_Metallic", 0);
-                material.SetFloat("_Glossiness", 0.5f);
-                break;
+                    material.SetFloat("_Metallic", 0);
+                    material.SetFloat("_Glossiness", 0.5f);
+                    hand.wetness = 0;
+                    break;
+                }
             default:
                 return;
 
