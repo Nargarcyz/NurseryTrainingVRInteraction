@@ -119,6 +119,7 @@ public class HandManager : MonoBehaviour
                 if (msg.Contains("dry"))
                 {
                     hand.state = HandState.Clean;
+                    hand.wetness = 0;
                     ExecuteState(hand);
                     CheckHands();
                 }
@@ -155,6 +156,7 @@ public class HandManager : MonoBehaviour
                 }
                 break;
             case HandState.CleanWet:
+                if (hand.wetness == 0) return;
                 Debug.Log(hand.name + " drying");
 
                 material.SetFloat("_Metallic", 0);
