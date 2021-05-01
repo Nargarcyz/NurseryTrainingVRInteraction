@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3412643997423271825}
   - component: {fileID: 4258851495403967012}
   - component: {fileID: 7088648849614780513}
-  - component: {fileID: 6625100183111910017}
+  - component: {fileID: 4891789192899144341}
   m_Layer: 8
   m_Name: Towel
   m_TagString: Untagged
@@ -159,7 +159,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.43, y: 3.04, z: 1.87}
   m_Center: {x: 0.00000023841858, y: 0.00000023841858, z: 0}
---- !u!114 &6625100183111910017
+--- !u!114 &4891789192899144341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,9 +168,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 196597811648750936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e9cdeff4abdcb14c8d7c7606bb5b4dd, type: 3}
+  m_Script: {fileID: 11500000, guid: a35179058d0ebff49932ac3200e243ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  messageAction: dry
 --- !u!1 &5162285413476099265
 GameObject:
   m_ObjectHideFlags: 0
@@ -5487,8 +5488,8 @@ GameObject:
   - component: {fileID: 5162285414663621986}
   - component: {fileID: 5162285414663621985}
   - component: {fileID: 9056449710290398302}
-  - component: {fileID: 3084732238799864428}
   - component: {fileID: 9067265464799340745}
+  - component: {fileID: 8141630823094422457}
   m_Layer: 8
   m_Name: Soap
   m_TagString: Untagged
@@ -5619,18 +5620,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3084732238799864428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5162285414663621991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4235d9f21e709f4ea5514dc24274cae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &9067265464799340745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5644,6 +5633,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.43, y: 3.04, z: 1.87}
   m_Center: {x: 0.00000023841858, y: 0.00000023841858, z: 0}
+--- !u!114 &8141630823094422457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5162285414663621991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35179058d0ebff49932ac3200e243ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageAction: soap
 --- !u!1 &5162285414704909790
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,13 @@ using UnityEngine;
 using VRTK;
 using NT;
 
-public class TowelScript : MonoBehaviour
+public class HandInteractionObjectScript : MonoBehaviour
 {
-
     private VRTK_InteractableObject linkedObject;
     private GameObject otherHand = null;
     private GameObject grabbingHand = null;
     private VRTK_SDKSetup setup;
+    public string messageAction = "";
 
     protected virtual void OnEnable()
     {
@@ -54,7 +54,8 @@ public class TowelScript : MonoBehaviour
         var grabbingController = linkedObject.GetGrabbingObject();
         Debug.Log("<color=red>Other Hand = " + otherHand.name + "</color>");
 
-        MessageSystem.SendMessage(otherHand.name + " dry");
+        // MessageSystem.SendMessage(otherHand.name + " soap");
+        MessageSystem.SendMessage(otherHand.name + " " + messageAction);
         // if (other.gameObject == setup.actualRightController)
         // {
 
