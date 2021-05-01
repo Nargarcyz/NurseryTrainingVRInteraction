@@ -65,10 +65,21 @@ public class FaucetScript : MonoBehaviour
         if (setup == null) return;
         var controller = getController(other.gameObject);
         // if (controller != null && !controllers.Contains(controller)) controllers.Add(controller);
-        ProcessController(controller);
+        // ProcessController(controller);
+        if (controller && handle.GetValue() <= handle.angleLimits.maximum / 2)
+            MessageSystem.SendMessage(controller.name + " in water");
 
 
 
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        if (setup == null) return;
+        var controller = getController(other.gameObject);
+        if (controller && handle.GetValue() <= handle.angleLimits.maximum / 2)
+            MessageSystem.SendMessage(controller.name + " out of water");
+        // if (controller != null && controllers.Contains(controller)) controllers.Remove(controller);
     }
 
     private void ProcessController(GameObject controller)
@@ -86,18 +97,12 @@ public class FaucetScript : MonoBehaviour
 
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        setup = VRTK_SDKManager.GetLoadedSDKSetup();
-        if (setup == null) return;
-        var controller = getController(other.gameObject);
-        if (controller != null && controllers.Contains(controller)) controllers.Remove(controller);
-    }
 
     private List<GameObject> controllers;
 
     void Update()
     {
+        return;
         if (handle.GetValue() <= handle.angleLimits.maximum / 2)
         {
             foreach (var c in controllers)

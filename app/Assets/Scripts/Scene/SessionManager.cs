@@ -330,6 +330,10 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate
         string saveFolder = Application.streamingAssetsPath + GetSavePath() + SessionData.sessionID;
         Debug.Log($" Saving session to: {saveFolder} ");
 
+        byte[] sceneGraphData = SerializationUtility.SerializeValue(sceneGraph, DataFormat.JSON);
+        byte[] userVariablesData = SerializationUtility.SerializeValue(userVariables, DataFormat.JSON);
+        if (sceneGraphData == null && userVariablesData == null && SessionData.sceneFile == null) return;
+
         if (Directory.Exists(saveFolder))
         {
             Directory.Delete(saveFolder, true);
@@ -340,12 +344,12 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate
 
         SessionData.lastModified = DateTime.Now.ToString();
 
+
+
         SessionData.sceneGraphFile = "sceneGraph.nt";
-        byte[] sceneGraphData = SerializationUtility.SerializeValue(sceneGraph, DataFormat.JSON);
         File.WriteAllBytes(saveFolder + "/" + SessionData.sceneGraphFile, sceneGraphData);
 
         SessionData.userVariables = "userVariables.nt";
-        byte[] userVariablesData = SerializationUtility.SerializeValue(userVariables, DataFormat.JSON);
         File.WriteAllBytes(saveFolder + "/" + SessionData.userVariables, userVariablesData);
 
         SessionData.sceneFile = "scene.nt";

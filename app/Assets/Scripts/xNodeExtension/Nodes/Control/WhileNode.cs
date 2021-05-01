@@ -16,7 +16,7 @@ namespace NT.Nodes.Flow
             while (cond)
             {
                 yield return null;
-                Debug.Log($"Condition: {cond}");
+                // Debug.Log($"Condition: {cond}");
                 cond = GetInputValue<bool>(nameof(this.condition), this.condition);
             }
         }

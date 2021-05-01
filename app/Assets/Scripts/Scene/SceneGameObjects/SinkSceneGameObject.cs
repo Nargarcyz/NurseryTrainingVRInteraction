@@ -48,88 +48,84 @@ public class SinkSceneGameObject : SceneGameObject
 
         if (msg.Contains("Exercise Started"))
         {
-            // VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
-            // if (setup != null)
-            // {
-            //     setup.actualBoundaries.transform.position = transform.position;
-            // }
-        }
-        else if (msg.Contains("LeftHandAnchor wet"))
-        {
-            leftHandWet = true;
-            if (leftHandSoapy)
-            {
-                leftHandSoapy = false;
-                leftHandWashed = true;
-            }
-        }
-        else if (msg.Contains("LeftHandAnchor soap"))
-        {
-            if (leftHandWet)
-            {
-                VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
-                var soapParticles = Instantiate(soapEffect);
-                soapParticles.transform.position = setup.actualLeftController.transform.position;
-                leftHandSoapy = true;
-            }
-        }
-        else if (msg.Contains("LeftHandAnchor dry"))
-        {
-            VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
-            var mat = setup.actualLeftController.GetComponentInChildren<Renderer>().materials[0];
-            mat.SetFloat("_Metallic", 0);
-            mat.SetFloat("_Glossiness", 0.5f);
-            leftHandWet = false;
-            leftHandSoapy = false;
-            if (leftHandWashed)
-            {
-                leftHandClean = true;
-                if (rightHandClean)
-                {
-                    MessageSystem.SendMessage("Hands Cleaned");
-
-                }
-            }
 
         }
-        else if (msg.Contains("RightHandAnchor wet"))
-        {
-            rightHandWet = true;
-            if (rightHandSoapy)
-            {
-                rightHandSoapy = false;
-                rightHandWashed = true;
-                Debug.Log("<color=blue>Right Hand Washed");
-            }
-        }
-        else if (msg.Contains("RightHandAnchor soap"))
-        {
-            if (rightHandWet)
-            {
-                VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
-                var soapParticles = Instantiate(soapEffect);
-                soapParticles.transform.position = setup.actualRightController.transform.position;
-                rightHandSoapy = true;
-            }
-        }
-        else if (msg.Contains("RightHandAnchor dry"))
-        {
-            VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
-            var mat = setup.actualRightController.GetComponentInChildren<Renderer>().materials[0];
-            mat.SetFloat("_Metallic", 0);
-            mat.SetFloat("_Glossiness", 0.5f);
-            rightHandWet = false;
-            rightHandSoapy = false;
-            if (rightHandWashed)
-            {
-                rightHandClean = true;
-                if (leftHandClean)
-                {
-                    MessageSystem.SendMessage("Hands Cleaned");
+        // else if (msg.Contains("LeftHandAnchor wet"))
+        // {
+        //     leftHandWet = true;
+        //     if (leftHandSoapy)
+        //     {
+        //         leftHandSoapy = false;
+        //         leftHandWashed = true;
+        //     }
+        // }
+        // else if (msg.Contains("LeftHandAnchor soap"))
+        // {
+        //     if (leftHandWet)
+        //     {
+        //         VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        //         var soapParticles = Instantiate(soapEffect);
+        //         soapParticles.transform.position = setup.actualLeftController.transform.position;
+        //         leftHandSoapy = true;
+        //     }
+        // }
+        // else if (msg.Contains("LeftHandAnchor dry"))
+        // {
+        //     VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        //     var mat = setup.actualLeftController.GetComponentInChildren<Renderer>().materials[0];
+        //     mat.SetFloat("_Metallic", 0);
+        //     mat.SetFloat("_Glossiness", 0.5f);
+        //     leftHandWet = false;
+        //     leftHandSoapy = false;
+        //     if (leftHandWashed)
+        //     {
+        //         leftHandClean = true;
+        //         if (rightHandClean)
+        //         {
+        //             MessageSystem.SendMessage("Hands Cleaned");
 
-                }
-            }
-        }
+        //         }
+        //     }
+
+        // }
+        // else if (msg.Contains("RightHandAnchor wet"))
+        // {
+        //     rightHandWet = true;
+        //     if (rightHandSoapy)
+        //     {
+        //         rightHandSoapy = false;
+        //         rightHandWashed = true;
+        //         Debug.Log("<color=blue>Right Hand Washed");
+        //     }
+        // }
+        // else if (msg.Contains("RightHandAnchor soap"))
+        // {
+        //     if (rightHandWet)
+        //     {
+        //         VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        //         var soapParticles = Instantiate(soapEffect);
+        //         soapParticles.transform.position = setup.actualRightController.transform.position;
+        //         rightHandSoapy = true;
+        //     }
+        // }
+        // else if (msg.Contains("RightHandAnchor dry"))
+        // {
+        //     VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();
+        //     var mat = setup.actualRightController.GetComponentInChildren<Renderer>().materials[0];
+        //     mat.SetFloat("_Metallic", 0);
+        //     mat.SetFloat("_Glossiness", 0.5f);
+        //     rightHandWet = false;
+        //     rightHandSoapy = false;
+        //     if (rightHandWashed)
+        //     {
+        //         rightHandClean = true;
+        //         if (leftHandClean)
+        //         {
+        //             MessageSystem.SendMessage("Hands Cleaned");
+
+        //         }
+        //     }
+        // }
 
 
         else if (msg.Contains("Go to sink"))
