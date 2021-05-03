@@ -55,10 +55,23 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate
 
             return "/Saves/Templates/";
         }
+    }
 
+    public static string GetNodeGroupPath()
+    {
 
+        if (Application.platform == RuntimePlatform.Android)
+            return "/Saves/NodeGroups/";
+        else
+        {
+            if (!Directory.Exists(Application.streamingAssetsPath + "/Saves"))
+                Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves");
 
+            if (!Directory.Exists(Application.streamingAssetsPath + "/Saves/NodeGroups"))
+                Directory.CreateDirectory(Application.streamingAssetsPath + "/Saves/NodeGroups");
 
+            return "/Saves/NodeGroups/";
+        }
     }
 
     public static void CreateSessionFromTemplate(SessionData sd, SessionData template)
@@ -272,12 +285,18 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate
 
     public void SetUpForExecution()
     {
+        Debug.Log("SETTING UP FOR EXECUTION");
         //Reset all variables to default values!
         foreach (var so in sceneGameObjects)
         {
             SceneGameObject scgo = so.Value;
 
             scgo.data.data.Reset();
+
+            Debug.Log($"<color=red>{scgo.GetType().Name}</color>");
+            Debug.Log($"<color=red>Graph null? {scgo.data.graph}</color>");
+            Debug.Log($"<color=red>Node count? {scgo.data.graph.nodes.Count}</color>");
+            Debug.Log($"<color=red>PNde count? {scgo.data.graph.packedNodes.Count}</color>");
 
             if (scgo.data.graph != null && (scgo.data.graph.nodes.Count > 0 || scgo.data.graph.packedNodes.Count > 0))
             {

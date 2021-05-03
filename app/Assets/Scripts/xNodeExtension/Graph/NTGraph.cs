@@ -10,9 +10,10 @@ using UnityEngine;
 
 using XNode;
 
-namespace  NT.Graph
+namespace NT.Graph
 {
-    public class NTGraph : NodeGraph {
+    public class NTGraph : NodeGraph
+    {
         public List<NodeGroupGraph> packedNodes = new List<NodeGroupGraph>();
         [NonSerialized] public IVariableDelegate variableDelegate;
 
@@ -25,23 +26,28 @@ namespace  NT.Graph
 
         public Dictionary<string, List<CallbackNode>> callbackNodesDict = new Dictionary<string, List<CallbackNode>>();
 
-        public override Node AddNode(System.Type type){
+        public override Node AddNode(System.Type type)
+        {
             Node node = base.AddNode(type);
-            if(node is CallbackNode){
-                callbackNodes.Add( (CallbackNode) node );
+            if (node is CallbackNode)
+            {
+                callbackNodes.Add((CallbackNode)node);
             }
             return node;
         }
 
 
-        public void StartExecution(){
+        public void StartExecution()
+        {
             MessageSystem.onMessageSent -= MessageRecieved;
             MessageSystem.onMessageSent += MessageRecieved;
-
+            Debug.Log(name);
             GenerateCallbackDict();
 
-            if(packedNodes != null){
-                foreach(var pack in packedNodes){
+            if (packedNodes != null)
+            {
+                foreach (var pack in packedNodes)
+                {
                     pack.StartExecution();
                 }
             }
@@ -49,21 +55,26 @@ namespace  NT.Graph
 
         public virtual void GenerateCallbackDict()
         {
-            callbackNodesDict = new Dictionary<string, List<CallbackNode> >();
-            
+            callbackNodesDict = new Dictionary<string, List<CallbackNode>>();
+
             callbackNodes = new List<CallbackNode>();
 
-            foreach(Node n in nodes){
-                if(n is CallbackNode){
-                    callbackNodes.Add( (CallbackNode) n);
+            foreach (Node n in nodes)
+            {
+                if (n is CallbackNode)
+                {
+                    callbackNodes.Add((CallbackNode)n);
                 }
             }
 
-            foreach(CallbackNode cn in callbackNodes){
-                if(cn != null && !string.IsNullOrEmpty(cn.GetCallbackKey()) ){
+            foreach (CallbackNode cn in callbackNodes)
+            {
+                if (cn != null && !string.IsNullOrEmpty(cn.GetCallbackKey()))
+                {
                     List<CallbackNode> callbacksInKey = new List<CallbackNode>();
 
-                    if(callbackNodesDict.ContainsKey(cn.GetCallbackKey())){
+                    if (callbackNodesDict.ContainsKey(cn.GetCallbackKey()))
+                    {
                         callbacksInKey = callbackNodesDict[cn.GetCallbackKey()];
                         callbacksInKey.Add(cn);
                         callbackNodesDict[cn.GetCallbackKey()] = callbacksInKey;
@@ -83,10 +94,21 @@ namespace  NT.Graph
         public virtual void MessageRecieved(string message)
         {
             Debug.Log("<color=magenta> Message recieved!   " + message + " on graph" + name + "</color>");
-
-            if(!string.IsNullOrEmpty(message) && callbackNodesDict.ContainsKey(message)){
-                List<CallbackNode> nodesToExecute = callbackNodesDict[message];
-                foreach(CallbackNode cn in nodesToExecute){
+            Debug.Log(callbackNodesDict);
+            var key = "";
+            if (this.GetType() == typeof(SceneGraph))
+            {
+                key = message;
+            }
+            else if (this.GetType() == typeof(SceneObjectGraph))
+            {
+                key = ((SceneObjectGraph)this).linkedNTVariable + message;
+            }
+            if (!string.IsNullOrEmpty(key) && callbackNodesDict.ContainsKey(key))
+            {
+                List<CallbackNode> nodesToExecute = callbackNodesDict[key];
+                foreach (CallbackNode cn in nodesToExecute)
+                {
                     CoroutineRunner.Instance.StartCoroutine(StartExecutionFlow(cn));
                 }
             }
@@ -99,7 +121,8 @@ namespace  NT.Graph
 
         public void RemoveGroupedNodes(NodeGroupGraph group)
         {
-            for(int i = group.nodes.Count - 1; i >= 0; i--){
+            for (int i = group.nodes.Count - 1; i >= 0; i--)
+            {
                 group.RemoveNode(group.nodes[i]);
             }
 
@@ -115,14 +138,15 @@ namespace  NT.Graph
 
         public IEnumerator StartExecutionFlow(CallbackNode callbackNode)
         {
-            NodeExecutionContext nodeExecutionContext = new NodeExecutionContext{node = callbackNode};
+            NodeExecutionContext nodeExecutionContext = new NodeExecutionContext { node = callbackNode };
 
-            while(nodeExecutionContext.node != null){
+            while (nodeExecutionContext.node != null)
+            {
 
-                Debug.Log("<color=green> Execute node:  " + nodeExecutionContext.node + " ... GRAPH: " + name +"</color>");
+                Debug.Log("<color=green> Execute node:  " + nodeExecutionContext.node + " ... GRAPH: " + name + "</color>");
                 nodeExecutionContext.node.Enter();
 
-                yield return new YieldNode(nodeExecutionContext );
+                yield return new YieldNode(nodeExecutionContext);
 
                 Debug.Log("<color=red> Finished node:  " + nodeExecutionContext.node + "</color>");
 
@@ -138,18 +162,22 @@ namespace  NT.Graph
 
         Dictionary<Type, Type> dataToNtVatiable = new Dictionary<Type, Type>();
 
-        public Type GetVariableFor(Type t){
-            if(dataToNtVatiable.ContainsKey(t)) return dataToNtVatiable[t];
+        public Type GetVariableFor(Type t)
+        {
+            if (dataToNtVatiable.ContainsKey(t)) return dataToNtVatiable[t];
 
 
-            foreach(Type nodeType in ReflectionUtilities.variableNodeTypes){
-                if(nodeType.IsGenericTypeDefinition){
+            foreach (Type nodeType in ReflectionUtilities.variableNodeTypes)
+            {
+                if (nodeType.IsGenericTypeDefinition)
+                {
                     continue;
                 }
 
-                Type dataType = ((NTVariable) Activator.CreateInstance(nodeType)).GetDataType();
+                Type dataType = ((NTVariable)Activator.CreateInstance(nodeType)).GetDataType();
 
-                if(dataType == t){
+                if (dataType == t)
+                {
                     dataToNtVatiable.Add(t, nodeType);
                     return nodeType;
                 }

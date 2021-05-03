@@ -67,7 +67,6 @@ public class HandManager : MonoBehaviour
         {
             setup = VRTK_SDKManager.GetLoadedSDKSetup();
             leftHand = new HandInfo(setup.actualLeftController);
-            Debug.Log(leftHand.name);
             rightHand = new HandInfo(setup.actualRightController);
         }
 

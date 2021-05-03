@@ -7,25 +7,30 @@ using UnityEngine;
 
 namespace NT.SceneObjects
 {
-    public class PrefabObject : SceneObject{
+    public class PrefabObject : SceneObject
+    {
         public SavedPrefab prefab;
-        public static string exportPath = Application.dataPath + "/Saves/Prefabs/";
+        public static string exportPath = Application.streamingAssetsPath + "/Saves/Prefabs/";
+        public static string importPath = "/Saves/Prefabs/";
         public static DataFormat dataFormat = DataFormat.JSON;
 
 
-        public GameObject CraftPrefab(Transform rootParent){
+        public GameObject CraftPrefab(Transform rootParent)
+        {
             SceneGameObject root = null;
 
             Dictionary<string, SceneGameObject> parentsGO = new Dictionary<string, SceneGameObject>();
             Dictionary<string, List<SceneGameObject>> childsGO = new Dictionary<string, List<SceneGameObject>>();
 
 
-            foreach(SceneGameObject prefabElement in prefab.prefabObjects){
+            foreach (SceneGameObject prefabElement in prefab.prefabObjects)
+            {
                 GameObject prefabElementGO = null;
 
                 SceneObject prefabElementSO = SessionManager.Instance.sceneObjects.GetObject(prefabElement.data.sceneObjectGUID);
 
-                if(prefabElementSO == null){
+                if (prefabElementSO == null)
+                {
                     Debug.LogWarning("Broken prefab!!!");
                     continue;
                 }
@@ -34,7 +39,8 @@ namespace NT.SceneObjects
 
                 SceneGameObject prefabElementSCGO = prefabElementGO.GetComponent<SceneGameObject>();
 
-                if(prefabElementSCGO == null){
+                if (prefabElementSCGO == null)
+                {
                     prefabElementSCGO = prefabElementGO.AddComponent<SceneGameObject>();
                 }
 
@@ -48,10 +54,12 @@ namespace NT.SceneObjects
 
                 prefabElementSCGO.LoadFromData(prefabElementInstanceData);
 
-                if(childsGO.ContainsKey(prefabElement.data.id)){
+                if (childsGO.ContainsKey(prefabElement.data.id))
+                {
                     List<SceneGameObject> childsOfElement = childsGO[prefabElement.data.id];
 
-                    foreach(SceneGameObject childOfElement in childsOfElement){
+                    foreach (SceneGameObject childOfElement in childsOfElement)
+                    {
                         childOfElement.transform.SetParent(prefabElementGO.transform);
                         childOfElement.RestoreTransform();
 
@@ -65,11 +73,13 @@ namespace NT.SceneObjects
                     childsGO.Remove(prefabElement.data.id);
                 }
 
-                if(prefabElement.data.id == prefab.root){
+                if (prefabElement.data.id == prefab.root)
+                {
                     root = prefabElementSCGO;
                     this.sceneGameObject.canBePlacedOver = prefabElementSO.GetLayerMask();
                 }
-                else if(parentsGO.ContainsKey(prefabElement.data.parent)){
+                else if (parentsGO.ContainsKey(prefabElement.data.parent))
+                {
                     SceneGameObject parent = parentsGO[prefabElement.data.parent];
 
                     parent.data.childs.Add(prefabElementSCGO.data.id);
@@ -79,27 +89,29 @@ namespace NT.SceneObjects
                     prefabElementSCGO.RestoreTransform();
 
                     parent.HoldItem(prefabElementSCGO);
-                }   
+                }
                 else
                 {
-                    if(childsGO.ContainsKey(prefabElement.data.parent)){
+                    if (childsGO.ContainsKey(prefabElement.data.parent))
+                    {
                         List<SceneGameObject> parentChilds = childsGO[prefabElement.data.parent];
                         parentChilds.Add(prefabElementSCGO);
                         childsGO[prefabElement.data.parent] = parentChilds;
                     }
                     else
                     {
-                        List<SceneGameObject> parentChilds = new List<SceneGameObject>(){prefabElementSCGO};
-                        childsGO.Add(prefabElement.data.parent, parentChilds); 
+                        List<SceneGameObject> parentChilds = new List<SceneGameObject>() { prefabElementSCGO };
+                        childsGO.Add(prefabElement.data.parent, parentChilds);
                     }
                 }
-                
+
 
                 parentsGO.Add(prefabElement.data.id, prefabElementSCGO);
-            
+
             }
 
-            if(rootParent != null){
+            if (rootParent != null)
+            {
                 root.transform.SetParent(rootParent);
                 root.RestoreTransform();
             }
@@ -107,15 +119,20 @@ namespace NT.SceneObjects
             return root.gameObject;
         }
 
-        public override GameObject GetPreviewGameObject(){
+        public override GameObject GetPreviewGameObject()
+        {
             return CraftPrefab(null);
         }
 
-        public static PrefabObject LoadPrefab(string prefabFile, List<Sprite> icons){
+        public static PrefabObject LoadPrefab(string prefabFile, List<Sprite> icons)
+        {
             PrefabObject loadedPrefab = ScriptableObject.CreateInstance<PrefabObject>();
 
-            if(File.Exists(prefabFile)){
-                byte[] loadedPrefabData = File.ReadAllBytes(prefabFile);
+            if (File.Exists(prefabFile))
+            {
+                // byte[] loadedPrefabData = File.ReadAllBytes(prefabFile);
+
+                byte[] loadedPrefabData = BetterStreamingAssets.ReadAllBytes(prefabFile);
                 loadedPrefab.prefab = SerializationUtility.DeserializeValue<SavedPrefab>(loadedPrefabData, dataFormat);
 
                 loadedPrefab.sceneObjectUI.category = loadedPrefab.prefab.category;
@@ -132,7 +149,8 @@ namespace NT.SceneObjects
 
         public override SceneGameObject Instantiate(string key, Transform parent,
             Vector3 localPosition, Quaternion localRotation
-        ){
+        )
+        {
             GameObject instancedGo = CraftPrefab(parent);
 
             instancedGo.SetActive(true);
@@ -141,14 +159,16 @@ namespace NT.SceneObjects
 
             SceneGameObject scgo = instancedGo.GetComponent<SceneGameObject>();
 
-            if(scgo == null){
-               Debug.LogError("Fatal error on prefab!");
+            if (scgo == null)
+            {
+                Debug.LogError("Fatal error on prefab!");
             }
 
             SceneGameObject[] prefabSCGOs = instancedGo.GetComponentsInChildren<SceneGameObject>(true);
 
-            foreach(SceneGameObject prefabSCGO in prefabSCGOs){
-                if(prefabSCGO == scgo) continue;
+            foreach (SceneGameObject prefabSCGO in prefabSCGOs)
+            {
+                if (prefabSCGO == scgo) continue;
 
                 SessionManager.Instance.AddSceneGameObject(prefabSCGO);
             }
@@ -156,25 +176,30 @@ namespace NT.SceneObjects
             return scgo;
         }
 
-        public override SceneGameObject Instantiate( Transform parent,
+        public override SceneGameObject Instantiate(Transform parent,
             Vector3 localPosition, Quaternion localRotation
-        ){
+        )
+        {
             return Instantiate("", parent, localPosition, localRotation);
         }
 
 
-        public static bool CreatePrefab(string prefabID, SceneGameObject root, string name = "", int sprite = 0, ObjectCategory category = ObjectCategory.UserPrefabs){
-            if(string.IsNullOrEmpty(prefabID)){
+        public static bool CreatePrefab(string prefabID, SceneGameObject root, string name = "", int sprite = 0, ObjectCategory category = ObjectCategory.UserPrefabs)
+        {
+            if (string.IsNullOrEmpty(prefabID))
+            {
                 return false;
             }
 
-            string prefabFolder = exportPath + "/" ;
+            string prefabFolder = exportPath + "/";
 
-            if(!Directory.Exists(exportPath)){
+            if (!Directory.Exists(exportPath))
+            {
                 Directory.CreateDirectory(prefabFolder);
             }
 
-            SavedPrefab savedPrefab = new SavedPrefab {
+            SavedPrefab savedPrefab = new SavedPrefab
+            {
                 name = name,
                 category = category,
                 sprite = sprite,
@@ -184,13 +209,14 @@ namespace NT.SceneObjects
 
             byte[] exportData = SerializationUtility.SerializeValue(savedPrefab, dataFormat);
 
-            File.WriteAllBytes(exportPath + "/" + prefabID + ".nt" , exportData);
+            File.WriteAllBytes(exportPath + "/" + prefabID + ".nt", exportData);
 
             return true;
         }
 
         [System.Serializable]
-        public struct SavedPrefab{
+        public struct SavedPrefab
+        {
             public int sprite;
             public ObjectCategory category;
             public string name;

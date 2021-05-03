@@ -5,16 +5,16 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 2,
+    "$rlength": 1,
     "$rcontent": [
         {
-            "$k": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7",
+            "$k": "EquipmentAssistantb74a3cd1-78b5-4561-afa6-65ca4c58b70c",
             "$v": {
                 "$id": 2,
-                "$type": "2|SceneGameObject, Assembly-CSharp",
+                "$type": "2|EquipmentAssistantSceneGameObject, Assembly-CSharp",
                 "data": {
                     "$type": "3|SceneGameObjectData, Assembly-CSharp",
-                    "id": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7",
+                    "id": "EquipmentAssistantb74a3cd1-78b5-4561-afa6-65ca4c58b70c",
                     "childs": {
                         "$id": 3,
                         "$type": "4|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
@@ -36,17 +36,17 @@
                         }
                     },
                     "sceneObjectGUID": "5a8120db-0350-4bb2-bef4-61cf568aa0a6",
-                    "graphJSON": null,
+                    "graphJSON": "",
                     "position": {
                         "$type": "7|UnityEngine.Vector3, UnityEngine.CoreModule",
-                        -3.38729858,
+                        -0.137542725,
                         0,
-                        -2.16657257
+                        3.28158
                     },
                     "rotation": {
                         "$type": 7,
                         0,
-                        0,
+                        180,
                         0
                     },
                     "graph": {
@@ -65,8 +65,8 @@
                                     "graph": $iref:5,
                                     "position": {
                                         "$type": "11|UnityEngine.Vector2, UnityEngine.CoreModule",
-                                        82.5,
-                                        -67.6000061
+                                        71.5,
+                                        -247.6
                                     },
                                     "ports": {
                                         "$id": 8,
@@ -98,8 +98,8 @@
                                                                     "graph": $iref:5,
                                                                     "position": {
                                                                         "$type": 11,
-                                                                        -390,
-                                                                        74.3999939
+                                                                        -277.000031,
+                                                                        -244.6
                                                                     },
                                                                     "ports": {
                                                                         "$id": 13,
@@ -147,8 +147,8 @@
                                                                     "error": "",
                                                                     "isExecuting": false,
                                                                     "flowOut": null,
-                                                                    "key": "Hands Cleaned",
-                                                                    "linkedToSceneObject": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7"
+                                                                    "key": "Application Start",
+                                                                    "linkedToSceneObject": "EquipmentAssistantb74a3cd1-78b5-4561-afa6-65ca4c58b70c"
                                                                 },
                                                                 "reroutePoints": {
                                                                     "$id": 18,
@@ -194,7 +194,7 @@
                                     "isExecuting": false,
                                     "flowIn": null,
                                     "flowOut": null,
-                                    "dest": 1
+                                    "dest": 0
                                 },
                                 $iref:12
                             ]
@@ -218,8 +218,8 @@
                                     "graph": $iref:5,
                                     "position": {
                                         "$type": 11,
-                                        -299.5,
-                                        -53.6000061
+                                        -351.5,
+                                        -240.6
                                     },
                                     "ports": {
                                         "$id": 24,
@@ -254,8 +254,8 @@
                                     "error": "",
                                     "isExecuting": false,
                                     "flowOut": null,
-                                    "key": "Application Start",
-                                    "linkedToSceneObject": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7"
+                                    "key": "OnEquipmentPut",
+                                    "linkedToSceneObject": "EquipmentAssistantb74a3cd1-78b5-4561-afa6-65ca4c58b70c"
                                 },
                                 $iref:12
                             ]
@@ -271,220 +271,49 @@
                             "$rcontent": [
                             ]
                         },
-                        "linkedNTVariable": "EquipmentAssistanted40bb0c-7c12-44ad-b722-86431a91efe7",
-                        "assignedSCGO": $iref:2,
-                        "displayName": "EquipmentAssistant"
-                    }
-                },
-                "outlineRoot": {
-                    "$id": 29,
-                    "$type": "21|UnityEngine.GameObject, UnityEngine.CoreModule"
-                }
-            }
-        },
-        {
-            "$k": "Closetf1c8669d-efd9-42f9-a922-dea4c4b6d6b9",
-            "$v": {
-                "$id": 30,
-                "$type": "22|ClosetSceneGameObject, Assembly-CSharp",
-                "data": {
-                    "$type": 3,
-                    "id": "Closetf1c8669d-efd9-42f9-a922-dea4c4b6d6b9",
-                    "childs": {
-                        "$id": 31,
-                        "$type": 4,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "parent": "",
-                    "data": {
-                        "$id": 32,
-                        "$type": "23|NT.Variables.NTVariable`1[[NT.SceneObjects.ClosetData, Assembly-CSharp]], Assembly-CSharp",
-                        "collapsed": true,
-                        "name": null,
-                        "value": {
-                            "$type": "24|NT.SceneObjects.ClosetData, Assembly-CSharp",
-                            "mainDrawer": {
-                                "$type": "25|NT.SceneObjects.Drawer, Assembly-CSharp",
-                                "canBeOpened": false,
-                                "slot00": null,
-                                "slot01": null,
-                                "slot02": null,
-                                "slot03": null,
-                                "slot04": null,
-                                "slot05": null
-                            }
-                        },
-                        "defaultValue": {
-                            "$type": 24,
-                            "mainDrawer": {
-                                "$type": 25,
-                                "canBeOpened": false,
-                                "slot00": null,
-                                "slot01": null,
-                                "slot02": null,
-                                "slot03": null,
-                                "slot04": null,
-                                "slot05": null
-                            }
-                        }
-                    },
-                    "sceneObjectGUID": "3a4e8434-b4fe-4101-ad63-cb5f5051df50",
-                    "graphJSON": "",
-                    "position": {
-                        "$type": 7,
-                        -3.72549438,
-                        0,
-                        4.432735
-                    },
-                    "rotation": {
-                        "$type": 7,
-                        0,
-                        0,
-                        0
-                    },
-                    "graph": {
-                        "$id": 33,
-                        "$type": 8,
-                        "_name": "",
-                        "nodes": {
-                            "$id": 34,
-                            "$type": 9,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "packedNodes": {
-                            "$id": 35,
-                            "$type": 18,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodes": {
-                            "$id": 36,
-                            "$type": 19,
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "callbackNodesDict": {
-                            "$id": 37,
-                            "$type": 20,
-                            "comparer": {
-                                "$id": 38,
-                                "$type": 1
-                            },
-                            "$rlength": 0,
-                            "$rcontent": [
-                            ]
-                        },
-                        "linkedNTVariable": "Closetf1c8669d-efd9-42f9-a922-dea4c4b6d6b9",
+                        "linkedNTVariable": "EquipmentAssistantb74a3cd1-78b5-4561-afa6-65ca4c58b70c",
                         "assignedSCGO": {
-                            "$id": 39,
-                            "$type": 22,
+                            "$id": 29,
+                            "$type": 2,
                             "data": {
                                 "$type": 3,
-                                "id": "Closetf1c8669d-efd9-42f9-a922-dea4c4b6d6b9",
+                                "id": "EquipmentAssistantb74a3cd1-78b5-4561-afa6-65ca4c58b70c",
                                 "childs": {
-                                    "$id": 40,
+                                    "$id": 30,
                                     "$type": 4,
                                     "$rlength": 0,
                                     "$rcontent": [
                                     ]
                                 },
                                 "parent": "",
-                                "data": $iref:32,
-                                "sceneObjectGUID": "3a4e8434-b4fe-4101-ad63-cb5f5051df50",
+                                "data": $iref:4,
+                                "sceneObjectGUID": "5a8120db-0350-4bb2-bef4-61cf568aa0a6",
                                 "graphJSON": "",
                                 "position": {
                                     "$type": 7,
-                                    -3.72549438,
+                                    -0.137542725,
                                     0,
-                                    4.432735
+                                    3.28158
                                 },
                                 "rotation": {
                                     "$type": 7,
                                     0,
-                                    0,
+                                    180,
                                     0
                                 },
-                                "graph": $iref:33
+                                "graph": $iref:5
                             },
                             "outlineRoot": {
-                                "$id": 41,
-                                "$type": 21
-                            },
-                            "drawer": {
-                                "$id": 42,
-                                "$type": 21
-                            },
-                            "slotPivot": {
-                                "$id": 43,
-                                "$type": "26|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
-                                "$rlength": 5,
-                                "$rcontent": [
-                                    {
-                                        "$id": 44,
-                                        "$type": "27|UnityEngine.Transform, UnityEngine.CoreModule"
-                                    },
-                                    {
-                                        "$id": 45,
-                                        "$type": 27
-                                    },
-                                    {
-                                        "$id": 46,
-                                        "$type": 27
-                                    },
-                                    {
-                                        "$id": 47,
-                                        "$type": 27
-                                    },
-                                    {
-                                        "$id": 48,
-                                        "$type": 27
-                                    }
-                                ]
+                                "$id": 31,
+                                "$type": "21|UnityEngine.GameObject, UnityEngine.CoreModule"
                             }
                         },
-                        "displayName": "Closet"
+                        "displayName": "EquipmentAssistant"
                     }
                 },
                 "outlineRoot": {
-                    "$id": 49,
+                    "$id": 32,
                     "$type": 21
-                },
-                "drawer": {
-                    "$id": 50,
-                    "$type": 21
-                },
-                "slotPivot": {
-                    "$id": 51,
-                    "$type": 26,
-                    "$rlength": 5,
-                    "$rcontent": [
-                        {
-                            "$id": 52,
-                            "$type": 27
-                        },
-                        {
-                            "$id": 53,
-                            "$type": 27
-                        },
-                        {
-                            "$id": 54,
-                            "$type": 27
-                        },
-                        {
-                            "$id": 55,
-                            "$type": 27
-                        },
-                        {
-                            "$id": 56,
-                            "$type": 27
-                        }
-                    ]
                 }
             }
         }
