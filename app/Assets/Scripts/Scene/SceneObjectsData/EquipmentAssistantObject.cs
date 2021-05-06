@@ -8,7 +8,10 @@ namespace NT.SceneObjects
     [System.Serializable]
     public struct EquipmentAssistantData
     {
-
+        public bool userInRange;
+        public bool userInPosition;
+        public bool gownCorrectlyPut;
+        public bool glovesCorrectlyPut;
     }
 
     [CreateAssetMenu(fileName = "EquipmentAssistant", menuName = "NT/Scene/EquipmentAssistant")]

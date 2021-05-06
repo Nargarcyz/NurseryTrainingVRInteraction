@@ -95,15 +95,19 @@ namespace NT.Graph
         {
             Debug.Log("<color=magenta> Message recieved!   " + message + " on graph" + name + "</color>");
             Debug.Log(callbackNodesDict);
-            var key = "";
-            if (this.GetType() == typeof(SceneGraph))
-            {
-                key = message;
-            }
-            else if (this.GetType() == typeof(SceneObjectGraph))
+
+            // FIX FOR CALLBACKS ON SCENEGAMEOBJECTS NOT PROPERLY TRIGGERING
+            var key = message;
+            // if (this.GetType() == typeof(SceneGraph))
+            // {
+            //     key = message;
+            // }
+            // else 
+            if (this.GetType() == typeof(SceneObjectGraph))
             {
                 key = ((SceneObjectGraph)this).linkedNTVariable + message;
             }
+            // FIX FOR CALLBACKS ON SCENEGAMEOBJECTS NOT PROPERLY TRIGGERING
             if (!string.IsNullOrEmpty(key) && callbackNodesDict.ContainsKey(key))
             {
                 List<CallbackNode> nodesToExecute = callbackNodesDict[key];

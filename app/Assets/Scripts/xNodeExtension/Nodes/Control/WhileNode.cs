@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NT.Atributes;
-
+using XNode;
 namespace NT.Nodes.Flow
 {
-    public class WhileNode : FlowNode
+    public class WhileNode : NTNode
     {
         [NTInput] public bool condition;
 
+        [NTInput] public DummyConnection flowIn;
+        [NTOutput] public DummyConnection loopBody;
+        [NTOutput] public DummyConnection flowOut;
 
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
         {
@@ -16,8 +19,21 @@ namespace NT.Nodes.Flow
             while (cond)
             {
                 yield return null;
-                // Debug.Log($"Condition: {cond}");
                 cond = GetInputValue<bool>(nameof(this.condition), this.condition);
+                Debug.Log($"Condition: {cond}");
+                if (cond)
+                {
+                    string portName = nameof(loopBody);
+                    NTNode node = GetNode(portName);
+                    NodePort port = GetPort(portName);
+                    var executeNode = new NodeExecutionContext { node = node, inputPort = port?.Connection, outputPort = port };
+                    executeNode.node.Enter();
+                    yield return new YieldNode(executeNode);
+                    executeNode.node.Exit();
+                }
+
+                // string portName = condition ? nameof(loopBody) : nameof(flowOut);
+
             }
         }
 
