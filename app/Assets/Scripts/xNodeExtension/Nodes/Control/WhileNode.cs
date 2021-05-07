@@ -44,7 +44,11 @@ namespace NT.Nodes.Flow
 
         public override NodeExecutionContext NextNode(NodeExecutionContext context)
         {
-            return base.NextNode(context);
+            NTNode node = GetNode(nameof(flowOut));
+            NodePort port = GetPort(nameof(flowOut));
+
+            return new NodeExecutionContext { node = node, inputPort = port?.Connection, outputPort = port };
+            // return base.NextNode(context);
         }
     }
 }
