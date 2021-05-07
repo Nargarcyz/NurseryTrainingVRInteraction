@@ -4,17 +4,20 @@ using NT.Atributes;
 using NT.SceneObjects;
 using TMPro;
 
-namespace NT.Nodes.Display {
-    
-    public class DisplayMessage : FlowNode {
+namespace NT.Nodes.Display
+{
+
+    public class DisplayMessage : FlowNode
+    {
 
         [NTInput] public string messageText;
 
         [NTInput] public SceneGameObjectReference objectPosition;
         //[Input(ShowBackingValue.Never, ConnectionType.Override)] public SceneGameObjectReference objectPosition;
-        
 
-        public object GetValue() {
+
+        public object GetValue()
+        {
             return null;
         }
 
@@ -55,7 +58,7 @@ namespace NT.Nodes.Display {
                     parentMessageGameObject.transform.Translate(new Vector3(1, 1, 0));
                 }
 
-                // Rotación de seguimiento alrededor del objeto de posición??
+                // Rotaciï¿½n de seguimiento alrededor del objeto de posiciï¿½n??
             }
 
             yield return null;
@@ -66,7 +69,8 @@ namespace NT.Nodes.Display {
             return g.transform.parent.gameObject;
         }
 
-        public override string GetDisplayName(){
+        public override string GetDisplayName()
+        {
             return "Display Message";
         }
     }
