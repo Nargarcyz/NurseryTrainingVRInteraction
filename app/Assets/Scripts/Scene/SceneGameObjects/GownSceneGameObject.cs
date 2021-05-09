@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 using VRTK.Controllables.ArtificialBased;
-public class GownScript : MonoBehaviour
+using NT;
+public class GownSceneGameObject : SceneGameObject
 {
 
     private VRTK_InteractableObject handle1;
@@ -14,11 +15,6 @@ public class GownScript : MonoBehaviour
     {
         handle1 = transform.Find("Handle1").GetComponent<VRTK_InteractableObject>();
         handle2 = transform.Find("Handle2").GetComponent<VRTK_InteractableObject>();
-        // handle1.isGrabbable = false;
-        // handle2.isGrabbable = false;
-        // handle1.enabled = false;
-        // handle2.enabled = false;
-
     }
     private GameObject OtherController(GameObject controller)
     {
@@ -33,25 +29,7 @@ public class GownScript : MonoBehaviour
         }
         else return null;
     }
-    private void SetHandlesActive(bool value)
-    {
-        // handle1.isGrabbable = value;
-        // handle2.isGrabbable = value;
-        // handle1.enabled = value;
-        // handle2.enabled = value;
-        if (value)
-        {
-            // handle1.ignoreCollisionsWith = new GameObject[] { linkedObject.GetGrabbingObject() };
-            // handle1.onlyInteractWith = new GameObject[] { OtherController(linkedObject.GetGrabbingObject()) };
-        }
-        else
-        {
-            // handle1.ignoreCollisionsWith = new GameObject[] { };
-            // handle1.onlyInteractWith = new GameObject[] { };
-        }
 
-
-    }
 
     protected virtual void OnEnable()
     {
@@ -60,8 +38,8 @@ public class GownScript : MonoBehaviour
         if (linkedObject != null)
         {
             linkedObject.InteractableObjectUsed += InteractableObjectUsed;
-            linkedObject.InteractableObjectUngrabbed += (object sender, InteractableObjectEventArgs e) => { SetHandlesActive(false); };
-            linkedObject.InteractableObjectGrabbed += (object sender, InteractableObjectEventArgs e) => { SetHandlesActive(true); };
+            // linkedObject.InteractableObjectUngrabbed += (object sender, InteractableObjectEventArgs e) => { SetHandlesActive(false); };
+            // linkedObject.InteractableObjectGrabbed += (object sender, InteractableObjectEventArgs e) => { SetHandlesActive(true); };
             // }
         }
         // Update is called once per frame
@@ -75,6 +53,7 @@ public class GownScript : MonoBehaviour
         if (open)
         {
             GetComponent<Animator>().Play("Open");
+
         }
         else
         {
@@ -84,6 +63,24 @@ public class GownScript : MonoBehaviour
     void Update()
     {
 
+
+    }
+
+    public void GownStateChange(int state)
+    {
+        switch (state)
+        {
+            case 1:
+                MessageSystem.SendMessage("Gown Open");
+                break;
+            case 0:
+                MessageSystem.SendMessage("Gown Closed");
+                break;
+            default:
+                break;
+
+
+        }
     }
 }
 

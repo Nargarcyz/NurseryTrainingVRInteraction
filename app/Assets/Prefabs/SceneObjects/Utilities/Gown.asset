@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036413a0b4178ea42bf4ce3aa00b2e03, type: 3}
+  m_Name: Gown
+  m_EditorClassIdentifier: 
+  displayName: 
+  sceneGameObject:
+    canBePlacedOver:
+      serializedVersion: 2
+      m_Bits: 512
+    model: {fileID: 261966560165260096, guid: cdaa3963b2eff3344a3ed14071607862, type: 3}
+  sceneObjectUI:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    icon: {fileID: 21300000, guid: 2b524d5d97f53ed41a1bd7323175f071, type: 3}
+    category: 3
+  GUID: 0cdf2682-1330-46b5-9e08-5b11976c0351
