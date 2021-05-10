@@ -187,11 +187,13 @@ namespace OVRTouchSample
 
         private void UpdateAnimStates()
         {
-            bool grabbing = m_grabber.grabbedObject != null;
+            // bool grabbing = m_grabber.grabbedObject != null;
+            bool grabbing = vrtk_grabber.GetGrabbedObject() != null;
             HandPose grabPose = m_defaultGrabPose;
             if (grabbing)
             {
-                HandPose customPose = m_grabber.grabbedObject.GetComponent<HandPose>();
+                // HandPose customPose = m_grabber.grabbedObject.GetComponent<HandPose>();
+                HandPose customPose = vrtk_grabber.GetGrabbedObject().GetComponent<HandPose>();
                 if (customPose != null) grabPose = customPose;
             }
             // Pose

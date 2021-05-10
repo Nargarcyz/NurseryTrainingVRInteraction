@@ -4,15 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ExcludeTeleport
-  - Tool
-  - Cover
-  - Runtime
-  - SnapCube
-  - Saucers
   - Leg
+  - SnapCube
+  - Arm
+  - SnapCylinder
+  - Saucers
+  - ExcludeTeleport
   - Torso
   - Head
+  - Runtime
+  - Cover
+  - Tool
+  - projectile
+  - FxTemporaire
+  - TeleportIgnore
   layers:
   - Default
   - TransparentFX
@@ -22,8 +27,12 @@ TagManager:
   - UI
   - 
   - 
-  - ParticleCollision
-  - StaticScenery
+  - PostProcessing
+  - Floor
+  - Furniture
+  - Items
+  - Walls
+  - Container
   - 
   - 
   - 
@@ -41,11 +50,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Placing
   m_SortingLayers:
   - name: Default
     uniqueID: 0

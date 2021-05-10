@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4437909072868505853}
   - component: {fileID: 4643181305096906070}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 8105793770081520066}
   - component: {fileID: 1640251128722731059}
   - component: {fileID: 1957514844819103292}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MicroscopeMonitor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,10 +136,6 @@ PrefabInstance:
       value: Screen_Microscope
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bb0ca1fe66772f4d821e4c769f01b89, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 3bb0ca1fe66772f4d821e4c769f01b89, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -152,10 +148,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bb0ca1fe66772f4d821e4c769f01b89, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 3bb0ca1fe66772f4d821e4c769f01b89, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -166,6 +158,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 3bb0ca1fe66772f4d821e4c769f01b89, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bb0ca1fe66772f4d821e4c769f01b89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3bb0ca1fe66772f4d821e4c769f01b89, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bb0ca1fe66772f4d821e4c769f01b89, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
