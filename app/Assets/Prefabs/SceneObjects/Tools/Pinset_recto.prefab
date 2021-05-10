@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8326830875189137059}
   - component: {fileID: 7532270873495471131}
   - component: {fileID: 2591542330496078479}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pinset_recto
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precisionGrab: 1
+  precisionGrab: 0
   rightSnapHandle: {fileID: 0}
   leftSnapHandle: {fileID: 0}
   throwVelocityWithAttachDistance: 0
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 6987682772060568830}
   - component: {fileID: 6987682772060568825}
   - component: {fileID: 8446600983077060791}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pinset_Cartrect
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -204,7 +204,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

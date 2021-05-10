@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359219061}
   - component: {fileID: 359219060}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 6739575570627130406}
   - component: {fileID: 3304456670925651937}
   - component: {fileID: 9013762898497673817}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pinset_Cartrect
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -100,12 +100,11 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e1e8df1ca909f2c4fa50d159f272726a, type: 2}
+  - {fileID: 2100000, guid: b8f328efbf05bb847aeaf8862383842e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -168,7 +167,7 @@ GameObject:
   - component: {fileID: 7165429540817732585}
   - component: {fileID: 6919906156586803929}
   - component: {fileID: 1203170531854932877}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Kocher_Mosquito
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -211,11 +210,10 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: b8f328efbf05bb847aeaf8862383842e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -279,7 +277,7 @@ GameObject:
   - component: {fileID: 971471629838414845}
   - component: {fileID: 5157442623973672050}
   - component: {fileID: 7504816600858270861}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Scissors
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -424,7 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1991040894496604055}
   - component: {fileID: 1991040894496604052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +509,7 @@ GameObject:
   - component: {fileID: 1991040896282038437}
   - component: {fileID: 1991040896282038436}
   - component: {fileID: 1178554166101548196}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SteelTableWithTools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1991040896470773004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +639,7 @@ GameObject:
   - component: {fileID: 8725521102768580125}
   - component: {fileID: 5299405671630924715}
   - component: {fileID: 9092634943284798189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ScreenshotCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +734,7 @@ GameObject:
   - component: {fileID: 2297015030418691079}
   - component: {fileID: 3295331320232389004}
   - component: {fileID: 5605284828439804808}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mosquito_Kocher
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -885,7 +883,7 @@ GameObject:
   - component: {fileID: 6201523395264885048}
   - component: {fileID: 2434022740232490313}
   - component: {fileID: 1289529631517030187}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pinset_recto
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -1033,7 +1031,7 @@ GameObject:
   - component: {fileID: 4446454164646459196}
   - component: {fileID: 6687458563736705756}
   - component: {fileID: 6327857756979096523}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Scissors
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -1076,11 +1074,10 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 202d7cfff950a63479b2693fa3712d81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1143,19 +1140,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1170,10 +1163,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -1184,6 +1173,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0dc649c86b66de40a1ed8f17a031429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

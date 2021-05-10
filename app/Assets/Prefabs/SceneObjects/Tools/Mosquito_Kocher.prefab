@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4811330874749068576}
   - component: {fileID: 4811330874749068577}
   - component: {fileID: 5102930942533348795}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Kocher_Mosquito
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -55,7 +55,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -107,7 +106,7 @@ GameObject:
   - component: {fileID: 193659590406818682}
   - component: {fileID: 4372650705656973815}
   - component: {fileID: 5123952768100346983}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mosquito_Kocher
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -175,7 +174,7 @@ MonoBehaviour:
       assignedSCGO: {fileID: 0}
       displayName: 
   outlineRoot: {fileID: 0}
-  toolType: 0
+  toolType: 9
   grabObject: {fileID: 0}
 --- !u!114 &193659590406818682
 MonoBehaviour:
@@ -193,7 +192,7 @@ MonoBehaviour:
   allowedNearTouchControllers: 0
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 0
+  isGrabbable: 1
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1

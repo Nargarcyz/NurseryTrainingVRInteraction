@@ -7,15 +7,16 @@ using NT;
 public class GownSceneGameObject : SceneGameObject
 {
 
-    private VRTK_InteractableObject handle1;
-    private VRTK_InteractableObject handle2;
+
     private VRTK_InteractableObject linkedObject;
     // Start is called before the first frame update
     void Start()
     {
-        handle1 = transform.Find("Handle1").GetComponent<VRTK_InteractableObject>();
-        handle2 = transform.Find("Handle2").GetComponent<VRTK_InteractableObject>();
+
+
     }
+
+
     private GameObject OtherController(GameObject controller)
     {
         VRTK_SDKSetup setup = VRTK_SDKManager.GetLoadedSDKSetup();

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6399135863922438033}
   - component: {fileID: 5894806596670301136}
   - component: {fileID: 3759400833408586128}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Forceps_Hoskin
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ MonoBehaviour:
       assignedSCGO: {fileID: 0}
       displayName: 
   outlineRoot: {fileID: 0}
-  toolType: 0
+  toolType: 6
   grabObject: {fileID: 0}
 --- !u!114 &6399135863922438033
 MonoBehaviour:
@@ -100,7 +100,7 @@ MonoBehaviour:
   allowedNearTouchControllers: 0
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 0
+  isGrabbable: 1
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 7979191621065435494}
   - component: {fileID: 7979191621065435545}
   - component: {fileID: 7940272503339191024}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hoskin_22
   m_TagString: Tool
   m_Icon: {fileID: 0}
@@ -204,7 +204,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
