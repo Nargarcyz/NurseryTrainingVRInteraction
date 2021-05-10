@@ -9,6 +9,10 @@ TagManager:
   - Cover
   - Runtime
   - SnapCube
+  - Saucers
+  - Leg
+  - Torso
+  - Head
   layers:
   - Default
   - TransparentFX
