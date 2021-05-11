@@ -3,7 +3,8 @@ using UnityEngine;
 using NT.Atributes;
 using NT.SceneObjects;
 using TMPro;
-
+using UnityEngine.Animations;
+using VRTK;
 namespace NT.Nodes.Display
 {
 
@@ -23,43 +24,63 @@ namespace NT.Nodes.Display
 
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
         {
-            GameObject messageGameObject = GameObject.Find("ShowMessage/Bocadillo/MessageText");
-            GameObject parentMessageGameObject = getGameObjectParent(getGameObjectParent(messageGameObject));
-
-            // Check if message is empty
             string message = GetInputValue<string>(nameof(this.messageText), this.messageText);
             bool visible = !string.IsNullOrEmpty(message);
-            // Modify visibility by changing scale
-            Vector3 scale = visible ? Vector3.one : Vector3.zero;
-            parentMessageGameObject.transform.localScale = scale;
-
             if (visible)
             {
-                TextMeshPro textComponent = messageGameObject.GetComponent<TextMeshPro>();
-                textComponent.text = message;
-                // Place message outside the object's bounding box, towards the scene center (to avoid walls collision)
-                GameObject positionGameObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null).gameObject;
-                BoxCollider collider = positionGameObject.gameObject.GetComponentInChildren<BoxCollider>();
-
-                if (collider != null)
+                GameObject messageObj = null;
+                var previousMessage = GameObject.Find("ShowMessage");
+                if (previousMessage)
                 {
-                    Vector3 colliderCenter = collider.transform.TransformPoint(collider.center);
-                    colliderCenter.y = 0;
-                    parentMessageGameObject.transform.position = colliderCenter;
-
-                    Vector3 offset = collider.size;
-                    offset.x += 0.5f;  // Message size fixed offset
-                    offset.z = 0;
-                    parentMessageGameObject.transform.Translate(offset);
+                    messageObj = previousMessage;
                 }
                 else
                 {
-                    parentMessageGameObject.transform.position = positionGameObject.transform.position;
-                    parentMessageGameObject.transform.Translate(new Vector3(1, 1, 0));
+                    messageObj = GameObject.Instantiate(Resources.Load("ShowMessage")) as GameObject;
                 }
+                var messageScript = messageObj.GetComponent<MessageObjectTracking>();
+                messageScript.trackedObject = VRTK_SDKManager.GetLoadedSDKSetup().actualHeadset;
+                messageScript.parentObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null).gameObject;
 
-                // Rotaci�n de seguimiento alrededor del objeto de posici�n??
+
             }
+
+            // GameObject messageGameObject = GameObject.Find("ShowMessage/Bocadillo/MessageText");
+            // GameObject parentMessageGameObject = getGameObjectParent(getGameObjectParent(messageGameObject));
+
+            // Check if message is empty
+
+            // Modify visibility by changing scale
+            // Vector3 scale = visible ? Vector3.one : Vector3.zero;
+            // parentMessageGameObject.transform.localScale = scale;
+
+            // if (visible)
+            // {
+            //     TextMeshPro textComponent = messageGameObject.GetComponent<TextMeshPro>();
+            //     textComponent.text = message;
+            //     // Place message outside the object's bounding box, towards the scene center (to avoid walls collision)
+            //     GameObject positionGameObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null).gameObject;
+            //     BoxCollider collider = positionGameObject.gameObject.GetComponentInChildren<BoxCollider>();
+
+            //     if (collider != null)
+            //     {
+            //         Vector3 colliderCenter = collider.transform.TransformPoint(collider.center);
+            //         colliderCenter.y = 0;
+            //         parentMessageGameObject.transform.position = colliderCenter;
+
+            //         Vector3 offset = collider.size;
+            //         offset.x += 0.5f;  // Message size fixed offset
+            //         offset.z = 0;
+            //         parentMessageGameObject.transform.Translate(offset);
+            //     }
+            //     else
+            //     {
+            //         parentMessageGameObject.transform.position = positionGameObject.transform.position;
+            //         parentMessageGameObject.transform.Translate(new Vector3(1, 1, 0));
+            //     }
+
+            //     // Rotaci�n de seguimiento alrededor del objeto de posici�n??
+            // }
 
             yield return null;
         }

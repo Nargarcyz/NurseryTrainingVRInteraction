@@ -10,6 +10,9 @@ public class GlovesSceneGameObjects : SceneGameObject
     public Color glovesColor;
     public VRTK_InteractableObject linkedObject;
 
+    public GameObject rightGlove;
+    public GameObject leftGlove;
+
     protected virtual void OnEnable()
     {
         linkedObject = (linkedObject == null ? GetComponent<VRTK_InteractableObject>() : linkedObject);
@@ -18,6 +21,8 @@ public class GlovesSceneGameObjects : SceneGameObject
         {
             linkedObject.InteractableObjectUsed += InteractableObjectUsed;
         }
+
+        // rightGlove = transform.Find("")
     }
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)

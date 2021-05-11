@@ -55,7 +55,16 @@ public class HandInteractionObjectScript : MonoBehaviour
         Debug.Log("<color=red>Other Hand = " + otherHand.name + "</color>");
 
         // MessageSystem.SendMessage(otherHand.name + " soap");
-        MessageSystem.SendMessage(otherHand.name + " " + messageAction);
+        var name = "";
+        if (otherHand == setup.actualLeftController)
+        {
+            name = "Left Hand";
+        }
+        else if (otherHand == setup.actualRightController)
+        {
+            name = "Right Hand";
+        }
+        MessageSystem.SendMessage(name + " " + messageAction);
         // if (other.gameObject == setup.actualRightController)
         // {
 

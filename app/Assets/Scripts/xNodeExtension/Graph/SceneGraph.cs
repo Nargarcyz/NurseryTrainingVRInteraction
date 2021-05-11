@@ -19,7 +19,8 @@ namespace NT.Graph
 
         public override List<string> GetCallbacks()
         {
-            return new List<string>() { "Application Start", "Application End", "Exercise Started", "Exercise End", "Hands Cleaned", "Pause", "Resume" };
+            return new List<string>() { "Application Start", "Application End", "Exercise Started", "Exercise End", "Pause", "Resume" };
+            // return new List<string>() { "Application Start", "Application End", "Exercise Started", "Exercise End", "Hands Cleaned", "Pause", "Resume" };
         }
 
     }

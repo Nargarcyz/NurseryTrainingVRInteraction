@@ -25,9 +25,19 @@ public class HandManager : MonoBehaviour
             this.handObject = handReference;
             this.state = HandState.Dirty;
             this.wetness = 0;
+            if (handReference == VRTK_SDKManager.GetLoadedSDKSetup().actualLeftController)
+            {
+                this.name = "Left Hand";
+            }
+            else if (handReference == VRTK_SDKManager.GetLoadedSDKSetup().actualRightController)
+            {
+                this.name = "Right Hand";
+            }
+
         }
 
-        public string name { get { return handObject.name; } }
+        private string _name;
+        public string name { get { return _name; } set { this._name = value; } }
         private float _wetness;
         public float wetness { get { return _wetness; } set { this._wetness = Mathf.Clamp(value, 0, 1); } }
         public GameObject handObject;
