@@ -22,6 +22,7 @@ public class GownSceneGameObject : SceneGameObject
         {
             var rigidbody = GetComponent<Rigidbody>();
             rigidbody.useGravity = true;
+            rigidbody.isKinematic = false;
         }
     }
     void Start()
@@ -77,7 +78,7 @@ public class GownSceneGameObject : SceneGameObject
                 GetComponent<Animator>().Play("Close");
             }
         }
-        else if (linkedObject && linkedObject.IsGrabbed())
+        else if (linkedObject && linkedObject.IsGrabbed() && open)
         {
             MessageSystem.SendMessage("Gown Used");
             DestroyImmediate(this.gameObject);

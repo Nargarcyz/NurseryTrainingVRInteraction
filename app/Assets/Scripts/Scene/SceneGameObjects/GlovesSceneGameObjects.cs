@@ -30,6 +30,7 @@ public class GlovesSceneGameObjects : SceneGameObject
             foreach (var r in rigidbodies)
             {
                 r.useGravity = true;
+                r.isKinematic = false;
             }
         }
     }

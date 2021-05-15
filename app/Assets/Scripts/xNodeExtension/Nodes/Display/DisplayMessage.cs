@@ -33,13 +33,9 @@ namespace NT.Nodes.Display
                 var previousMessage = GameObject.Find("NewShowMessage(Clone)");
                 if (previousMessage)
                 {
-                    messageObj = previousMessage;
+                    GameObject.DestroyImmediate(previousMessage.gameObject);
                 }
-                else
-                {
-                    messageObj = GameObject.Instantiate(Resources.Load("NewShowMessage")) as GameObject;
-                    // messageObj = GameObject.Instantiate(Resources.Load("ShowMessage")) as GameObject;
-                }
+                messageObj = GameObject.Instantiate(Resources.Load("NewShowMessage")) as GameObject;
 
                 TextMeshProUGUI text = messageObj.GetComponentInChildren<TextMeshProUGUI>();
                 text.text = message;
