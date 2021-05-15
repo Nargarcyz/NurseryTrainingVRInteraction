@@ -29,15 +29,20 @@ namespace NT.Nodes.Display
             if (visible)
             {
                 GameObject messageObj = null;
-                var previousMessage = GameObject.Find("ShowMessage");
+                // var previousMessage = GameObject.Find("ShowMessage(Clone)");
+                var previousMessage = GameObject.Find("NewShowMessage(Clone)");
                 if (previousMessage)
                 {
                     messageObj = previousMessage;
                 }
                 else
                 {
-                    messageObj = GameObject.Instantiate(Resources.Load("ShowMessage")) as GameObject;
+                    messageObj = GameObject.Instantiate(Resources.Load("NewShowMessage")) as GameObject;
+                    // messageObj = GameObject.Instantiate(Resources.Load("ShowMessage")) as GameObject;
                 }
+
+                TextMeshProUGUI text = messageObj.GetComponentInChildren<TextMeshProUGUI>();
+                text.text = message;
                 var messageScript = messageObj.GetComponent<MessageObjectTracking>();
                 messageScript.trackedObject = VRTK_SDKManager.GetLoadedSDKSetup().actualHeadset;
                 messageScript.parentObject = GetInputValue<SceneGameObject>(nameof(objectPosition), null).gameObject;
