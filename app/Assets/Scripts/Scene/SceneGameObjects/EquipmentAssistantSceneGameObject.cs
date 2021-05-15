@@ -9,17 +9,20 @@ public class EquipmentAssistantSceneGameObject : SceneGameObject
 
     private bool userInRange = false;
     private EquipmentAssistantData variables;
-    void Start()
+
+    private void OnEnable()
     {
-        variables = (EquipmentAssistantData)data.data.GetValue();
+        MessageSystem.onMessageSent += ReceiveMessage;
     }
-    // private void OnDestroy()
-    // {
-    //     MessageSystem.onMessageSent -= RecieveMessage;
-    // }
+    private void OnDestroy()
+    {
+        MessageSystem.onMessageSent -= ReceiveMessage;
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
+
         var setup = VRTK_SDKManager.GetLoadedSDKSetup();
         if (!setup) return;
         var obj = other.gameObject;
@@ -30,8 +33,9 @@ public class EquipmentAssistantSceneGameObject : SceneGameObject
         // }
         if (obj.transform.IsChildOf(setup.actualHeadset.transform))
         {
-
+            variables = (EquipmentAssistantData)data.data.GetValue();
             variables.userInRange = true;
+            MessageSystem.SendMessage("UserInRange");
             data.data.SetValue(variables);
             // Debug.Log("<color=yellow>YES</color>");
 
@@ -42,6 +46,39 @@ public class EquipmentAssistantSceneGameObject : SceneGameObject
         }
     }
 
+    private void ReceiveMessage(string msg)
+    {
+
+
+        if (msg.Contains("Left Hand glove on"))
+        {
+            variables.leftGloveOn = true;
+            if (variables.gownOn && variables.rightGloveOn)
+            {
+                variables.glovesCorrectlyPut = true;
+            }
+            data.data.SetValue(variables);
+        }
+        else if (msg.Contains("Right Hand glove on"))
+        {
+            variables.rightGloveOn = true;
+            if (variables.gownOn && variables.leftGloveOn)
+            {
+                variables.glovesCorrectlyPut = true;
+            }
+            data.data.SetValue(variables);
+        }
+        else if (msg.Contains("Gown Used"))
+        {
+            // MessageSystem.SendMessage("GownUsed");
+            variables.gownPrepared = true;
+            // if (!(variables.rightGloveOn || variables.leftGloveOn))
+            // {
+            //     variables.gownCorrectlyPut = true;
+            // }
+            data.data.SetValue(variables);
+        }
+    }
     private void Update()
     {
         if (variables.userInRange)
@@ -70,5 +107,13 @@ public class EquipmentAssistantSceneGameObject : SceneGameObject
 
 
         }
+        if (variables.userInPosition && variables.gownOn)
+        {
+            if (!(variables.rightGloveOn || variables.leftGloveOn))
+            {
+                variables.gownCorrectlyPut = true;
+            }
+        }
+
     }
 }

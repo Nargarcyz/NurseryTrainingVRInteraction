@@ -10,9 +10,23 @@ public class GownSceneGameObject : SceneGameObject
 
     private VRTK_InteractableObject linkedObject;
     // Start is called before the first frame update
+
+    private void OnDestroy()
+    {
+        MessageSystem.onMessageSent -= ReceiveMessage;
+    }
+
+    private void ReceiveMessage(string msg)
+    {
+        if (msg.Contains("Exercise Started"))
+        {
+            var rigidbody = GetComponent<Rigidbody>();
+            rigidbody.useGravity = true;
+        }
+    }
     void Start()
     {
-
+        MessageSystem.onMessageSent += ReceiveMessage;
 
     }
 
@@ -51,14 +65,22 @@ public class GownSceneGameObject : SceneGameObject
     {
         open = !open;
         Debug.Log(open);
-        if (open)
+        if (linkedObject != null && !linkedObject.IsGrabbed())
         {
-            GetComponent<Animator>().Play("Open");
+            if (open)
+            {
+                GetComponent<Animator>().Play("Open");
 
+            }
+            else
+            {
+                GetComponent<Animator>().Play("Close");
+            }
         }
-        else
+        else if (linkedObject && linkedObject.IsGrabbed())
         {
-            GetComponent<Animator>().Play("Close");
+            MessageSystem.SendMessage("Gown Used");
+            DestroyImmediate(this.gameObject);
         }
     }
     void Update()

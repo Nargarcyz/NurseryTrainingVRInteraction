@@ -1,0 +1,807 @@
+{
+    "$id": 0,
+    "$type": "0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[SceneGameObject, Assembly-CSharp]], mscorlib",
+    "comparer": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
+    },
+    "$rlength": 4,
+    "$rcontent": [
+        {
+            "$k": "EquipmentAssistant82b8c2d5-9671-4d7c-85d2-95073cec5f65",
+            "$v": {
+                "$id": 2,
+                "$type": "2|EquipmentAssistantSceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": "3|SceneGameObjectData, Assembly-CSharp",
+                    "id": "EquipmentAssistant82b8c2d5-9671-4d7c-85d2-95073cec5f65",
+                    "childs": {
+                        "$id": 3,
+                        "$type": "4|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 4,
+                        "$type": "5|NT.Variables.NTVariable`1[[NT.SceneObjects.EquipmentAssistantData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "6|NT.SceneObjects.EquipmentAssistantData, Assembly-CSharp",
+                            "userInRange": false,
+                            "userInPosition": false,
+                            "gownPrepared": false,
+                            "gownOn": false,
+                            "gownCorrectlyPut": false,
+                            "glovesCorrectlyPut": false,
+                            "rightGloveOn": false,
+                            "leftGloveOn": false
+                        },
+                        "defaultValue": {
+                            "$type": 6,
+                            "userInRange": false,
+                            "userInPosition": false,
+                            "gownPrepared": false,
+                            "gownOn": false,
+                            "gownCorrectlyPut": false,
+                            "glovesCorrectlyPut": false,
+                            "rightGloveOn": false,
+                            "leftGloveOn": false
+                        }
+                    },
+                    "sceneObjectGUID": "5a8120db-0350-4bb2-bef4-61cf568aa0a6",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": "7|UnityEngine.Vector3, UnityEngine.CoreModule",
+                        -0.0818481445,
+                        0,
+                        3.973449
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        180,
+                        0
+                    },
+                    "graph": {
+                        "$id": 5,
+                        "$type": "8|NT.Graph.SceneObjectGraph, Assembly-CSharp",
+                        "_name": "",
+                        "nodes": {
+                            "$id": 6,
+                            "$type": "9|System.Collections.Generic.List`1[[XNode.Node, Assembly-CSharp]], mscorlib",
+                            "$rlength": 4,
+                            "$rcontent": [
+                                {
+                                    "$id": 7,
+                                    "$type": "10|NT.Nodes.Messages.CallbackNode, Assembly-CSharp",
+                                    "_name": "Message Received",
+                                    "graph": $iref:5,
+                                    "position": {
+                                        "$type": "11|UnityEngine.Vector2, UnityEngine.CoreModule",
+                                        -301.500122,
+                                        -237.6
+                                    },
+                                    "ports": {
+                                        "$id": 8,
+                                        "$type": "12|XNode.Node+NodePortDictionary, Assembly-CSharp",
+                                        "comparer": $iref:1,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$k": "flowOut",
+                                                "$v": {
+                                                    "$id": 9,
+                                                    "$type": "13|XNode.NodePort, Assembly-CSharp",
+                                                    "_fieldName": "flowOut",
+                                                    "_node": $iref:7,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 10,
+                                                        "$type": "14|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, Assembly-CSharp]], mscorlib",
+                                                        "$rlength": 1,
+                                                        "$rcontent": [
+                                                            {
+                                                                "$id": 11,
+                                                                "$type": "15|XNode.NodePort+PortConnection, Assembly-CSharp",
+                                                                "fieldName": "flowIn",
+                                                                "node": {
+                                                                    "$id": 12,
+                                                                    "$type": "16|NT.Nodes.Display.DisplayMessage, Assembly-CSharp",
+                                                                    "_name": "Display Message",
+                                                                    "graph": $iref:5,
+                                                                    "position": {
+                                                                        "$type": 11,
+                                                                        -19.5001221,
+                                                                        -318.6
+                                                                    },
+                                                                    "ports": {
+                                                                        "$id": 13,
+                                                                        "$type": 12,
+                                                                        "comparer": $iref:1,
+                                                                        "$rlength": 4,
+                                                                        "$rcontent": [
+                                                                            {
+                                                                                "$k": "messageText",
+                                                                                "$v": {
+                                                                                    "$id": 14,
+                                                                                    "$type": 13,
+                                                                                    "_fieldName": "messageText",
+                                                                                    "_node": $iref:12,
+                                                                                    "_typeQualifiedName": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                                                                    "connections": {
+                                                                                        "$id": 15,
+                                                                                        "$type": 14,
+                                                                                        "$rlength": 0,
+                                                                                        "$rcontent": [
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 0,
+                                                                                    "_connectionType": 1,
+                                                                                    "_typeConstraint": 2,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "$k": "objectPosition",
+                                                                                "$v": {
+                                                                                    "$id": 16,
+                                                                                    "$type": 13,
+                                                                                    "_fieldName": "objectPosition",
+                                                                                    "_node": $iref:12,
+                                                                                    "_typeQualifiedName": "NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 17,
+                                                                                        "$type": 14,
+                                                                                        "$rlength": 1,
+                                                                                        "$rcontent": [
+                                                                                            {
+                                                                                                "$id": 18,
+                                                                                                "$type": 15,
+                                                                                                "fieldName": "value",
+                                                                                                "node": {
+                                                                                                    "$id": 19,
+                                                                                                    "$type": "17|NT.Nodes.Variables.GetNTVariableNode, Assembly-CSharp",
+                                                                                                    "_name": "GET - (EquipmentAssistant)",
+                                                                                                    "graph": $iref:5,
+                                                                                                    "position": {
+                                                                                                        "$type": 11,
+                                                                                                        -291.500122,
+                                                                                                        -326.6
+                                                                                                    },
+                                                                                                    "ports": {
+                                                                                                        "$id": 20,
+                                                                                                        "$type": 12,
+                                                                                                        "comparer": $iref:1,
+                                                                                                        "$rlength": 1,
+                                                                                                        "$rcontent": [
+                                                                                                            {
+                                                                                                                "$k": "value",
+                                                                                                                "$v": {
+                                                                                                                    "$id": 21,
+                                                                                                                    "$type": 13,
+                                                                                                                    "_fieldName": "value",
+                                                                                                                    "_node": $iref:19,
+                                                                                                                    "_typeQualifiedName": "SceneGameObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                                    "connections": {
+                                                                                                                        "$id": 22,
+                                                                                                                        "$type": 14,
+                                                                                                                        "$rlength": 1,
+                                                                                                                        "$rcontent": [
+                                                                                                                            {
+                                                                                                                                "$id": 23,
+                                                                                                                                "$type": 15,
+                                                                                                                                "fieldName": "objectPosition",
+                                                                                                                                "node": $iref:12,
+                                                                                                                                "reroutePoints": {
+                                                                                                                                    "$id": 24,
+                                                                                                                                    "$type": "18|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]], mscorlib",
+                                                                                                                                    "$rlength": 0,
+                                                                                                                                    "$rcontent": [
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    "_direction": 1,
+                                                                                                                    "_connectionType": 1,
+                                                                                                                    "_typeConstraint": 2,
+                                                                                                                    "_dynamic": true
+                                                                                                                }
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "hasError": false,
+                                                                                                    "error": "",
+                                                                                                    "isExecuting": false,
+                                                                                                    "variableType": {
+                                                                                                        "$id": 25,
+                                                                                                        "$type": "19|System.RuntimeType, mscorlib",
+                                                                                                        "SceneGameObject, Assembly-CSharp"
+                                                                                                    },
+                                                                                                    "variablePath": "",
+                                                                                                    "dataType": {
+                                                                                                        "$id": 26,
+                                                                                                        "$type": 19,
+                                                                                                        "System.String, mscorlib"
+                                                                                                    },
+                                                                                                    "dataKey": "EquipmentAssistant82b8c2d5-9671-4d7c-85d2-95073cec5f65"
+                                                                                                },
+                                                                                                "reroutePoints": {
+                                                                                                    "$id": 27,
+                                                                                                    "$type": 18,
+                                                                                                    "$rlength": 0,
+                                                                                                    "$rcontent": [
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 0,
+                                                                                    "_connectionType": 1,
+                                                                                    "_typeConstraint": 2,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "$k": "flowIn",
+                                                                                "$v": {
+                                                                                    "$id": 28,
+                                                                                    "$type": 13,
+                                                                                    "_fieldName": "flowIn",
+                                                                                    "_node": $iref:12,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 29,
+                                                                                        "$type": 14,
+                                                                                        "$rlength": 1,
+                                                                                        "$rcontent": [
+                                                                                            {
+                                                                                                "$id": 30,
+                                                                                                "$type": 15,
+                                                                                                "fieldName": "flowOut",
+                                                                                                "node": $iref:7,
+                                                                                                "reroutePoints": {
+                                                                                                    "$id": 31,
+                                                                                                    "$type": 18,
+                                                                                                    "$rlength": 0,
+                                                                                                    "$rcontent": [
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 0,
+                                                                                    "_connectionType": 1,
+                                                                                    "_typeConstraint": 2,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "$k": "flowOut",
+                                                                                "$v": {
+                                                                                    "$id": 32,
+                                                                                    "$type": 13,
+                                                                                    "_fieldName": "flowOut",
+                                                                                    "_node": $iref:12,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 33,
+                                                                                        "$type": 14,
+                                                                                        "$rlength": 0,
+                                                                                        "$rcontent": [
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 1,
+                                                                                    "_connectionType": 0,
+                                                                                    "_typeConstraint": 0,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "hasError": false,
+                                                                    "error": "",
+                                                                    "isExecuting": false,
+                                                                    "flowIn": null,
+                                                                    "flowOut": null,
+                                                                    "messageText": "Ok lets begin! Try to put your gown on first, then face away from me so i can tie it up.",
+                                                                    "objectPosition": null
+                                                                },
+                                                                "reroutePoints": {
+                                                                    "$id": 34,
+                                                                    "$type": 18,
+                                                                    "$rlength": 0,
+                                                                    "$rcontent": [
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_direction": 1,
+                                                    "_connectionType": 0,
+                                                    "_typeConstraint": 0,
+                                                    "_dynamic": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "hasError": false,
+                                    "error": "",
+                                    "isExecuting": false,
+                                    "flowOut": null,
+                                    "key": "UserInRange",
+                                    "linkedToSceneObject": "EquipmentAssistant82b8c2d5-9671-4d7c-85d2-95073cec5f65"
+                                },
+                                $iref:12,
+                                $iref:19,
+                                {
+                                    "$id": 35,
+                                    "$type": 10,
+                                    "_name": "Message Received",
+                                    "graph": $iref:5,
+                                    "position": {
+                                        "$type": 11,
+                                        -268.000122,
+                                        -36.6000061
+                                    },
+                                    "ports": {
+                                        "$id": 36,
+                                        "$type": 12,
+                                        "comparer": $iref:1,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$k": "flowOut",
+                                                "$v": {
+                                                    "$id": 37,
+                                                    "$type": 13,
+                                                    "_fieldName": "flowOut",
+                                                    "_node": $iref:35,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 38,
+                                                        "$type": 14,
+                                                        "$rlength": 0,
+                                                        "$rcontent": [
+                                                        ]
+                                                    },
+                                                    "_direction": 1,
+                                                    "_connectionType": 0,
+                                                    "_typeConstraint": 0,
+                                                    "_dynamic": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "hasError": false,
+                                    "error": "",
+                                    "isExecuting": false,
+                                    "flowOut": null,
+                                    "key": "Gown Used",
+                                    "linkedToSceneObject": "EquipmentAssistant82b8c2d5-9671-4d7c-85d2-95073cec5f65"
+                                }
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 39,
+                            "$type": "20|System.Collections.Generic.List`1[[NT.Graph.NodeGroupGraph, Assembly-CSharp]], mscorlib",
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 40,
+                            "$type": "21|System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib",
+                            "$rlength": 2,
+                            "$rcontent": [
+                                $iref:7,
+                                $iref:35
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 41,
+                            "$type": "22|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib]], mscorlib",
+                            "comparer": {
+                                "$id": 42,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "EquipmentAssistant82b8c2d5-9671-4d7c-85d2-95073cec5f65",
+                        "assignedSCGO": {
+                            "$id": 43,
+                            "$type": 2,
+                            "data": {
+                                "$type": 3,
+                                "id": "EquipmentAssistant82b8c2d5-9671-4d7c-85d2-95073cec5f65",
+                                "childs": {
+                                    "$id": 44,
+                                    "$type": 4,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "parent": "",
+                                "data": $iref:4,
+                                "sceneObjectGUID": "5a8120db-0350-4bb2-bef4-61cf568aa0a6",
+                                "graphJSON": "",
+                                "position": {
+                                    "$type": 7,
+                                    -0.0818481445,
+                                    0,
+                                    3.973449
+                                },
+                                "rotation": {
+                                    "$type": 7,
+                                    0,
+                                    180,
+                                    0
+                                },
+                                "graph": $iref:5
+                            },
+                            "outlineRoot": {
+                                "$id": 45,
+                                "$type": "23|UnityEngine.GameObject, UnityEngine.CoreModule"
+                            }
+                        },
+                        "displayName": "EquipmentAssistant"
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 46,
+                    "$type": 23
+                }
+            }
+        },
+        {
+            "$k": "SteelTable5b7b43a2-92fb-4406-867e-c47dea282020",
+            "$v": {
+                "$id": 47,
+                "$type": "24|SteelTableASceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "SteelTable5b7b43a2-92fb-4406-867e-c47dea282020",
+                    "childs": {
+                        "$id": 48,
+                        "$type": 4,
+                        "$rlength": 2,
+                        "$rcontent": [
+                            "Gowndf70cd8c-a9af-4a56-b3b6-534d4faac635",
+                            "Gloves0d20806d-4280-4573-babc-983dfcf12d90"
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 49,
+                        "$type": "25|NT.Variables.NTVariable`1[[NT.SceneObjects.SteelTableAData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "26|NT.SceneObjects.SteelTableAData, Assembly-CSharp",
+                            "rowSize": 0,
+                            "colSize": 0
+                        },
+                        "defaultValue": {
+                            "$type": 26,
+                            "rowSize": 0,
+                            "colSize": 0
+                        }
+                    },
+                    "sceneObjectGUID": "04083b50-f681-46c3-8094-0b76a017bc60",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        0.8562927,
+                        0,
+                        3.56562519
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 50,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 51,
+                            "$type": 9,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 52,
+                            "$type": 20,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 53,
+                            "$type": 21,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 54,
+                            "$type": 22,
+                            "comparer": {
+                                "$id": 55,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 56,
+                    "$type": 23
+                },
+                "coverVisual": {
+                    "$id": 57,
+                    "$type": 23
+                },
+                "coverVisible": false,
+                "surface": {
+                    "$id": 58,
+                    "$type": 23
+                },
+                "ToolChange": {
+                    "$id": 59,
+                    "$type": "27|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule",
+                    "m_PersistentCalls": {
+                        "$id": 60,
+                        "$type": "28|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule",
+                        "m_Calls": {
+                            "$id": 61,
+                            "$type": "29|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall, UnityEngine.CoreModule]], mscorlib",
+                            "$rlength": 1,
+                            "$rcontent": [
+                                {
+                                    "$id": 62,
+                                    "$type": "30|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule",
+                                    "m_Target": {
+                                        "$id": 63,
+                                        "$type": "31|CameraScreenshot, Assembly-CSharp",
+                                        "screenshotCamera": {
+                                            "$id": 64,
+                                            "$type": "32|UnityEngine.Camera, UnityEngine.CoreModule"
+                                        },
+                                        "triggerCollider": {
+                                            "$id": 65,
+                                            "$type": "33|UnityEngine.BoxCollider, UnityEngine.PhysicsModule"
+                                        },
+                                        "resWidth": 1920,
+                                        "resHeight": 1080,
+                                        "waitSeconds": 3
+                                    },
+                                    "m_MethodName": "TakeScreenshotAfterSeconds",
+                                    "m_Mode": 1,
+                                    "m_Arguments": {
+                                        "$id": 66,
+                                        "$type": "34|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule",
+                                        "m_ObjectArgument": {
+                                            "$id": 67,
+                                            "$type": "35|UnityEngine.Object, UnityEngine.CoreModule"
+                                        },
+                                        "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                                        "m_IntArgument": 0,
+                                        "m_FloatArgument": 0,
+                                        "m_StringArgument": "",
+                                        "m_BoolArgument": false
+                                    },
+                                    "m_CallState": 2
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "$k": "Gowndf70cd8c-a9af-4a56-b3b6-534d4faac635",
+            "$v": {
+                "$id": 68,
+                "$type": "36|GownSceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "Gowndf70cd8c-a9af-4a56-b3b6-534d4faac635",
+                    "childs": {
+                        "$id": 69,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "SteelTable5b7b43a2-92fb-4406-867e-c47dea282020",
+                    "data": {
+                        "$id": 70,
+                        "$type": "37|NT.Variables.NTVariable`1[[NT.SceneObjects.GownData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "38|NT.SceneObjects.GownData, Assembly-CSharp"
+                        },
+                        "defaultValue": {
+                            "$type": 38
+                        }
+                    },
+                    "sceneObjectGUID": "0cdf2682-1330-46b5-9e08-5b11976c0351",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        -0.07687378,
+                        0.955444336,
+                        0.212849617
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0.00138353754,
+                        355.784271,
+                        -0.00133001432
+                    },
+                    "graph": {
+                        "$id": 71,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 72,
+                            "$type": 9,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 73,
+                            "$type": 20,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 74,
+                            "$type": 21,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 75,
+                            "$type": 22,
+                            "comparer": $iref:55,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 76,
+                    "$type": 23
+                }
+            }
+        },
+        {
+            "$k": "Gloves0d20806d-4280-4573-babc-983dfcf12d90",
+            "$v": {
+                "$id": 77,
+                "$type": "39|GlovesSceneGameObjects, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "Gloves0d20806d-4280-4573-babc-983dfcf12d90",
+                    "childs": {
+                        "$id": 78,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "SteelTable5b7b43a2-92fb-4406-867e-c47dea282020",
+                    "data": {
+                        "$id": 79,
+                        "$type": "40|NT.Variables.NTVariable`1[[NT.SceneObjects.GlovesData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "41|NT.SceneObjects.GlovesData, Assembly-CSharp"
+                        },
+                        "defaultValue": {
+                            "$type": 41
+                        }
+                    },
+                    "sceneObjectGUID": "689a793f-636f-4b2d-a8af-bd418691a091",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        0.13671875,
+                        0.9454346,
+                        0.0592198372
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 80,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 81,
+                            "$type": 9,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 82,
+                            "$type": 20,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 83,
+                            "$type": 21,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 84,
+                            "$type": 22,
+                            "comparer": {
+                                "$id": 85,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 86,
+                    "$type": 23
+                },
+                "glovesColor": {
+                    "$type": "42|UnityEngine.Color, UnityEngine.CoreModule",
+                    0.407843173,
+                    0.5294118,
+                    0.607843161,
+                    1
+                },
+                "linkedObject": null,
+                "rightGlove": {
+                    "$id": 87,
+                    "$type": 23
+                },
+                "leftGlove": {
+                    "$id": 88,
+                    "$type": 23
+                }
+            }
+        }
+    ]
+}

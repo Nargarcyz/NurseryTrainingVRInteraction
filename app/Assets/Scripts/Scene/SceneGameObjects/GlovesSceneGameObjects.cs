@@ -13,22 +13,31 @@ public class GlovesSceneGameObjects : SceneGameObject
     public GameObject rightGlove;
     public GameObject leftGlove;
 
-    protected virtual void OnEnable()
+    private void Start()
     {
-        linkedObject = (linkedObject == null ? GetComponent<VRTK_InteractableObject>() : linkedObject);
+        MessageSystem.onMessageSent += ReceiveMessage;
+    }
+    private void OnDestroy()
+    {
+        MessageSystem.onMessageSent -= ReceiveMessage;
+    }
 
-        if (linkedObject != null)
+    private void ReceiveMessage(string msg)
+    {
+        if (msg.Contains("Exercise Started"))
         {
-            linkedObject.InteractableObjectUsed += InteractableObjectUsed;
+            var rigidbodies = GetComponentsInChildren<Rigidbody>();
+            foreach (var r in rigidbodies)
+            {
+                r.useGravity = true;
+            }
         }
-
-        // rightGlove = transform.Find("")
     }
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-        MessageSystem.SendMessage("Gloves On");
-        gameObject.SetActive(false);
+        // MessageSystem.SendMessage("Gloves On");
+        // gameObject.SetActive(false);
     }
 
     // private void OnTriggerEnter(Collider other)

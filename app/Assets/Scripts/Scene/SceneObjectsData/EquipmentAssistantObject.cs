@@ -10,8 +10,12 @@ namespace NT.SceneObjects
     {
         public bool userInRange;
         public bool userInPosition;
+        public bool gownPrepared;
+        public bool gownOn;
         public bool gownCorrectlyPut;
         public bool glovesCorrectlyPut;
+        public bool rightGloveOn;
+        public bool leftGloveOn;
     }
 
     [CreateAssetMenu(fileName = "EquipmentAssistant", menuName = "NT/Scene/EquipmentAssistant")]
@@ -19,7 +23,7 @@ namespace NT.SceneObjects
     {
         public override List<string> GetCallbacks()
         {
-            return new List<string>() { "OnEquipmentPut" };
+            return new List<string>() { "UserInRange", "UserLeft", "Gown Used", "OnEquipmentPut" };
         }
     }
 }
