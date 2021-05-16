@@ -35,7 +35,7 @@ namespace NT.Nodes.Display
                 {
                     GameObject.DestroyImmediate(previousMessage.gameObject);
                 }
-                messageObj = GameObject.Instantiate(Resources.Load("NewShowMessage")) as GameObject;
+                messageObj = GameObject.Instantiate(Resources.Load("UI/NewShowMessage")) as GameObject;
 
                 TextMeshProUGUI text = messageObj.GetComponentInChildren<TextMeshProUGUI>();
                 text.text = message;
