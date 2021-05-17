@@ -11,6 +11,7 @@ language governing permissions and limitations under the license.
 
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections;
 using UnityEngine;
 using OVRTouchSample;
 using VRTK;
@@ -65,10 +66,70 @@ namespace OVRTouchSample
 
         private bool m_restoreOnInputAcquired = false;
 
+        private VRTK_ControllerEvents vrtkControllerEvents;
         private void Awake()
         {
             m_grabber = GetComponent<OVRGrabber>();
             vrtk_grabber = GetComponentInParent<VRTK_InteractGrab>();
+            vrtkControllerEvents = GetComponentInParent<VRTK_ControllerEvents>();
+        }
+        private bool _indexPrecision = false;
+        private bool indexPrecision
+        {
+            get
+            {
+                return _indexPrecision;
+            }
+            set
+            {
+                _indexPrecision = value;
+                HandlePrecisionGrab();
+            }
+        }
+
+        private bool _thumbPrecision = false;
+        private bool thumbPrecision
+        {
+            get
+            {
+                return _thumbPrecision;
+            }
+            set
+            {
+                _thumbPrecision = value;
+                HandlePrecisionGrab();
+            }
+        }
+
+        private bool disablePrecisionGrab = false;
+
+        private IEnumerator TryToGrab()
+        {
+            var grabbing = vrtk_grabber.GetGrabbedObject();
+            while (grabbing == null)
+            {
+                Debug.Log("<color=green>Attempting precision grab</color>");
+                vrtk_grabber.AttemptGrab();
+                grabbing = vrtk_grabber.GetGrabbedObject();
+                yield return 0;
+            }
+        }
+        private Coroutine grabbingCoroutine;
+        private void HandlePrecisionGrab()
+        {
+            if (disablePrecisionGrab)
+            {
+                return;
+            }
+            if (thumbPrecision && indexPrecision)
+            {
+                StartCoroutine("TryToGrab");
+            }
+            else
+            {
+                vrtk_grabber.ForceRelease();
+                StopCoroutine("TryToGrab");
+            }
         }
 
         private void Start()
@@ -78,7 +139,14 @@ namespace OVRTouchSample
             // Collision starts disabled. We'll enable it for certain cases such as making a fist.
             m_colliders = this.GetComponentsInChildren<Collider>().Where(childCollider => !childCollider.isTrigger).ToArray();
             CollisionEnable(false);
+            vrtkControllerEvents.TouchpadTouchStart += (object sender, ControllerInteractionEventArgs e) => { Debug.Log("Touchpad"); thumbPrecision = true; };
+            vrtkControllerEvents.TouchpadTouchEnd += (object sender, ControllerInteractionEventArgs e) => { thumbPrecision = false; };
 
+            vrtkControllerEvents.TriggerPressed += (object sender, ControllerInteractionEventArgs e) => { Debug.Log("Trigger"); indexPrecision = true; };
+            vrtkControllerEvents.TriggerReleased += (object sender, ControllerInteractionEventArgs e) => { indexPrecision = false; };
+
+            vrtk_grabber.GrabButtonPressed += (object sender, ControllerInteractionEventArgs e) => { disablePrecisionGrab = true; };
+            vrtk_grabber.GrabButtonReleased += (object sender, ControllerInteractionEventArgs e) => { disablePrecisionGrab = false; };
             // Get animator layer indices by name, for later use switching between hand visuals
             m_animLayerIndexPoint = m_animator.GetLayerIndex(ANIM_LAYER_NAME_POINT);
             m_animLayerIndexThumb = m_animator.GetLayerIndex(ANIM_LAYER_NAME_THUMB);
@@ -108,7 +176,7 @@ namespace OVRTouchSample
             float flex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
 
             bool collisionEnabled = vrtk_grabber.GetGrabbedObject() == null && flex >= THRESH_COLLISION_FLEX;
-            CollisionEnable(collisionEnabled);
+            // CollisionEnable(collisionEnabled);
 
 
             UpdateAnimStates();

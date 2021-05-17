@@ -62,9 +62,13 @@ public class HandManager : MonoBehaviour
     public ParticleSystem soapEffect;
     public ParticleSystem drippingEffect;
 
-    void Start()
+    void Awake()
     {
         MessageSystem.onMessageSent += RecieveMessage;
+    }
+    private void OnDisable()
+    {
+        MessageSystem.onMessageSent -= RecieveMessage;
     }
     private void OnDestroy()
     {

@@ -293,11 +293,6 @@ public class SessionManager : Singleton<SessionManager>, IVariableDelegate
 
             scgo.data.data.Reset();
 
-            Debug.Log($"<color=red>{scgo.GetType().Name}</color>");
-            Debug.Log($"<color=red>Graph null? {scgo.data.graph}</color>");
-            Debug.Log($"<color=red>Node count? {scgo.data.graph.nodes.Count}</color>");
-            Debug.Log($"<color=red>PNde count? {scgo.data.graph.packedNodes.Count}</color>");
-
             if (scgo.data.graph != null && (scgo.data.graph.nodes.Count > 0 || scgo.data.graph.packedNodes.Count > 0))
             {
                 scgo.data.graph.StartExecution();
