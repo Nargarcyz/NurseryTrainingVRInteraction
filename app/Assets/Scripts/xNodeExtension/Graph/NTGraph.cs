@@ -94,7 +94,6 @@ namespace NT.Graph
         public virtual void MessageRecieved(string message)
         {
             Debug.Log("<color=magenta> Message recieved!   " + message + " on graph" + name + "</color>");
-            Debug.Log(callbackNodesDict);
 
             // FIX FOR CALLBACKS ON SCENEGAMEOBJECTS NOT PROPERLY TRIGGERING
             var key = message;

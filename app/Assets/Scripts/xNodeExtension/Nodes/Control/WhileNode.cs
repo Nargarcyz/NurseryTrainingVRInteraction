@@ -10,7 +10,7 @@ namespace NT.Nodes.Flow
         [NTInput] public bool condition;
 
         [NTInput] public DummyConnection flowIn;
-        [NTOutput] public DummyConnection loopBody;
+        // [NTOutput] public DummyConnection loopBody;
         [NTOutput] public DummyConnection flowOut;
 
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
@@ -18,19 +18,20 @@ namespace NT.Nodes.Flow
             bool cond = GetInputValue<bool>(nameof(this.condition), this.condition);
             while (cond)
             {
-                yield return null;
+
                 cond = GetInputValue<bool>(nameof(this.condition), this.condition);
                 Debug.Log($"Condition: {cond}");
-                if (cond)
-                {
-                    string portName = nameof(loopBody);
-                    NTNode node = GetNode(portName);
-                    NodePort port = GetPort(portName);
-                    var executeNode = new NodeExecutionContext { node = node, inputPort = port?.Connection, outputPort = port };
-                    executeNode.node.Enter();
-                    yield return new YieldNode(executeNode);
-                    executeNode.node.Exit();
-                }
+                // if (cond)
+                // {
+                //     string portName = nameof(loopBody);
+                //     NTNode node = GetNode(portName);
+                //     NodePort port = GetPort(portName);
+                //     var executeNode = new NodeExecutionContext { node = node, inputPort = port?.Connection, outputPort = port };
+                //     // executeNode.node.Enter();
+                //     yield return new YieldNode(executeNode);
+                //     // executeNode.node.Exit();
+                // }
+                yield return null;
 
                 // string portName = condition ? nameof(loopBody) : nameof(flowOut);
 

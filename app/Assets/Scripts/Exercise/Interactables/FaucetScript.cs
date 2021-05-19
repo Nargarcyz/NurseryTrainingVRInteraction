@@ -67,10 +67,22 @@ public class FaucetScript : MonoBehaviour
         // if (controller != null && !controllers.Contains(controller)) controllers.Add(controller);
         // ProcessController(controller);
         if (controller && handle.GetValue() <= handle.angleLimits.maximum / 2)
-            MessageSystem.SendMessage(controller.name + " in water");
+            MessageSystem.SendMessage(ControllerName(controller) + " in water");
 
 
 
+    }
+    private string ControllerName(GameObject controller)
+    {
+        if (controller == VRTK_SDKManager.GetLoadedSDKSetup().actualLeftController)
+        {
+            return "Left Hand";
+        }
+        else if (controller == VRTK_SDKManager.GetLoadedSDKSetup().actualRightController)
+        {
+            return "Right Hand";
+        }
+        else return "";
     }
     private void OnTriggerExit(Collider other)
     {
@@ -78,7 +90,7 @@ public class FaucetScript : MonoBehaviour
         if (setup == null) return;
         var controller = getController(other.gameObject);
         if (controller && handle.GetValue() <= handle.angleLimits.maximum / 2)
-            MessageSystem.SendMessage(controller.name + " out of water");
+            MessageSystem.SendMessage(ControllerName(controller) + " out of water");
         // if (controller != null && controllers.Contains(controller)) controllers.Remove(controller);
     }
 
@@ -88,7 +100,7 @@ public class FaucetScript : MonoBehaviour
         {
             var mat = controller.GetComponentInChildren<Renderer>().materials[0];
             if (mat.GetFloat("_Metallic") >= 0.5f && mat.GetFloat("_Glossiness") >= 0.7f)
-                MessageSystem.SendMessage(controller.name + " wet");
+                MessageSystem.SendMessage(ControllerName(controller) + " wet");
             else if (!controllers.Contains(controller))
             {
                 controllers.Add(controller);

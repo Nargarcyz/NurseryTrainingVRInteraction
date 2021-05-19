@@ -16,6 +16,16 @@ public class HintLogUIScript : MonoBehaviour
         HintMessageSystem.onHintSent += ReceiveHint;
     }
 
+    private void OnDisable()
+    {
+        HintMessageSystem.onHintSent -= ReceiveHint;
+    }
+    private void OnDestroy()
+    {
+        HintMessageSystem.onHintSent -= ReceiveHint;
+    }
+
+
     void ReceiveHint(string hint)
     {
         var scroll = this.gameObject.transform.GetComponentInChildren<ScrollRect>();

@@ -71,7 +71,7 @@ public class EquipmentAssistantSceneGameObject : SceneGameObject
         else if (msg.Contains("Gown Used"))
         {
             // MessageSystem.SendMessage("GownUsed");
-            variables.gownPrepared = true;
+            variables.gownOn = true;
             // if (!(variables.rightGloveOn || variables.leftGloveOn))
             // {
             //     variables.gownCorrectlyPut = true;
@@ -92,7 +92,8 @@ public class EquipmentAssistantSceneGameObject : SceneGameObject
             headsetForward = Quaternion.Euler(0, rotation, 0) * headsetForward;
 
             var angle = Vector3.Angle(this.transform.forward, headsetForward);
-
+            // Debug.Log(angle);
+            // variables.DisplayValues();
             if (angle < 90 && !variables.userInPosition)
             {
                 variables.userInPosition = true;

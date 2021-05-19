@@ -64,10 +64,11 @@ public class GownSceneGameObject : SceneGameObject
     private bool open = false;
     private void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-        open = !open;
+
         Debug.Log(open);
         if (linkedObject != null && !linkedObject.IsGrabbed())
         {
+            open = !open;
             if (open)
             {
                 GetComponent<Animator>().Play("Open");
