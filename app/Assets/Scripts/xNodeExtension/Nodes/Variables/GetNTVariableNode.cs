@@ -21,7 +21,6 @@ namespace NT.Nodes.Variables
 
         public override object GetValue(NodePort port)
         {
-            Debug.Log("Getting Value");
             if (graph is NTGraph)
             {
                 NTGraph g = (NTGraph)graph;

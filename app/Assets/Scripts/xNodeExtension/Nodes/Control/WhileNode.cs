@@ -20,7 +20,7 @@ namespace NT.Nodes.Flow
             {
 
                 cond = GetInputValue<bool>(nameof(this.condition), this.condition);
-                Debug.Log($"Condition: {cond}");
+                // Debug.Log($"Condition: {cond}");
                 // if (cond)
                 // {
                 //     string portName = nameof(loopBody);

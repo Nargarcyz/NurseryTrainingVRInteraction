@@ -33,6 +33,14 @@ public class GlovesSceneGameObjects : SceneGameObject
                 r.isKinematic = false;
             }
         }
+        else if (msg.Contains("Left Hand glove on"))
+        {
+            DestroyImmediate(transform.Find("LeftGlove").gameObject);
+        }
+        else if (msg.Contains("Right Hand glove on"))
+        {
+            DestroyImmediate(transform.Find("RightGlove").gameObject);
+        }
     }
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
