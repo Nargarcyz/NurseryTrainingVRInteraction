@@ -51,6 +51,9 @@ namespace OVRTouchSample
         private bool m_collisionEnabled = true;
         private OVRGrabber m_grabber;
         public VRTK_InteractGrab vrtk_grabber;
+        [Header("Interaction Volumes")]
+        public GameObject precisionVolume;
+        public GameObject generalVolume;
 
         List<Renderer> m_showAfterInputFocusAcquired;
 
@@ -72,36 +75,45 @@ namespace OVRTouchSample
             m_grabber = GetComponent<OVRGrabber>();
             vrtk_grabber = GetComponentInParent<VRTK_InteractGrab>();
             vrtkControllerEvents = GetComponentInParent<VRTK_ControllerEvents>();
+            precisionVolume.SetActive(false);
+            generalVolume.SetActive(true);
         }
-        private bool _indexPrecision = false;
-        private bool indexPrecision
+        private bool _indexPressed = false;
+        private bool indexPressed
         {
             get
             {
-                return _indexPrecision;
+                return _indexPressed;
             }
             set
             {
-                _indexPrecision = value;
+                _indexPressed = value;
                 HandlePrecisionGrab();
             }
         }
 
-        private bool _thumbPrecision = false;
-        private bool thumbPrecision
+        private bool _thumbPressed = false;
+        private bool thumbPressed
         {
             get
             {
-                return _thumbPrecision;
+                return _thumbPressed;
             }
             set
             {
-                _thumbPrecision = value;
+                _thumbPressed = value;
                 HandlePrecisionGrab();
             }
         }
 
         private bool disablePrecisionGrab = false;
+
+        private void SetPrecisionGrabbing(bool value)
+        {
+            disablePrecisionGrab = !value;
+            precisionVolume.SetActive(value);
+            generalVolume.SetActive(!value);
+        }
 
         private IEnumerator TryToGrab()
         {
@@ -121,12 +133,16 @@ namespace OVRTouchSample
             {
                 return;
             }
-            if (thumbPrecision && indexPrecision)
+            if (thumbPressed && indexPressed)
             {
+                precisionVolume.SetActive(true);
+                generalVolume.SetActive(false);
                 StartCoroutine("TryToGrab");
             }
             else
             {
+                precisionVolume.SetActive(false);
+                generalVolume.SetActive(true);
                 vrtk_grabber.ForceRelease();
                 StopCoroutine("TryToGrab");
             }
@@ -139,11 +155,11 @@ namespace OVRTouchSample
             // Collision starts disabled. We'll enable it for certain cases such as making a fist.
             m_colliders = this.GetComponentsInChildren<Collider>().Where(childCollider => !childCollider.isTrigger).ToArray();
             CollisionEnable(false);
-            vrtkControllerEvents.TouchpadTouchStart += (object sender, ControllerInteractionEventArgs e) => { Debug.Log("Touchpad"); thumbPrecision = true; };
-            vrtkControllerEvents.TouchpadTouchEnd += (object sender, ControllerInteractionEventArgs e) => { thumbPrecision = false; };
+            vrtkControllerEvents.TouchpadTouchStart += (object sender, ControllerInteractionEventArgs e) => { thumbPressed = true; };
+            vrtkControllerEvents.TouchpadTouchEnd += (object sender, ControllerInteractionEventArgs e) => { thumbPressed = false; };
 
-            vrtkControllerEvents.TriggerPressed += (object sender, ControllerInteractionEventArgs e) => { Debug.Log("Trigger"); indexPrecision = true; };
-            vrtkControllerEvents.TriggerReleased += (object sender, ControllerInteractionEventArgs e) => { indexPrecision = false; };
+            vrtkControllerEvents.TriggerPressed += (object sender, ControllerInteractionEventArgs e) => { indexPressed = true; };
+            vrtkControllerEvents.TriggerReleased += (object sender, ControllerInteractionEventArgs e) => { indexPressed = false; };
 
             vrtk_grabber.GrabButtonPressed += (object sender, ControllerInteractionEventArgs e) => { disablePrecisionGrab = true; };
             vrtk_grabber.GrabButtonReleased += (object sender, ControllerInteractionEventArgs e) => { disablePrecisionGrab = false; };
