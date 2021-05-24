@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad45c0de98569a845b084c227eee6ea8, type: 3}
-  m_Name: Sink
+  m_Name: SinkRoom
   m_EditorClassIdentifier: Assembly-CSharp:NT.SceneObjects:SinkObject
   displayName: 
   sceneGameObject:
@@ -19,7 +19,7 @@ MonoBehaviour:
       m_Bits: 512
     model: {fileID: 7154647904626145751, guid: 66f4c477cf1cd7d4099916c751939656, type: 3}
   sceneObjectUI:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    icon: {fileID: 0}
+    color: {r: 1, g: 0.95667076, b: 0.4481132, a: 0}
+    icon: {fileID: 21300000, guid: 2b524d5d97f53ed41a1bd7323175f071, type: 3}
     category: 0
   GUID: 3c3224cf-f24a-4c38-8621-fb3ac29280cb

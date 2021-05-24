@@ -4,7 +4,7 @@ using UnityEngine;
 using VRTK;
 using NT;
 
-public class HandInteractionObjectScript : MonoBehaviour
+public class HandInteractableObjectScript : SceneGameObject
 {
     private VRTK_InteractableObject linkedObject;
     private GameObject otherHand = null;
@@ -20,10 +20,16 @@ public class HandInteractionObjectScript : MonoBehaviour
         {
             linkedObject.InteractableObjectUsed += InteractableObjectUsed;
             linkedObject.InteractableObjectUngrabbed += (object sender, InteractableObjectEventArgs e) => { otherHand = null; grabbingHand = null; };
-            linkedObject.InteractableObjectGrabbed += (object sender, InteractableObjectEventArgs e) => { grabbingHand = linkedObject.GetGrabbingObject(); };
+            linkedObject.InteractableObjectGrabbed += OnGrabbed;
         }
     }
 
+    private void OnGrabbed(object sender, InteractableObjectEventArgs e)
+    {
+        grabbingHand = linkedObject.GetGrabbingObject();
+        MessageSystem.SendMessage(data.id + "OnGrabbed");
+        // Debug.Log(this.data.graph.linkedNTVariable);
+    }
     private void Start()
     {
         setup = VRTK_SDKManager.GetLoadedSDKSetup();
@@ -50,9 +56,9 @@ public class HandInteractionObjectScript : MonoBehaviour
 
     protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-
+        MessageSystem.SendMessage(data.id + "OnUsed");
         var grabbingController = linkedObject.GetGrabbingObject();
-        Debug.Log("<color=red>Other Hand = " + otherHand.name + "</color>");
+        // Debug.Log("<color=red>Other Hand = " + otherHand.name + "</color>");
 
         // MessageSystem.SendMessage(otherHand.name + " soap");
         var name = "";
@@ -84,7 +90,7 @@ public class HandInteractionObjectScript : MonoBehaviour
         if (controller != null && controller != grabbingHand)
         {
             otherHand = controller;
-            Debug.Log(otherHand);
+            // Debug.Log(otherHand);
         }
 
     }

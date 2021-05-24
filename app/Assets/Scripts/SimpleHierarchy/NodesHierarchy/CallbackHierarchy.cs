@@ -30,35 +30,35 @@ public class CallbackHierarchy : GUIHierarchy
         if (showing is NTGraph)
         {
             // Added
-            if (showing != mainGraph)
-            {
-                root.Add(new HierarchyModel(new HierarchyData
-                {
-                    name = "Global Callbacks"
-                }));
-                List<string> globalCallbacks = ((NTGraph)mainGraph).GetCallbacks();
-                foreach (var callback in globalCallbacks)
-                {
-                    root.Add(new HierarchyModel(
-                            new NodeHierarchyData
-                            {
-                                name = callback,
-                                key = callback,
-                                onNodeCreated = (n) =>
-                                {
-                                    Debug.Log(callback);
-                                    ((CallbackNode)n).key = callback;
-                                    ((CallbackNode)n).linkedToSceneObject = showing is SceneObjectGraph ? ((SceneObjectGraph)showing).linkedNTVariable : "";
-                                },
-                                nodeType = typeof(CallbackNode)
-                            }
-                    ));
-                }
-                root.Add(new HierarchyModel(new HierarchyData
-                {
-                    name = "Object Callbacks"
-                }));
-            }
+            // if (showing != mainGraph)
+            // {
+            //     root.Add(new HierarchyModel(new HierarchyData
+            //     {
+            //         name = "Global Callbacks"
+            //     }));
+            //     List<string> globalCallbacks = ((NTGraph)mainGraph).GetCallbacks();
+            //     foreach (var callback in globalCallbacks)
+            //     {
+            //         root.Add(new HierarchyModel(
+            //                 new NodeHierarchyData
+            //                 {
+            //                     name = callback,
+            //                     key = callback,
+            //                     onNodeCreated = (n) =>
+            //                     {
+            //                         Debug.Log(callback);
+            //                         ((CallbackNode)n).key = callback;
+            //                         ((CallbackNode)n).linkedToSceneObject = showing is SceneObjectGraph ? ((SceneObjectGraph)showing).linkedNTVariable : "";
+            //                     },
+            //                     nodeType = typeof(CallbackNode)
+            //                 }
+            //         ));
+            //     }
+            //     root.Add(new HierarchyModel(new HierarchyData
+            //     {
+            //         name = "Object Callbacks"
+            //     }));
+            // }
 
             List<string> callbacks = ((NTGraph)showing).GetCallbacks();
             // callbacks.AddRange(((NTGraph)mainGraph).GetCallbacks());

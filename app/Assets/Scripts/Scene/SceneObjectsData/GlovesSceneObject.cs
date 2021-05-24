@@ -16,7 +16,7 @@ namespace NT.SceneObjects
 
         public override List<string> GetCallbacks()
         {
-            return new List<string>() { "Gloves On" };
+            return new List<string>() {"OnUsed","OnGrabbed","Gloves On" };
         }
     }
 }

@@ -51,6 +51,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 469b7b9b81bbfc04ca89de202c96263a, type: 2}
   - {fileID: 11400000, guid: fbf59a6f43c40dc49bd3227589f9579c, type: 2}
   - {fileID: 11400000, guid: 146c612373f108e4d8d1bad69359e380, type: 2}
+  - {fileID: 11400000, guid: 9ad5e69392dd44f45bf77fac4ce0d99e, type: 2}
+  - {fileID: 11400000, guid: 624b5e116e01b70499d2e3477573f043, type: 2}
   prefabSet:
   - {fileID: 0}
   - {fileID: 0}

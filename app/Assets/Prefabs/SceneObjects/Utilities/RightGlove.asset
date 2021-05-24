@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adabfd5558a3dfa46a7befb422d1fa1e, type: 3}
+  m_Name: RightGlove
+  m_EditorClassIdentifier: 
+  displayName: Right Glove
+  sceneGameObject:
+    canBePlacedOver:
+      serializedVersion: 2
+      m_Bits: 1536
+    model: {fileID: 2579085328931674688, guid: e187298fa64faae479af46b0986acdb6, type: 3}
+  sceneObjectUI:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    icon: {fileID: 21300000, guid: dbfbde9ab6892f747860127adceb7832, type: 3}
+    category: 3
+  GUID: 00981f8f-db6e-4b7d-81c1-0936aac40dc9

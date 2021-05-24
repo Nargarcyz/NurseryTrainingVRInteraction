@@ -102,10 +102,10 @@ namespace NT.Graph
             //     key = message;
             // }
             // else 
-            if (this.GetType() == typeof(SceneObjectGraph))
-            {
-                key = ((SceneObjectGraph)this).linkedNTVariable + message;
-            }
+            // if (this.GetType() == typeof(SceneObjectGraph))
+            // {
+            //     key = ((SceneObjectGraph)this).linkedNTVariable + message;
+            // }
             // FIX FOR CALLBACKS ON SCENEGAMEOBJECTS NOT PROPERLY TRIGGERING
             if (!string.IsNullOrEmpty(key) && callbackNodesDict.ContainsKey(key))
             {

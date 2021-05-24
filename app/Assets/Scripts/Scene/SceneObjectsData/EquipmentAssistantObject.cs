@@ -9,23 +9,8 @@ namespace NT.SceneObjects
     public struct EquipmentAssistantData
     {
         public bool userInRange;
-        public bool userInPosition;
-        public bool gownOn;
-        public bool gownCorrectlyPut;
-        public bool glovesCorrectlyPut;
-        public bool rightGloveOn;
-        public bool leftGloveOn;
+        public bool userFacingAway;
 
-        public void DisplayValues()
-        {
-            Debug.Log($"userInRange = {userInRange}");
-            Debug.Log($"userInPosition = {userInPosition}");
-            Debug.Log($"gownOn = {gownOn}");
-            Debug.Log($"gownCorrectlyPut = {gownCorrectlyPut}");
-            Debug.Log($"glovesCorrectlyPut = {glovesCorrectlyPut}");
-            Debug.Log($"rightGloveOn = {rightGloveOn}");
-            Debug.Log($"leftGloveOn = {leftGloveOn}");
-        }
     }
 
     [CreateAssetMenu(fileName = "EquipmentAssistant", menuName = "NT/Scene/EquipmentAssistant")]
@@ -33,7 +18,7 @@ namespace NT.SceneObjects
     {
         public override List<string> GetCallbacks()
         {
-            return new List<string>() { "UserInRange", "UserLeft", "EquipmentCorrectlyPut", "BadEquipmentProcedure" };
+            return new List<string>() { "UserFacingAssistant", "UserFacingAway", "UserInRange", "EquipmentCorrectlyPut", "BadEquipmentProcedure" };
         }
     }
 }

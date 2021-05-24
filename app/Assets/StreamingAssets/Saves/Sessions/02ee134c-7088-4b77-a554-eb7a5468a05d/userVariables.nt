@@ -5,7 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 1,
+    "$rlength": 4,
     "$rcontent": [
         {
             "$k": "Hands Clean",
@@ -17,6 +17,42 @@
                     false
                 },
                 "defaultValue": $iref:2
+            }
+        },
+        {
+            "$k": "LeftGloveOn",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 3,
+                    "$type": 3,
+                    false
+                },
+                "defaultValue": $iref:3
+            }
+        },
+        {
+            "$k": "Right Glove On",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 4,
+                    "$type": 3,
+                    false
+                },
+                "defaultValue": $iref:4
+            }
+        },
+        {
+            "$k": "Gown On",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 5,
+                    "$type": 3,
+                    false
+                },
+                "defaultValue": $iref:5
             }
         }
     ]

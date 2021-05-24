@@ -18,7 +18,7 @@ public class GownSceneGameObject : SceneGameObject
 
     private void ReceiveMessage(string msg)
     {
-        if (msg.Contains("Exercise Started"))
+        if (msg.Equals("Exercise Started"))
         {
             var rigidbody = GetComponent<Rigidbody>();
             rigidbody.useGravity = true;
@@ -72,16 +72,17 @@ public class GownSceneGameObject : SceneGameObject
             if (open)
             {
                 GetComponent<Animator>().Play("Open");
-
+                MessageSystem.SendMessage(data.id + "OnGownOpened");
             }
             else
             {
                 GetComponent<Animator>().Play("Close");
+                MessageSystem.SendMessage(data.id + "OnGownClosed");
             }
         }
         else if (linkedObject && linkedObject.IsGrabbed() && open)
         {
-            MessageSystem.SendMessage("Gown Used");
+            MessageSystem.SendMessage(data.id + "OnGownUsed");
             DestroyImmediate(this.gameObject);
         }
     }

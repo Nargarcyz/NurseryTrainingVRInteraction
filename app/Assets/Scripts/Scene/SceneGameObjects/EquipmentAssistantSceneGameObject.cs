@@ -35,7 +35,7 @@ public class EquipmentAssistantSceneGameObject : SceneGameObject
         {
             variables = (EquipmentAssistantData)data.data.GetValue();
             variables.userInRange = true;
-            MessageSystem.SendMessage("UserInRange");
+            MessageSystem.SendMessage(data.id + "UserInRange");
             data.data.SetValue(variables);
             // Debug.Log("<color=yellow>YES</color>");
 
@@ -48,36 +48,39 @@ public class EquipmentAssistantSceneGameObject : SceneGameObject
 
     private void ReceiveMessage(string msg)
     {
+        // if (msg.Equals("Exercise Started"))
+        // {
+        //     MessageSystem.SendMessage(data.id + "Exercise Start");
+        // }
 
-
-        if (msg.Contains("Left Hand glove on"))
-        {
-            variables.leftGloveOn = true;
-            if (variables.gownOn && variables.rightGloveOn)
-            {
-                variables.glovesCorrectlyPut = true;
-            }
-            data.data.SetValue(variables);
-        }
-        else if (msg.Contains("Right Hand glove on"))
-        {
-            variables.rightGloveOn = true;
-            if (variables.gownOn && variables.leftGloveOn)
-            {
-                variables.glovesCorrectlyPut = true;
-            }
-            data.data.SetValue(variables);
-        }
-        else if (msg.Contains("Gown Used"))
-        {
-            // MessageSystem.SendMessage("GownUsed");
-            variables.gownOn = true;
-            // if (!(variables.rightGloveOn || variables.leftGloveOn))
-            // {
-            //     variables.gownCorrectlyPut = true;
-            // }
-            data.data.SetValue(variables);
-        }
+        // if (msg.Contains("Left Hand glove on"))
+        // {
+        //     variables.leftGloveOn = true;
+        //     if (variables.gownOn && variables.rightGloveOn)
+        //     {
+        //         variables.glovesCorrectlyPut = true;
+        //     }
+        //     data.data.SetValue(variables);
+        // }
+        // else if (msg.Contains("Right Hand glove on"))
+        // {
+        //     variables.rightGloveOn = true;
+        //     if (variables.gownOn && variables.leftGloveOn)
+        //     {
+        //         variables.glovesCorrectlyPut = true;
+        //     }
+        //     data.data.SetValue(variables);
+        // }
+        // else if (msg.Contains("Gown Used"))
+        // {
+        //     // MessageSystem.SendMessage("GownUsed");
+        //     variables.gownOn = true;
+        //     // if (!(variables.rightGloveOn || variables.leftGloveOn))
+        //     // {
+        //     //     variables.gownCorrectlyPut = true;
+        //     // }
+        //     data.data.SetValue(variables);
+        // }
     }
     private void Update()
     {
@@ -94,27 +97,29 @@ public class EquipmentAssistantSceneGameObject : SceneGameObject
             var angle = Vector3.Angle(this.transform.forward, headsetForward);
             // Debug.Log(angle);
             // variables.DisplayValues();
-            if (angle < 90 && !variables.userInPosition)
+            if (angle < 90 && !variables.userFacingAway)
             {
-                variables.userInPosition = true;
+                variables.userFacingAway = true;
+                MessageSystem.SendMessage(data.id + "UserFacingAway");
                 data.data.SetValue(variables);
             }
-            else if (angle >= 90 && variables.userInPosition)
+            else if (angle >= 90 && variables.userFacingAway)
             {
-                variables.userInPosition = false;
+                variables.userFacingAway = false;
+                MessageSystem.SendMessage(data.id + "UserFacingAssistant");
                 data.data.SetValue(variables);
             }
 
 
 
         }
-        if (variables.userInPosition && variables.gownOn)
-        {
-            if (!(variables.rightGloveOn || variables.leftGloveOn))
-            {
-                variables.gownCorrectlyPut = true;
-            }
-        }
+        // if (variables.userFacingAway && variables.gownOn)
+        // {
+        //     if (!(variables.rightGloveOn || variables.leftGloveOn))
+        //     {
+        //         variables.gownCorrectlyPut = true;
+        //     }
+        // }
 
     }
 }

@@ -1,0 +1,1365 @@
+{
+    "$id": 0,
+    "$type": "0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[SceneGameObject, Assembly-CSharp]], mscorlib",
+    "comparer": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
+    },
+    "$rlength": 5,
+    "$rcontent": [
+        {
+            "$k": "DesktopTable59be520a-abd8-44d4-ba0b-ba9132429f5b",
+            "$v": {
+                "$id": 2,
+                "$type": "2|SceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": "3|SceneGameObjectData, Assembly-CSharp",
+                    "id": "DesktopTable59be520a-abd8-44d4-ba0b-ba9132429f5b",
+                    "childs": {
+                        "$id": 3,
+                        "$type": "4|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 4,
+                        "$type": "5|NT.Variables.NTVariable`1[[NT.SceneObjects.DummyData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "6|NT.SceneObjects.DummyData, Assembly-CSharp"
+                        },
+                        "defaultValue": {
+                            "$type": 6
+                        }
+                    },
+                    "sceneObjectGUID": "d737ca38-69c6-4c81-8cf4-ec64c57aed57",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": "7|UnityEngine.Vector3, UnityEngine.CoreModule",
+                        -3.05175781E-05,
+                        0,
+                        1.92365825
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 5,
+                        "$type": "8|NT.Graph.SceneObjectGraph, Assembly-CSharp",
+                        "_name": "",
+                        "nodes": {
+                            "$id": 6,
+                            "$type": "9|System.Collections.Generic.List`1[[XNode.Node, Assembly-CSharp]], mscorlib",
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 7,
+                            "$type": "10|System.Collections.Generic.List`1[[NT.Graph.NodeGroupGraph, Assembly-CSharp]], mscorlib",
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 8,
+                            "$type": "11|System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib",
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 9,
+                            "$type": "12|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib]], mscorlib",
+                            "comparer": {
+                                "$id": 10,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 11,
+                    "$type": "13|UnityEngine.GameObject, UnityEngine.CoreModule"
+                }
+            }
+        },
+        {
+            "$k": "SteelTable68a78cdb-3914-47b7-94e7-97f5d0c7b013",
+            "$v": {
+                "$id": 12,
+                "$type": "14|SteelTableASceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "SteelTable68a78cdb-3914-47b7-94e7-97f5d0c7b013",
+                    "childs": {
+                        "$id": 13,
+                        "$type": 4,
+                        "$rlength": 2,
+                        "$rcontent": [
+                            "LeftGlove8daf992c-7eb6-4a82-b627-88e1aef22157",
+                            "RightGlove4848b310-73a7-43d4-a956-d5c1e986539c"
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 14,
+                        "$type": "15|NT.Variables.NTVariable`1[[NT.SceneObjects.SteelTableAData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "16|NT.SceneObjects.SteelTableAData, Assembly-CSharp",
+                            "rowSize": 0,
+                            "colSize": 0
+                        },
+                        "defaultValue": {
+                            "$type": 16,
+                            "rowSize": 0,
+                            "colSize": 0
+                        }
+                    },
+                    "sceneObjectGUID": "04083b50-f681-46c3-8094-0b76a017bc60",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        1.46902466,
+                        0,
+                        1.36956835
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 15,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 16,
+                            "$type": 9,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 17,
+                            "$type": 10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 18,
+                            "$type": 11,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 19,
+                            "$type": 12,
+                            "comparer": $iref:10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 20,
+                    "$type": 13
+                },
+                "coverVisual": {
+                    "$id": 21,
+                    "$type": 13
+                },
+                "coverVisible": false,
+                "surface": {
+                    "$id": 22,
+                    "$type": 13
+                },
+                "ToolChange": {
+                    "$id": 23,
+                    "$type": "17|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule",
+                    "m_PersistentCalls": {
+                        "$id": 24,
+                        "$type": "18|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule",
+                        "m_Calls": {
+                            "$id": 25,
+                            "$type": "19|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall, UnityEngine.CoreModule]], mscorlib",
+                            "$rlength": 1,
+                            "$rcontent": [
+                                {
+                                    "$id": 26,
+                                    "$type": "20|UnityEngine.Events.PersistentCall, UnityEngine.CoreModule",
+                                    "m_Target": {
+                                        "$id": 27,
+                                        "$type": "21|CameraScreenshot, Assembly-CSharp",
+                                        "screenshotCamera": {
+                                            "$id": 28,
+                                            "$type": "22|UnityEngine.Camera, UnityEngine.CoreModule"
+                                        },
+                                        "triggerCollider": {
+                                            "$id": 29,
+                                            "$type": "23|UnityEngine.BoxCollider, UnityEngine.PhysicsModule"
+                                        },
+                                        "resWidth": 1920,
+                                        "resHeight": 1080,
+                                        "waitSeconds": 3
+                                    },
+                                    "m_MethodName": "TakeScreenshotAfterSeconds",
+                                    "m_Mode": 1,
+                                    "m_Arguments": {
+                                        "$id": 30,
+                                        "$type": "24|UnityEngine.Events.ArgumentCache, UnityEngine.CoreModule",
+                                        "m_ObjectArgument": {
+                                            "$id": 31,
+                                            "$type": "25|UnityEngine.Object, UnityEngine.CoreModule"
+                                        },
+                                        "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine",
+                                        "m_IntArgument": 0,
+                                        "m_FloatArgument": 0,
+                                        "m_StringArgument": "",
+                                        "m_BoolArgument": false
+                                    },
+                                    "m_CallState": 2
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "$k": "LeftGlove8daf992c-7eb6-4a82-b627-88e1aef22157",
+            "$v": {
+                "$id": 32,
+                "$type": "26|HandInteractableObjectScript, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "LeftGlove8daf992c-7eb6-4a82-b627-88e1aef22157",
+                    "childs": {
+                        "$id": 33,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "SteelTable68a78cdb-3914-47b7-94e7-97f5d0c7b013",
+                    "data": {
+                        "$id": 34,
+                        "$type": "27|NT.Variables.NTVariable`1[[NT.SceneObjects.HandInteractableData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "28|NT.SceneObjects.HandInteractableData, Assembly-CSharp"
+                        },
+                        "defaultValue": {
+                            "$type": 28
+                        }
+                    },
+                    "sceneObjectGUID": "bd4d231c-2ee5-4321-9261-739ad016ec2c",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        -0.133117676,
+                        0.9454346,
+                        0.1035862
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 35,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 36,
+                            "$type": 9,
+                            "$rlength": 4,
+                            "$rcontent": [
+                                {
+                                    "$id": 37,
+                                    "$type": "29|NT.Nodes.Messages.CallbackNode, Assembly-CSharp",
+                                    "_name": "Message Received",
+                                    "graph": $iref:35,
+                                    "position": {
+                                        "$type": "30|UnityEngine.Vector2, UnityEngine.CoreModule",
+                                        -335,
+                                        -240.6
+                                    },
+                                    "ports": {
+                                        "$id": 38,
+                                        "$type": "31|XNode.Node+NodePortDictionary, Assembly-CSharp",
+                                        "comparer": $iref:1,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$k": "flowOut",
+                                                "$v": {
+                                                    "$id": 39,
+                                                    "$type": "32|XNode.NodePort, Assembly-CSharp",
+                                                    "_fieldName": "flowOut",
+                                                    "_node": $iref:37,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 40,
+                                                        "$type": "33|System.Collections.Generic.List`1[[XNode.NodePort+PortConnection, Assembly-CSharp]], mscorlib",
+                                                        "$rlength": 1,
+                                                        "$rcontent": [
+                                                            {
+                                                                "$id": 41,
+                                                                "$type": "34|XNode.NodePort+PortConnection, Assembly-CSharp",
+                                                                "fieldName": "flowIn",
+                                                                "node": {
+                                                                    "$id": 42,
+                                                                    "$type": "35|NT.Nodes.Messages.DebugLogNode, Assembly-CSharp",
+                                                                    "_name": "Debug Log Message",
+                                                                    "graph": $iref:35,
+                                                                    "position": {
+                                                                        "$type": 30,
+                                                                        -41,
+                                                                        -252.6
+                                                                    },
+                                                                    "ports": {
+                                                                        "$id": 43,
+                                                                        "$type": 31,
+                                                                        "comparer": $iref:1,
+                                                                        "$rlength": 2,
+                                                                        "$rcontent": [
+                                                                            {
+                                                                                "$k": "flowIn",
+                                                                                "$v": {
+                                                                                    "$id": 44,
+                                                                                    "$type": 32,
+                                                                                    "_fieldName": "flowIn",
+                                                                                    "_node": $iref:42,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 45,
+                                                                                        "$type": 33,
+                                                                                        "$rlength": 1,
+                                                                                        "$rcontent": [
+                                                                                            {
+                                                                                                "$id": 46,
+                                                                                                "$type": 34,
+                                                                                                "fieldName": "flowOut",
+                                                                                                "node": $iref:37,
+                                                                                                "reroutePoints": {
+                                                                                                    "$id": 47,
+                                                                                                    "$type": "36|System.Collections.Generic.List`1[[UnityEngine.Vector2, UnityEngine.CoreModule]], mscorlib",
+                                                                                                    "$rlength": 0,
+                                                                                                    "$rcontent": [
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 0,
+                                                                                    "_connectionType": 1,
+                                                                                    "_typeConstraint": 2,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "$k": "flowOut",
+                                                                                "$v": {
+                                                                                    "$id": 48,
+                                                                                    "$type": 32,
+                                                                                    "_fieldName": "flowOut",
+                                                                                    "_node": $iref:42,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 49,
+                                                                                        "$type": 33,
+                                                                                        "$rlength": 0,
+                                                                                        "$rcontent": [
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 1,
+                                                                                    "_connectionType": 0,
+                                                                                    "_typeConstraint": 0,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "hasError": false,
+                                                                    "error": "",
+                                                                    "isExecuting": false,
+                                                                    "flowIn": null,
+                                                                    "flowOut": null,
+                                                                    "message": "LeftGloveGrabbed"
+                                                                },
+                                                                "reroutePoints": {
+                                                                    "$id": 50,
+                                                                    "$type": 36,
+                                                                    "$rlength": 0,
+                                                                    "$rcontent": [
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_direction": 1,
+                                                    "_connectionType": 0,
+                                                    "_typeConstraint": 0,
+                                                    "_dynamic": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "hasError": false,
+                                    "error": "",
+                                    "isExecuting": false,
+                                    "flowOut": null,
+                                    "key": "OnGrabbed",
+                                    "linkedToSceneObject": "LeftGlove8daf992c-7eb6-4a82-b627-88e1aef22157"
+                                },
+                                $iref:42,
+                                {
+                                    "$id": 51,
+                                    "$type": 29,
+                                    "_name": "Message Received",
+                                    "graph": $iref:35,
+                                    "position": {
+                                        "$type": 30,
+                                        -316,
+                                        13.3999939
+                                    },
+                                    "ports": {
+                                        "$id": 52,
+                                        "$type": 31,
+                                        "comparer": $iref:1,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$k": "flowOut",
+                                                "$v": {
+                                                    "$id": 53,
+                                                    "$type": 32,
+                                                    "_fieldName": "flowOut",
+                                                    "_node": $iref:51,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 54,
+                                                        "$type": 33,
+                                                        "$rlength": 1,
+                                                        "$rcontent": [
+                                                            {
+                                                                "$id": 55,
+                                                                "$type": 34,
+                                                                "fieldName": "flowIn",
+                                                                "node": {
+                                                                    "$id": 56,
+                                                                    "$type": 35,
+                                                                    "_name": "Debug Log Message",
+                                                                    "graph": $iref:35,
+                                                                    "position": {
+                                                                        "$type": 30,
+                                                                        -18,
+                                                                        -4.600006
+                                                                    },
+                                                                    "ports": {
+                                                                        "$id": 57,
+                                                                        "$type": 31,
+                                                                        "comparer": $iref:1,
+                                                                        "$rlength": 2,
+                                                                        "$rcontent": [
+                                                                            {
+                                                                                "$k": "flowIn",
+                                                                                "$v": {
+                                                                                    "$id": 58,
+                                                                                    "$type": 32,
+                                                                                    "_fieldName": "flowIn",
+                                                                                    "_node": $iref:56,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 59,
+                                                                                        "$type": 33,
+                                                                                        "$rlength": 1,
+                                                                                        "$rcontent": [
+                                                                                            {
+                                                                                                "$id": 60,
+                                                                                                "$type": 34,
+                                                                                                "fieldName": "flowOut",
+                                                                                                "node": $iref:51,
+                                                                                                "reroutePoints": {
+                                                                                                    "$id": 61,
+                                                                                                    "$type": 36,
+                                                                                                    "$rlength": 0,
+                                                                                                    "$rcontent": [
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 0,
+                                                                                    "_connectionType": 1,
+                                                                                    "_typeConstraint": 2,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "$k": "flowOut",
+                                                                                "$v": {
+                                                                                    "$id": 62,
+                                                                                    "$type": 32,
+                                                                                    "_fieldName": "flowOut",
+                                                                                    "_node": $iref:56,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 63,
+                                                                                        "$type": 33,
+                                                                                        "$rlength": 0,
+                                                                                        "$rcontent": [
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 1,
+                                                                                    "_connectionType": 0,
+                                                                                    "_typeConstraint": 0,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "hasError": false,
+                                                                    "error": "",
+                                                                    "isExecuting": false,
+                                                                    "flowIn": null,
+                                                                    "flowOut": null,
+                                                                    "message": "Exercise from left glove"
+                                                                },
+                                                                "reroutePoints": {
+                                                                    "$id": 64,
+                                                                    "$type": 36,
+                                                                    "$rlength": 0,
+                                                                    "$rcontent": [
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_direction": 1,
+                                                    "_connectionType": 0,
+                                                    "_typeConstraint": 0,
+                                                    "_dynamic": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "hasError": false,
+                                    "error": "",
+                                    "isExecuting": false,
+                                    "flowOut": null,
+                                    "key": "Exercise Started",
+                                    "linkedToSceneObject": "LeftGlove8daf992c-7eb6-4a82-b627-88e1aef22157"
+                                },
+                                $iref:56
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 65,
+                            "$type": 10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 66,
+                            "$type": 11,
+                            "$rlength": 2,
+                            "$rcontent": [
+                                $iref:37,
+                                $iref:51
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 67,
+                            "$type": 12,
+                            "comparer": $iref:10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "LeftGlove8daf992c-7eb6-4a82-b627-88e1aef22157",
+                        "assignedSCGO": {
+                            "$id": 68,
+                            "$type": 26,
+                            "data": {
+                                "$type": 3,
+                                "id": "LeftGlove8daf992c-7eb6-4a82-b627-88e1aef22157",
+                                "childs": {
+                                    "$id": 69,
+                                    "$type": 4,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "parent": "SteelTable68a78cdb-3914-47b7-94e7-97f5d0c7b013",
+                                "data": $iref:34,
+                                "sceneObjectGUID": "bd4d231c-2ee5-4321-9261-739ad016ec2c",
+                                "graphJSON": "",
+                                "position": {
+                                    "$type": 7,
+                                    -0.133117676,
+                                    0.9454346,
+                                    0.1035862
+                                },
+                                "rotation": {
+                                    "$type": 7,
+                                    0,
+                                    0,
+                                    0
+                                },
+                                "graph": $iref:35
+                            },
+                            "outlineRoot": {
+                                "$id": 70,
+                                "$type": 13
+                            },
+                            "messageAction": "glove on"
+                        },
+                        "displayName": "LeftGlove"
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 71,
+                    "$type": 13
+                },
+                "messageAction": "glove on"
+            }
+        },
+        {
+            "$k": "RightGlove4848b310-73a7-43d4-a956-d5c1e986539c",
+            "$v": {
+                "$id": 72,
+                "$type": 26,
+                "data": {
+                    "$type": 3,
+                    "id": "RightGlove4848b310-73a7-43d4-a956-d5c1e986539c",
+                    "childs": {
+                        "$id": 73,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "SteelTable68a78cdb-3914-47b7-94e7-97f5d0c7b013",
+                    "data": {
+                        "$id": 74,
+                        "$type": 27,
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": 28
+                        },
+                        "defaultValue": {
+                            "$type": 28
+                        }
+                    },
+                    "sceneObjectGUID": "00981f8f-db6e-4b7d-81c1-0936aac40dc9",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        0.1060791,
+                        0.9454346,
+                        0.118299961
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 75,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 76,
+                            "$type": 9,
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 77,
+                                    "$type": 35,
+                                    "_name": "Debug Log Message",
+                                    "graph": $iref:75,
+                                    "position": {
+                                        "$type": 30,
+                                        0,
+                                        -249.6
+                                    },
+                                    "ports": {
+                                        "$id": 78,
+                                        "$type": 31,
+                                        "comparer": $iref:1,
+                                        "$rlength": 2,
+                                        "$rcontent": [
+                                            {
+                                                "$k": "flowIn",
+                                                "$v": {
+                                                    "$id": 79,
+                                                    "$type": 32,
+                                                    "_fieldName": "flowIn",
+                                                    "_node": $iref:77,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 80,
+                                                        "$type": 33,
+                                                        "$rlength": 1,
+                                                        "$rcontent": [
+                                                            {
+                                                                "$id": 81,
+                                                                "$type": 34,
+                                                                "fieldName": "flowOut",
+                                                                "node": {
+                                                                    "$id": 82,
+                                                                    "$type": 29,
+                                                                    "_name": "Message Received",
+                                                                    "graph": $iref:75,
+                                                                    "position": {
+                                                                        "$type": 30,
+                                                                        -275,
+                                                                        -244.6
+                                                                    },
+                                                                    "ports": {
+                                                                        "$id": 83,
+                                                                        "$type": 31,
+                                                                        "comparer": $iref:1,
+                                                                        "$rlength": 1,
+                                                                        "$rcontent": [
+                                                                            {
+                                                                                "$k": "flowOut",
+                                                                                "$v": {
+                                                                                    "$id": 84,
+                                                                                    "$type": 32,
+                                                                                    "_fieldName": "flowOut",
+                                                                                    "_node": $iref:82,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 85,
+                                                                                        "$type": 33,
+                                                                                        "$rlength": 1,
+                                                                                        "$rcontent": [
+                                                                                            {
+                                                                                                "$id": 86,
+                                                                                                "$type": 34,
+                                                                                                "fieldName": "flowIn",
+                                                                                                "node": $iref:77,
+                                                                                                "reroutePoints": {
+                                                                                                    "$id": 87,
+                                                                                                    "$type": 36,
+                                                                                                    "$rlength": 0,
+                                                                                                    "$rcontent": [
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 1,
+                                                                                    "_connectionType": 0,
+                                                                                    "_typeConstraint": 0,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "hasError": false,
+                                                                    "error": "",
+                                                                    "isExecuting": false,
+                                                                    "flowOut": null,
+                                                                    "key": "OnGrabbed",
+                                                                    "linkedToSceneObject": "RightGlove4848b310-73a7-43d4-a956-d5c1e986539c"
+                                                                },
+                                                                "reroutePoints": {
+                                                                    "$id": 88,
+                                                                    "$type": 36,
+                                                                    "$rlength": 0,
+                                                                    "$rcontent": [
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_direction": 0,
+                                                    "_connectionType": 1,
+                                                    "_typeConstraint": 2,
+                                                    "_dynamic": false
+                                                }
+                                            },
+                                            {
+                                                "$k": "flowOut",
+                                                "$v": {
+                                                    "$id": 89,
+                                                    "$type": 32,
+                                                    "_fieldName": "flowOut",
+                                                    "_node": $iref:77,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 90,
+                                                        "$type": 33,
+                                                        "$rlength": 0,
+                                                        "$rcontent": [
+                                                        ]
+                                                    },
+                                                    "_direction": 1,
+                                                    "_connectionType": 0,
+                                                    "_typeConstraint": 0,
+                                                    "_dynamic": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "hasError": false,
+                                    "error": "",
+                                    "isExecuting": false,
+                                    "flowIn": null,
+                                    "flowOut": null,
+                                    "message": "RightGloveGrabbed"
+                                },
+                                $iref:82
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 91,
+                            "$type": 10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 92,
+                            "$type": 11,
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 93,
+                                    "$type": 29,
+                                    "_name": "Message Received",
+                                    "graph": $iref:75,
+                                    "position": {
+                                        "$type": 30,
+                                        -293,
+                                        -240.6
+                                    },
+                                    "ports": {
+                                        "$id": 94,
+                                        "$type": 31,
+                                        "comparer": $iref:1,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$k": "flowOut",
+                                                "$v": {
+                                                    "$id": 95,
+                                                    "$type": 32,
+                                                    "_fieldName": "flowOut",
+                                                    "_node": $iref:93,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 96,
+                                                        "$type": 33,
+                                                        "$rlength": 0,
+                                                        "$rcontent": [
+                                                        ]
+                                                    },
+                                                    "_direction": 1,
+                                                    "_connectionType": 0,
+                                                    "_typeConstraint": 0,
+                                                    "_dynamic": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "hasError": false,
+                                    "error": "",
+                                    "isExecuting": false,
+                                    "flowOut": null,
+                                    "key": "OnUsed",
+                                    "linkedToSceneObject": "RightGlove4848b310-73a7-43d4-a956-d5c1e986539c"
+                                },
+                                $iref:82
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 97,
+                            "$type": 12,
+                            "comparer": $iref:10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "RightGlove4848b310-73a7-43d4-a956-d5c1e986539c",
+                        "assignedSCGO": {
+                            "$id": 98,
+                            "$type": 26,
+                            "data": {
+                                "$type": 3,
+                                "id": "RightGlove4848b310-73a7-43d4-a956-d5c1e986539c",
+                                "childs": {
+                                    "$id": 99,
+                                    "$type": 4,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "parent": "SteelTable68a78cdb-3914-47b7-94e7-97f5d0c7b013",
+                                "data": $iref:74,
+                                "sceneObjectGUID": "00981f8f-db6e-4b7d-81c1-0936aac40dc9",
+                                "graphJSON": "",
+                                "position": {
+                                    "$type": 7,
+                                    0.1060791,
+                                    0.9454346,
+                                    0.118299961
+                                },
+                                "rotation": {
+                                    "$type": 7,
+                                    0,
+                                    0,
+                                    0
+                                },
+                                "graph": $iref:75
+                            },
+                            "outlineRoot": {
+                                "$id": 100,
+                                "$type": 13
+                            },
+                            "messageAction": "glove on"
+                        },
+                        "displayName": "Right Glove"
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 101,
+                    "$type": 13
+                },
+                "messageAction": "glove on"
+            }
+        },
+        {
+            "$k": "EquipmentAssistant6e8a2846-0c75-4113-a906-bfabe4deda66",
+            "$v": {
+                "$id": 102,
+                "$type": "37|EquipmentAssistantSceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "EquipmentAssistant6e8a2846-0c75-4113-a906-bfabe4deda66",
+                    "childs": {
+                        "$id": 103,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "",
+                    "data": {
+                        "$id": 104,
+                        "$type": "38|NT.Variables.NTVariable`1[[NT.SceneObjects.EquipmentAssistantData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "39|NT.SceneObjects.EquipmentAssistantData, Assembly-CSharp",
+                            "userInRange": false,
+                            "userFacingAway": false,
+                            "gownOn": false,
+                            "gownCorrectlyPut": false,
+                            "glovesCorrectlyPut": false,
+                            "rightGloveOn": false,
+                            "leftGloveOn": false
+                        },
+                        "defaultValue": {
+                            "$type": 39,
+                            "userInRange": false,
+                            "userFacingAway": false,
+                            "gownOn": false,
+                            "gownCorrectlyPut": false,
+                            "glovesCorrectlyPut": false,
+                            "rightGloveOn": false,
+                            "leftGloveOn": false
+                        }
+                    },
+                    "sceneObjectGUID": "5a8120db-0350-4bb2-bef4-61cf568aa0a6",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        -1.97897339,
+                        0,
+                        4.35154963
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        180,
+                        0
+                    },
+                    "graph": {
+                        "$id": 105,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 106,
+                            "$type": 9,
+                            "$rlength": 3,
+                            "$rcontent": [
+                                {
+                                    "$id": 107,
+                                    "$type": 29,
+                                    "_name": "Message Received",
+                                    "graph": $iref:105,
+                                    "position": {
+                                        "$type": 30,
+                                        -333.098419,
+                                        -227.6
+                                    },
+                                    "ports": {
+                                        "$id": 108,
+                                        "$type": 31,
+                                        "comparer": $iref:1,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$k": "flowOut",
+                                                "$v": {
+                                                    "$id": 109,
+                                                    "$type": 32,
+                                                    "_fieldName": "flowOut",
+                                                    "_node": $iref:107,
+                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "connections": {
+                                                        "$id": 110,
+                                                        "$type": 33,
+                                                        "$rlength": 1,
+                                                        "$rcontent": [
+                                                            {
+                                                                "$id": 111,
+                                                                "$type": 34,
+                                                                "fieldName": "flowIn",
+                                                                "node": {
+                                                                    "$id": 112,
+                                                                    "$type": "40|NT.Nodes.Display.DisplayMessage, Assembly-CSharp",
+                                                                    "_name": "Display Message",
+                                                                    "graph": $iref:105,
+                                                                    "position": {
+                                                                        "$type": 30,
+                                                                        -34.5,
+                                                                        -313.6
+                                                                    },
+                                                                    "ports": {
+                                                                        "$id": 113,
+                                                                        "$type": 31,
+                                                                        "comparer": $iref:1,
+                                                                        "$rlength": 4,
+                                                                        "$rcontent": [
+                                                                            {
+                                                                                "$k": "messageText",
+                                                                                "$v": {
+                                                                                    "$id": 114,
+                                                                                    "$type": 32,
+                                                                                    "_fieldName": "messageText",
+                                                                                    "_node": $iref:112,
+                                                                                    "_typeQualifiedName": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                                                                    "connections": {
+                                                                                        "$id": 115,
+                                                                                        "$type": 33,
+                                                                                        "$rlength": 0,
+                                                                                        "$rcontent": [
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 0,
+                                                                                    "_connectionType": 1,
+                                                                                    "_typeConstraint": 2,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "$k": "objectPosition",
+                                                                                "$v": {
+                                                                                    "$id": 116,
+                                                                                    "$type": 32,
+                                                                                    "_fieldName": "objectPosition",
+                                                                                    "_node": $iref:112,
+                                                                                    "_typeQualifiedName": "NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 117,
+                                                                                        "$type": 33,
+                                                                                        "$rlength": 1,
+                                                                                        "$rcontent": [
+                                                                                            {
+                                                                                                "$id": 118,
+                                                                                                "$type": 34,
+                                                                                                "fieldName": "value",
+                                                                                                "node": {
+                                                                                                    "$id": 119,
+                                                                                                    "$type": "41|NT.Nodes.Variables.GetNTVariableNode, Assembly-CSharp",
+                                                                                                    "_name": "GET - (EquipmentAssistant)",
+                                                                                                    "graph": $iref:105,
+                                                                                                    "position": {
+                                                                                                        "$type": 30,
+                                                                                                        -276.5,
+                                                                                                        -333.6
+                                                                                                    },
+                                                                                                    "ports": {
+                                                                                                        "$id": 120,
+                                                                                                        "$type": 31,
+                                                                                                        "comparer": $iref:1,
+                                                                                                        "$rlength": 1,
+                                                                                                        "$rcontent": [
+                                                                                                            {
+                                                                                                                "$k": "value",
+                                                                                                                "$v": {
+                                                                                                                    "$id": 121,
+                                                                                                                    "$type": 32,
+                                                                                                                    "_fieldName": "value",
+                                                                                                                    "_node": $iref:119,
+                                                                                                                    "_typeQualifiedName": "SceneGameObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                                    "connections": {
+                                                                                                                        "$id": 122,
+                                                                                                                        "$type": 33,
+                                                                                                                        "$rlength": 1,
+                                                                                                                        "$rcontent": [
+                                                                                                                            {
+                                                                                                                                "$id": 123,
+                                                                                                                                "$type": 34,
+                                                                                                                                "fieldName": "objectPosition",
+                                                                                                                                "node": $iref:112,
+                                                                                                                                "reroutePoints": {
+                                                                                                                                    "$id": 124,
+                                                                                                                                    "$type": 36,
+                                                                                                                                    "$rlength": 0,
+                                                                                                                                    "$rcontent": [
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    "_direction": 1,
+                                                                                                                    "_connectionType": 1,
+                                                                                                                    "_typeConstraint": 2,
+                                                                                                                    "_dynamic": true
+                                                                                                                }
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "hasError": false,
+                                                                                                    "error": "",
+                                                                                                    "isExecuting": false,
+                                                                                                    "variableType": {
+                                                                                                        "$id": 125,
+                                                                                                        "$type": "42|System.RuntimeType, mscorlib",
+                                                                                                        "SceneGameObject, Assembly-CSharp"
+                                                                                                    },
+                                                                                                    "variablePath": "",
+                                                                                                    "dataType": {
+                                                                                                        "$id": 126,
+                                                                                                        "$type": 42,
+                                                                                                        "System.String, mscorlib"
+                                                                                                    },
+                                                                                                    "dataKey": "EquipmentAssistant6e8a2846-0c75-4113-a906-bfabe4deda66"
+                                                                                                },
+                                                                                                "reroutePoints": {
+                                                                                                    "$id": 127,
+                                                                                                    "$type": 36,
+                                                                                                    "$rlength": 0,
+                                                                                                    "$rcontent": [
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 0,
+                                                                                    "_connectionType": 1,
+                                                                                    "_typeConstraint": 2,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "$k": "flowIn",
+                                                                                "$v": {
+                                                                                    "$id": 128,
+                                                                                    "$type": 32,
+                                                                                    "_fieldName": "flowIn",
+                                                                                    "_node": $iref:112,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 129,
+                                                                                        "$type": 33,
+                                                                                        "$rlength": 1,
+                                                                                        "$rcontent": [
+                                                                                            {
+                                                                                                "$id": 130,
+                                                                                                "$type": 34,
+                                                                                                "fieldName": "flowOut",
+                                                                                                "node": $iref:107,
+                                                                                                "reroutePoints": {
+                                                                                                    "$id": 131,
+                                                                                                    "$type": 36,
+                                                                                                    "$rlength": 0,
+                                                                                                    "$rcontent": [
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 0,
+                                                                                    "_connectionType": 1,
+                                                                                    "_typeConstraint": 2,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "$k": "flowOut",
+                                                                                "$v": {
+                                                                                    "$id": 132,
+                                                                                    "$type": 32,
+                                                                                    "_fieldName": "flowOut",
+                                                                                    "_node": $iref:112,
+                                                                                    "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "connections": {
+                                                                                        "$id": 133,
+                                                                                        "$type": 33,
+                                                                                        "$rlength": 0,
+                                                                                        "$rcontent": [
+                                                                                        ]
+                                                                                    },
+                                                                                    "_direction": 1,
+                                                                                    "_connectionType": 0,
+                                                                                    "_typeConstraint": 0,
+                                                                                    "_dynamic": false
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "hasError": false,
+                                                                    "error": "",
+                                                                    "isExecuting": false,
+                                                                    "flowIn": null,
+                                                                    "flowOut": null,
+                                                                    "messageText": "Yo",
+                                                                    "objectPosition": null
+                                                                },
+                                                                "reroutePoints": {
+                                                                    "$id": 134,
+                                                                    "$type": 36,
+                                                                    "$rlength": 0,
+                                                                    "$rcontent": [
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "_direction": 1,
+                                                    "_connectionType": 0,
+                                                    "_typeConstraint": 0,
+                                                    "_dynamic": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "hasError": false,
+                                    "error": "",
+                                    "isExecuting": false,
+                                    "flowOut": null,
+                                    "key": "Exercise Start",
+                                    "linkedToSceneObject": "EquipmentAssistant6e8a2846-0c75-4113-a906-bfabe4deda66"
+                                },
+                                $iref:112,
+                                $iref:119
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 135,
+                            "$type": 10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 136,
+                            "$type": 11,
+                            "$rlength": 1,
+                            "$rcontent": [
+                                $iref:107
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 137,
+                            "$type": 12,
+                            "comparer": {
+                                "$id": 138,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "EquipmentAssistant6e8a2846-0c75-4113-a906-bfabe4deda66",
+                        "assignedSCGO": {
+                            "$id": 139,
+                            "$type": 37,
+                            "data": {
+                                "$type": 3,
+                                "id": "EquipmentAssistant6e8a2846-0c75-4113-a906-bfabe4deda66",
+                                "childs": {
+                                    "$id": 140,
+                                    "$type": 4,
+                                    "$rlength": 0,
+                                    "$rcontent": [
+                                    ]
+                                },
+                                "parent": "",
+                                "data": $iref:104,
+                                "sceneObjectGUID": "5a8120db-0350-4bb2-bef4-61cf568aa0a6",
+                                "graphJSON": "",
+                                "position": {
+                                    "$type": 7,
+                                    -1.97897339,
+                                    0,
+                                    4.35154963
+                                },
+                                "rotation": {
+                                    "$type": 7,
+                                    0,
+                                    180,
+                                    0
+                                },
+                                "graph": $iref:105
+                            },
+                            "outlineRoot": {
+                                "$id": 141,
+                                "$type": 13
+                            }
+                        },
+                        "displayName": "EquipmentAssistant"
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 142,
+                    "$type": 13
+                }
+            }
+        }
+    ]
+}
