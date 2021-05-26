@@ -5,7 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 5,
+    "$rlength": 6,
     "$rcontent": [
         {
             "$k": "DesktopTable59be520a-abd8-44d4-ba0b-ba9132429f5b",
@@ -107,10 +107,11 @@
                     "childs": {
                         "$id": 13,
                         "$type": 4,
-                        "$rlength": 2,
+                        "$rlength": 3,
                         "$rcontent": [
                             "LeftGlove8daf992c-7eb6-4a82-b627-88e1aef22157",
-                            "RightGlove4848b310-73a7-43d4-a956-d5c1e986539c"
+                            "RightGlove4848b310-73a7-43d4-a956-d5c1e986539c",
+                            "Gown0a87fa46-c970-436c-a8a5-8c26720bde70"
                         ]
                     },
                     "parent": "",
@@ -983,22 +984,12 @@
                         "value": {
                             "$type": "39|NT.SceneObjects.EquipmentAssistantData, Assembly-CSharp",
                             "userInRange": false,
-                            "userFacingAway": false,
-                            "gownOn": false,
-                            "gownCorrectlyPut": false,
-                            "glovesCorrectlyPut": false,
-                            "rightGloveOn": false,
-                            "leftGloveOn": false
+                            "userFacingAway": false
                         },
                         "defaultValue": {
                             "$type": 39,
                             "userInRange": false,
-                            "userFacingAway": false,
-                            "gownOn": false,
-                            "gownCorrectlyPut": false,
-                            "glovesCorrectlyPut": false,
-                            "rightGloveOn": false,
-                            "leftGloveOn": false
+                            "userFacingAway": false
                         }
                     },
                     "sceneObjectGUID": "5a8120db-0350-4bb2-bef4-61cf568aa0a6",
@@ -1357,6 +1348,95 @@
                 },
                 "outlineRoot": {
                     "$id": 142,
+                    "$type": 13
+                }
+            }
+        },
+        {
+            "$k": "Gown0a87fa46-c970-436c-a8a5-8c26720bde70",
+            "$v": {
+                "$id": 143,
+                "$type": "43|GownSceneGameObject, Assembly-CSharp",
+                "data": {
+                    "$type": 3,
+                    "id": "Gown0a87fa46-c970-436c-a8a5-8c26720bde70",
+                    "childs": {
+                        "$id": 144,
+                        "$type": 4,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "parent": "SteelTable68a78cdb-3914-47b7-94e7-97f5d0c7b013",
+                    "data": {
+                        "$id": 145,
+                        "$type": "44|NT.Variables.NTVariable`1[[NT.SceneObjects.GownData, Assembly-CSharp]], Assembly-CSharp",
+                        "collapsed": true,
+                        "name": null,
+                        "value": {
+                            "$type": "45|NT.SceneObjects.GownData, Assembly-CSharp"
+                        },
+                        "defaultValue": {
+                            "$type": 45
+                        }
+                    },
+                    "sceneObjectGUID": "0cdf2682-1330-46b5-9e08-5b11976c0351",
+                    "graphJSON": "",
+                    "position": {
+                        "$type": 7,
+                        -0.0210266113,
+                        0.9454346,
+                        -0.256973267
+                    },
+                    "rotation": {
+                        "$type": 7,
+                        0,
+                        0,
+                        0
+                    },
+                    "graph": {
+                        "$id": 146,
+                        "$type": 8,
+                        "_name": "",
+                        "nodes": {
+                            "$id": 147,
+                            "$type": 9,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "packedNodes": {
+                            "$id": 148,
+                            "$type": 10,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodes": {
+                            "$id": 149,
+                            "$type": 11,
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "callbackNodesDict": {
+                            "$id": 150,
+                            "$type": 12,
+                            "comparer": {
+                                "$id": 151,
+                                "$type": 1
+                            },
+                            "$rlength": 0,
+                            "$rcontent": [
+                            ]
+                        },
+                        "linkedNTVariable": "",
+                        "assignedSCGO": null,
+                        "displayName": ""
+                    }
+                },
+                "outlineRoot": {
+                    "$id": 152,
                     "$type": 13
                 }
             }

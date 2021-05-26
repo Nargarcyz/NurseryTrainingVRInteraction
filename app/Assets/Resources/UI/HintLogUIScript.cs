@@ -29,24 +29,18 @@ public class HintLogUIScript : MonoBehaviour
     void ReceiveHint(string hint)
     {
         var scroll = this.gameObject.transform.GetComponentInChildren<ScrollRect>();
-        float backup = scroll.verticalNormalizedPosition;
 
         var newHint = Instantiate(HintMessageEntryObject) as GameObject;
         newHint.GetComponentInChildren<TextMeshProUGUI>().text = hint;
         newHint.transform.SetParent(MessageLog, false);
         LayoutRebuilder.ForceRebuildLayoutImmediate(MessageLog.GetComponent<VerticalLayoutGroup>().GetComponent<RectTransform>());
 
-        StartCoroutine(RebuildAfterOneFrame(scroll, backup));
-
-
-        // newHint.transform.parent = MessageLog;
+        StartCoroutine(RebuildAfterOneFrame(scroll));
     }
-    private IEnumerator RebuildAfterOneFrame(ScrollRect scrollRect, float verticalPos)
+    private IEnumerator RebuildAfterOneFrame(ScrollRect scrollRect)
     {
         yield return new WaitForEndOfFrame();
         scrollRect.verticalNormalizedPosition = 0;
-        // LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)scrollRect.transform);
-
     }
 
     void Start()

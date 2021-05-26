@@ -72,12 +72,12 @@ public class GownSceneGameObject : SceneGameObject
             if (open)
             {
                 GetComponent<Animator>().Play("Open");
-                MessageSystem.SendMessage(data.id + "OnGownOpened");
+
             }
             else
             {
                 GetComponent<Animator>().Play("Close");
-                MessageSystem.SendMessage(data.id + "OnGownClosed");
+
             }
         }
         else if (linkedObject && linkedObject.IsGrabbed() && open)
@@ -96,16 +96,14 @@ public class GownSceneGameObject : SceneGameObject
     {
         switch (state)
         {
-            case 1:
-                MessageSystem.SendMessage("Gown Open");
-                break;
             case 0:
-                MessageSystem.SendMessage("Gown Closed");
+                MessageSystem.SendMessage(data.id + "OnGownClosed");
+                break;
+            case 1:
+                MessageSystem.SendMessage(data.id + "OnGownOpened");
                 break;
             default:
                 break;
-
-
         }
     }
 }
