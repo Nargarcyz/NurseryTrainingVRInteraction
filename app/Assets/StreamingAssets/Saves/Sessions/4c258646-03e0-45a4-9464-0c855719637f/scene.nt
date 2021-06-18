@@ -694,9 +694,9 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        3.51467133,
+                        3.5145874,
                         0,
-                        0.692438841
+                        0.692604363
                     },
                     "rotation": {
                         "$type": 7,
@@ -1161,42 +1161,14 @@
                     0.607843161,
                     1
                 },
-                "linkedObject": {
+                "linkedObject": null,
+                "rightGlove": {
                     "$id": 124,
-                    "$type": "24|VRTK.VRTK_InteractableObject, Assembly-CSharp",
-                    "disableWhenIdle": true,
-                    "allowedNearTouchControllers": 0,
-                    "allowedTouchControllers": 0,
-                    "ignoredColliders": {
-                        "$id": 125,
-                        "$type": "25|UnityEngine.Collider[], UnityEngine.PhysicsModule",
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "isGrabbable": true,
-                    "holdButtonToGrab": true,
-                    "stayGrabbedOnTeleport": true,
-                    "validDrop": 1,
-                    "grabOverrideButton": 0,
-                    "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
-                    "secondaryGrabActionScript": null,
-                    "isUsable": true,
-                    "holdButtonToUse": true,
-                    "useOnlyIfGrabbed": false,
-                    "pointerActivatesUseAction": false,
-                    "useOverrideButton": 0,
-                    "allowedUseControllers": 0,
-                    "objectHighlighter": null,
-                    "touchHighlightColor": {
-                        "$type": 19,
-                        0,
-                        0,
-                        0,
-                        0
-                    },
-                    "usingState": 0
+                    "$type": 13
+                },
+                "leftGlove": {
+                    "$id": 125,
+                    "$type": 13
                 }
             }
         },
@@ -1204,7 +1176,7 @@
             "$k": "TableCovere941195b-5333-4f3d-9ada-a828b08c8f11",
             "$v": {
                 "$id": 126,
-                "$type": "26|ToolSceneGameObject, Assembly-CSharp",
+                "$type": "24|ToolSceneGameObject, Assembly-CSharp",
                 "data": {
                     "$type": 3,
                     "id": "TableCovere941195b-5333-4f3d-9ada-a828b08c8f11",
@@ -1218,7 +1190,7 @@
                     "parent": "TableD1ad0ec91-372a-4cc8-bfd4-58748a67c904",
                     "data": {
                         "$id": 128,
-                        "$type": "27|NT.Variables.NTVariable`1[[NT.SceneObjects.ToolObject, Assembly-CSharp]], Assembly-CSharp",
+                        "$type": "25|NT.Variables.NTVariable`1[[NT.SceneObjects.ToolObject, Assembly-CSharp]], Assembly-CSharp",
                         "collapsed": true,
                         "name": null,
                         "value": null,
@@ -1283,13 +1255,13 @@
                 "toolType": 0,
                 "grabObject": {
                     "$id": 135,
-                    "$type": 24,
+                    "$type": "26|VRTK.VRTK_InteractableObject, Assembly-CSharp",
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
                         "$id": 136,
-                        "$type": 25,
+                        "$type": "27|UnityEngine.Collider[], UnityEngine.PhysicsModule",
                         "$rlength": 0,
                         "$rcontent": [
                         ]
@@ -1613,7 +1585,7 @@
             "$k": "Scissorsa17b925f-8ff2-4d1d-b7e3-b8da8dbc9376",
             "$v": {
                 "$id": 176,
-                "$type": 26,
+                "$type": 24,
                 "data": {
                     "$type": 3,
                     "id": "Scissorsa17b925f-8ff2-4d1d-b7e3-b8da8dbc9376",
@@ -1627,7 +1599,7 @@
                     "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
                     "data": {
                         "$id": 178,
-                        "$type": 27,
+                        "$type": 25,
                         "collapsed": true,
                         "name": null,
                         "value": null,
@@ -1637,15 +1609,15 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.00173949474,
+                        0.00170897716,
                         0.03540039,
-                        0.2387405
+                        0.238886416
                     },
                     "rotation": {
                         "$type": 7,
-                        359.988739,
-                        3.29155755,
-                        0.00493448135
+                        7.228596E-05,
+                        3.255282,
+                        -0.0002190157
                     },
                     "graph": {
                         "$id": 179,
@@ -1695,13 +1667,13 @@
                 "toolType": 0,
                 "grabObject": {
                     "$id": 186,
-                    "$type": 24,
+                    "$type": 26,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
                         "$id": 187,
-                        "$type": 25,
+                        "$type": 27,
                         "$rlength": 0,
                         "$rcontent": [
                         ]
@@ -1712,7 +1684,24 @@
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
+                    "grabAttachMechanicScript": {
+                        "$id": 188,
+                        "$type": "47|VRTK.GrabAttachMechanics.VRTK_FixedJointGrabAttach, Assembly-CSharp",
+                        "precisionGrab": true,
+                        "rightSnapHandle": {
+                            "$id": 189,
+                            "$type": 46
+                        },
+                        "leftSnapHandle": {
+                            "$id": 190,
+                            "$type": 46
+                        },
+                        "throwVelocityWithAttachDistance": false,
+                        "throwMultiplier": 1,
+                        "onGrabCollisionDelay": 0,
+                        "destroyImmediatelyOnThrow": true,
+                        "breakForce": 1500
+                    },
                     "secondaryGrabActionScript": null,
                     "isUsable": false,
                     "holdButtonToUse": true,
@@ -1735,13 +1724,13 @@
         {
             "$k": "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06",
             "$v": {
-                "$id": 188,
-                "$type": 26,
+                "$id": 191,
+                "$type": 24,
                 "data": {
                     "$type": 3,
                     "id": "Pinset_rectoaa6fc063-f5a3-460f-b551-f3a14e589e06",
                     "childs": {
-                        "$id": 189,
+                        "$id": 192,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -1749,8 +1738,8 @@
                     },
                     "parent": "MetallicBoxb75cb8ff-5508-46a8-98e8-6f1f41c2a228",
                     "data": {
-                        "$id": 190,
-                        "$type": 27,
+                        "$id": 193,
+                        "$type": 25,
                         "collapsed": true,
                         "name": null,
                         "value": null,
@@ -1760,43 +1749,43 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        -3.05101312E-05,
+                        7.450577E-09,
                         0.07751465,
-                        0.200012267
+                        0.200003445
                     },
                     "rotation": {
                         "$type": 7,
-                        270,
-                        0.00187875249,
+                        270.019775,
+                        0.00149240228,
                         0
                     },
                     "graph": {
-                        "$id": 191,
+                        "$id": 194,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 192,
+                            "$id": 195,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 193,
+                            "$id": 196,
                             "$type": 10,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 194,
+                            "$id": 197,
                             "$type": 11,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 195,
+                            "$id": 198,
                             "$type": 12,
                             "comparer": $iref:184,
                             "$rlength": 0,
@@ -1809,19 +1798,19 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 196,
+                    "$id": 199,
                     "$type": 13
                 },
                 "toolType": 5,
                 "grabObject": {
-                    "$id": 197,
-                    "$type": 24,
+                    "$id": 200,
+                    "$type": 26,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 198,
-                        "$type": 25,
+                        "$id": 201,
+                        "$type": 27,
                         "$rlength": 0,
                         "$rcontent": [
                         ]
@@ -1832,7 +1821,24 @@
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
+                    "grabAttachMechanicScript": {
+                        "$id": 202,
+                        "$type": 47,
+                        "precisionGrab": true,
+                        "rightSnapHandle": {
+                            "$id": 203,
+                            "$type": 46
+                        },
+                        "leftSnapHandle": {
+                            "$id": 204,
+                            "$type": 46
+                        },
+                        "throwVelocityWithAttachDistance": false,
+                        "throwMultiplier": 1,
+                        "onGrabCollisionDelay": 0,
+                        "destroyImmediatelyOnThrow": true,
+                        "breakForce": 1500
+                    },
                     "secondaryGrabActionScript": null,
                     "isUsable": false,
                     "holdButtonToUse": true,

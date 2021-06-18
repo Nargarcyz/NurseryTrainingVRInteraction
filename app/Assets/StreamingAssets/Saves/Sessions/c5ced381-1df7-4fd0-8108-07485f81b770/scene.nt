@@ -31,24 +31,12 @@
                         "value": {
                             "$type": "6|NT.SceneObjects.EquipmentAssistantData, Assembly-CSharp",
                             "userInRange": false,
-                            "userInPosition": false,
-                            "gownPrepared": false,
-                            "gownOn": false,
-                            "gownCorrectlyPut": false,
-                            "glovesCorrectlyPut": false,
-                            "rightGloveOn": false,
-                            "leftGloveOn": false
+                            "userFacingAway": false
                         },
                         "defaultValue": {
                             "$type": 6,
                             "userInRange": false,
-                            "userInPosition": false,
-                            "gownPrepared": false,
-                            "gownOn": false,
-                            "gownCorrectlyPut": false,
-                            "glovesCorrectlyPut": false,
-                            "rightGloveOn": false,
-                            "leftGloveOn": false
+                            "userFacingAway": false
                         }
                     },
                     "sceneObjectGUID": "5a8120db-0350-4bb2-bef4-61cf568aa0a6",

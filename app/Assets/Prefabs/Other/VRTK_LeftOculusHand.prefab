@@ -2101,7 +2101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0160c6852be49c44adc91a391d7b158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_controller: 2
+  m_controller: 1
   m_animator: {fileID: 8876106631659301970}
   m_defaultGrabPose: {fileID: 11437176, guid: 35525acb4c3b75c4a8c4dc2c117427be, type: 3}
   vrtk_grabber: {fileID: 0}

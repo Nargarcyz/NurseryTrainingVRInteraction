@@ -1553,7 +1553,6 @@ GameObject:
   m_Component:
   - component: {fileID: 298583809}
   - component: {fileID: 298583808}
-  - component: {fileID: 298583807}
   m_Layer: 0
   m_Name: '[VRTK_SDKManager]'
   m_TagString: Untagged
@@ -1561,19 +1560,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &298583807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298583806}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd363faecdfb6d4da2d9cdab9de34f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceOculusFloorLevel: 1
 --- !u!114 &298583808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14844,11 +14830,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VRTK_LeftOculusHand
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876106632514165859, guid: b7c38b999e5e708438434b4613c69288,
-        type: 3}
-      propertyPath: m_controller
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8876106632514165859, guid: b7c38b999e5e708438434b4613c69288,
         type: 3}
