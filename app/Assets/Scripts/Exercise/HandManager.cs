@@ -100,6 +100,7 @@ public class HandManager : MonoBehaviour
 
     private void ProcessStatus(HandInfo hand, string msg)
     {
+        if (msg.Contains("glove")) return;
         switch (hand.state)
         {
             case HandState.Dirty:

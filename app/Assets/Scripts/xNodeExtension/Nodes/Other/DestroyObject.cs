@@ -16,13 +16,15 @@ namespace NT.Nodes.Other
 
         public override IEnumerator ExecuteNode(NodeExecutionContext context)
         {
-            GameObject.DestroyImmediate(GetInputValue<SceneGameObject>(nameof(objectToDestroy), null).gameObject);
+            var obj = GetInputValue<SceneGameObject>(nameof(objectToDestroy), null).gameObject;
+            if (obj != null)
+                GameObject.DestroyImmediate(obj);
             yield return null;
         }
 
         public override string GetDisplayName()
         {
-            return "Display Hint";
+            return "Destroy Object";
         }
     }
 }

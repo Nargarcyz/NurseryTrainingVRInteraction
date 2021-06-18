@@ -5,7 +5,7 @@
         "$id": 1,
         "$type": "1|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
     },
-    "$rlength": 4,
+    "$rlength": 5,
     "$rcontent": [
         {
             "$k": "Hands Clean",
@@ -53,6 +53,18 @@
                     false
                 },
                 "defaultValue": $iref:5
+            }
+        },
+        {
+            "$k": "FirstTime",
+            "$v": {
+                "$type": 2,
+                "value": {
+                    "$id": 6,
+                    "$type": 3,
+                    true
+                },
+                "defaultValue": $iref:6
             }
         }
     ]
