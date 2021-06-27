@@ -5201,7 +5201,7 @@ MonoBehaviour:
     maxAllowedPerFrameAngleDifference: 1.5
   validCollisionColor: {r: 0, g: 1, b: 0, a: 1}
   invalidCollisionColor: {r: 1, g: 0, b: 0, a: 1}
-  tracerVisibility: 0
+  tracerVisibility: 2
   cursorVisibility: 0
   maximumLength: 100
   scaleFactor: 0.002
@@ -10890,6 +10890,8 @@ GameObject:
   - component: {fileID: 2000665409}
   - component: {fileID: 2000665408}
   - component: {fileID: 2000665415}
+  - component: {fileID: 2000665417}
+  - component: {fileID: 2000665416}
   m_Layer: 2
   m_Name: RightControllerScriptAlias
   m_TagString: Untagged
@@ -10937,7 +10939,7 @@ MonoBehaviour:
     maxAllowedPerFrameAngleDifference: 1.5
   validCollisionColor: {r: 0, g: 1, b: 0, a: 1}
   invalidCollisionColor: {r: 1, g: 0, b: 0, a: 1}
-  tracerVisibility: 0
+  tracerVisibility: 2
   cursorVisibility: 0
   maximumLength: 100
   scaleFactor: 0.002
@@ -11120,6 +11122,63 @@ MonoBehaviour:
   canClickOnHover: 0
   autoActivatingCanvas: {fileID: 0}
   collisionClick: 0
+--- !u!114 &2000665416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000665406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8968b5d420eccb44b9ca55dd8b291b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnControllerStartGrabInteractableObject:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnControllerGrabInteractableObject:
+    m_PersistentCalls:
+      m_Calls: []
+  OnControllerStartUngrabInteractableObject:
+    m_PersistentCalls:
+      m_Calls: []
+  OnControllerUngrabInteractableObject:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGrabButtonPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGrabButtonReleased:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2000665417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000665406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3942f053b21854fbc5d1227c94120b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layersToIgnore:
+    serializedVersion: 2
+    m_Bits: 4
+  triggerInteraction: 0
 --- !u!1 &2012632393
 GameObject:
   m_ObjectHideFlags: 0
@@ -14771,6 +14830,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 863734811}
     m_Modifications:
+    - target: {fileID: 8876106632514165855, guid: b7c38b999e5e708438434b4613c69288,
+        type: 3}
+      propertyPath: mirrorModel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8876106632514165856, guid: b7c38b999e5e708438434b4613c69288,
         type: 3}
       propertyPath: m_RootOrder

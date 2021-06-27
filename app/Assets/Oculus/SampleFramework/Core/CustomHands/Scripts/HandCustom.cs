@@ -51,6 +51,7 @@ namespace OVRTouchSample
         private bool m_collisionEnabled = true;
         private OVRGrabber m_grabber;
         public VRTK_InteractGrab vrtk_grabber;
+
         [Header("Interaction Volumes")]
         public GameObject precisionVolume;
         public GameObject generalVolume;
@@ -76,7 +77,7 @@ namespace OVRTouchSample
             vrtk_grabber = GetComponentInParent<VRTK_InteractGrab>();
             vrtkControllerEvents = GetComponentInParent<VRTK_ControllerEvents>();
             precisionVolume.SetActive(false);
-            generalVolume.SetActive(true);
+            generalVolume.SetActive(false);
         }
         private bool _indexPressed = false;
         private bool indexPressed
@@ -133,11 +134,14 @@ namespace OVRTouchSample
             {
                 return;
             }
-            if (thumbPressed && indexPressed)
+
+            if (thumbPressed || indexPressed)
             {
                 precisionVolume.SetActive(true);
                 generalVolume.SetActive(false);
-                StartCoroutine("TryToGrab");
+                if (thumbPressed && indexPressed)
+                    StartCoroutine("TryToGrab");
+
             }
             else
             {

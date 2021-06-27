@@ -22,6 +22,7 @@ public class SteelTableASceneGameObject : SceneGameObject
     private void OnTriggerEnter(Collider other)
     {
         GameObject collisionObject = other.gameObject;
+        Debug.Log("OBJECT ENTERED");
         if (other.tag == "Cover")
         {
             collisionObject.SetActive(false);

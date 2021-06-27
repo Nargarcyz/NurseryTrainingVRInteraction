@@ -5,7 +5,7 @@
     "nodes": {
         "$id": 1,
         "$type": "1|System.Collections.Generic.List`1[[XNode.Node, Assembly-CSharp]], mscorlib",
-        "$rlength": 10,
+        "$rlength": 6,
         "$rcontent": [
             {
                 "$id": 2,
@@ -280,8 +280,8 @@
                 "graph": $iref:0,
                 "position": {
                     "$type": 3,
-                    -73.88113,
-                    318.068176
+                    -76.15385,
+                    311.25
                 },
                 "ports": {
                     "$id": 32,
@@ -527,355 +527,51 @@
                 "objectPosition": null
             },
             $iref:48,
-            $iref:38,
+            $iref:38
+        ]
+    },
+    "packedNodes": {
+        "$id": 57,
+        "$type": "13|System.Collections.Generic.List`1[[NT.Graph.NodeGroupGraph, Assembly-CSharp]], mscorlib",
+        "$rlength": 0,
+        "$rcontent": [
+        ]
+    },
+    "callbackNodes": {
+        "$id": 58,
+        "$type": "14|System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib",
+        "$rlength": 3,
+        "$rcontent": [
+            $iref:2,
             {
-                "$id": 57,
-                "$type": "13|NT.Nodes.SessionCore.ToolPlacementComparer, Assembly-CSharp",
-                "_name": "Tool Placement Comparer",
+                "$id": 59,
+                "$type": 2,
+                "_name": "Message Received",
                 "graph": $iref:0,
                 "position": {
                     "$type": 3,
-                    -124.556465,
-                    -50.0403252
+                    -468.3523,
+                    106.647736
                 },
                 "ports": {
-                    "$id": 58,
+                    "$id": 60,
                     "$type": 4,
                     "comparer": $iref:4,
-                    "$rlength": 6,
+                    "$rlength": 1,
                     "$rcontent": [
-                        {
-                            "$k": "table",
-                            "$v": {
-                                "$id": 59,
-                                "$type": 6,
-                                "_fieldName": "table",
-                                "_node": $iref:57,
-                                "_typeQualifiedName": "NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                "connections": {
-                                    "$id": 60,
-                                    "$type": 7,
-                                    "$rlength": 1,
-                                    "$rcontent": [
-                                        {
-                                            "$id": 61,
-                                            "$type": 8,
-                                            "fieldName": "value",
-                                            "node": {
-                                                "$id": 62,
-                                                "$type": 10,
-                                                "_name": "GET - (Steel Table)",
-                                                "graph": $iref:0,
-                                                "position": {
-                                                    "$type": 3,
-                                                    -409.233948,
-                                                    -5.68547535
-                                                },
-                                                "ports": {
-                                                    "$id": 63,
-                                                    "$type": 4,
-                                                    "comparer": $iref:4,
-                                                    "$rlength": 1,
-                                                    "$rcontent": [
-                                                        {
-                                                            "$k": "value",
-                                                            "$v": {
-                                                                "$id": 64,
-                                                                "$type": 6,
-                                                                "_fieldName": "value",
-                                                                "_node": $iref:62,
-                                                                "_typeQualifiedName": "SceneGameObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                                "connections": {
-                                                                    "$id": 65,
-                                                                    "$type": 7,
-                                                                    "$rlength": 1,
-                                                                    "$rcontent": [
-                                                                        {
-                                                                            "$id": 66,
-                                                                            "$type": 8,
-                                                                            "fieldName": "table",
-                                                                            "node": $iref:57,
-                                                                            "reroutePoints": {
-                                                                                "$id": 67,
-                                                                                "$type": 11,
-                                                                                "$rlength": 0,
-                                                                                "$rcontent": [
-                                                                                ]
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                },
-                                                                "_direction": 1,
-                                                                "_connectionType": 1,
-                                                                "_typeConstraint": 2,
-                                                                "_dynamic": true
-                                                            }
-                                                        }
-                                                    ]
-                                                },
-                                                "hasError": false,
-                                                "error": "",
-                                                "isExecuting": false,
-                                                "variableType": $iref:21,
-                                                "variablePath": "",
-                                                "dataType": $iref:22,
-                                                "dataKey": "SteelTableA5cc345e5-33da-41e1-ade6-02aba3d840f4"
-                                            },
-                                            "reroutePoints": {
-                                                "$id": 68,
-                                                "$type": 11,
-                                                "$rlength": 0,
-                                                "$rcontent": [
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                "_direction": 0,
-                                "_connectionType": 1,
-                                "_typeConstraint": 2,
-                                "_dynamic": false
-                            }
-                        },
-                        {
-                            "$k": "reglas",
-                            "$v": {
-                                "$id": 69,
-                                "$type": 6,
-                                "_fieldName": "reglas",
-                                "_node": $iref:57,
-                                "_typeQualifiedName": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[MutableTuple`2[[Tools, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Tools, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-                                "connections": {
-                                    "$id": 70,
-                                    "$type": 7,
-                                    "$rlength": 0,
-                                    "$rcontent": [
-                                    ]
-                                },
-                                "_direction": 0,
-                                "_connectionType": 0,
-                                "_typeConstraint": 2,
-                                "_dynamic": false
-                            }
-                        },
-                        {
-                            "$k": "flowIn",
-                            "$v": {
-                                "$id": 71,
-                                "$type": 6,
-                                "_fieldName": "flowIn",
-                                "_node": $iref:57,
-                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                "connections": {
-                                    "$id": 72,
-                                    "$type": 7,
-                                    "$rlength": 1,
-                                    "$rcontent": [
-                                        {
-                                            "$id": 73,
-                                            "$type": 8,
-                                            "fieldName": "flowOut",
-                                            "node": {
-                                                "$id": 74,
-                                                "$type": 2,
-                                                "_name": "Message Received",
-                                                "graph": $iref:0,
-                                                "position": {
-                                                    "$type": 3,
-                                                    -435.0404,
-                                                    113.669395
-                                                },
-                                                "ports": {
-                                                    "$id": 75,
-                                                    "$type": 4,
-                                                    "comparer": $iref:4,
-                                                    "$rlength": 1,
-                                                    "$rcontent": [
-                                                        {
-                                                            "$k": "flowOut",
-                                                            "$v": {
-                                                                "$id": 76,
-                                                                "$type": 6,
-                                                                "_fieldName": "flowOut",
-                                                                "_node": $iref:74,
-                                                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                                "connections": {
-                                                                    "$id": 77,
-                                                                    "$type": 7,
-                                                                    "$rlength": 1,
-                                                                    "$rcontent": [
-                                                                        {
-                                                                            "$id": 78,
-                                                                            "$type": 8,
-                                                                            "fieldName": "flowIn",
-                                                                            "node": $iref:57,
-                                                                            "reroutePoints": {
-                                                                                "$id": 79,
-                                                                                "$type": 11,
-                                                                                "$rlength": 0,
-                                                                                "$rcontent": [
-                                                                                ]
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                },
-                                                                "_direction": 1,
-                                                                "_connectionType": 0,
-                                                                "_typeConstraint": 0,
-                                                                "_dynamic": false
-                                                            }
-                                                        }
-                                                    ]
-                                                },
-                                                "hasError": false,
-                                                "error": "",
-                                                "isExecuting": false,
-                                                "flowOut": null,
-                                                "key": "Exercise End",
-                                                "linkedToSceneObject": null
-                                            },
-                                            "reroutePoints": {
-                                                "$id": 80,
-                                                "$type": 11,
-                                                "$rlength": 0,
-                                                "$rcontent": [
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                "_direction": 0,
-                                "_connectionType": 1,
-                                "_typeConstraint": 2,
-                                "_dynamic": false
-                            }
-                        },
                         {
                             "$k": "flowOut",
                             "$v": {
-                                "$id": 81,
+                                "$id": 61,
                                 "$type": 6,
                                 "_fieldName": "flowOut",
-                                "_node": $iref:57,
+                                "_node": $iref:59,
                                 "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                 "connections": {
-                                    "$id": 82,
+                                    "$id": 62,
                                     "$type": 7,
-                                    "$rlength": 1,
+                                    "$rlength": 0,
                                     "$rcontent": [
-                                        {
-                                            "$id": 83,
-                                            "$type": 8,
-                                            "fieldName": "flowIn",
-                                            "node": {
-                                                "$id": 84,
-                                                "$type": "14|NT.Nodes.Other.PassExercice, Assembly-CSharp",
-                                                "_name": "Pass Exercise",
-                                                "graph": $iref:0,
-                                                "position": {
-                                                    "$type": 3,
-                                                    348.863525,
-                                                    56.1363525
-                                                },
-                                                "ports": {
-                                                    "$id": 85,
-                                                    "$type": 4,
-                                                    "comparer": $iref:4,
-                                                    "$rlength": 3,
-                                                    "$rcontent": [
-                                                        {
-                                                            "$k": "grade",
-                                                            "$v": {
-                                                                "$id": 86,
-                                                                "$type": 6,
-                                                                "_fieldName": "grade",
-                                                                "_node": $iref:84,
-                                                                "_typeQualifiedName": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-                                                                "connections": {
-                                                                    "$id": 87,
-                                                                    "$type": 7,
-                                                                    "$rlength": 0,
-                                                                    "$rcontent": [
-                                                                    ]
-                                                                },
-                                                                "_direction": 0,
-                                                                "_connectionType": 1,
-                                                                "_typeConstraint": 2,
-                                                                "_dynamic": false
-                                                            }
-                                                        },
-                                                        {
-                                                            "$k": "flowIn",
-                                                            "$v": {
-                                                                "$id": 88,
-                                                                "$type": 6,
-                                                                "_fieldName": "flowIn",
-                                                                "_node": $iref:84,
-                                                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                                "connections": {
-                                                                    "$id": 89,
-                                                                    "$type": 7,
-                                                                    "$rlength": 1,
-                                                                    "$rcontent": [
-                                                                        {
-                                                                            "$id": 90,
-                                                                            "$type": 8,
-                                                                            "fieldName": "flowOut",
-                                                                            "node": $iref:57,
-                                                                            "reroutePoints": {
-                                                                                "$id": 91,
-                                                                                "$type": 11,
-                                                                                "$rlength": 0,
-                                                                                "$rcontent": [
-                                                                                ]
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                },
-                                                                "_direction": 0,
-                                                                "_connectionType": 1,
-                                                                "_typeConstraint": 2,
-                                                                "_dynamic": false
-                                                            }
-                                                        },
-                                                        {
-                                                            "$k": "flowOut",
-                                                            "$v": {
-                                                                "$id": 92,
-                                                                "$type": 6,
-                                                                "_fieldName": "flowOut",
-                                                                "_node": $iref:84,
-                                                                "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                                "connections": {
-                                                                    "$id": 93,
-                                                                    "$type": 7,
-                                                                    "$rlength": 0,
-                                                                    "$rcontent": [
-                                                                    ]
-                                                                },
-                                                                "_direction": 1,
-                                                                "_connectionType": 0,
-                                                                "_typeConstraint": 0,
-                                                                "_dynamic": false
-                                                            }
-                                                        }
-                                                    ]
-                                                },
-                                                "hasError": false,
-                                                "error": "",
-                                                "isExecuting": false,
-                                                "flowIn": null,
-                                                "flowOut": null,
-                                                "grade": 10
-                                            },
-                                            "reroutePoints": {
-                                                "$id": 94,
-                                                "$type": 11,
-                                                "$rlength": 0,
-                                                "$rcontent": [
-                                                ]
-                                            }
-                                        }
                                     ]
                                 },
                                 "_direction": 1,
@@ -883,114 +579,24 @@
                                 "_typeConstraint": 0,
                                 "_dynamic": false
                             }
-                        },
-                        {
-                            "$k": "#List#reglas#less_than#f5528b68-01ca-4f08-9f4f-5623aa9c04e5",
-                            "$v": {
-                                "$id": 95,
-                                "$type": 6,
-                                "_fieldName": "#List#reglas#less_than#f5528b68-01ca-4f08-9f4f-5623aa9c04e5",
-                                "_node": $iref:57,
-                                "_typeQualifiedName": "MutableTuple`2[[Tools, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Tools, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                "connections": {
-                                    "$id": 96,
-                                    "$type": 7,
-                                    "$rlength": 0,
-                                    "$rcontent": [
-                                    ]
-                                },
-                                "_direction": 0,
-                                "_connectionType": 0,
-                                "_typeConstraint": 0,
-                                "_dynamic": true
-                            }
-                        },
-                        {
-                            "$k": "#List#reglas#less_than#98e0dca8-9a02-4b78-9233-b538ca98e626",
-                            "$v": {
-                                "$id": 97,
-                                "$type": 6,
-                                "_fieldName": "#List#reglas#less_than#98e0dca8-9a02-4b78-9233-b538ca98e626",
-                                "_node": $iref:57,
-                                "_typeQualifiedName": "MutableTuple`2[[Tools, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Tools, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                "connections": {
-                                    "$id": 98,
-                                    "$type": 7,
-                                    "$rlength": 0,
-                                    "$rcontent": [
-                                    ]
-                                },
-                                "_direction": 0,
-                                "_connectionType": 0,
-                                "_typeConstraint": 0,
-                                "_dynamic": true
-                            }
                         }
                     ]
                 },
                 "hasError": false,
                 "error": "",
                 "isExecuting": false,
-                "flowIn": null,
                 "flowOut": null,
-                "table": null,
-                "reglas": {
-                    "$id": 99,
-                    "$type": "15|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[MutableTuple`2[[Tools, Assembly-CSharp],[Tools, Assembly-CSharp]], Assembly-CSharp]], mscorlib",
-                    "comparer": {
-                        "$id": 100,
-                        "$type": 5
-                    },
-                    "$rlength": 2,
-                    "$rcontent": [
-                        {
-                            "$k": "#List#reglas#less_than#f5528b68-01ca-4f08-9f4f-5623aa9c04e5",
-                            "$v": {
-                                "$id": 101,
-                                "$type": "16|MutableTuple`2[[Tools, Assembly-CSharp],[Tools, Assembly-CSharp]], Assembly-CSharp",
-                                "Item1": 0,
-                                "Item2": 5
-                            }
-                        },
-                        {
-                            "$k": "#List#reglas#less_than#98e0dca8-9a02-4b78-9233-b538ca98e626",
-                            "$v": {
-                                "$id": 102,
-                                "$type": 16,
-                                "Item1": 5,
-                                "Item2": 9
-                            }
-                        }
-                    ]
-                }
+                "key": "Exercise End",
+                "linkedToSceneObject": null
             },
-            $iref:74,
-            $iref:62,
-            $iref:84
-        ]
-    },
-    "packedNodes": {
-        "$id": 103,
-        "$type": "17|System.Collections.Generic.List`1[[NT.Graph.NodeGroupGraph, Assembly-CSharp]], mscorlib",
-        "$rlength": 0,
-        "$rcontent": [
-        ]
-    },
-    "callbackNodes": {
-        "$id": 104,
-        "$type": "18|System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib",
-        "$rlength": 3,
-        "$rcontent": [
-            $iref:2,
-            $iref:48,
-            $iref:74
+            $iref:48
         ]
     },
     "callbackNodesDict": {
-        "$id": 105,
-        "$type": "19|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib]], mscorlib",
+        "$id": 63,
+        "$type": "15|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[NT.Nodes.Messages.CallbackNode, Assembly-CSharp]], mscorlib]], mscorlib",
         "comparer": {
-            "$id": 106,
+            "$id": 64,
             "$type": 5
         },
         "$rlength": 2,
@@ -998,8 +604,8 @@
             {
                 "$k": "Exercise Started",
                 "$v": {
-                    "$id": 107,
-                    "$type": 18,
+                    "$id": 65,
+                    "$type": 14,
                     "$rlength": 1,
                     "$rcontent": [
                         $iref:2
@@ -1009,12 +615,12 @@
             {
                 "$k": "Exercise End",
                 "$v": {
-                    "$id": 108,
-                    "$type": 18,
+                    "$id": 66,
+                    "$type": 14,
                     "$rlength": 2,
                     "$rcontent": [
-                        $iref:48,
-                        $iref:74
+                        $iref:59,
+                        $iref:48
                     ]
                 }
             }

@@ -2208,7 +2208,9 @@
                                     0
                                 },
                                 "usingState": 0
-                            }
+                            },
+                            "rightGlove": null,
+                            "leftGlove": null
                         },
                         "displayName": "Gloves"
                     }
@@ -2224,42 +2226,14 @@
                     0.607843161,
                     1
                 },
-                "linkedObject": {
+                "linkedObject": null,
+                "rightGlove": {
                     "$id": 211,
-                    "$type": 35,
-                    "disableWhenIdle": true,
-                    "allowedNearTouchControllers": 0,
-                    "allowedTouchControllers": 0,
-                    "ignoredColliders": {
-                        "$id": 212,
-                        "$type": 36,
-                        "$rlength": 0,
-                        "$rcontent": [
-                        ]
-                    },
-                    "isGrabbable": true,
-                    "holdButtonToGrab": true,
-                    "stayGrabbedOnTeleport": true,
-                    "validDrop": 1,
-                    "grabOverrideButton": 0,
-                    "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
-                    "secondaryGrabActionScript": null,
-                    "isUsable": true,
-                    "holdButtonToUse": true,
-                    "useOnlyIfGrabbed": false,
-                    "pointerActivatesUseAction": false,
-                    "useOverrideButton": 0,
-                    "allowedUseControllers": 0,
-                    "objectHighlighter": null,
-                    "touchHighlightColor": {
-                        "$type": 25,
-                        0,
-                        0,
-                        0,
-                        0
-                    },
-                    "usingState": 0
+                    "$type": 22
+                },
+                "leftGlove": {
+                    "$id": 212,
+                    "$type": 22
                 }
             }
         },
@@ -4455,15 +4429,15 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.0308176726,
+                        0.0186106581,
                         -3.11049843,
-                        0.104959607
+                        0.00241994858
                     },
                     "rotation": {
                         "$type": 7,
-                        0.154552221,
-                        359.7274,
-                        359.9511
+                        0.154604018,
+                        359.834167,
+                        359.951141
                     },
                     "graph": {
                         "$id": 442,
@@ -5356,7 +5330,7 @@
                     "$id": 532,
                     "$type": 22
                 },
-                "toolType": 0,
+                "toolType": 4,
                 "grabObject": {
                     "$id": 533,
                     "$type": 35,
@@ -5370,13 +5344,30 @@
                         "$rcontent": [
                         ]
                     },
-                    "isGrabbable": false,
+                    "isGrabbable": true,
                     "holdButtonToGrab": true,
                     "stayGrabbedOnTeleport": true,
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
+                    "grabAttachMechanicScript": {
+                        "$id": 535,
+                        "$type": "43|VRTK.GrabAttachMechanics.VRTK_FixedJointGrabAttach, Assembly-CSharp",
+                        "precisionGrab": true,
+                        "rightSnapHandle": {
+                            "$id": 536,
+                            "$type": "44|UnityEngine.Transform, UnityEngine.CoreModule"
+                        },
+                        "leftSnapHandle": {
+                            "$id": 537,
+                            "$type": 44
+                        },
+                        "throwVelocityWithAttachDistance": false,
+                        "throwMultiplier": 1,
+                        "onGrabCollisionDelay": 0,
+                        "destroyImmediatelyOnThrow": true,
+                        "breakForce": 1500
+                    },
                     "secondaryGrabActionScript": null,
                     "isUsable": false,
                     "holdButtonToUse": true,
@@ -5399,13 +5390,13 @@
         {
             "$k": "Scissors3159abf5-7bc9-4bf3-af1f-c6d771c5f84b",
             "$v": {
-                "$id": 535,
+                "$id": 538,
                 "$type": 29,
                 "data": {
                     "$type": 3,
                     "id": "Scissors3159abf5-7bc9-4bf3-af1f-c6d771c5f84b",
                     "childs": {
-                        "$id": 536,
+                        "$id": 539,
                         "$type": 4,
                         "$rlength": 0,
                         "$rcontent": [
@@ -5413,7 +5404,7 @@
                     },
                     "parent": "Closetd9f59041-dab7-421d-8411-7c57c8b83eb1",
                     "data": {
-                        "$id": 537,
+                        "$id": 540,
                         "$type": 30,
                         "collapsed": true,
                         "name": null,
@@ -5424,37 +5415,37 @@
                     "graphJSON": "",
                     "position": {
                         "$type": 7,
-                        0.0150921028,
+                        0.007329194,
                         -3.110498,
-                        8.787727E-05
+                        0.00374998781
                     },
                     "rotation": {
                         "$type": 7,
-                        0.03100993,
-                        359.945374,
+                        0.0310597252,
+                        359.966766,
                         359.978821
                     },
                     "graph": {
-                        "$id": 538,
+                        "$id": 541,
                         "$type": 8,
                         "_name": "SceneObjectGraph",
                         "nodes": {
-                            "$id": 539,
+                            "$id": 542,
                             "$type": 9,
                             "$rlength": 3,
                             "$rcontent": [
                                 {
-                                    "$id": 540,
+                                    "$id": 543,
                                     "$type": 31,
                                     "_name": "GET - (Clean Hands)",
-                                    "graph": $iref:538,
+                                    "graph": $iref:541,
                                     "position": {
                                         "$type": 11,
                                         -404.431824,
                                         -47.4090958
                                     },
                                     "ports": {
-                                        "$id": 541,
+                                        "$id": 544,
                                         "$type": 12,
                                         "comparer": $iref:1,
                                         "$rlength": 1,
@@ -5462,45 +5453,45 @@
                                             {
                                                 "$k": "Clean Hands",
                                                 "$v": {
-                                                    "$id": 542,
+                                                    "$id": 545,
                                                     "$type": 13,
                                                     "_fieldName": "Clean Hands",
-                                                    "_node": $iref:540,
+                                                    "_node": $iref:543,
                                                     "_typeQualifiedName": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                     "connections": {
-                                                        "$id": 543,
+                                                        "$id": 546,
                                                         "$type": 14,
                                                         "$rlength": 1,
                                                         "$rcontent": [
                                                             {
-                                                                "$id": 544,
+                                                                "$id": 547,
                                                                 "$type": 15,
                                                                 "fieldName": "condittion0",
                                                                 "node": {
-                                                                    "$id": 545,
+                                                                    "$id": 548,
                                                                     "$type": 32,
                                                                     "_name": "Boolean Operation_1932705536",
                                                                     "graph": {
-                                                                        "$id": 546,
+                                                                        "$id": 549,
                                                                         "$type": 8,
                                                                         "_name": "",
                                                                         "nodes": {
-                                                                            "$id": 547,
+                                                                            "$id": 550,
                                                                             "$type": 9,
                                                                             "$rlength": 3,
                                                                             "$rcontent": [
                                                                                 {
-                                                                                    "$id": 548,
+                                                                                    "$id": 551,
                                                                                     "$type": 33,
                                                                                     "_name": "Branch_-1338280576",
-                                                                                    "graph": $iref:546,
+                                                                                    "graph": $iref:549,
                                                                                     "position": {
                                                                                         "$type": 11,
                                                                                         37.77971,
                                                                                         -197.947388
                                                                                     },
                                                                                     "ports": {
-                                                                                        "$id": 549,
+                                                                                        "$id": 552,
                                                                                         "$type": 12,
                                                                                         "comparer": $iref:1,
                                                                                         "$rlength": 4,
@@ -5508,32 +5499,32 @@
                                                                                             {
                                                                                                 "$k": "flowIn",
                                                                                                 "$v": {
-                                                                                                    "$id": 550,
+                                                                                                    "$id": 553,
                                                                                                     "$type": 13,
                                                                                                     "_fieldName": "flowIn",
-                                                                                                    "_node": $iref:548,
+                                                                                                    "_node": $iref:551,
                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                     "connections": {
-                                                                                                        "$id": 551,
+                                                                                                        "$id": 554,
                                                                                                         "$type": 14,
                                                                                                         "$rlength": 1,
                                                                                                         "$rcontent": [
                                                                                                             {
-                                                                                                                "$id": 552,
+                                                                                                                "$id": 555,
                                                                                                                 "$type": 15,
                                                                                                                 "fieldName": "flowOut",
                                                                                                                 "node": {
-                                                                                                                    "$id": 553,
+                                                                                                                    "$id": 556,
                                                                                                                     "$type": 10,
                                                                                                                     "_name": "Message Received",
-                                                                                                                    "graph": $iref:538,
+                                                                                                                    "graph": $iref:541,
                                                                                                                     "position": {
                                                                                                                         "$type": 11,
                                                                                                                         -448.317963,
                                                                                                                         -207.318176
                                                                                                                     },
                                                                                                                     "ports": {
-                                                                                                                        "$id": 554,
+                                                                                                                        "$id": 557,
                                                                                                                         "$type": 12,
                                                                                                                         "comparer": $iref:1,
                                                                                                                         "$rlength": 1,
@@ -5541,23 +5532,23 @@
                                                                                                                             {
                                                                                                                                 "$k": "flowOut",
                                                                                                                                 "$v": {
-                                                                                                                                    "$id": 555,
+                                                                                                                                    "$id": 558,
                                                                                                                                     "$type": 13,
                                                                                                                                     "_fieldName": "flowOut",
-                                                                                                                                    "_node": $iref:553,
+                                                                                                                                    "_node": $iref:556,
                                                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                                                     "connections": {
-                                                                                                                                        "$id": 556,
+                                                                                                                                        "$id": 559,
                                                                                                                                         "$type": 14,
                                                                                                                                         "$rlength": 1,
                                                                                                                                         "$rcontent": [
                                                                                                                                             {
-                                                                                                                                                "$id": 557,
+                                                                                                                                                "$id": 560,
                                                                                                                                                 "$type": 15,
                                                                                                                                                 "fieldName": "flowIn",
-                                                                                                                                                "node": $iref:548,
+                                                                                                                                                "node": $iref:551,
                                                                                                                                                 "reroutePoints": {
-                                                                                                                                                    "$id": 558,
+                                                                                                                                                    "$id": 561,
                                                                                                                                                     "$type": 17,
                                                                                                                                                     "$rlength": 0,
                                                                                                                                                     "$rcontent": [
@@ -5582,7 +5573,7 @@
                                                                                                                     "linkedToSceneObject": "Scissors3159abf5-7bc9-4bf3-af1f-c6d771c5f84b"
                                                                                                                 },
                                                                                                                 "reroutePoints": {
-                                                                                                                    "$id": 559,
+                                                                                                                    "$id": 562,
                                                                                                                     "$type": 17,
                                                                                                                     "$rlength": 0,
                                                                                                                     "$rcontent": [
@@ -5600,13 +5591,13 @@
                                                                                             {
                                                                                                 "$k": "trueBranch",
                                                                                                 "$v": {
-                                                                                                    "$id": 560,
+                                                                                                    "$id": 563,
                                                                                                     "$type": 13,
                                                                                                     "_fieldName": "trueBranch",
-                                                                                                    "_node": $iref:548,
+                                                                                                    "_node": $iref:551,
                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                     "connections": {
-                                                                                                        "$id": 561,
+                                                                                                        "$id": 564,
                                                                                                         "$type": 14,
                                                                                                         "$rlength": 0,
                                                                                                         "$rcontent": [
@@ -5621,32 +5612,32 @@
                                                                                             {
                                                                                                 "$k": "falseBranch",
                                                                                                 "$v": {
-                                                                                                    "$id": 562,
+                                                                                                    "$id": 565,
                                                                                                     "$type": 13,
                                                                                                     "_fieldName": "falseBranch",
-                                                                                                    "_node": $iref:548,
+                                                                                                    "_node": $iref:551,
                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                     "connections": {
-                                                                                                        "$id": 563,
+                                                                                                        "$id": 566,
                                                                                                         "$type": 14,
                                                                                                         "$rlength": 1,
                                                                                                         "$rcontent": [
                                                                                                             {
-                                                                                                                "$id": 564,
+                                                                                                                "$id": 567,
                                                                                                                 "$type": 15,
                                                                                                                 "fieldName": "flowIn",
                                                                                                                 "node": {
-                                                                                                                    "$id": 565,
+                                                                                                                    "$id": 568,
                                                                                                                     "$type": 34,
                                                                                                                     "_name": "Fail Exercise_1236135424",
-                                                                                                                    "graph": $iref:546,
+                                                                                                                    "graph": $iref:549,
                                                                                                                     "position": {
                                                                                                                         "$type": 11,
                                                                                                                         350.937622,
                                                                                                                         -175.578964
                                                                                                                     },
                                                                                                                     "ports": {
-                                                                                                                        "$id": 566,
+                                                                                                                        "$id": 569,
                                                                                                                         "$type": 12,
                                                                                                                         "comparer": $iref:1,
                                                                                                                         "$rlength": 3,
@@ -5654,13 +5645,13 @@
                                                                                                                             {
                                                                                                                                 "$k": "grade",
                                                                                                                                 "$v": {
-                                                                                                                                    "$id": 567,
+                                                                                                                                    "$id": 570,
                                                                                                                                     "$type": 13,
                                                                                                                                     "_fieldName": "grade",
-                                                                                                                                    "_node": $iref:565,
+                                                                                                                                    "_node": $iref:568,
                                                                                                                                     "_typeQualifiedName": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                                                                     "connections": {
-                                                                                                                                        "$id": 568,
+                                                                                                                                        "$id": 571,
                                                                                                                                         "$type": 14,
                                                                                                                                         "$rlength": 0,
                                                                                                                                         "$rcontent": [
@@ -5675,23 +5666,23 @@
                                                                                                                             {
                                                                                                                                 "$k": "flowIn",
                                                                                                                                 "$v": {
-                                                                                                                                    "$id": 569,
+                                                                                                                                    "$id": 572,
                                                                                                                                     "$type": 13,
                                                                                                                                     "_fieldName": "flowIn",
-                                                                                                                                    "_node": $iref:565,
+                                                                                                                                    "_node": $iref:568,
                                                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                                                     "connections": {
-                                                                                                                                        "$id": 570,
+                                                                                                                                        "$id": 573,
                                                                                                                                         "$type": 14,
                                                                                                                                         "$rlength": 1,
                                                                                                                                         "$rcontent": [
                                                                                                                                             {
-                                                                                                                                                "$id": 571,
+                                                                                                                                                "$id": 574,
                                                                                                                                                 "$type": 15,
                                                                                                                                                 "fieldName": "falseBranch",
-                                                                                                                                                "node": $iref:548,
+                                                                                                                                                "node": $iref:551,
                                                                                                                                                 "reroutePoints": {
-                                                                                                                                                    "$id": 572,
+                                                                                                                                                    "$id": 575,
                                                                                                                                                     "$type": 17,
                                                                                                                                                     "$rlength": 0,
                                                                                                                                                     "$rcontent": [
@@ -5709,13 +5700,13 @@
                                                                                                                             {
                                                                                                                                 "$k": "flowOut",
                                                                                                                                 "$v": {
-                                                                                                                                    "$id": 573,
+                                                                                                                                    "$id": 576,
                                                                                                                                     "$type": 13,
                                                                                                                                     "_fieldName": "flowOut",
-                                                                                                                                    "_node": $iref:565,
+                                                                                                                                    "_node": $iref:568,
                                                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                                                     "connections": {
-                                                                                                                                        "$id": 574,
+                                                                                                                                        "$id": 577,
                                                                                                                                         "$type": 14,
                                                                                                                                         "$rlength": 0,
                                                                                                                                         "$rcontent": [
@@ -5737,7 +5728,7 @@
                                                                                                                     "grade": 0
                                                                                                                 },
                                                                                                                 "reroutePoints": {
-                                                                                                                    "$id": 575,
+                                                                                                                    "$id": 578,
                                                                                                                     "$type": 17,
                                                                                                                     "$rlength": 0,
                                                                                                                     "$rcontent": [
@@ -5755,23 +5746,23 @@
                                                                                             {
                                                                                                 "$k": "condition",
                                                                                                 "$v": {
-                                                                                                    "$id": 576,
+                                                                                                    "$id": 579,
                                                                                                     "$type": 13,
                                                                                                     "_fieldName": "condition",
-                                                                                                    "_node": $iref:548,
+                                                                                                    "_node": $iref:551,
                                                                                                     "_typeQualifiedName": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                                     "connections": {
-                                                                                                        "$id": 577,
+                                                                                                        "$id": 580,
                                                                                                         "$type": 14,
                                                                                                         "$rlength": 1,
                                                                                                         "$rcontent": [
                                                                                                             {
-                                                                                                                "$id": 578,
+                                                                                                                "$id": 581,
                                                                                                                 "$type": 15,
                                                                                                                 "fieldName": "result",
-                                                                                                                "node": $iref:545,
+                                                                                                                "node": $iref:548,
                                                                                                                 "reroutePoints": {
-                                                                                                                    "$id": 579,
+                                                                                                                    "$id": 582,
                                                                                                                     "$type": 17,
                                                                                                                     "$rlength": 0,
                                                                                                                     "$rcontent": [
@@ -5796,34 +5787,34 @@
                                                                                     "falseBranch": null,
                                                                                     "condition": false
                                                                                 },
-                                                                                $iref:545,
-                                                                                $iref:565
+                                                                                $iref:548,
+                                                                                $iref:568
                                                                             ]
                                                                         },
                                                                         "packedNodes": {
-                                                                            "$id": 580,
+                                                                            "$id": 583,
                                                                             "$type": 19,
                                                                             "$rlength": 0,
                                                                             "$rcontent": [
                                                                             ]
                                                                         },
                                                                         "callbackNodes": {
-                                                                            "$id": 581,
+                                                                            "$id": 584,
                                                                             "$type": 20,
                                                                             "$rlength": 1,
                                                                             "$rcontent": [
                                                                                 {
-                                                                                    "$id": 582,
+                                                                                    "$id": 585,
                                                                                     "$type": 10,
                                                                                     "_name": "Message Received",
-                                                                                    "graph": $iref:546,
+                                                                                    "graph": $iref:549,
                                                                                     "position": {
                                                                                         "$type": 11,
                                                                                         -449,
                                                                                         -224.56
                                                                                     },
                                                                                     "ports": {
-                                                                                        "$id": 583,
+                                                                                        "$id": 586,
                                                                                         "$type": 12,
                                                                                         "comparer": $iref:1,
                                                                                         "$rlength": 1,
@@ -5831,13 +5822,13 @@
                                                                                             {
                                                                                                 "$k": "flowOut",
                                                                                                 "$v": {
-                                                                                                    "$id": 584,
+                                                                                                    "$id": 587,
                                                                                                     "$type": 13,
                                                                                                     "_fieldName": "flowOut",
-                                                                                                    "_node": $iref:582,
+                                                                                                    "_node": $iref:585,
                                                                                                     "_typeQualifiedName": "NT.DummyConnection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                                                                                     "connections": {
-                                                                                                        "$id": 585,
+                                                                                                        "$id": 588,
                                                                                                         "$type": 14,
                                                                                                         "$rlength": 0,
                                                                                                         "$rcontent": [
@@ -5861,10 +5852,10 @@
                                                                             ]
                                                                         },
                                                                         "callbackNodesDict": {
-                                                                            "$id": 586,
+                                                                            "$id": 589,
                                                                             "$type": 21,
                                                                             "comparer": {
-                                                                                "$id": 587,
+                                                                                "$id": 590,
                                                                                 "$type": 1
                                                                             },
                                                                             "$rlength": 0,
@@ -5873,13 +5864,13 @@
                                                                         },
                                                                         "linkedNTVariable": "TableCover7d04d881-c574-4957-9ff1-f2543b72d931",
                                                                         "assignedSCGO": {
-                                                                            "$id": 588,
+                                                                            "$id": 591,
                                                                             "$type": 29,
                                                                             "data": {
                                                                                 "$type": 3,
                                                                                 "id": "TableCover7d04d881-c574-4957-9ff1-f2543b72d931",
                                                                                 "childs": {
-                                                                                    "$id": 589,
+                                                                                    "$id": 592,
                                                                                     "$type": 4,
                                                                                     "$rlength": 0,
                                                                                     "$rcontent": [
@@ -5887,7 +5878,7 @@
                                                                                 },
                                                                                 "parent": "TableD979a54cc-da6e-4d0b-9cd9-cec1b6776d28",
                                                                                 "data": {
-                                                                                    "$id": 590,
+                                                                                    "$id": 593,
                                                                                     "$type": 30,
                                                                                     "collapsed": true,
                                                                                     "name": null,
@@ -5908,21 +5899,21 @@
                                                                                     0,
                                                                                     0
                                                                                 },
-                                                                                "graph": $iref:546
+                                                                                "graph": $iref:549
                                                                             },
                                                                             "outlineRoot": {
-                                                                                "$id": 591,
+                                                                                "$id": 594,
                                                                                 "$type": 22
                                                                             },
                                                                             "toolType": 0,
                                                                             "grabObject": {
-                                                                                "$id": 592,
+                                                                                "$id": 595,
                                                                                 "$type": 35,
                                                                                 "disableWhenIdle": true,
                                                                                 "allowedNearTouchControllers": 0,
                                                                                 "allowedTouchControllers": 0,
                                                                                 "ignoredColliders": {
-                                                                                    "$id": 593,
+                                                                                    "$id": 596,
                                                                                     "$type": 36,
                                                                                     "$rlength": 0,
                                                                                     "$rcontent": [
@@ -5961,7 +5952,7 @@
                                                                         -45.3157959
                                                                     },
                                                                     "ports": {
-                                                                        "$id": 594,
+                                                                        "$id": 597,
                                                                         "$type": 12,
                                                                         "comparer": $iref:1,
                                                                         "$rlength": 3,
@@ -5969,23 +5960,23 @@
                                                                             {
                                                                                 "$k": "result",
                                                                                 "$v": {
-                                                                                    "$id": 595,
+                                                                                    "$id": 598,
                                                                                     "$type": 13,
                                                                                     "_fieldName": "result",
-                                                                                    "_node": $iref:545,
+                                                                                    "_node": $iref:548,
                                                                                     "_typeQualifiedName": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                     "connections": {
-                                                                                        "$id": 596,
+                                                                                        "$id": 599,
                                                                                         "$type": 14,
                                                                                         "$rlength": 1,
                                                                                         "$rcontent": [
                                                                                             {
-                                                                                                "$id": 597,
+                                                                                                "$id": 600,
                                                                                                 "$type": 15,
                                                                                                 "fieldName": "condition",
-                                                                                                "node": $iref:548,
+                                                                                                "node": $iref:551,
                                                                                                 "reroutePoints": {
-                                                                                                    "$id": 598,
+                                                                                                    "$id": 601,
                                                                                                     "$type": 17,
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
@@ -6003,23 +5994,23 @@
                                                                             {
                                                                                 "$k": "condittion0",
                                                                                 "$v": {
-                                                                                    "$id": 599,
+                                                                                    "$id": 602,
                                                                                     "$type": 13,
                                                                                     "_fieldName": "condittion0",
-                                                                                    "_node": $iref:545,
+                                                                                    "_node": $iref:548,
                                                                                     "_typeQualifiedName": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                     "connections": {
-                                                                                        "$id": 600,
+                                                                                        "$id": 603,
                                                                                         "$type": 14,
                                                                                         "$rlength": 1,
                                                                                         "$rcontent": [
                                                                                             {
-                                                                                                "$id": 601,
+                                                                                                "$id": 604,
                                                                                                 "$type": 15,
                                                                                                 "fieldName": "Clean Hands",
-                                                                                                "node": $iref:540,
+                                                                                                "node": $iref:543,
                                                                                                 "reroutePoints": {
-                                                                                                    "$id": 602,
+                                                                                                    "$id": 605,
                                                                                                     "$type": 17,
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
@@ -6037,32 +6028,32 @@
                                                                             {
                                                                                 "$k": "condittion1",
                                                                                 "$v": {
-                                                                                    "$id": 603,
+                                                                                    "$id": 606,
                                                                                     "$type": 13,
                                                                                     "_fieldName": "condittion1",
-                                                                                    "_node": $iref:545,
+                                                                                    "_node": $iref:548,
                                                                                     "_typeQualifiedName": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                     "connections": {
-                                                                                        "$id": 604,
+                                                                                        "$id": 607,
                                                                                         "$type": 14,
                                                                                         "$rlength": 1,
                                                                                         "$rcontent": [
                                                                                             {
-                                                                                                "$id": 605,
+                                                                                                "$id": 608,
                                                                                                 "$type": 15,
                                                                                                 "fieldName": "Gloves On",
                                                                                                 "node": {
-                                                                                                    "$id": 606,
+                                                                                                    "$id": 609,
                                                                                                     "$type": 31,
                                                                                                     "_name": "GET - (Gloves On)",
-                                                                                                    "graph": $iref:538,
+                                                                                                    "graph": $iref:541,
                                                                                                     "position": {
                                                                                                         "$type": 11,
                                                                                                         -389.659119,
                                                                                                         90.09091
                                                                                                     },
                                                                                                     "ports": {
-                                                                                                        "$id": 607,
+                                                                                                        "$id": 610,
                                                                                                         "$type": 12,
                                                                                                         "comparer": $iref:1,
                                                                                                         "$rlength": 1,
@@ -6070,23 +6061,23 @@
                                                                                                             {
                                                                                                                 "$k": "Gloves On",
                                                                                                                 "$v": {
-                                                                                                                    "$id": 608,
+                                                                                                                    "$id": 611,
                                                                                                                     "$type": 13,
                                                                                                                     "_fieldName": "Gloves On",
-                                                                                                                    "_node": $iref:606,
+                                                                                                                    "_node": $iref:609,
                                                                                                                     "_typeQualifiedName": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                                                                                                                     "connections": {
-                                                                                                                        "$id": 609,
+                                                                                                                        "$id": 612,
                                                                                                                         "$type": 14,
                                                                                                                         "$rlength": 1,
                                                                                                                         "$rcontent": [
                                                                                                                             {
-                                                                                                                                "$id": 610,
+                                                                                                                                "$id": 613,
                                                                                                                                 "$type": 15,
                                                                                                                                 "fieldName": "condittion1",
-                                                                                                                                "node": $iref:545,
+                                                                                                                                "node": $iref:548,
                                                                                                                                 "reroutePoints": {
-                                                                                                                                    "$id": 611,
+                                                                                                                                    "$id": 614,
                                                                                                                                     "$type": 17,
                                                                                                                                     "$rlength": 0,
                                                                                                                                     "$rcontent": [
@@ -6109,7 +6100,7 @@
                                                                                                     "dataKey": "Gloves On"
                                                                                                 },
                                                                                                 "reroutePoints": {
-                                                                                                    "$id": 612,
+                                                                                                    "$id": 615,
                                                                                                     "$type": 17,
                                                                                                     "$rlength": 0,
                                                                                                     "$rcontent": [
@@ -6136,7 +6127,7 @@
                                                                     "extraConditions": null
                                                                 },
                                                                 "reroutePoints": {
-                                                                    "$id": 613,
+                                                                    "$id": 616,
                                                                     "$type": 17,
                                                                     "$rlength": 0,
                                                                     "$rcontent": [
@@ -6158,36 +6149,36 @@
                                     "isExecuting": false,
                                     "dataKey": "Clean Hands"
                                 },
-                                $iref:606,
-                                $iref:553
+                                $iref:609,
+                                $iref:556
                             ]
                         },
                         "packedNodes": {
-                            "$id": 614,
+                            "$id": 617,
                             "$type": 19,
                             "$rlength": 1,
                             "$rcontent": [
                                 {
-                                    "$id": 615,
+                                    "$id": 618,
                                     "$type": 37,
                                     "_name": "Clean hands",
-                                    "nodes": $iref:547,
+                                    "nodes": $iref:550,
                                     "packedNodes": {
-                                        "$id": 616,
+                                        "$id": 619,
                                         "$type": 19,
                                         "$rlength": 0,
                                         "$rcontent": [
                                         ]
                                     },
                                     "callbackNodes": {
-                                        "$id": 617,
+                                        "$id": 620,
                                         "$type": 20,
                                         "$rlength": 0,
                                         "$rcontent": [
                                         ]
                                     },
                                     "callbackNodesDict": {
-                                        "$id": 618,
+                                        "$id": 621,
                                         "$type": 21,
                                         "comparer": $iref:27,
                                         "$rlength": 0,
@@ -6201,31 +6192,31 @@
                                     },
                                     "assetID": "21afdba4-a3a0-4e97-bb13-2d7587933598",
                                     "ports": {
-                                        "$id": 619,
+                                        "$id": 622,
                                         "$type": 38,
                                         "$rlength": 6,
                                         "$rcontent": [
-                                            $iref:550,
-                                            $iref:560,
-                                            $iref:599,
-                                            $iref:603,
-                                            $iref:567,
-                                            $iref:573
+                                            $iref:553,
+                                            $iref:563,
+                                            $iref:602,
+                                            $iref:606,
+                                            $iref:570,
+                                            $iref:576
                                         ]
                                     }
                                 }
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 620,
+                            "$id": 623,
                             "$type": 20,
                             "$rlength": 1,
                             "$rcontent": [
-                                $iref:553
+                                $iref:556
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 621,
+                            "$id": 624,
                             "$type": 21,
                             "comparer": $iref:27,
                             "$rlength": 1,
@@ -6233,11 +6224,11 @@
                                 {
                                     "$k": "Scissors3159abf5-7bc9-4bf3-af1f-c6d771c5f84bGrabbed",
                                     "$v": {
-                                        "$id": 622,
+                                        "$id": 625,
                                         "$type": 20,
                                         "$rlength": 1,
                                         "$rcontent": [
-                                            $iref:553
+                                            $iref:556
                                         ]
                                     }
                                 }
@@ -6245,20 +6236,20 @@
                         },
                         "linkedNTVariable": "Scissors3159abf5-7bc9-4bf3-af1f-c6d771c5f84b",
                         "assignedSCGO": {
-                            "$id": 623,
+                            "$id": 626,
                             "$type": 29,
                             "data": {
                                 "$type": 3,
                                 "id": "Scissors3159abf5-7bc9-4bf3-af1f-c6d771c5f84b",
                                 "childs": {
-                                    "$id": 624,
+                                    "$id": 627,
                                     "$type": 4,
                                     "$rlength": 0,
                                     "$rcontent": [
                                     ]
                                 },
                                 "parent": "Closetd9f59041-dab7-421d-8411-7c57c8b83eb1",
-                                "data": $iref:537,
+                                "data": $iref:540,
                                 "sceneObjectGUID": "7ee3bff5-d777-41ff-ba1b-8ee1d83dd392",
                                 "graphJSON": "",
                                 "position": {
@@ -6273,21 +6264,21 @@
                                     359.821747,
                                     359.978851
                                 },
-                                "graph": $iref:538
+                                "graph": $iref:541
                             },
                             "outlineRoot": {
-                                "$id": 625,
+                                "$id": 628,
                                 "$type": 22
                             },
                             "toolType": 0,
                             "grabObject": {
-                                "$id": 626,
+                                "$id": 629,
                                 "$type": 35,
                                 "disableWhenIdle": true,
                                 "allowedNearTouchControllers": 0,
                                 "allowedTouchControllers": 0,
                                 "ignoredColliders": {
-                                    "$id": 627,
+                                    "$id": 630,
                                     "$type": 36,
                                     "$rlength": 0,
                                     "$rcontent": [
@@ -6322,18 +6313,18 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 628,
+                    "$id": 631,
                     "$type": 22
                 },
                 "toolType": 0,
                 "grabObject": {
-                    "$id": 629,
+                    "$id": 632,
                     "$type": 35,
                     "disableWhenIdle": true,
                     "allowedNearTouchControllers": 0,
                     "allowedTouchControllers": 0,
                     "ignoredColliders": {
-                        "$id": 630,
+                        "$id": 633,
                         "$type": 36,
                         "$rlength": 0,
                         "$rcontent": [
@@ -6345,7 +6336,24 @@
                     "validDrop": 1,
                     "grabOverrideButton": 0,
                     "allowedGrabControllers": 0,
-                    "grabAttachMechanicScript": null,
+                    "grabAttachMechanicScript": {
+                        "$id": 634,
+                        "$type": 43,
+                        "precisionGrab": true,
+                        "rightSnapHandle": {
+                            "$id": 635,
+                            "$type": 44
+                        },
+                        "leftSnapHandle": {
+                            "$id": 636,
+                            "$type": 44
+                        },
+                        "throwVelocityWithAttachDistance": false,
+                        "throwMultiplier": 1,
+                        "onGrabCollisionDelay": 0,
+                        "destroyImmediatelyOnThrow": true,
+                        "breakForce": 1500
+                    },
                     "secondaryGrabActionScript": null,
                     "isUsable": false,
                     "holdButtonToUse": true,
@@ -6368,13 +6376,13 @@
         {
             "$k": "Closetd9f59041-dab7-421d-8411-7c57c8b83eb1",
             "$v": {
-                "$id": 631,
-                "$type": "43|ClosetSceneGameObject, Assembly-CSharp",
+                "$id": 637,
+                "$type": "45|ClosetSceneGameObject, Assembly-CSharp",
                 "data": {
                     "$type": 3,
                     "id": "Closetd9f59041-dab7-421d-8411-7c57c8b83eb1",
                     "childs": {
-                        "$id": 632,
+                        "$id": 638,
                         "$type": 4,
                         "$rlength": 2,
                         "$rcontent": [
@@ -6384,53 +6392,53 @@
                     },
                     "parent": "",
                     "data": {
-                        "$id": 633,
-                        "$type": "44|NT.Variables.NTVariable`1[[NT.SceneObjects.ClosetData, Assembly-CSharp]], Assembly-CSharp",
+                        "$id": 639,
+                        "$type": "46|NT.Variables.NTVariable`1[[NT.SceneObjects.ClosetData, Assembly-CSharp]], Assembly-CSharp",
                         "collapsed": true,
                         "name": null,
                         "value": {
-                            "$type": "45|NT.SceneObjects.ClosetData, Assembly-CSharp",
+                            "$type": "47|NT.SceneObjects.ClosetData, Assembly-CSharp",
                             "mainDrawer": {
-                                "$type": "46|NT.SceneObjects.Drawer, Assembly-CSharp",
+                                "$type": "48|NT.SceneObjects.Drawer, Assembly-CSharp",
                                 "canBeOpened": false,
                                 "slot00": {
-                                    "$id": 634,
-                                    "$type": "47|NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp",
+                                    "$id": 640,
+                                    "$type": "49|NT.SceneObjects.SceneGameObjectReference, Assembly-CSharp",
                                     "linkedSGO": "Scissors3159abf5-7bc9-4bf3-af1f-c6d771c5f84b"
                                 },
                                 "slot01": {
-                                    "$id": 635,
-                                    "$type": 47,
+                                    "$id": 641,
+                                    "$type": 49,
                                     "linkedSGO": "Scissors_big3bffd261-0537-4fd0-87c1-d53baacf4ad9"
                                 },
                                 "slot02": {
-                                    "$id": 636,
-                                    "$type": 47,
+                                    "$id": 642,
+                                    "$type": 49,
                                     "linkedSGO": "Forceps_smallf4434acb-bb43-418e-9241-f225ba8cbcbb"
                                 },
                                 "slot03": {
-                                    "$id": 637,
-                                    "$type": 47,
+                                    "$id": 643,
+                                    "$type": 49,
                                     "linkedSGO": "Forceps_bigc7fe5b8c-9f52-416f-bfcc-7740e34ed140"
                                 },
                                 "slot04": {
-                                    "$id": 638,
-                                    "$type": 47,
+                                    "$id": 644,
+                                    "$type": 49,
                                     "linkedSGO": "Clampb711fb11-f918-4f81-a6a8-e18a40379a1c"
                                 },
                                 "slot05": null
                             }
                         },
                         "defaultValue": {
-                            "$type": 45,
+                            "$type": 47,
                             "mainDrawer": {
-                                "$type": 46,
+                                "$type": 48,
                                 "canBeOpened": false,
-                                "slot00": $iref:634,
-                                "slot01": $iref:635,
-                                "slot02": $iref:636,
-                                "slot03": $iref:637,
-                                "slot04": $iref:638,
+                                "slot00": $iref:640,
+                                "slot01": $iref:641,
+                                "slot02": $iref:642,
+                                "slot03": $iref:643,
+                                "slot04": $iref:644,
                                 "slot05": null
                             }
                         }
@@ -6450,35 +6458,35 @@
                         0
                     },
                     "graph": {
-                        "$id": 639,
+                        "$id": 645,
                         "$type": 8,
                         "_name": "",
                         "nodes": {
-                            "$id": 640,
+                            "$id": 646,
                             "$type": 9,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "packedNodes": {
-                            "$id": 641,
+                            "$id": 647,
                             "$type": 19,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodes": {
-                            "$id": 642,
+                            "$id": 648,
                             "$type": 20,
                             "$rlength": 0,
                             "$rcontent": [
                             ]
                         },
                         "callbackNodesDict": {
-                            "$id": 643,
+                            "$id": 649,
                             "$type": 21,
                             "comparer": {
-                                "$id": 644,
+                                "$id": 650,
                                 "$type": 1
                             },
                             "$rlength": 0,
@@ -6491,37 +6499,37 @@
                     }
                 },
                 "outlineRoot": {
-                    "$id": 645,
+                    "$id": 651,
                     "$type": 22
                 },
                 "drawer": {
-                    "$id": 646,
+                    "$id": 652,
                     "$type": 22
                 },
                 "slotPivot": {
-                    "$id": 647,
-                    "$type": "48|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
+                    "$id": 653,
+                    "$type": "50|System.Collections.Generic.List`1[[UnityEngine.Transform, UnityEngine.CoreModule]], mscorlib",
                     "$rlength": 5,
                     "$rcontent": [
                         {
-                            "$id": 648,
-                            "$type": "49|UnityEngine.Transform, UnityEngine.CoreModule"
+                            "$id": 654,
+                            "$type": 44
                         },
                         {
-                            "$id": 649,
-                            "$type": 49
+                            "$id": 655,
+                            "$type": 44
                         },
                         {
-                            "$id": 650,
-                            "$type": 49
+                            "$id": 656,
+                            "$type": 44
                         },
                         {
-                            "$id": 651,
-                            "$type": 49
+                            "$id": 657,
+                            "$type": 44
                         },
                         {
-                            "$id": 652,
-                            "$type": 49
+                            "$id": 658,
+                            "$type": 44
                         }
                     ]
                 }

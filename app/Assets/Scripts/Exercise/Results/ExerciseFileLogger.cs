@@ -116,6 +116,7 @@ public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
 
     private string GetLogPath()
     {
+        // Use Application.persistentDataPath
         string path = Application.streamingAssetsPath + "/Results";
         FolderExistsOrCreate(path);
 
@@ -132,6 +133,8 @@ public class ExerciseFileLogger : Singleton<ExerciseFileLogger>
         //     Directory.CreateDirectory(folder);
         // }
 
+
+        // Don't use this when reenabling loggin, use commented one on top
         if (!BetterStreamingAssets.DirectoryExists(folder))
         {
             Directory.CreateDirectory(folder);
